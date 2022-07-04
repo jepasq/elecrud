@@ -1,0 +1,25 @@
+elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
+
+
+=== ChangeLog ===
+
+* v0.0.0-1 (13 apr. 2022 - ???)
+- (7) Add check rule and first MainWindow unit test
+- Handle help command line option
+- Fix doxygen generation
+- Handling doxygen file generation
+- First attemp to handle unit tests using Boost
+- MainWindow is in its own files
+- Minimal cmake file
+
+=== TODO
+
+This is a project I dreamed about. A C++ FOX-based application that can be used
+to edit a list a inter-dependent tables and fields. All this is saved in a
+one-file project file.
+
+Then, we can generate a client-server app based on a C++ backend and an modern
+electron frontend that can be used to modify the tables/fields.
+
+If the resulting application must be compiled, it can be from the FOX-based
+editor application.

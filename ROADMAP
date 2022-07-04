@@ -1,0 +1,39 @@
+					-*-org-*-
+
+* v1.0.0
+** v0.1.0
+*** v0.0.1
+**** Multiple persistance system
+- [ ] Sqlite first ?
+**** Project-file serialization
+     As an ini file read by boost ?
+**** Editor GUI setup
+     :LOGBOOK:
+     CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
+     :END:
+- [X] First FOX window must be shown
+- [ ] Should show version from config.h in window title
+- [ ] We need at least a File menu to handle open/save/close
+- [ ] A image-based menu to edit the project
+  http://fox-toolkit.org/screenshots/iims1.png
+- [ ] First panel is the project info one (name, author, version etc...)
+**** TODO Unit tests and CI setup
+     :LOGBOOK:
+     CLOCK: [2022-06-04 sam. 09:41]--[2022-06-04 sam. 10:08] =>  0:27
+     :END:
+- [X] Trying with boost.Test so we have access to all Boost-related libraries
+- [ ] Write our first test
+  - [ ] For example for editor/MainTest (currently a tutorial test)
+**** TODO Keep improving doxygen documentation
+**** DONE Correct project setup
+     :LOGBOOK:
+     CLOCK: [2022-04-21 jeu. 22:26]--[2022-04-21 jeu. 22:37] =>  0:11
+     CLOCK: [2022-04-13 mer. 19:44]--[2022-04-13 mer. 19:55] =>  0:11
+     CLOCK: [2022-04-13 mer. 17:36]--[2022-04-13 mer. 17:48] =>  0:12
+     :END:
+- [X] Add GPLv3 license file
+- [X] Basic cmake file
+- [X] Add a README.md file
+- [X] Search for fox toolkit library
+- [X] Handle Doxyfile and doc generation (version from cmake file)
+- [X] Handle --help on editor
