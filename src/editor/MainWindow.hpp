@@ -2,7 +2,6 @@
 #define __MAIN_WINDOW_HPP__
 
 #include <fox-1.6/fx.h>
-
 #include <string>
 
 /** The main editor window
@@ -31,6 +30,9 @@ private:
     ID_CLEAR,
     ID_LAST
     };
+
+  FX::FXMenuBar*   mbFile;   //!< The File menubar 
+  FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
 };
 
 #endif // !__MAIN_WINDOW_HPP__

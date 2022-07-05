@@ -6,7 +6,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Update version and revision in CMakeLists.txt
 
 * v0.0.0-2 (05 Jul. 2022 - ???)
-- (1) Updated Doxyfile.in for doxygen 1.9.3
+- (2) Add File menubar and title to editor's MainWindow
+- Updated Doxyfile.in for doxygen 1.9.3
 
 === TODO
 

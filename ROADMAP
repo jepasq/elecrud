@@ -6,15 +6,18 @@
 **** Multiple persistance system
 - [ ] Sqlite first ?
 **** Project-file serialization
-     As an ini file read by boost ?
+     As an ini file read by boost or a binary file or a zip directory?
+     Must be versionnable with a magic number to keep opening old files.
 **** Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
      CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
      CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
      :END:
 - [X] First FOX window must be shown
 - [X] Should show version from config.h in window title
 - [ ] We need at least a File menu to handle open/save/close
+  Add first menu items
 - [ ] A image-based menu to edit the project
   http://fox-toolkit.org/screenshots/iims1.png
 - [ ] First panel is the project info one (name, author, version etc...)

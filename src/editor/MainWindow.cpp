@@ -24,14 +24,21 @@ MainWindow::MainWindow()
   *
   */
 MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
-FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480)
+  FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480),
+  mbFile(nullptr),
+  mtFile(nullptr)
 {
-
+  mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
+  mtFile = new FX::FXMenuTitle(mbFile, "&File");
 }
 
+/** The main window destructor
+  *
+  */
 MainWindow::~MainWindow()
 {
-
+  delete mbFile;
+  delete mtFile;
 }
 
 void
