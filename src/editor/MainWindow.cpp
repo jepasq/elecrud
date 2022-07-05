@@ -15,7 +15,14 @@ MainWindow::MainWindow()
 {
   
 }
-  
+/** FXApp-based and titled constructor
+  *
+  * Thiw will create an editor MainWindow with hardcoded size.
+  *
+  * \param a           The current fxo toolkit application.
+  * \param windowTitle The MainWindow's title.
+  *
+  */
 MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480)
 {

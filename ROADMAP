@@ -26,6 +26,16 @@
 - [ ] Write our first test
   - [ ] For example for editor/MainTest (currently a tutorial test)
 **** TODO Keep improving doxygen documentation
+:LOGBOOK:
+CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
+:END:
+- [ ] Fix undocumented members
+- [ ] We have a dot error
+  error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
+
+  error: Problems running dot: exit code=0, command='dot', arguments='"/home/
+  rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
+  graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
 **** DONE Correct project setup
      :LOGBOOK:
      CLOCK: [2022-04-21 jeu. 22:26]--[2022-04-21 jeu. 22:37] =>  0:11
