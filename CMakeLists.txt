@@ -27,7 +27,8 @@ set(EDITOR_SRC
 )
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${LIBS_LIBRARIES})
-target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS})
+target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
+  ${PROJECT_BINARY_DIR})
 
 # Unit tests
 find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 

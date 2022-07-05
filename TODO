@@ -4,7 +4,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
 === ChangeLog ===
 
 * v0.0.0-1 (13 apr. 2022 - ???)
-- (7) Add check rule and first MainWindow unit test
+- (8) Editor version comes from config.h
+- Add check rule and first MainWindow unit test
 - Handle help command line option
 - Fix doxygen generation
 - Handling doxygen file generation

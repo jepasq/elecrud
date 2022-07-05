@@ -9,10 +9,11 @@
      As an ini file read by boost ?
 **** Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
      CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
      :END:
 - [X] First FOX window must be shown
-- [ ] Should show version from config.h in window title
+- [X] Should show version from config.h in window title
 - [ ] We need at least a File menu to handle open/save/close
 - [ ] A image-based menu to edit the project
   http://fox-toolkit.org/screenshots/iims1.png

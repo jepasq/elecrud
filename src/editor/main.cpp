@@ -1,7 +1,10 @@
 #include <string>
 #include <iostream>
+#include <sstream>
 
 #include "MainWindow.hpp"
+
+#include "config.h"
 
 using namespace std;
 
@@ -28,8 +31,10 @@ main(int argc, char** argv)
       FXApp application("elecrud","editor");
       
       application.init(argc,argv);
-      
-      MainWindow mw(&application, "elecrud editor v...");
+
+      ostringstream oss;
+      oss << PROJECT_NAME << " editor " << PROJECT_NUMBER;
+      MainWindow mw(&application, oss.str().c_str());
       application.create();
       
       // Run the application
