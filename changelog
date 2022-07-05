@@ -1,0 +1,9 @@
+* v0.0.0-1 (13 apr. 2022 - 05 Jul. 2022)
+- Editor version comes from config.h
+- Add check rule and first MainWindow unit test
+- Handle help command line option
+- Fix doxygen generation
+- Handling doxygen file generation
+- First attemp to handle unit tests using Boost
+- MainWindow is in its own files
+- Minimal cmake file

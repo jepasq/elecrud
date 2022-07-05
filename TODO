@@ -2,16 +2,11 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
 
 
 === ChangeLog ===
+    (8 items per revision)
+    Update version and revision in CMakeLists.txt
 
-* v0.0.0-1 (13 apr. 2022 - ???)
-- (8) Editor version comes from config.h
-- Add check rule and first MainWindow unit test
-- Handle help command line option
-- Fix doxygen generation
-- Handling doxygen file generation
-- First attemp to handle unit tests using Boost
-- MainWindow is in its own files
-- Minimal cmake file
+* v0.0.0-2 (05 Jul. 2022 - ???)
+
 
 === TODO
 
