@@ -1,10 +1,15 @@
 #include "MainWindow.hpp"
 
+#include <iostream>
+
+using namespace std;
+
 // Message Map for the Scribble Window class
 FXDEFMAP(MainWindow) MainWindowMap[]={
   //________Message_Type_____________________ID____________Message_Handler_______
   //  FXMAPFUNC(SEL_PAINT,             MainWindow::ID_CANVAS, MainWindow::onPaint),
   // FXMAPFUNC(SEL_LEFTBUTTONPRESS,   MainWindow::ID_CANVAS, MainWindow::onMouseDown),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NEW,MainWindow::onNewFile),
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -41,6 +46,10 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 		    nullptr,this,ID_NEW);
   new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
 		    nullptr,this,ID_OPEN);
+
+  auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
+				nullptr,this,ID_OPEN);
+  save->disable();
 }
 
 /** The main window destructor
@@ -52,6 +61,9 @@ MainWindow::~MainWindow()
   delete mtFile;
 }
 
+/** Create and set initial placement of the MainWindow
+  *
+  */
 void
 MainWindow::create()
 {
@@ -61,3 +73,12 @@ MainWindow::create()
   show(PLACEMENT_SCREEN);
 }
 
+/** New file menu command callback
+  *
+  */
+long
+MainWindow::onNewFile(FXObject*,FXSelector,void*)
+{
+  std::cout << "New file clicked!" << std::endl;
+  return 1;
+}

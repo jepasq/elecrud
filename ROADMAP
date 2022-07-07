@@ -3,13 +3,16 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** First version of the to-be-generated electron app
 **** Multiple persistance system
 - [ ] Sqlite first ?
 **** Project-file serialization
      As an ini file read by boost or a binary file or a zip directory?
      Must be versionnable with a magic number to keep opening old files.
+- [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-07 jeu. 06:01]--[2022-07-07 jeu. 06:11] =>  0:10
      CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
      CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
      CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
@@ -20,8 +23,11 @@
 - [ ] We need at least a File menu to handle open/save/close
   Add first menu items
 - [ ] Menu icons are created using `reswrap`. it should be called from cmake
+- [ ] Must add a status widget
 - [ ] A image-based menu to edit the project
   http://fox-toolkit.org/screenshots/iims1.png
+  - [ ] Find something that can be used as example in
+    https://github.com/gogglesguy/fox. I think it's an FXIconList widget
 - [ ] First panel is the project info one (name, author, version etc...)
 - [ ] FX has a thing for recent files
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520

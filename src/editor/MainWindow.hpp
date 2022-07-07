@@ -16,14 +16,6 @@ public:
   // MainWindow's constructor
   MainWindow(FXApp* a, const FX::FXString& windowTitle);
 
-  // Initialize
-  virtual void create();
-  virtual ~MainWindow();
-
-protected:
-  MainWindow();
-  
-private:  
   // Messages for our class
   enum{
     ID_CANVAS=FXMainWindow::ID_LAST,
@@ -33,8 +25,18 @@ private:
     ID_OPEN,  // Open an existing project
 
     ID_LAST,
-
     };
+
+  
+  // Initialize
+  virtual void create();
+  virtual ~MainWindow();
+
+  long onNewFile(FXObject*,FXSelector,void*);
+  
+protected:
+  MainWindow();
+
 
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
   FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
