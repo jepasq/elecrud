@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 
+#include "Elecrud.hpp"
 #include "MainWindow.hpp"
 
 #include "config.h"
@@ -28,7 +29,7 @@ main(int argc, char** argv)
   if (argc<2)
     {
       // Make application
-      FXApp application("elecrud","editor");
+      Elecrud application("elecrud-editor");
       
       application.init(argc,argv);
 

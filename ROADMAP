@@ -8,8 +8,9 @@
 **** Project-file serialization
      As an ini file read by boost or a binary file or a zip directory?
      Must be versionnable with a magic number to keep opening old files.
-**** Editor GUI setup
+**** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
      CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
      CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
      CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
@@ -18,9 +19,12 @@
 - [X] Should show version from config.h in window title
 - [ ] We need at least a File menu to handle open/save/close
   Add first menu items
+- [ ] Menu icons are created using `reswrap`. it should be called from cmake
 - [ ] A image-based menu to edit the project
   http://fox-toolkit.org/screenshots/iims1.png
 - [ ] First panel is the project info one (name, author, version etc...)
+- [ ] FX has a thing for recent files
+    https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
      CLOCK: [2022-06-04 sam. 09:41]--[2022-06-04 sam. 10:08] =>  0:27

@@ -28,7 +28,12 @@ private:
   enum{
     ID_CANVAS=FXMainWindow::ID_LAST,
     ID_CLEAR,
-    ID_LAST
+
+    ID_NEW,  // Creating a new project
+    ID_OPEN,  // Open an existing project
+
+    ID_LAST,
+
     };
 
   FX::FXMenuBar*   mbFile;   //!< The File menubar 

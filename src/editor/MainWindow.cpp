@@ -29,7 +29,18 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   mtFile(nullptr)
 {
   mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
-  mtFile = new FX::FXMenuTitle(mbFile, "&File");
+  auto filemenu=new FXMenuPane(this);
+  mtFile = new FX::FXMenuTitle(mbFile, "&File", nullptr,filemenu);
+
+  /*  new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
+		    getApp()->newicon,this,ID_NEW);
+  new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
+		    getApp()->openicon,this,ID_OPEN);
+  */
+  new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
+		    nullptr,this,ID_NEW);
+  new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
+		    nullptr,this,ID_OPEN);
 }
 
 /** The main window destructor
