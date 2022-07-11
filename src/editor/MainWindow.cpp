@@ -1,5 +1,7 @@
 #include "MainWindow.hpp"
 
+#include "Elecrud.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -50,6 +52,9 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
 				nullptr,this,ID_OPEN);
   save->disable();
+
+  new FXMenuSeparator(filemenu);
+  new FXMenuCommand(filemenu,tr("&Quit\tCtl-Q\tQuit program."),/*getApp()->quiticon*/nullptr,getApp(),Elecrud::ID_QUIT);
 }
 
 /** The main window destructor
@@ -57,8 +62,10 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   */
 MainWindow::~MainWindow()
 {
+  /*
   delete mbFile;
   delete mtFile;
+  */
 }
 
 /** Create and set initial placement of the MainWindow

@@ -2,8 +2,8 @@
 
 // Map
 FXDEFMAP(Elecrud) ElecrudMap[]={
-  /*  FXMAPFUNC(SEL_SIGNAL,Adie::ID_HARVEST,Adie::onSigHarvest),
-  FXMAPFUNC(SEL_SIGNAL,Adie::ID_CLOSEALL,Adie::onCmdCloseAll),
+    FXMAPFUNC(SEL_SIGNAL,Elecrud::ID_QUIT,Elecrud::onQuit),
+    /* FXMAPFUNC(SEL_SIGNAL,Adie::ID_CLOSEALL,Adie::onCmdCloseAll),
   FXMAPFUNC(SEL_COMMAND,Adie::ID_CLOSEALL,Adie::onCmdCloseAll),
   FXMAPFUNC(SEL_COMMAND,Adie::ID_SYNTAXPATHS,Adie::onCmdSyntaxPaths),
   FXMAPFUNC(SEL_UPDATE,Adie::ID_SYNTAXPATHS,Adie::onUpdSyntaxPaths),
@@ -27,4 +27,13 @@ Elecrud::Elecrud(const FXString& name):
 Elecrud::~Elecrud()
 {
 
+}
+
+/** We asked to quit application certainly with File/Quit menu
+  *
+  */
+long
+Elecrud::onQuit(FXObject*,FXSelector,void*)
+{
+  return 0;
 }

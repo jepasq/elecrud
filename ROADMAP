@@ -12,6 +12,7 @@
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-11 lun. 03:14]--[2022-07-11 lun. 03:42] =>  0:28
      CLOCK: [2022-07-07 jeu. 06:01]--[2022-07-07 jeu. 06:11] =>  0:10
      CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
      CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
@@ -20,9 +21,12 @@
      :END:
 - [X] First FOX window must be shown
 - [X] Should show version from config.h in window title
-- [ ] We need at least a File menu to handle open/save/close
+- [X] We need at least a File menu to handle open/save/close
   Add first menu items
+  - [X] Add a Exit menu item
+- [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
 - [ ] Menu icons are created using `reswrap`. it should be called from cmake
+  - [ ] Adie has a quit icon
 - [ ] Must add a status widget
 - [ ] A image-based menu to edit the project
   http://fox-toolkit.org/screenshots/iims1.png
