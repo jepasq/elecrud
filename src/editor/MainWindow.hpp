@@ -6,6 +6,8 @@
 
 /** The main editor window
   *
+  * If current \c filename is an empty string, 
+  *
   */
 class MainWindow : public FXMainWindow
 {
@@ -23,7 +25,10 @@ public:
 
     ID_NEW,  // Creating a new project
     ID_OPEN,  // Open an existing project
-
+    ID_SAVE,
+    ID_SAVEAS,
+    
+    
     ID_LAST,
     };
 
@@ -32,14 +37,20 @@ public:
   virtual void create();
   virtual ~MainWindow();
 
-  long onNewFile(FXObject*,FXSelector,void*);
+  long onFileNew(FXObject*,FXSelector,void*);
+  long onFileOpen(FXObject*,FXSelector,void*);
+  long onFileSave(FXObject*,FXSelector,void*);
+  long onFileSaveAs(FXObject*,FXSelector,void*);
   
 protected:
   MainWindow();
 
-
+private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
   FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
+
+  FX::FXString     filename; //!< The current prohject filename or an empty one.
+  bool             dirty;    //!< Does the actual document need a save ?
 };
 
 #endif // !__MAIN_WINDOW_HPP__

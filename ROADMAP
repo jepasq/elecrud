@@ -12,6 +12,7 @@
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-13 mer. 03:57]--[2022-07-13 mer. 04:07] =>  0:10
      CLOCK: [2022-07-11 lun. 03:14]--[2022-07-11 lun. 03:42] =>  0:28
      CLOCK: [2022-07-07 jeu. 06:01]--[2022-07-07 jeu. 06:11] =>  0:10
      CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
@@ -24,7 +25,10 @@
 - [X] We need at least a File menu to handle open/save/close
   Add first menu items
   - [X] Add a Exit menu item
+- [X] Open/Save must show a FXFileDialog instance
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
+- [ ] Must keep in sync window title with filename and a star indicating a
+  dirty document
 - [ ] Menu icons are created using `reswrap`. it should be called from cmake
   - [ ] Adie has a quit icon
 - [ ] Must add a status widget

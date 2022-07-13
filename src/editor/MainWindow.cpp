@@ -11,7 +11,10 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   //________Message_Type_____________________ID____________Message_Handler_______
   //  FXMAPFUNC(SEL_PAINT,             MainWindow::ID_CANVAS, MainWindow::onPaint),
   // FXMAPFUNC(SEL_LEFTBUTTONPRESS,   MainWindow::ID_CANVAS, MainWindow::onMouseDown),
-  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NEW,MainWindow::onNewFile),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NEW,   MainWindow::onFileNew),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_OPEN,  MainWindow::onFileOpen),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVE,  MainWindow::onFileSave),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVEAS,MainWindow::onFileSaveAs),
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -33,7 +36,9 @@ MainWindow::MainWindow()
 MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480),
   mbFile(nullptr),
-  mtFile(nullptr)
+  mtFile(nullptr),
+  filename(""),
+  dirty(false)
 {
   mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
   auto filemenu=new FXMenuPane(this);
@@ -50,9 +55,12 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 		    nullptr,this,ID_OPEN);
 
   auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
-				nullptr,this,ID_OPEN);
+				nullptr,this,ID_SAVE);
   save->disable();
 
+  new FXMenuCommand(filemenu,tr("&Save as...\tCtrl-S\tSave in a new file."),
+				nullptr,this,ID_SAVEAS);
+  
   new FXMenuSeparator(filemenu);
   new FXMenuCommand(filemenu,tr("&Quit\tCtl-Q\tQuit program."),/*getApp()->quiticon*/nullptr,getApp(),Elecrud::ID_QUIT);
 }
@@ -84,8 +92,27 @@ MainWindow::create()
   *
   */
 long
-MainWindow::onNewFile(FXObject*,FXSelector,void*)
+MainWindow::onFileNew(FXObject*,FXSelector,void*)
 {
   std::cout << "New file clicked!" << std::endl;
+  return 1;
+}
+
+long
+MainWindow::onFileOpen(FXObject*,FXSelector,void*)
+{
+  FXString filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
+  return 1;
+}
+
+long
+MainWindow::onFileSave(FXObject*,FXSelector,void*)
+{
+  return 1;
+}
+
+long
+MainWindow::onFileSaveAs(FXObject*,FXSelector,void*)
+{
   return 1;
 }
