@@ -12,6 +12,11 @@ FXDEFMAP(Elecrud) ElecrudMap[]={
 
 FXIMPLEMENT(Elecrud,FXApp,ElecrudMap,ARRAYNUMBER(ElecrudMap))
 
+/** The elecrud application named constructor
+  *
+  * \param name The fox application name.
+  *
+  */
 Elecrud::Elecrud(const FXString& name):
   FXApp(name),
   newicon(nullptr),

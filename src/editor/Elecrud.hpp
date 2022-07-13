@@ -5,6 +5,9 @@
 
 using namespace FX;
 
+/** The main application object
+  *
+  */
 class Elecrud : public FXApp {
   FXDECLARE(Elecrud)
 public:
@@ -14,18 +17,16 @@ public:
   long onQuit(FXObject*,FXSelector,void*);
   
   enum{
-    ID_CLOSEALL=FXApp::ID_LAST,
-    ID_SYNTAXPATHS,
-    ID_HARVEST,
-    ID_LAST
+    ID_CLOSEALL=FXApp::ID_LAST,  //!< Close all documents and exit
+    ID_LAST                      //!< Last, unused event ID
     };
   
 private:
-  Elecrud(){}
-  Elecrud(const Elecrud&);
-  Elecrud& operator=(const Elecrud&);
+  Elecrud(){}              //!< Forbidden default constructor
+  Elecrud(const Elecrud&); //!< Forbidden copy constructor
+  Elecrud& operator=(const Elecrud&); //!< Forbidden affectation operator
   
-  FXIcon* newicon;
-  FXIcon* openicon;  
+  FXIcon* newicon;  //!< The File/New icon
+  FXIcon* openicon; //!< The File/Open icon
 };
 #endif // !__ELECRUD_HPP__

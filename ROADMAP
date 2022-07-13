@@ -44,9 +44,10 @@
   - [ ] For example for editor/MainTest (currently a tutorial test)
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25
 CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 :END:
-- [ ] Fix undocumented members
+     Always fix undocumented members
 - [ ] We have a dot error
   error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
 
