@@ -6,7 +6,7 @@ A C++/electron based multi-user CRUD operator program generator.
 
 On debian-based distributions :
 
-	sudo apt install libfox-1.6-dev libboost-dev libboost-test-dev
+	sudo apt install libfox-1.6-dev libboost-dev libboost-test-dev libboost-serialization-dev
 
 or on arch :
 

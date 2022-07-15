@@ -53,13 +53,15 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
+     CLOCK: [2022-07-15 ven. 06:23]--[2022-07-15 ven. 06:30] =>  0:07
      CLOCK: [2022-06-04 sam. 09:41]--[2022-06-04 sam. 10:08] =>  0:27
      :END:
 - [X] Trying with boost.Test so we have access to all Boost-related libraries
 - [X] Write our first test
   - [X] For example for editor/MainTest (currently a tutorial test)
 - [X] Added a first workflow test file in .github
-- [ ] May use  https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml   
+- [X] May use  https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml
+- [ ] We have a dependency error =no packing 'fox' found=
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
 CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25
