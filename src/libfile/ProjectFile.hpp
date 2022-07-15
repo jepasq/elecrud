@@ -11,6 +11,7 @@ class ProjectFile
 public:
   ProjectFile();
 
+  void               setFilename(const std::string&);
   const std::string& getFilename(void) const;
   
 private:
