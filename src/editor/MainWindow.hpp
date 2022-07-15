@@ -4,6 +4,8 @@
 #include <fox-1.6/fx.h>
 #include <string>
 
+#include "libfile/ProjectFile.hpp"
+
 /** The main editor window
   *
   * If current \c filename is an empty string, 
@@ -49,8 +51,10 @@ private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
   FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
 
-  FX::FXString     filename; //!< The current prohject filename or an empty one.
+  FX::FXString     filename; //!< The current project filename or an empty one.
   bool             dirty;    //!< Does the actual document need a save ?
+
+  ProjectFile      projectFile; //!< Used to load/save actual project
 };
 
 #endif // !__MAIN_WINDOW_HPP__

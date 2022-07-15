@@ -10,9 +10,14 @@
 **** Multiple persistance system
 - [ ] Sqlite first ?
 **** Project-file serialization
+:LOGBOOK:
+CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
+:END:
      As an ini file read by boost or a binary file or a zip directory?
      Must be versionnable with a magic number to keep opening old files.
 - [X] Cmake search for boost_serialization
+- [ ] Implement ProjectFile::setFilename() and unit test
+- [ ] ProjectFile may handle dirty flag so it can be tested
 - [ ] Create the ProjectFile class using
   https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     

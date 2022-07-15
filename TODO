@@ -6,7 +6,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Update version and revision in CMakeLists.txt
 
 * v0.0.0-2 (05 Jul. 2022 - ???)
-- (7) Cmake search for and link editor executable with boost serialzation
+- (8) Start to implement ProjectFile and its filename member
+- Cmake search for and link editor executable with boost serialzation
 - Open menu item shows a file dialog
 - Add a file/quit menu item
 - Add MainWindow's open callback

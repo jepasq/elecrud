@@ -19,22 +19,36 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 include(FindPkgConfig)
 pkg_check_modules(LIBS REQUIRED fox>=1.6)
+
+find_package(Boost COMPONENTS serialization REQUIRED)
+
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(EDITOR_SRC
   src/editor/Elecrud.cpp
   src/editor/MainWindow.cpp
 )
-find_package(Boost COMPONENTS serialization REQUIRED)
+
+# File library
+add_library(elecrud-file SHARED
+  src/libfile/ProjectFile.cpp)
+target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES})
+
+
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
-target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
+target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
+
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
-  ${PROJECT_BINARY_DIR})
+  ${PROJECT_BINARY_DIR} src)
 
 # Unit tests
 find_package(Boost COMPONENTS unit_test_framework serialization REQUIRED) # filesystem system 
 add_executable(tests src/tests.cpp
   ${EDITOR_SRC}
+  src/libfile/ProjectFile_Test.cpp
+  
   src/editor/MainWindow_Test.cpp)
-target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
+target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
+target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
+  ${PROJECT_BINARY_DIR} src)
 add_custom_target(check COMMAND tests) # Add the `make check` command
