@@ -19,20 +19,20 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 include(FindPkgConfig)
 pkg_check_modules(LIBS REQUIRED fox>=1.6)
-
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(EDITOR_SRC
   src/editor/Elecrud.cpp
   src/editor/MainWindow.cpp
 )
+find_package(Boost COMPONENTS serialization REQUIRED)
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
-target_link_libraries(elecrud ${LIBS_LIBRARIES})
+target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR})
 
 # Unit tests
-find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
+find_package(Boost COMPONENTS unit_test_framework serialization REQUIRED) # filesystem system 
 add_executable(tests src/tests.cpp
   ${EDITOR_SRC}
   src/editor/MainWindow_Test.cpp)

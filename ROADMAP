@@ -3,12 +3,18 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** Must be multi-user
+- [ ] While the admin user can be crated in fox editor, other users may be
+  created by admin user
 **** First version of the to-be-generated electron app
 **** Multiple persistance system
 - [ ] Sqlite first ?
 **** Project-file serialization
      As an ini file read by boost or a binary file or a zip directory?
      Must be versionnable with a magic number to keep opening old files.
+- [X] Cmake search for boost_serialization
+- [ ] Create the ProjectFile class using
+  https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 **** TODO Editor GUI setup
      :LOGBOOK:
