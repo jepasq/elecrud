@@ -17,3 +17,6 @@ or on arch :
 	make
 	./electrud
 
+## src/app
+
+This directory contains the skeleton of the to-be-generated application.

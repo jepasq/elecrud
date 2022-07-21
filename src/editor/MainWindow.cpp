@@ -38,17 +38,14 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   mbFile(nullptr),
   mtFile(nullptr),
   filename(""),
-  dirty(false)
+  dirty(false),
+  mcGen(nullptr),
+  mcRun(nullptr)
 {
   mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
   auto filemenu=new FXMenuPane(this);
   mtFile = new FX::FXMenuTitle(mbFile, "&File", nullptr,filemenu);
 
-  /*  new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
-		    getApp()->newicon,this,ID_NEW);
-  new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
-		    getApp()->openicon,this,ID_OPEN);
-  */
   new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
 		    nullptr,this,ID_NEW);
   new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
@@ -63,6 +60,20 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   
   new FXMenuSeparator(filemenu);
   new FXMenuCommand(filemenu,tr("&Quit\tCtl-Q\tQuit program."),/*getApp()->quiticon*/nullptr,getApp(),Elecrud::ID_QUIT);
+
+
+
+  auto mbProject=new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
+  auto prjMenu=new FXMenuPane(this);
+  auto mtFile = new FX::FXMenuTitle(mbFile, "&Project", nullptr,prjMenu);
+
+  mcGen = new FXMenuCommand(prjMenu,
+	       tr("&Generate...\tCtl-N\tGenerate the electron app."),
+				 nullptr,this,ID_NEW);
+  auto mcRun = new FXMenuCommand(prjMenu,tr("&Run...\tCtl-O\tGenerate and run the app."),
+		    nullptr,this,ID_OPEN);
+
+  setRunnableProject(false);
 }
 
 /** The main window destructor
@@ -102,6 +113,7 @@ long
 MainWindow::onFileOpen(FXObject*,FXSelector,void*)
 {
   FXString filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
+
   return 1;
 }
 
@@ -115,4 +127,22 @@ long
 MainWindow::onFileSaveAs(FXObject*,FXSelector,void*)
 {
   return 1;
+}
+
+/** Set the generate/run menu enable/disable status
+ *
+ */
+void
+MainWindow::setRunnableProject(bool runnable)
+{
+  if (runnable)
+    {
+      mcGen->enable();
+      mcRun->enable();
+    }
+  else
+    {
+      mcGen->disable();
+      mcRun->disable();
+    }
 }

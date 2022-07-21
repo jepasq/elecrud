@@ -47,6 +47,8 @@ public:
 protected:
   MainWindow();
 
+  void setRunnableProject(bool);
+  
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
   FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
@@ -54,6 +56,10 @@ private:
   FX::FXString     filename; //!< The current project filename or an empty one.
   bool             dirty;    //!< Does the actual document need a save ?
 
+  // Used to set them to disable if we can't generate project
+  FXMenuCommand* mcGen; //!< Then Project>Generate menu command
+  FXMenuCommand* mcRun; //!< Then Project>Run menu command
+  
   ProjectFile      projectFile; //!< Used to load/save actual project
 };
 
