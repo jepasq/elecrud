@@ -7,6 +7,7 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
 
 * v0.0.0-3 (15 Jul. 2022 - ???)
-- (3) Fix startup segfault dur to MainWindow overriden pointer member
+- (4) Add a MainWindow's status bar
+- Fix startup segfault dur to MainWindow overriden pointer member
 - Add the project menu pane to MainWindow
 - Implement ProjectFile::setFilename() and unit test

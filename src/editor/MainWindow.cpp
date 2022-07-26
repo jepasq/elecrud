@@ -74,6 +74,10 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 			    tr("&Run...\tCtl-O\tGenerate and run the app."),
 			    nullptr,this,ID_OPEN);
 
+
+  auto statusbar = new FXStatusBar(this,LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X|
+				   STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
+  
   setRunnableProject(false);
 }
 
