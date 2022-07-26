@@ -69,9 +69,10 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 
   mcGen = new FXMenuCommand(prjMenu,
 	       tr("&Generate...\tCtl-N\tGenerate the electron app."),
-				 nullptr,this,ID_NEW);
-  auto mcRun = new FXMenuCommand(prjMenu,tr("&Run...\tCtl-O\tGenerate and run the app."),
-		    nullptr,this,ID_OPEN);
+			    nullptr,this,ID_NEW);
+  mcRun = new FXMenuCommand(prjMenu,
+			    tr("&Run...\tCtl-O\tGenerate and run the app."),
+			    nullptr,this,ID_OPEN);
 
   setRunnableProject(false);
 }
@@ -95,8 +96,10 @@ MainWindow::create()
 {
   // Create the windows
   FXMainWindow::create();
+
   // Make the main window appear
   show(PLACEMENT_SCREEN);
+
 }
 
 /** New file menu command callback

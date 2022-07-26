@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-07-26 mar. 09:13]--[2022-07-26 mar. 09:25] =>  0:12
      CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
      CLOCK: [2022-07-13 mer. 03:57]--[2022-07-13 mer. 04:07] =>  0:10
      CLOCK: [2022-07-11 lun. 03:14]--[2022-07-11 lun. 03:42] =>  0:28
@@ -47,6 +48,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Open/Save must show a FXFileDialog instance
 - [X] Add Project/Generate and Run menus
   Project may be disabled 
+- [X] We have a segfault at startup
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
 - [ ] Must keep in sync window title with filename and a star indicating a
   dirty document
