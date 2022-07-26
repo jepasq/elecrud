@@ -1,0 +1,19 @@
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+@media (prefers-color-scheme: dark) {
+  body {           background: #333; color: white; }
+  .modal-content { background: #555; color: white; }
+}
+
+@media (prefers-color-scheme: light) {
+  body {           background: #ddd; color: black; }
+  .modal-content { background: #bbb; color: black; }
+}
+
+.modal.in {
+    opacity: 0.9;
+}
+
+.modal-dialog {
+    max-width: 85%;
+}

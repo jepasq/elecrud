@@ -27,7 +27,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 :END:
 - [X] Maybe something like daily chores in its very early state
   Started in src/app
-- [ ] Must be added to git repo  
+- [X] Must be added to git repo  
 **** TODO Editor GUI setup
      :LOGBOOK:
      CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
