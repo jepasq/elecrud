@@ -6,9 +6,6 @@
 **** Must be multi-user
 - [ ] While the admin user can be crated in fox editor, other users may be
   created by admin user
-**** First version of the to-be-generated electron app
-- [ ] Maybe something like daily chores in its very early state
-  Started in src/app
 **** Multiple persistance system
 - [ ] Sqlite first ?
 **** Project-file serialization
@@ -24,6 +21,13 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [ ] Create the ProjectFile class using
   https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
+**** TODO First version of the to-be-generated electron app
+:LOGBOOK:
+CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
+:END:
+- [X] Maybe something like daily chores in its very early state
+  Started in src/app
+- [ ] Must be added to git repo  
 **** TODO Editor GUI setup
      :LOGBOOK:
      CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
@@ -69,7 +73,7 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
   - [X] For example for editor/MainTest (currently a tutorial test)
 - [X] Added a first workflow test file in .github
 - [X] May use  https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml
-- [ ] We have a dependency error =no packing 'fox' found=
+- [X] We have a dependency error =no packing 'fox' found=
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
 CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25
