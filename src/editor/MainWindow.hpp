@@ -48,11 +48,13 @@ protected:
   MainWindow();
 
   void setRunnableProject(bool);
+  void updateTitle(void);
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
   FX::FXMenuTitle* mtFile;   //!< The File menubar's title 
 
+  FX::FXString     titlebase;//!< Window title got via constructor
   FX::FXString     filename; //!< The current project filename or an empty one.
   bool             dirty;    //!< Does the actual document need a save ?
 
