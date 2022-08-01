@@ -55,6 +55,8 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must keep in sync window title with filename and a star indicating a
   dirty document
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
+- [ ] Don't know why but with boost 1.65.1 we have to add a main function
+  to avoid a linker error. I fear it can make CI fail btw.
 - [ ] Menu icons are created using `reswrap`. it should be called from cmake
   - [ ] Adie has a quit icon
 - [ ] Should have a log panel when we try to generate/run project
