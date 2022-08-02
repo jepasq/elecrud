@@ -3,6 +3,7 @@
 #include "Elecrud.hpp"
 
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -37,6 +38,7 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480),
   mbFile(nullptr),
   mtFile(nullptr),
+  titlebase(windowTitle),
   filename(""),
   dirty(false),
   mcGen(nullptr),
@@ -79,6 +81,7 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 				   STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
   
   setRunnableProject(false);
+  updateTitle();
 }
 
 /** The main window destructor
@@ -120,6 +123,7 @@ long
 MainWindow::onFileOpen(FXObject*,FXSelector,void*)
 {
   FXString filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
+  updateTitle();
 
   return 1;
 }
@@ -127,6 +131,7 @@ MainWindow::onFileOpen(FXObject*,FXSelector,void*)
 long
 MainWindow::onFileSave(FXObject*,FXSelector,void*)
 {
+  updateTitle();
   return 1;
 }
 
@@ -152,4 +157,24 @@ MainWindow::setRunnableProject(bool runnable)
       mcGen->disable();
       mcRun->disable();
     }
+}
+
+/** Update the window title with project save status
+  *
+  */
+void
+MainWindow::updateTitle(void)
+{
+  FXString title = "";
+  if (filename.empty())
+    title += "<Untitled>";
+  else
+    title += filename.text();
+
+  if (dirty)
+    title += "*";
+    
+  title += " - ";
+  title += titlebase.text();
+  this->setTitle(title);  
 }

@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-08-01 lun. 06:13]--[2022-08-01 lun. 06:39] =>  0:26
      CLOCK: [2022-07-26 mar. 09:29]--[2022-07-26 mar. 09:32] =>  0:03
      CLOCK: [2022-07-26 mar. 09:13]--[2022-07-26 mar. 09:25] =>  0:12
      CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
@@ -51,9 +52,11 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   Project may be disabled 
 - [X] We have a segfault at startup
 - [X] Must add a status bar
-- [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
-- [ ] Must keep in sync window title with filename and a star indicating a
+- [X] Must keep in sync window title with filename and a star indicating a
   dirty document
+- [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
+- [ ] Don't know why but with boost 1.65.1 we have to add a main function
+  to avoid a linker error. I fear it can make CI fail btw.
 - [ ] Menu icons are created using `reswrap`. it should be called from cmake
   - [ ] Adie has a quit icon
 - [ ] Should have a log panel when we try to generate/run project
@@ -90,6 +93,17 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot', arguments='"/home/
   rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
   graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE Unit tests and CI setup
+     :LOGBOOK:
+     CLOCK: [2022-07-15 ven. 06:23]--[2022-07-15 ven. 06:30] =>  0:07
+     CLOCK: [2022-06-04 sam. 09:41]--[2022-06-04 sam. 10:08] =>  0:27
+     :END:
+- [X] Trying with boost.Test so we have access to all Boost-related libraries
+- [X] Write our first test
+  - [X] For example for editor/MainTest (currently a tutorial test)
+- [X] Added a first workflow test file in .github
+- [X] May use  https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml
+- [X] We have a dependency error =no packing 'fox' found=
 **** DONE Correct project setup
      :LOGBOOK:
      CLOCK: [2022-04-21 jeu. 22:26]--[2022-04-21 jeu. 22:37] =>  0:11
