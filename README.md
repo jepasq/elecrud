@@ -10,7 +10,7 @@ On debian-based distributions :
 
 or on arch :
 
-	sudo pacman -S fox boost
+	sudo pacman -S cmake pkg-config fox boost 
 
 	mkdir build
 	cmake ..

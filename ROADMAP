@@ -68,6 +68,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
+     CLOCK: [2022-08-02 mar. 12:13]--[2022-08-02 mar. 12:30] =>  0:17
      CLOCK: [2022-07-15 ven. 06:23]--[2022-07-15 ven. 06:30] =>  0:07
      CLOCK: [2022-06-04 sam. 09:41]--[2022-06-04 sam. 10:08] =>  0:27
      :END:
