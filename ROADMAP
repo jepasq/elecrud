@@ -28,12 +28,14 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Maybe something like daily chores in its very early state
   Started in src/app
 - [X] Must be added to git repo  
-**** Continue MainWindow and Icon menu work
+**** TODO Continue MainWindow and Icon menu work
+:LOGBOOK:
+CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
+:END:
+- [X] Menu icons are created using `reswrap`. it should be called from cmake
+- [ ] Start to use icons like adie does
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
-- [ ] Don't know why but with boost 1.65.1 we have to add a main function
-  to avoid a linker error. I fear it can make CI fail btw.
-- [ ] Menu icons are created using `reswrap`. it should be called from cmake
-  - [ ] Adie has a quit icon
+- [ ] Adie has a quit icon, stole this
 - [ ] Should have a log panel when we try to generate/run project
   If we use a image-based menu, it could be the last and we can auto select
   it when trying to generate or run
@@ -52,6 +54,8 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Added a first workflow test file in .github
 - [X] May use  https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml
 - [X] We have a dependency error =no packing 'fox' found=
+- [ ] Don't know why but with boost 1.65.1 we have to add a main function
+  to avoid a linker error. I fear it can make CI fail btw.
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
 CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25

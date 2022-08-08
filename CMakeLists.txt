@@ -52,3 +52,15 @@ target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR} src)
 add_custom_target(check COMMAND tests) # Add the `make check` command
+
+# Reswrap command to handle FX icons
+set(ICONS
+  ../media/icons/new_gif.gif
+  ../media/icons/open_gif.gif
+  )
+add_custom_command(OUTPUT icons.hpp
+  MAIN_DEPENDENCY ${ICONS}
+  COMMAND reswrap -o icons.hpp ${ICONS}
+  COMMENT "Handling icons with `reswrap` FX tool"
+  )
+add_custom_target(run ALL DEPENDS icons.hpp)
