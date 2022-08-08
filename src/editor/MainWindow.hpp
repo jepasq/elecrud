@@ -25,11 +25,12 @@ public:
     ID_CANVAS=FXMainWindow::ID_LAST,
     ID_CLEAR,
 
-    ID_NEW,  // Creating a new project
-    ID_OPEN,  // Open an existing project
+    ID_NEW,   //!< Creating a new project
+    ID_OPEN,  //!< Open an existing project
     ID_SAVE,
     ID_SAVEAS,
     
+    ID_ICON,  //!< An icon from isonlist has been clicked
     
     ID_LAST,
     };
@@ -43,6 +44,9 @@ public:
   long onFileOpen(FXObject*,FXSelector,void*);
   long onFileSave(FXObject*,FXSelector,void*);
   long onFileSaveAs(FXObject*,FXSelector,void*);
+
+  long onIconClicked(FXObject*,FXSelector,void*);
+
   
 protected:
   MainWindow();

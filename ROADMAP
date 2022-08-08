@@ -28,37 +28,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Maybe something like daily chores in its very early state
   Started in src/app
 - [X] Must be added to git repo  
-**** TODO Editor GUI setup
-     :LOGBOOK:
-     CLOCK: [2022-08-08 lun. 09:01]--[2022-08-08 lun. 09:25] =>  0:24
-     CLOCK: [2022-08-01 lun. 06:13]--[2022-08-01 lun. 06:39] =>  0:26
-     CLOCK: [2022-07-26 mar. 09:29]--[2022-07-26 mar. 09:32] =>  0:03
-     CLOCK: [2022-07-26 mar. 09:13]--[2022-07-26 mar. 09:25] =>  0:12
-     CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
-     CLOCK: [2022-07-13 mer. 03:57]--[2022-07-13 mer. 04:07] =>  0:10
-     CLOCK: [2022-07-11 lun. 03:14]--[2022-07-11 lun. 03:42] =>  0:28
-     CLOCK: [2022-07-07 jeu. 06:01]--[2022-07-07 jeu. 06:11] =>  0:10
-     CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
-     CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
-     CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
-     CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
-     :END:
-- [X] First FOX window must be shown
-- [X] Should show version from config.h in window title
-- [X] We need at least a File menu to handle open/save/close
-  Add first menu items
-  - [X] Add a Exit menu item
-- [X] Open/Save must show a FXFileDialog instance
-- [X] Add Project/Generate and Run menus
-  Project may be disabled 
-- [X] We have a segfault at startup
-- [X] Must add a status bar
-- [X] Must keep in sync window title with filename and a star indicating a
-  dirty document
-- [ ] A image-based menu to edit the project
-  http://fox-toolkit.org/screenshots/iims1.png
-  - [ ] Find something that can be used as example in
-    https://github.com/gogglesguy/fox. I think it's an FXIconList widget
+**** Continue MainWindow and Icon menu work
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
 - [ ] Don't know why but with boost 1.65.1 we have to add a main function
   to avoid a linker error. I fear it can make CI fail btw.
@@ -94,6 +64,39 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot', arguments='"/home/
   rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
   graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE Editor GUI setup
+     :LOGBOOK:
+     CLOCK: [2022-08-08 lun. 09:29]--[2022-08-08 lun. 09:52] =>  0:23
+     CLOCK: [2022-08-08 lun. 09:01]--[2022-08-08 lun. 09:25] =>  0:24
+     CLOCK: [2022-08-01 lun. 06:13]--[2022-08-01 lun. 06:39] =>  0:26
+     CLOCK: [2022-07-26 mar. 09:29]--[2022-07-26 mar. 09:32] =>  0:03
+     CLOCK: [2022-07-26 mar. 09:13]--[2022-07-26 mar. 09:25] =>  0:12
+     CLOCK: [2022-07-21 jeu. 07:03]--[2022-07-21 jeu. 07:24] =>  0:21
+     CLOCK: [2022-07-13 mer. 03:57]--[2022-07-13 mer. 04:07] =>  0:10
+     CLOCK: [2022-07-11 lun. 03:14]--[2022-07-11 lun. 03:42] =>  0:28
+     CLOCK: [2022-07-07 jeu. 06:01]--[2022-07-07 jeu. 06:11] =>  0:10
+     CLOCK: [2022-07-07 jeu. 04:46]--[2022-07-07 jeu. 05:22] =>  0:36
+     CLOCK: [2022-07-06 mer. 01:03]--[2022-07-06 mer. 01:24] =>  0:21
+     CLOCK: [2022-07-05 mar. 02:59]--[2022-07-05 mar. 03:03] =>  0:04
+     CLOCK: [2022-04-13 mer. 21:28]--[2022-04-13 mer. 21:45] =>  0:17
+     :END:
+- [X] First FOX window must be shown
+- [X] Should show version from config.h in window title
+- [X] We need at least a File menu to handle open/save/close
+  Add first menu items
+  - [X] Add a Exit menu item
+- [X] Open/Save must show a FXFileDialog instance
+- [X] Add Project/Generate and Run menus
+  Project may be disabled 
+- [X] We have a segfault at startup
+- [X] Must add a status bar
+- [X] Must keep in sync window title with filename and a star indicating a
+  dirty document
+- [X] A image-based menu to edit the project
+  http://fox-toolkit.org/screenshots/iims1.png
+  - [X] Find something that can be used as example in
+    https://github.com/gogglesguy/fox. I think it's an FXIconList widget
+- [X] Add a 'Project' item to iconlist
 **** DONE Unit tests and CI setup
      :LOGBOOK:
      CLOCK: [2022-07-15 ven. 06:23]--[2022-07-15 ven. 06:30] =>  0:07

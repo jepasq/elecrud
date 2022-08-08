@@ -16,6 +16,8 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_OPEN,  MainWindow::onFileOpen),
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVE,  MainWindow::onFileSave),
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVEAS,MainWindow::onFileSaveAs),
+
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -83,8 +85,12 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 
   FXSplitter* splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
   
-  auto ilMenu = new FXIconList (splitter, nullptr, 0, ICONLIST_NORMAL|FX::ICONLIST_SINGLESELECT );
+  auto ilMenu = new FXIconList (splitter, this, ID_ICON,
+				ICONLIST_BIG_ICONS|FX::ICONLIST_SINGLESELECT );
 
+  ilMenu->appendItem(new FXIconItem("Project"));
+
+  
   new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);
   
   setRunnableProject(false);
@@ -185,3 +191,13 @@ MainWindow::updateTitle(void)
   title += titlebase.text();
   this->setTitle(title);  
 }
+
+long
+MainWindow::onIconClicked(FXObject*,FXSelector,void* idx)
+{
+  
+  
+  cout << "Icon clicked :  " << idx << endl;
+  return 1;
+}
+

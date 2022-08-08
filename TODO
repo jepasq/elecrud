@@ -7,7 +7,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
 
 * v0.0.0-3 (15 Jul. 2022 - ???)
-- (6) Add a FXIconList based menu test
+- (7) Add project item to cin list-based menu
+- Add a FXIconList based menu test
 - MainWindow::updateTitle() implementation
 - Add a MainWindow's status bar
 - Fix startup segfault dur to MainWindow overriden pointer member
