@@ -5,13 +5,7 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     (8 items per revision)
     Update version and revision in CMakeLists.txt
     Create a new git tag and pull --tags for each revision commit
+    SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.0-3 (15 Jul. 2022 - ???)
-- (8) Add a custom cmake command to handle icons using reswrap FX tool
-- Add project item to cin list-based menu
-- Add a FXIconList based menu test
-- MainWindow::updateTitle() implementation
-- Add a MainWindow's status bar
-- Fix startup segfault dur to MainWindow overriden pointer member
-- Add the project menu pane to MainWindow
-- Implement ProjectFile::setFilename() and unit test
+* v0.0.0-4 (08 Aug. 2022 - ???) SLCO ???
+

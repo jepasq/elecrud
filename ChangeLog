@@ -1,3 +1,13 @@
+* v0.0.0-3 (15 Jul. 2022 - 08 Aug. 2022) SLOC 537
+- Add a custom cmake command to handle icons using reswrap FX tool
+- Add project item to cin list-based menu
+- Add a FXIconList based menu test
+- MainWindow::updateTitle() implementation
+- Add a MainWindow's status bar
+- Fix startup segfault dur to MainWindow overriden pointer member
+- Add the project menu pane to MainWindow
+- Implement ProjectFile::setFilename() and unit test
+
 * v0.0.0-2 (05 Jul. 2022 - 15 Jul. 2022)
 - Start to implement ProjectFile and its filename member
 - Cmake search for and link editor executable with boost serialzation
