@@ -79,6 +79,13 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
 
   auto statusbar = new FXStatusBar(this,LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X|
 				   STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
+
+
+  FXSplitter* splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
+  
+  auto ilMenu = new FXIconList (splitter, nullptr, 0, ICONLIST_NORMAL|FX::ICONLIST_SINGLESELECT );
+
+  new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);
   
   setRunnableProject(false);
   updateTitle();

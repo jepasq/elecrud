@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Editor GUI setup
      :LOGBOOK:
+     CLOCK: [2022-08-08 lun. 09:01]--[2022-08-08 lun. 09:25] =>  0:24
      CLOCK: [2022-08-01 lun. 06:13]--[2022-08-01 lun. 06:39] =>  0:26
      CLOCK: [2022-07-26 mar. 09:29]--[2022-07-26 mar. 09:32] =>  0:03
      CLOCK: [2022-07-26 mar. 09:13]--[2022-07-26 mar. 09:25] =>  0:12
@@ -54,6 +55,10 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must add a status bar
 - [X] Must keep in sync window title with filename and a star indicating a
   dirty document
+- [ ] A image-based menu to edit the project
+  http://fox-toolkit.org/screenshots/iims1.png
+  - [ ] Find something that can be used as example in
+    https://github.com/gogglesguy/fox. I think it's an FXIconList widget
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
 - [ ] Don't know why but with boost 1.65.1 we have to add a main function
   to avoid a linker error. I fear it can make CI fail btw.
@@ -62,10 +67,6 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [ ] Should have a log panel when we try to generate/run project
   If we use a image-based menu, it could be the last and we can auto select
   it when trying to generate or run
-- [ ] A image-based menu to edit the project
-  http://fox-toolkit.org/screenshots/iims1.png
-  - [ ] Find something that can be used as example in
-    https://github.com/gogglesguy/fox. I think it's an FXIconList widget
 - [ ] First panel is the project info one (name, author, version etc...)
 - [ ] FX has a thing for recent files
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
