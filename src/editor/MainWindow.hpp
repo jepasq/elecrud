@@ -6,6 +6,8 @@
 
 #include "libfile/ProjectFile.hpp"
 
+#include "Elecrud.hpp"
+
 /** The main editor window
   *
   * If current \c filename is an empty string, 
@@ -18,7 +20,7 @@ class MainWindow : public FXMainWindow
 
 public:
   // MainWindow's constructor
-  MainWindow(FXApp* a, const FX::FXString& windowTitle);
+  MainWindow(Elecrud* a, const FX::FXString& windowTitle);
 
   // Messages for our class
   enum{

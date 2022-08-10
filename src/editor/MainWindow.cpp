@@ -5,6 +5,8 @@
 #include <iostream>
 #include <sstream>
 
+#include "icons.hpp"
+
 using namespace std;
 
 // Message Map for the Scribble Window class
@@ -36,8 +38,8 @@ MainWindow::MainWindow()
   * \param windowTitle The MainWindow's title.
   *
   */
-MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
-  FXMainWindow(a, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480),
+MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
+  FXMainWindow(app, windowTitle, NULL, NULL, DECOR_ALL, 0, 0, 640, 480),
   mbFile(nullptr),
   mtFile(nullptr),
   titlebase(windowTitle),
@@ -51,7 +53,7 @@ MainWindow::MainWindow(FXApp* a, const FX::FXString& windowTitle):
   mtFile = new FX::FXMenuTitle(mbFile, "&File", nullptr,filemenu);
 
   new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
-		    nullptr,this,ID_NEW);
+		    app->newicon,this,ID_NEW);
   new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
 		    nullptr,this,ID_OPEN);
 

@@ -1,5 +1,9 @@
 #include "Elecrud.hpp"
 
+//#include <FXGIFIcon.h>
+
+#include "icons.hpp"
+
 // Map
 FXDEFMAP(Elecrud) ElecrudMap[]={
     FXMAPFUNC(SEL_SIGNAL,Elecrud::ID_QUIT,Elecrud::onQuit),
@@ -26,6 +30,9 @@ Elecrud::Elecrud(const FXString& name):
   /*  newicon=new FXGIFIcon(this,new_gif,0,IMAGE_ALPHAGUESS);
   openicon=new FXGIFIcon(this,open_gif);
   */
+
+  newicon = new FXGIFIcon(this, new_gif);
+  
 }
 
 /** Needed destructor overriding FXApp's one */

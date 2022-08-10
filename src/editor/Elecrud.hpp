@@ -25,7 +25,8 @@ private:
   Elecrud(){}              //!< Forbidden default constructor
   Elecrud(const Elecrud&); //!< Forbidden copy constructor
   Elecrud& operator=(const Elecrud&); //!< Forbidden affectation operator
-  
+
+public:
   FXIcon* newicon;  //!< The File/New icon
   FXIcon* openicon; //!< The File/Open icon
 };

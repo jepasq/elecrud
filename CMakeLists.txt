@@ -35,10 +35,11 @@ add_library(elecrud-file SHARED
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES})
 
 
+
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
-
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
+  ${LIBS_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR} src)
 
 # Unit tests
