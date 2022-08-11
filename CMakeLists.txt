@@ -34,8 +34,6 @@ add_library(elecrud-file SHARED
   src/libfile/ProjectFile.cpp)
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES})
 
-
-
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
@@ -43,7 +41,7 @@ target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR} src)
 
 # Unit tests
-find_package(Boost COMPONENTS unit_test_framework serialization REQUIRED) # filesystem system 
+find_package(Boost COMPONENTS unit_test_framework serialization REQUIRED)
 add_executable(tests src/tests.cpp
   ${EDITOR_SRC}
   src/libfile/ProjectFile_Test.cpp
@@ -52,7 +50,7 @@ add_executable(tests src/tests.cpp
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR} src)
-add_custom_target(check COMMAND tests) # Add the `make check` command
+add_custom_target(check COMMAND tests DEPENDS icons)
 
 # Reswrap command to handle FX icons
 set(ICONS
@@ -64,4 +62,5 @@ add_custom_command(OUTPUT icons.hpp
   COMMAND reswrap -o icons.hpp ${ICONS}
   COMMENT "Handling icons with `reswrap` FX tool"
   )
-add_custom_target(run ALL DEPENDS icons.hpp)
+add_custom_target(icons ALL DEPENDS icons.hpp)
+
