@@ -8,5 +8,6 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.0-4 (08 Aug. 2022 - ???) SLCO ???
-- (2) Makefile's check rule now depends the icons one to fix CI
+- (3) Make the default Makefile rule depends on icons one
+- Makefile's check rule now depends the icons one to fix CI
 - Add File/New menu icon

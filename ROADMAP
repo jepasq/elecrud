@@ -50,6 +50,7 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
+     CLOCK: [2022-08-11 jeu. 12:57]--[2022-08-11 jeu. 13:19] =>  0:22
      CLOCK: [2022-08-11 jeu. 12:26]--[2022-08-11 jeu. 12:42] =>  0:16
      CLOCK: [2022-08-02 mar. 12:13]--[2022-08-02 mar. 12:30] =>  0:17
      CLOCK: [2022-07-15 ven. 06:23]--[2022-07-15 ven. 06:30] =>  0:07
@@ -63,6 +64,8 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
 - [X] We have a dependency error =no packing 'fox' found=
 - [X] CI actually fails because it can't find icons.hpp
   Because the =make check= rule doesn't depends on icons.hpp one
+- [X] While check runs icons automatically, =make= doesn't
+  It makes the CI fail again.
 - [ ] Don't know why but with boost 1.65.1 we have to add a main function
   to avoid a linker error. I fear it can make CI fail btw.
 **** TODO Keep improving doxygen documentation
