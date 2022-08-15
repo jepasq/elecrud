@@ -59,6 +59,7 @@ add_custom_target(check COMMAND tests DEPENDS icons)
 set(ICONS
   ../media/icons/new_gif.gif
   ../media/icons/open_gif.gif
+  ../media/icons/project_big.gif
   )
 add_custom_command(OUTPUT icons.hpp
   MAIN_DEPENDENCY ${ICONS}

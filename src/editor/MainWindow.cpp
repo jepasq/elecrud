@@ -90,7 +90,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   auto ilMenu = new FXIconList (splitter, this, ID_ICON,
 				ICONLIST_BIG_ICONS|FX::ICONLIST_SINGLESELECT );
 
-  ilMenu->appendItem(new FXIconItem("Project"));
+  ilMenu->appendItem(new FXIconItem("Project", app->projecticon_big, nullptr));
 
   
   new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);

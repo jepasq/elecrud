@@ -33,7 +33,9 @@ Elecrud::Elecrud(const FXString& name):
 
   newicon  = new FXGIFIcon(this, new_gif);
   openicon = new FXGIFIcon(this, open_gif);
-  
+
+
+  projecticon_big = new FXGIFIcon(this, project_big);
 }
 
 /** Needed destructor overriding FXApp's one */
