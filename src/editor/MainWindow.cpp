@@ -55,7 +55,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXMenuCommand(filemenu,tr("&New...\tCtl-N\tCreate new document."),
 		    app->newicon,this,ID_NEW);
   new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
-		    nullptr,this,ID_OPEN);
+		    app->openicon,this,ID_OPEN);
 
   auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
 				nullptr,this,ID_SAVE);

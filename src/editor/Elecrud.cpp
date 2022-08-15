@@ -31,7 +31,8 @@ Elecrud::Elecrud(const FXString& name):
   openicon=new FXGIFIcon(this,open_gif);
   */
 
-  newicon = new FXGIFIcon(this, new_gif);
+  newicon  = new FXGIFIcon(this, new_gif);
+  openicon = new FXGIFIcon(this, open_gif);
   
 }
 
