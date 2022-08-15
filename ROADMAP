@@ -50,6 +50,7 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
+     CLOCK: [2022-08-16 mar. 00:37]--[2022-08-16 mar. 00:40] =>  0:03
      CLOCK: [2022-08-11 jeu. 12:57]--[2022-08-11 jeu. 13:19] =>  0:22
      CLOCK: [2022-08-11 jeu. 12:26]--[2022-08-11 jeu. 12:42] =>  0:16
      CLOCK: [2022-08-02 mar. 12:13]--[2022-08-02 mar. 12:30] =>  0:17
@@ -66,6 +67,9 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
   Because the =make check= rule doesn't depends on icons.hpp one
 - [X] While check runs icons automatically, =make= doesn't
   It makes the CI fail again.
+
+- [ ] Can't correctly make the default make rule depends on icons so
+  for insta,ce, the .github worflow has to run =make icons= manually
 - [ ] Don't know why but with boost 1.65.1 we have to add a main function
   to avoid a linker error. I fear it can make CI fail btw.
 **** TODO Keep improving doxygen documentation
