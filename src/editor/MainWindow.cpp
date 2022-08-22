@@ -153,15 +153,31 @@ MainWindow::onFileOpen(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** The File/Save menu item callback
+  *
+  * \param o Unused.
+  * \param s Unused.
+  * \param d Unused.
+  *
+  * \return Always returns 1.
+  */
 long
-MainWindow::onFileSave(FXObject*,FXSelector,void*)
+MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
 {
   updateTitle();
   return 1;
 }
 
+/** The File/Save as menu item callback
+  *
+  * \param o Unused.
+  * \param s Unused.
+  * \param d Unused.
+  *
+  * \return Always returns 1.
+  */
 long
-MainWindow::onFileSaveAs(FXObject*,FXSelector,void*)
+MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 {
   return 1;
 }
