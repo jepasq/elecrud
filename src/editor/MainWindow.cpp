@@ -86,17 +86,24 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 
 
   FXSplitter* splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
+
+  new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);
+
   
   auto ilMenu = new FXIconList (splitter, this, ID_ICON,
 				ICONLIST_BIG_ICONS|FX::ICONLIST_SINGLESELECT );
 
   ilMenu->appendItem(new FXIconItem("Project", app->projecticon_big, nullptr));
   ilMenu->appendItem(new FXIconItem("Collections", app->collicon_big, nullptr));
-
   ilMenu->setWidth(120);
   
+  // Project details pane
+  //  projectPane = new FXFrame(splitter);
+  projectPane = new FXHorizontalFrame(splitter);
+  new FXLabel(projectPane, "Project details");
   
-  new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);
+  collectPane  = new FXHorizontalFrame(splitter);
+  new FXLabel(collectPane, "Collections details");
   
   setRunnableProject(false);
   updateTitle();
@@ -200,8 +207,19 @@ MainWindow::updateTitle(void)
 long
 MainWindow::onIconClicked(FXObject*,FXSelector,void* idx)
 {
+  unsigned long i = (unsigned long)idx;
   
-  
+  if (i == 0)
+    {
+      projectPane->show();
+      collectPane->hide();
+    }
+  else
+    {
+      projectPane->hide();
+      collectPane->show();
+    }
+    
   cout << "Icon clicked :  " << idx << endl;
   return 1;
 }

@@ -69,6 +69,9 @@ private:
   FXMenuCommand* mcRun; //!< Then Project>Run menu command
   
   ProjectFile      projectFile; //!< Used to load/save actual project
+
+  FXHorizontalFrame* projectPane;  //!< The project details panel
+  FXHorizontalFrame* collectPane;  //!< The project details panel
 };
 
 #endif // !__MAIN_WINDOW_HPP__

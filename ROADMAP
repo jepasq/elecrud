@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Continue MainWindow and Icon menu work
 :LOGBOOK:
+CLOCK: [2022-08-22 lun. 14:33]--[2022-08-22 lun. 15:08] =>  0:35
 CLOCK: [2022-08-22 lun. 14:19]--[2022-08-22 lun. 14:23] =>  0:04
 CLOCK: [2022-08-16 mar. 01:41]--[2022-08-16 mar. 01:48] =>  0:07
 CLOCK: [2022-08-16 mar. 01:18]--[2022-08-16 mar. 01:34] =>  0:16
@@ -49,7 +50,8 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
 - [-] We'll have to find a second iconlist icon (maybe collection)
   and work on the switch of roght-side panel
   - [X] Add collections wityh big icon
-  - [ ] Create two diffirent panel to edit project properties and collections
+  - [X] Create two diffirent panel to edit project properties and collections
+  - [ ] Switch between these two panes
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
