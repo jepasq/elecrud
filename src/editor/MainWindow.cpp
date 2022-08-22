@@ -91,6 +91,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 				ICONLIST_BIG_ICONS|FX::ICONLIST_SINGLESELECT );
 
   ilMenu->appendItem(new FXIconItem("Project", app->projecticon_big, nullptr));
+  ilMenu->appendItem(new FXIconItem("Collections", app->collicon_big, nullptr));
+
   ilMenu->setWidth(120);
   
   

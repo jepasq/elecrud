@@ -31,6 +31,7 @@ public:
   FXIcon* openicon; //!< The File/Open icon
 
   FXIcon* projecticon_big; //!< The File/Open icon
+  FXIcon* collicon_big; //!< The File/Open icon
 
 };
 #endif // !__ELECRUD_HPP__

@@ -60,6 +60,7 @@ set(ICONS
   ../media/icons/new_gif.gif
   ../media/icons/open_gif.gif
   ../media/icons/project_big.gif
+  ../media/icons/coll_big.gif
   )
 add_custom_command(OUTPUT icons.hpp
   MAIN_DEPENDENCY ${ICONS}
