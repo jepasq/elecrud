@@ -37,7 +37,8 @@ Elecrud::Elecrud(const FXString& name):
 
   projecticon_big = new FXGIFIcon(this, project_big);
   collicon_big = new FXGIFIcon(this, coll_big);
-}
+  logicon_big = new FXGIFIcon(this, log_big);
+  }
 
 /** Needed destructor overriding FXApp's one */
 Elecrud::~Elecrud()

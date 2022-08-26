@@ -95,6 +95,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 
   ilMenu->appendItem(new FXIconItem("Project", app->projecticon_big, nullptr));
   ilMenu->appendItem(new FXIconItem("Collections", app->collicon_big, nullptr));
+  ilMenu->appendItem(new FXIconItem("Log", app->logicon_big, nullptr));
   ilMenu->setWidth(120);
   
   // Project details pane

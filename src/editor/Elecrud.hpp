@@ -30,8 +30,9 @@ public:
   FXIcon* newicon;  //!< The File/New icon
   FXIcon* openicon; //!< The File/Open icon
 
-  FXIcon* projecticon_big; //!< The File/Open icon
-  FXIcon* collicon_big; //!< The File/Open icon
+  FXIcon* projecticon_big; //!< The Project pane icon
+  FXIcon* collicon_big;    //!< The Collections icon
+  FXIcon* logicon_big;     //!< The Log icon
 
 };
 #endif // !__ELECRUD_HPP__

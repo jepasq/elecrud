@@ -61,6 +61,7 @@ set(ICONS
   ../media/icons/open_gif.gif
   ../media/icons/project_big.gif
   ../media/icons/coll_big.gif
+  ../media/icons/log_big.gif
   )
 add_custom_command(OUTPUT icons.hpp
   MAIN_DEPENDENCY ${ICONS}
