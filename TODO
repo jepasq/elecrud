@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.0-4 (08 Aug. 2022 - ???) SLCO ???
-- (8) Fix the splitter layout when changing pane
-- Add both project and collections panes to splitter
-- Add a collection IconListItem with big icon
-- Add Project Icon list item icon
-- Add file/open icon
-- Make the default Makefile rule depends on icons one
-- Makefile's check rule now depends the icons one to fix CI
-- Add File/New menu icon
+* v0.0.0-5 (26 Aug. 2022 - ???) SLOC ???
+

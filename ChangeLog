@@ -1,3 +1,13 @@
+* v0.0.0-4 (08 Aug. 2022 - 26 Aug. 2022) SLOC 599
+- Fix the splitter layout when changing pane
+- Add both project and collections panes to splitter
+- Add a collection IconListItem with big icon
+- Add Project Icon list item icon
+- Add file/open icon
+- Make the default Makefile rule depends on icons one
+- Makefile's check rule now depends the icons one to fix CI
+- Add File/New menu icon
+
 * v0.0.0-3 (15 Jul. 2022 - 08 Aug. 2022) SLOC 537
 - Add a custom cmake command to handle icons using reswrap FX tool
 - Add project item to cin list-based menu
