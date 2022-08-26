@@ -49,6 +49,7 @@ public:
 
   long onIconClicked(FXObject*,FXSelector,void*);
 
+  void addLogMessage(const FXString&);  
   
 protected:
   MainWindow();
@@ -73,8 +74,9 @@ private:
   FXSplitter* splitter;            //!w The parent of all panes
   FXHorizontalFrame* projectPane;  //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The collections panel
-  FXHorizontalFrame* logPane;      //!< The project log panel
-  
+  FXVerticalFrame* logPane;      //!< The project log panel
+
+  FXList* logger;      //!< The logger widget
 };
 
 #endif // !__MAIN_WINDOW_HPP__

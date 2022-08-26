@@ -21,6 +21,11 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [ ] Create the ProjectFile class using
   https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
+**** Logger widget options
+- [ ] May add some icon types and a legend to see information, warning error
+  etc...
+- [ ] The content may be exported to a text file
+- [ ] Content may be copied to clipboard. Add button  
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
 CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
@@ -30,6 +35,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Continue MainWindow and Icon menu work
 :LOGBOOK:
+CLOCK: [2022-08-26 ven. 15:28]--[2022-08-26 ven. 15:58] =>  0:30
 CLOCK: [2022-08-26 ven. 14:21]--[2022-08-26 ven. 14:42] =>  0:21
 CLOCK: [2022-08-26 ven. 13:45]--[2022-08-26 ven. 13:54] =>  0:09
 CLOCK: [2022-08-26 ven. 13:32]--[2022-08-26 ven. 13:37] =>  0:05
@@ -57,12 +63,12 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
   - [X] Create two diffirent panel to edit project properties and collections
   - [X] Switch between these two panes
     - [X] Try to call layout on the parent composite each time
-- [-] Should have a log panel when we try to generate/run project
+- [X] Should have a log panel when we try to generate/run project
   If we use a image-based menu, it could be the last and we can auto select
   it when trying to generate or run
   - [X] Add icon
   - [X] Change panel
-  - [ ] Create panel : maybe a FXList ?
+  - [X] Create panel : maybe a FXList
 - [ ] First panel is the project info one (name, author, version etc...)
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  

@@ -106,8 +106,9 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
 
-  logPane  = new FXHorizontalFrame(splitter);
+  logPane  = new FXVerticalFrame(splitter, FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(logPane, "Logger");
+  logger = new FXList(logPane, nullptr, 0, FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
 
   // Preselect project details
   onIconClicked(nullptr, 0, 0);
@@ -263,5 +264,11 @@ MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
   
   cout << "Icon clicked :  " << idx << endl;
   return 1;
+}
+
+void
+MainWindow::addLogMessage(const FXString& msg)
+{
+  logger->appendItem(msg);
 }
 

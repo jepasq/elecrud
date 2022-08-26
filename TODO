@@ -8,5 +8,6 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.0-5 (26 Aug. 2022 - ???) SLOC ???
-- (2) Change to log panel and pre-select project one at startup
+- (3) Add logger's FXList and add message function
+- Change to log panel and pre-select project one at startup
 - Add log icon to iconlist
