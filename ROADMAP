@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Continue MainWindow and Icon menu work
 :LOGBOOK:
+CLOCK: [2022-08-26 ven. 14:21]--[2022-08-26 ven. 14:42] =>  0:21
 CLOCK: [2022-08-26 ven. 13:45]--[2022-08-26 ven. 13:54] =>  0:09
 CLOCK: [2022-08-26 ven. 13:32]--[2022-08-26 ven. 13:37] =>  0:05
 CLOCK: [2022-08-22 lun. 15:11]--[2022-08-22 lun. 15:36] =>  0:25
@@ -60,8 +61,8 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
   If we use a image-based menu, it could be the last and we can auto select
   it when trying to generate or run
   - [X] Add icon
+  - [X] Change panel
   - [ ] Create panel : maybe a FXList ?
-  - [ ] Change panel
 - [ ] First panel is the project info one (name, author, version etc...)
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  

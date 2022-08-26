@@ -72,7 +72,9 @@ private:
 
   FXSplitter* splitter;            //!w The parent of all panes
   FXHorizontalFrame* projectPane;  //!< The project details panel
-  FXHorizontalFrame* collectPane;  //!< The project details panel
+  FXHorizontalFrame* collectPane;  //!< The collections panel
+  FXHorizontalFrame* logPane;      //!< The project log panel
+  
 };
 
 #endif // !__MAIN_WINDOW_HPP__

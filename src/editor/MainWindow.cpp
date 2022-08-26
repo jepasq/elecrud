@@ -105,6 +105,13 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
+
+  logPane  = new FXHorizontalFrame(splitter);
+  new FXLabel(logPane, "Logger");
+
+  // Preselect project details
+  onIconClicked(nullptr, 0, 0);
+  ilMenu->selectItem(0);
   
   setRunnableProject(false);
   updateTitle();
@@ -221,8 +228,16 @@ MainWindow::updateTitle(void)
   this->setTitle(title);  
 }
 
+
+/** An icon of the iconlist-based menu was clicked
+  *
+  * \param _o  Unused paramater.
+  * \param _s  Unused paramater.
+  * \param idx The index of clicked item. Used to change active panel.
+  *
+  */
 long
-MainWindow::onIconClicked(FXObject*,FXSelector,void* idx)
+MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
 {
   unsigned long i = (unsigned long)idx;
   
@@ -230,11 +245,19 @@ MainWindow::onIconClicked(FXObject*,FXSelector,void* idx)
     {
       projectPane->show();
       collectPane->hide();
+      logPane->hide();
+    }
+  else if (i == 1)
+    {
+      projectPane->hide();
+      collectPane->show();
+      logPane->hide();
     }
   else
     {
       projectPane->hide();
-      collectPane->show();
+      collectPane->hide();
+      logPane->show();
     }
   splitter->layout();
   
