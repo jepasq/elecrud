@@ -70,6 +70,7 @@ private:
   
   ProjectFile      projectFile; //!< Used to load/save actual project
 
+  FXSplitter* splitter;            //!w The parent of all panes
   FXHorizontalFrame* projectPane;  //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The project details panel
 };

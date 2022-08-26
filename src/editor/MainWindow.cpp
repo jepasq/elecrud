@@ -85,7 +85,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 				   STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
 
 
-  FXSplitter* splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
+  splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
 
   new FXFrame(splitter,FRAME_RAISED|LAYOUT_CENTER_Y|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,0,0,4,4);
 
@@ -235,7 +235,8 @@ MainWindow::onIconClicked(FXObject*,FXSelector,void* idx)
       projectPane->hide();
       collectPane->show();
     }
-    
+  splitter->layout();
+  
   cout << "Icon clicked :  " << idx << endl;
   return 1;
 }

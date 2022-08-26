@@ -30,6 +30,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Continue MainWindow and Icon menu work
 :LOGBOOK:
+CLOCK: [2022-08-26 ven. 13:32]--[2022-08-26 ven. 13:37] =>  0:05
 CLOCK: [2022-08-22 lun. 15:11]--[2022-08-22 lun. 15:36] =>  0:25
 CLOCK: [2022-08-22 lun. 14:33]--[2022-08-22 lun. 15:08] =>  0:35
 CLOCK: [2022-08-22 lun. 14:19]--[2022-08-22 lun. 14:23] =>  0:04
@@ -48,15 +49,16 @@ CLOCK: [2022-08-08 lun. 10:22]--[2022-08-08 lun. 10:32] =>  0:10
   We need projecticon and projecticon_big
 - [X] Icon left pabnel should have a minimal width to make the big icons
   visible without resizing the pane
-- [-] We'll have to find a second iconlist icon (maybe collection)
+- [X] We'll have to find a second iconlist icon (maybe collection)
   and work on the switch of roght-side panel
   - [X] Add collections wityh big icon
   - [X] Create two diffirent panel to edit project properties and collections
-  - [ ] Switch between these two panes
+  - [X] Switch between these two panes
+    - [X] Try to call layout on the parent composite each time
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
-- [ ] Adie has a quit icon, stole this
+- [ ] Adie has a quit icon, steal this
 - [ ] Should have a log panel when we try to generate/run project
   If we use a image-based menu, it could be the last and we can auto select
   it when trying to generate or run
