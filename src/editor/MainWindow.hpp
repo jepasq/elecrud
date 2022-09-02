@@ -33,7 +33,7 @@ public:
     ID_SAVEAS,
     
     ID_ICON,  //!< An icon from isonlist has been clicked
-    ID_PRJNAME, //!< The name textfield has been modified
+    ID_PRJD, //!< The name textfield has been modified
     
     ID_LAST,
     };
@@ -49,7 +49,7 @@ public:
   long onFileSaveAs(FXObject*,FXSelector,void*);
 
   long onIconClicked(FXObject*,FXSelector,void*);
-  long onProjectNameChanged(FXObject*,FXSelector,void*);
+  long onProjectDetailsChanged(FXObject*,FXSelector,void*);
 
   void addLogMessage(const FXString&);  
   
@@ -80,6 +80,9 @@ private:
 
   FXList* logger;             //!< The logger widget
   FXTextField* tfProjectName; //!< The widget for the project name edition
+  FXTextField* tfProjectAuth; //!< The project author widget
+  FXTextField* tfProjectVers; //!< The project version
+  FXTextField* tfProjectLice; //!< The project version
 };
 
 #endif // !__MAIN_WINDOW_HPP__

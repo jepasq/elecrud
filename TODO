@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.0-5 (26 Aug. 2022 - ???) SLOC ???
-- (4) Add project anme text field to project detail pane
+- (5) Add multiple textfields to project details
+- Add project anme text field to project detail pane
 - Add logger's FXList and add message function
 - Change to log panel and pre-select project one at startup
 - Add log icon to iconlist

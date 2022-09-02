@@ -34,6 +34,11 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   Started in src/app
 - [X] Must be added to git repo  
 **** TODO Continue with details panel implementation
+:LOGBOOK:
+CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
+:END:
+- [X] Add author, version and license as text field
+- [ ] Add project description as multiline  
 - [ ] First panel is the project info one (+name+, author, version etc...)
   - [ ] When modifing the projectname, should set project file dirty file
 - [ ] Search for other icons in Adie source code

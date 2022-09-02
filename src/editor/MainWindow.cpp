@@ -21,7 +21,7 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
 
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
 
- FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJNAME,MainWindow::onProjectNameChanged),
+ FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -102,11 +102,29 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   
   // Project details pane
   //  projectPane = new FXFrame(splitter);
+  auto lablength = 80;
+  auto tflength = 35;
   projectPane = new FXVerticalFrame(splitter);
   new FXLabel(projectPane, "Project details");
   auto pph1 = new FXHorizontalFrame(projectPane);
-  new FXLabel(pph1, "Project name");
-  tfProjectName = new FXTextField(pph1, 30, this, ID_PRJNAME);
+  auto labPrjName=new FXLabel(pph1, "Name :", 0, LAYOUT_FIX_WIDTH );
+  labPrjName->setWidth(lablength);
+  tfProjectName = new FXTextField(pph1, tflength, this, ID_PRJD);
+  
+  auto pph2 = new FXHorizontalFrame(projectPane);
+  auto labPrjAuth=new FXLabel(pph2, "Author :", 0, LAYOUT_FIX_WIDTH );
+  labPrjAuth->setWidth(lablength);
+  tfProjectAuth = new FXTextField(pph2, tflength, this, ID_PRJD);
+
+  auto pph3 = new FXHorizontalFrame(projectPane);
+  auto labPrjVers=new FXLabel(pph3, "Version :", 0, LAYOUT_FIX_WIDTH );
+  labPrjVers->setWidth(lablength);
+  tfProjectVers = new FXTextField(pph3, tflength, this, ID_PRJD);
+
+  auto pph4 = new FXHorizontalFrame(projectPane);
+  auto labPrjLice=new FXLabel(pph4, "License :", 0, LAYOUT_FIX_WIDTH );
+  labPrjLice->setWidth(lablength);
+  tfProjectLice = new FXTextField(pph4, tflength, this, ID_PRJD);
   
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
@@ -287,7 +305,7 @@ MainWindow::addLogMessage(const FXString& msg)
   *
   */
 long
-MainWindow::onProjectNameChanged(FXObject*,FXSelector,void* val)
+MainWindow::onProjectDetailsChanged(FXObject*,FXSelector,void* val)
 {
   auto pn = (FXchar*)val;
   cout << "Icon clickedProject name changed to '" << pn << "'" << endl;
