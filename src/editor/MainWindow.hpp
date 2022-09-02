@@ -33,6 +33,7 @@ public:
     ID_SAVEAS,
     
     ID_ICON,  //!< An icon from isonlist has been clicked
+    ID_PRJNAME, //!< The name textfield has been modified
     
     ID_LAST,
     };
@@ -48,6 +49,7 @@ public:
   long onFileSaveAs(FXObject*,FXSelector,void*);
 
   long onIconClicked(FXObject*,FXSelector,void*);
+  long onProjectNameChanged(FXObject*,FXSelector,void*);
 
   void addLogMessage(const FXString&);  
   
@@ -72,11 +74,12 @@ private:
   ProjectFile      projectFile; //!< Used to load/save actual project
 
   FXSplitter* splitter;            //!w The parent of all panes
-  FXHorizontalFrame* projectPane;  //!< The project details panel
+  FXVerticalFrame* projectPane;    //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The collections panel
-  FXVerticalFrame* logPane;      //!< The project log panel
+  FXVerticalFrame* logPane;        //!< The project log panel
 
-  FXList* logger;      //!< The logger widget
+  FXList* logger;             //!< The logger widget
+  FXTextField* tfProjectName; //!< The widget for the project name edition
 };
 
 #endif // !__MAIN_WINDOW_HPP__

@@ -20,6 +20,8 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVEAS,MainWindow::onFileSaveAs),
 
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
+
+ FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJNAME,MainWindow::onProjectNameChanged),
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -100,8 +102,11 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   
   // Project details pane
   //  projectPane = new FXFrame(splitter);
-  projectPane = new FXHorizontalFrame(splitter);
+  projectPane = new FXVerticalFrame(splitter);
   new FXLabel(projectPane, "Project details");
+  auto pph1 = new FXHorizontalFrame(projectPane);
+  new FXLabel(pph1, "Project name");
+  tfProjectName = new FXTextField(pph1, 30, this, ID_PRJNAME);
   
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
@@ -266,9 +271,26 @@ MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
   return 1;
 }
 
+/** Add a message in the log widget
+  *
+  * \param msg The message to be added.
+  *
+  */
 void
 MainWindow::addLogMessage(const FXString& msg)
 {
   logger->appendItem(msg);
 }
 
+/** The content of the TextField widget used to modify the project name
+  * has changed
+  *
+  */
+long
+MainWindow::onProjectNameChanged(FXObject*,FXSelector,void* val)
+{
+  auto pn = (FXchar*)val;
+  cout << "Icon clickedProject name changed to '" << pn << "'" << endl;
+  
+  return 1;
+}
