@@ -33,7 +33,8 @@ public:
     ID_SAVEAS,
     
     ID_ICON,  //!< An icon from isonlist has been clicked
-    ID_PRJD, //!< The name textfield has been modified
+    ID_PRJD,  //!< The name textfield has been modified
+    ID_DSCR,  //!< The project description widget
     
     ID_LAST,
     };
@@ -50,6 +51,7 @@ public:
 
   long onIconClicked(FXObject*,FXSelector,void*);
   long onProjectDetailsChanged(FXObject*,FXSelector,void*);
+  long onProjectDescChanged(FXObject*,FXSelector,void*);
 
   void addLogMessage(const FXString&);  
   

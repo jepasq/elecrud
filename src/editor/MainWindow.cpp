@@ -21,7 +21,10 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
 
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
 
- FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
+ FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDescChanged),
+
+ FXMAPFUNC(SEL_INSERTED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
+ 
 };
 
 // Macro for the ScribbleApp class hierarchy implementation
@@ -102,7 +105,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   
   // Project details pane
   //  projectPane = new FXFrame(splitter);
-  auto lablength = 80;
+  auto lablength = 60;
   auto tflength = 35;
   projectPane = new FXVerticalFrame(splitter);
   new FXLabel(projectPane, "Project details");
@@ -125,10 +128,15 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   auto labPrjLice=new FXLabel(pph4, "License :", 0, LAYOUT_FIX_WIDTH );
   labPrjLice->setWidth(lablength);
   tfProjectLice = new FXTextField(pph4, tflength, this, ID_PRJD);
+
+  new FXLabel(projectPane, "Description :");
+  new FXText(projectPane, this, ID_DSCR, LAYOUT_FILL_X|LAYOUT_FILL_Y);
   
+  // Collections edition pane
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
 
+  // Logger pane
   logPane  = new FXVerticalFrame(splitter, FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(logPane, "Logger");
   logger = new FXList(logPane, nullptr, 0, FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
@@ -311,4 +319,13 @@ MainWindow::onProjectDetailsChanged(FXObject*,FXSelector,void* val)
   cout << "Icon clickedProject name changed to '" << pn << "'" << endl;
   
   return 1;
+}
+
+long
+MainWindow::onProjectDescChanged(FXObject*,FXSelector,void*)
+{
+  FXchar* pn="";
+  cout << "Description changed to '" << pn << "'" << endl;
+
+    return 1;
 }
