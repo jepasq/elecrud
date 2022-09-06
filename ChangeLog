@@ -1,3 +1,13 @@
+* v0.0.0-5 (26 Aug. 2022 - 06 Sep. 2022) SLOC 720
+- Improve MainWindow class doxygen documentation
+- Improve documentation about dot/graphviz need and ProjectFile class
+- Add descrption FXText widget
+- Add multiple textfields to project details
+- Add project anme text field to project detail pane
+- Add logger's FXList and add message function
+- Change to log panel and pre-select project one at startup
+- Add log icon to iconlist
+
 * v0.0.0-4 (08 Aug. 2022 - 26 Aug. 2022) SLOC 599
 - Fix the splitter layout when changing pane
 - Add both project and collections panes to splitter
