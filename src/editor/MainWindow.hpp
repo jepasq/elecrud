@@ -27,16 +27,16 @@ public:
     ID_CANVAS=FXMainWindow::ID_LAST,
     ID_CLEAR,
 
-    ID_NEW,   //!< Creating a new project
-    ID_OPEN,  //!< Open an existing project
-    ID_SAVE,
-    ID_SAVEAS,
+    ID_NEW,    //!< Creating a new project
+    ID_OPEN,   //!< Open an existing project
+    ID_SAVE,   //!< The file/save menu item
+    ID_SAVEAS, //!< The file/save as menu item
     
-    ID_ICON,  //!< An icon from isonlist has been clicked
-    ID_PRJD,  //!< The name textfield has been modified
-    ID_DSCR,  //!< The project description widget
+    ID_ICON,   //!< An icon from isonlist has been clicked
+    ID_PRJD,   //!< The name textfield has been modified
+    ID_DSCR,   //!< The project description widget
     
-    ID_LAST,
+    ID_LAST,   //!< Always last (and not used)
     };
 
   
@@ -75,7 +75,7 @@ private:
   
   ProjectFile      projectFile; //!< Used to load/save actual project
 
-  FXSplitter* splitter;            //!w The parent of all panes
+  FXSplitter* splitter;            //!< The parent of all panes
   FXVerticalFrame* projectPane;    //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The collections panel
   FXVerticalFrame* logPane;        //!< The project log panel

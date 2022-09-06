@@ -39,7 +39,7 @@ MainWindow::MainWindow()
   *
   * Thiw will create an editor MainWindow with hardcoded size.
   *
-  * \param a           The current fxo toolkit application.
+  * \param app         The current fox toolkit application.
   * \param windowTitle The MainWindow's title.
   *
   */
@@ -184,8 +184,16 @@ MainWindow::onFileNew(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** The File/Open menu item callback.
+  *
+  * \param o Unused.
+  * \param s Unused.
+  * \param d Unused.
+  *
+  * \return Always returns 1.
+  */
 long
-MainWindow::onFileOpen(FXObject*,FXSelector,void*)
+MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 {
   FXString filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
   updateTitle();
@@ -267,6 +275,8 @@ MainWindow::updateTitle(void)
   * \param _s  Unused paramater.
   * \param idx The index of clicked item. Used to change active panel.
   *
+  * \return Always 1.
+  *
   */
 long
 MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
@@ -311,21 +321,28 @@ MainWindow::addLogMessage(const FXString& msg)
 /** The content of the TextField widget used to modify the project name
   * has changed
   *
+  * \param _o Unused parameter.
+  * \param _s Unused parameter.
+  * \param val The new content of the widget to be cast as a FXChar*.
+  *
+  * \return Always 1.
+  *
   */
 long
-MainWindow::onProjectDetailsChanged(FXObject*,FXSelector,void* val)
+MainWindow::onProjectDetailsChanged(FXObject* _o,FXSelector _s,void* val)
 {
   auto pn = (FXchar*)val;
-  cout << "Icon clickedProject name changed to '" << pn << "'" << endl;
+  cout << "Project name changed to '" << pn << "'" << endl;
   
   return 1;
 }
 
+/// Trying to get a callback executed when the description widget is changed
 long
 MainWindow::onProjectDescChanged(FXObject*,FXSelector,void*)
 {
-  FXchar* pn="";
+  auto pn="";
   cout << "Description changed to '" << pn << "'" << endl;
 
-    return 1;
+  return 1;
 }
