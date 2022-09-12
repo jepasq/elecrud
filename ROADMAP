@@ -41,7 +41,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
 :END:
 - [X] Add author, version and license as text field
 - [X] Add project description as multiline
-- [ ] Try to handle FXText description events. See Adie, it seems there
+- [X] Try to handle FXText description events. See Adie, it seems there
   is multiple involved events or selector.  
 - [ ] Can't get project description and print it. Maybe it's in wide charset    
 - [ ] First panel is the project info one (+name+, author, version etc...)
@@ -78,6 +78,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
   to avoid a linker error. I fear it can make CI fail btw.
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2022-09-06 mar. 07:19]--[2022-09-06 mar. 07:27] =>  0:08
 CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25
 CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 :END:

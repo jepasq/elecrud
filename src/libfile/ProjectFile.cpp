@@ -13,7 +13,7 @@ ProjectFile::ProjectFile():
 
 /** Set the current filename
   *
-  * \param fn The new filename.
+  * \param fn The new filename as a std string.
   *
   */
 void
@@ -24,6 +24,8 @@ ProjectFile::setFilename(const std::string& fn)
 
 
 /** Get the current filename of this project
+  *
+  * \return  The current filename.
   *
   */
 const std::string&

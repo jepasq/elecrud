@@ -15,7 +15,7 @@ public:
   const std::string& getFilename(void) const;
   
 private:
-  std::string filename;
+  std::string filename; //!< The filename to this project file. Can be empty.
 };
 
 #endif // !__PROJECT_FILE_HPP__
