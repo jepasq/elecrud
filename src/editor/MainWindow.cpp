@@ -22,8 +22,8 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
 
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDescChanged),
-
- FXMAPFUNC(SEL_INSERTED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
+ // From https://rubydoc.info/gems/fxruby/Fox/FXText : Changed in any way.
+ FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
  
 };
 
@@ -51,7 +51,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   filename(""),
   dirty(false),
   mcGen(nullptr),
-  mcRun(nullptr)
+  mcRun(nullptr),
+  ftDescription(nullptr)
 {
   mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
   auto filemenu=new FXMenuPane(this);
@@ -130,7 +131,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   tfProjectLice = new FXTextField(pph4, tflength, this, ID_PRJD);
 
   new FXLabel(projectPane, "Description :");
-  new FXText(projectPane, this, ID_DSCR, LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  ftDescription = new FXText(projectPane, this, ID_DSCR,
+			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
   
   // Collections edition pane
   collectPane  = new FXHorizontalFrame(splitter);
@@ -311,6 +313,10 @@ MainWindow::addLogMessage(const FXString& msg)
 /** The content of the TextField widget used to modify the project name
   * has changed
   *
+  * \param val The new content of the widget once cast to FXchar*.
+  *
+  * \return 1;
+  *
   */
 long
 MainWindow::onProjectDetailsChanged(FXObject*,FXSelector,void* val)
@@ -321,11 +327,19 @@ MainWindow::onProjectDetailsChanged(FXObject*,FXSelector,void* val)
   return 1;
 }
 
+/** The content of the TextField widget used to modify the project name
+  * has changed
+  *
+  * \param _o Unused.
+  * \param _s Unused.
+  * \param _d Unused.
+  *
+  */
 long
-MainWindow::onProjectDescChanged(FXObject*,FXSelector,void*)
+MainWindow::onProjectDescChanged(FXObject* _o,FXSelector _s,void* _d)
 {
-  FXchar* pn="";
-  cout << "Description changed to '" << pn << "'" << endl;
+  const FXchar* d = ftDescription->getText().text();
+  cout << "Description changed to '" << d << "'" << endl;
 
-    return 1;
+  return 1;
 }

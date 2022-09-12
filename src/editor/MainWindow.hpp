@@ -85,6 +85,7 @@ private:
   FXTextField* tfProjectAuth; //!< The project author widget
   FXTextField* tfProjectVers; //!< The project version
   FXTextField* tfProjectLice; //!< The project version
+  FXText*      ftDescription; //!< The description multiline input widget
 };
 
 #endif // !__MAIN_WINDOW_HPP__
