@@ -52,7 +52,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   dirty(false),
   mcGen(nullptr),
   mcRun(nullptr),
-  ftDescription(nullptr)
+  ftDescription(nullptr),
+  mrufiles(app)
 {
   mbFile = new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
   auto filemenu=new FXMenuPane(this);
@@ -63,13 +64,29 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXMenuCommand(filemenu,tr("&Open...\tCtl-O\tOpen document file."),
 		    app->openicon,this,ID_OPEN);
 
+ 
   auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
 				nullptr,this,ID_SAVE);
   save->disable();
 
   new FXMenuCommand(filemenu,tr("&Save as...\tCtrl-S\tSave in a new file."),
 				nullptr,this,ID_SAVEAS);
-  
+
+  // Recent file menu; this automatically hides if there are no files
+  //  new FXMenuSeparator(filemenu,&mrufiles,FXRecentFiles::ID_ANYFILES);
+  new FXMenuCommand(filemenu,"&1",nullptr,&mrufiles,FXRecentFiles::ID_FILE_1);
+  new FXMenuCommand(filemenu,"&2",nullptr,&mrufiles,FXRecentFiles::ID_FILE_2);
+  new FXMenuCommand(filemenu,"&3",nullptr,&mrufiles,FXRecentFiles::ID_FILE_3);
+  new FXMenuCommand(filemenu,"&4",nullptr,&mrufiles,FXRecentFiles::ID_FILE_4);
+  new FXMenuCommand(filemenu,"&5",nullptr,&mrufiles,FXRecentFiles::ID_FILE_5);
+  new FXMenuCommand(filemenu,"&6",nullptr,&mrufiles,FXRecentFiles::ID_FILE_6);
+  new FXMenuCommand(filemenu,"&7",nullptr,&mrufiles,FXRecentFiles::ID_FILE_7);
+  new FXMenuCommand(filemenu,"&8",nullptr,&mrufiles,FXRecentFiles::ID_FILE_8);
+  new FXMenuCommand(filemenu,"&9",nullptr,&mrufiles,FXRecentFiles::ID_FILE_9);
+  new FXMenuCommand(filemenu,"1&0",nullptr,&mrufiles,FXRecentFiles::ID_FILE_10);
+  new FXMenuCommand(filemenu,tr("&Clear Recent Files"),nullptr,&mrufiles,FXRecentFiles::ID_CLEAR);
+  //  new FXMenuSeparator(filemenu,&mrufiles,FXRecentFiles::ID_ANYFILES);
+
   new FXMenuSeparator(filemenu);
   new FXMenuCommand(filemenu,tr("&Quit\tCtl-Q\tQuit program."),/*getApp()->quiticon*/nullptr,getApp(),Elecrud::ID_QUIT);
 

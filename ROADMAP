@@ -35,6 +35,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be added to git repo  
 **** TODO Continue with details panel implementation
 :LOGBOOK:
+CLOCK: [2022-09-13 mar. 10:10]--[2022-09-13 mar. 10:21] =>  0:11
 CLOCK: [2022-09-13 mar. 09:40]--[2022-09-13 mar. 10:04] =>  0:24
 CLOCK: [2022-09-12 lun. 03:44]--[2022-09-12 lun. 04:28] =>  0:44
 CLOCK: [2022-09-02 ven. 03:19]--[2022-09-02 ven. 03:44] =>  0:25
@@ -47,12 +48,12 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
 - [X] Can't get project description and print it. Maybe it's in wide charset    
 - [X] First panel is the project info one (+name+, author, version etc...)
   - [X] When modifing the projectname, should set project file dirty file
+- [X] FX has a thing for recent files
+    https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
 - [ ] Adie has a quit icon, steal this
-- [ ] FX has a thing for recent files
-    https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 **** TODO Unit tests and CI setup
      :LOGBOOK:
      CLOCK: [2022-08-16 mar. 00:37]--[2022-08-16 mar. 00:40] =>  0:03

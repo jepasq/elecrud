@@ -87,6 +87,8 @@ private:
   FXTextField* tfProjectVers; //!< The project version
   FXTextField* tfProjectLice; //!< The project version
   FXText*      ftDescription; //!< The description multiline input widget
+
+  FXRecentFiles mrufiles; //!< Recent files list
 };
 
 #endif // !__MAIN_WINDOW_HPP__
