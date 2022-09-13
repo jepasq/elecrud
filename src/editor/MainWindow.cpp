@@ -21,7 +21,7 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
 
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
 
- FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDescChanged),
+ FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
  // From https://rubydoc.info/gems/fxruby/Fox/FXText : Changed in any way.
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
  
@@ -133,6 +133,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(projectPane, "Description :");
   ftDescription = new FXText(projectPane, this, ID_DSCR,
 			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
+
+  ftDescription->setText("Insert project description here.");
   
   // Collections edition pane
   collectPane  = new FXHorizontalFrame(splitter);
@@ -214,6 +216,7 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 long
 MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
 {
+  dirty=false;
   updateTitle();
   return 1;
 }
@@ -334,8 +337,8 @@ long
 MainWindow::onProjectDetailsChanged(FXObject* _o,FXSelector _s,void* val)
 {
   auto pn = (FXchar*)val;
-  cout << "Project name changed to '" << pn << "'" << endl;
-  
+  cout << "Project detail changed to '" << pn << "'" << endl;
+  setDirty();
   return 1;
 }
 
@@ -350,8 +353,21 @@ MainWindow::onProjectDetailsChanged(FXObject* _o,FXSelector _s,void* val)
 long
 MainWindow::onProjectDescChanged(FXObject* _o,FXSelector _s,void* _d)
 {
-  const FXchar* d = ftDescription->getText().text();
-  cout << "Description changed to '" << d << "'" << endl;
-
+  auto d = ftDescription->getText();
+  cout << "Description changed to '" << d.text() << "'" << endl;
+  setDirty();
   return 1;
 }
+
+/** Set the dirty flag to a new value (default to true) and update title
+  *
+  * \param vDirty The new dirty flag value.
+  *
+  */
+void
+MainWindow::setDirty(bool vDirty)
+{
+  dirty = vDirty;
+  updateTitle();
+}
+

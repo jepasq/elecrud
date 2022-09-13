@@ -60,6 +60,7 @@ protected:
 
   void setRunnableProject(bool);
   void updateTitle(void);
+  void setDirty(bool vDirty=true);
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
