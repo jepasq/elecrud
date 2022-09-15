@@ -4,7 +4,7 @@
 #include <fox-1.6/fx.h>
 #include <string>
 
-#include "libfile/ProjectFile.hpp"
+#include "ProjectFile.hpp"
 
 #include "Elecrud.hpp"
 

@@ -8,6 +8,11 @@
   created by admin user
 **** Multiple persistance system
 - [ ] Sqlite first ?
+**** Logger widget options
+- [ ] May add some icon types and a legend to see information, warning error
+  etc...
+- [ ] The content may be exported to a text file
+- [ ] Content may be copied to clipboard. Add button  
 **** Project-file serialization
 :LOGBOOK:
 CLOCK: [2022-07-15 ven. 06:01]--[2022-07-15 ven. 06:16] =>  0:15
@@ -21,13 +26,9 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [ ] Create the ProjectFile class using
   https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
-**** Logger widget options
-- [ ] May add some icon types and a legend to see information, warning error
-  etc...
-- [ ] The content may be exported to a text file
-- [ ] Content may be copied to clipboard. Add button  
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
+CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
 CLOCK: [2022-09-15 jeu. 02:51]--[2022-09-15 jeu. 03:00] =>  0:09
 CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 :END:
@@ -35,8 +36,8 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   Started in src/app
 - [X] Must be added to git repo
 - [X] Implement the Save As. event handler
-- [ ] Must be able to include libfile's headers in elecrud
-- [ ] ProjectFile must have a setter from FXString
+- [X] Must be able to include libfile's headers in elecrud
+- [X] ProjectFile must have a setter from FXString
   Add unit tests for this
 - [ ] Add a Generator panel where we can select output file and other  
 **** TODO Continue with details panel implementation

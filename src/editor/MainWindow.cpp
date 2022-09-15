@@ -4,7 +4,6 @@
 #include <iostream>
 #include <sstream>
 
-//#include "ProjectFile.hpp"
 #include "Elecrud.hpp"
 #include "icons.hpp"
 
@@ -251,9 +250,7 @@ MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 {
   filename = FXFileDialog::getSaveFilename(this, "Save as project...", "~",
 					   "eud");
-
-  ProjectFile pf;
-  
+  projectFile.setFilename(filename);
 
   updateTitle();
   return 1;

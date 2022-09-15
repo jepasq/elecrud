@@ -33,3 +33,15 @@ ProjectFile::getFilename() const
 {
   return filename;
 }
+
+/** Set the current filename from a FXString
+  *
+  * \param fn The new filename as a std string.
+  *
+  */
+void
+ProjectFile::setFilename(const FX::FXString& fn)
+{
+  std::string s(fn.text());
+  filename = s;
+}

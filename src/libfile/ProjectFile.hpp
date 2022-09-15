@@ -2,6 +2,7 @@
 #define __PROJECT_FILE_HPP__
 
 #include <string>
+#include <fox-1.6/fx.h>
 
 /** The project file used to serialize a complete project
   *
@@ -12,6 +13,8 @@ public:
   ProjectFile();
 
   void               setFilename(const std::string&);
+  void               setFilename(const FX::FXString&);
+
   const std::string& getFilename(void) const;
   
 private:
