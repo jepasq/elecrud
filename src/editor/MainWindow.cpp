@@ -1,10 +1,11 @@
 #include "MainWindow.hpp"
 
-#include "Elecrud.hpp"
 
 #include <iostream>
 #include <sstream>
 
+//#include "ProjectFile.hpp"
+#include "Elecrud.hpp"
 #include "icons.hpp"
 
 using namespace std;
@@ -216,7 +217,7 @@ MainWindow::onFileNew(FXObject*,FXSelector,void*)
 long
 MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 {
-  FXString filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
+  filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
   updateTitle();
 
   return 1;
@@ -233,8 +234,7 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 long
 MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
 {
-  dirty=false;
-  updateTitle();
+  setDirty(false);
   return 1;
 }
 
@@ -249,6 +249,13 @@ MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
 long
 MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 {
+  filename = FXFileDialog::getSaveFilename(this, "Save as project...", "~",
+					   "eud");
+
+  ProjectFile pf;
+  
+
+  updateTitle();
   return 1;
 }
 

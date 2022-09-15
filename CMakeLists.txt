@@ -40,7 +40,9 @@ target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   elecrud-file)
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
   ${LIBS_INCLUDE_DIRS}
-  ${PROJECT_BINARY_DIR} src)
+  ${PROJECT_BINARY_DIR}
+  src
+  src/libfile)
 add_dependencies(elecrud icons)
 
 # Unit tests
@@ -52,7 +54,7 @@ add_executable(tests src/tests.cpp
   src/editor/MainWindow_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
-  ${PROJECT_BINARY_DIR} src)
+  ${PROJECT_BINARY_DIR} src src/libfile)
 add_custom_target(check COMMAND tests DEPENDS icons)
 
 # Reswrap command to handle FX icons
