@@ -81,8 +81,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
   Because the =make check= rule doesn't depends on icons.hpp one
 - [X] While check runs icons automatically, =make= doesn't
   It makes the CI fail again.
-
-- [ ] We actually have a CI issue
+- [X] We actually have a CI issue
   fail to fetch some ubuntu archives
   Trying to call a-get update before installing dependencies
 
