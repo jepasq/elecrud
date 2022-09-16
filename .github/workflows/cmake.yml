@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      run: sudo apt install libfox-1.6-dev libboost-dev libboost-test-dev libboost-serialization-dev
+      run: sudo apt-get update&&sudo apt-get install -y libfox-1.6-dev libboost-dev libboost-test-dev libboost-serialization-dev
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.

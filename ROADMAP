@@ -63,6 +63,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
 - [ ] Adie has a quit icon, steal this
 **** TODO Unit tests and CI setup
      :LOGBOOK:
+     CLOCK: [2022-09-16 ven. 02:03]--[2022-09-16 ven. 02:09] =>  0:06
      CLOCK: [2022-08-16 mar. 00:37]--[2022-08-16 mar. 00:40] =>  0:03
      CLOCK: [2022-08-11 jeu. 12:57]--[2022-08-11 jeu. 13:19] =>  0:22
      CLOCK: [2022-08-11 jeu. 12:26]--[2022-08-11 jeu. 12:42] =>  0:16
@@ -80,6 +81,10 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
   Because the =make check= rule doesn't depends on icons.hpp one
 - [X] While check runs icons automatically, =make= doesn't
   It makes the CI fail again.
+
+- [ ] We actually have a CI issue
+  fail to fetch some ubuntu archives
+  Trying to call a-get update before installing dependencies
 
 - [ ] Can't correctly make the default make rule depends on icons so
   for instance, the .github worflow has to run =make icons= manually
