@@ -9,6 +9,8 @@
 
 using namespace std;
 
+#define EXT_PATTERN "*.eud"
+
 // Message Map for the Scribble Window class
 FXDEFMAP(MainWindow) MainWindowMap[]={
   //________Message_Type_____________________ID____________Message_Handler_______
@@ -158,9 +160,11 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(collectPane, "Collections details");
 
   // Logger pane
-  logPane  = new FXVerticalFrame(splitter, FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  logPane  = new FXVerticalFrame(splitter,
+				 FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(logPane, "Logger");
-  logger = new FXList(logPane, nullptr, 0, FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  logger = new FXList(logPane, nullptr, 0,
+		      FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
 
   // Preselect project details
   onIconClicked(nullptr, 0, 0);
@@ -216,7 +220,8 @@ MainWindow::onFileNew(FXObject*,FXSelector,void*)
 long
 MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 {
-  filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~");
+  filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~",
+					   EXT_PATTERN);
   updateTitle();
 
   return 1;
@@ -249,7 +254,7 @@ long
 MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 {
   filename = FXFileDialog::getSaveFilename(this, "Save as project...", "~",
-					   "eud");
+					   EXT_PATTERN);
   projectFile.setFilename(filename);
 
   updateTitle();
