@@ -2,6 +2,8 @@
 
 A C++/electron based multi-user CRUD operator program generator.
 
+![Elecrud's MainWindow](media/screenshots/elecrud_01.png)
+
 ## Building
 
 On debian-based distributions :
