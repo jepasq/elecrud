@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** v0.0.2
+*** TODO v0.0.2
 **** Must be multi-user
 - [ ] While the admin user can be crated in fox editor, other users may be
   created by admin user
@@ -15,6 +15,7 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** Project-file serialization
 :LOGBOOK:
+CLOCK: [2022-09-27 mar. 03:56]--[2022-09-27 mar. 04:14] =>  0:18
 CLOCK: [2022-07-15 ven. 06:01]--[2022-07-15 ven. 06:16] =>  0:15
 CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 :END:
@@ -23,9 +24,9 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [X] Cmake search for boost_serialization
 - [X] Implement ProjectFile::setFilename() and unit test
 - [ ] ProjectFile may handle dirty flag so it can be tested
-- [ ] Create the ProjectFile class using
-  https://www.boost.org/doc/libs/1_79_0/libs/serialization/doc/
+- [ ] Create the ProjectFile class using fox steam object
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
+- [ ] If we don't use boost serialization, remove it from cmake and README
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
 CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
@@ -80,6 +81,8 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot', arguments='"/home/
   rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
   graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
+**** Font issue on manjaro
+- [ ] Can't see entered text in textfields etc...
 *** DONE v0.0.1
 **** DONE Unit tests and CI setup
      :LOGBOOK:

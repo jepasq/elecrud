@@ -149,11 +149,11 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   labPrjLice->setWidth(lablength);
   tfProjectLice = new FXTextField(pph4, tflength, this, ID_PRJD);
 
-  new FXLabel(projectPane, "Description :");
+  new FXLabel(projectPane, "Multiline description and notes :");
   ftDescription = new FXText(projectPane, this, ID_DSCR,
 			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
 
-  ftDescription->setText("Insert project description here.");
+  //  ftDescription->setText("Insert project description here.");
   
   // Collections edition pane
   collectPane  = new FXHorizontalFrame(splitter);
@@ -363,7 +363,7 @@ long
 MainWindow::onProjectDetailsChanged(FXObject* _o,FXSelector _s,void* val)
 {
   auto pn = (FXchar*)val;
-  cout << "Project detail changed to '" << pn << "'" << endl;
+  //  cout << "Project detail changed to '" << pn << "'" << endl;
   setDirty();
   return 1;
 }
