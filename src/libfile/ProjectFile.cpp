@@ -45,3 +45,21 @@ ProjectFile::setFilename(const FX::FXString& fn)
   std::string s(fn.text());
   filename = s;
 }
+
+void
+ProjectFile::setFilename(const char* fn)
+{
+  std::string s(fn);
+  filename = s;
+}
+
+
+/** Save the project file as a current set filename
+  *
+  */
+void
+ProjectFile::save()
+{
+
+}
+

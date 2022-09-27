@@ -14,8 +14,11 @@ public:
 
   void               setFilename(const std::string&);
   void               setFilename(const FX::FXString&);
+  void               setFilename(const char*);
 
   const std::string& getFilename(void) const;
+
+  void save();
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
