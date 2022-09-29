@@ -33,6 +33,7 @@ set(EDITOR_SRC
 add_library(elecrud-file SHARED
   src/libfile/ProjectFile.cpp)
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES})
+target_include_directories(elecrud-file PUBLIC ${LIBS_INCLUDE_DIRS})
 
 # Executable
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 

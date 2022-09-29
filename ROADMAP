@@ -15,6 +15,7 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
 CLOCK: [2022-09-29 jeu. 05:14]--[2022-09-29 jeu. 05:21] =>  0:07
 CLOCK: [2022-09-27 mar. 04:17]--[2022-09-27 mar. 04:38] =>  0:21
 CLOCK: [2022-09-27 mar. 03:56]--[2022-09-27 mar. 04:14] =>  0:18
@@ -89,6 +90,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
 **** Font issue on manjaro
 - [ ] Can't see entered text in textfields etc...
+  see font section of https://sites.google.com/site/foxtoolkitusers/faq
 *** DONE v0.0.1
 **** DONE Unit tests and CI setup
      :LOGBOOK:

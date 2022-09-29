@@ -1,6 +1,7 @@
 #include "ProjectFile.hpp"
 
-#include  <stdexcept>
+#include <stdexcept>  // USES runtime_error
+#include <FXFileStream.h>
 
 /** The default constructor
   *
@@ -66,6 +67,11 @@ ProjectFile::save()
     throw std::runtime_error("Can't save project file with empty filename");
   else
     {
+      FXString fna(filename.c_str());
+      FXFileStream s;
+      s.open(fna, FXStreamSave);
+      s << FXString("test");
+      s.close();
     }
 }
 
