@@ -46,7 +46,7 @@ executable is in your PATH.
 
 ## Adding icon to the editor
 
-1. Icons are in GIF format and are stored in media/icons directory;
+1. Icons are in GIF format and are stored in ehs *media/icons* directory;
 2. Add the new one to the ICONS list in CMakeLists.txt;
 3. The src/editor/Elecrud class must have it as a public FXIcon member and its
    constructor must obviously construct it with reswrap'ed Icons.hpp icon

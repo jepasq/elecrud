@@ -41,8 +41,6 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_FXString_filename_setter )
 
 BOOST_AUTO_TEST_CASE( ProjectFile_has_save_function )
 {
-  BOOST_REQUIRE_EQUAL( false, true );
-
   ProjectFile pf;
   pf.setFilename("");
   // If filename is empty, must throw an exception
