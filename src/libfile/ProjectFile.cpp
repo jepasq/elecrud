@@ -1,5 +1,7 @@
 #include "ProjectFile.hpp"
 
+#include  <stdexcept>
+
 /** The default constructor
   *
   * This sets the project filename to an empty string.
@@ -60,6 +62,10 @@ ProjectFile::setFilename(const char* fn)
 void
 ProjectFile::save()
 {
-
+  if (filename.empty())
+    throw std::runtime_error("Can't save project file with empty filename");
+  else
+    {
+    }
 }
 

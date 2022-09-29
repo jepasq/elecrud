@@ -13,8 +13,9 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
-**** Project-file serialization
+**** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2022-09-29 jeu. 05:14]--[2022-09-29 jeu. 05:21] =>  0:07
 CLOCK: [2022-09-27 mar. 04:17]--[2022-09-27 mar. 04:38] =>  0:21
 CLOCK: [2022-09-27 mar. 03:56]--[2022-09-27 mar. 04:14] =>  0:18
 CLOCK: [2022-07-15 ven. 06:01]--[2022-07-15 ven. 06:16] =>  0:15
@@ -24,8 +25,10 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
      Must be versionnable with a magic number to keep opening old files.
 - [X] Cmake search for boost_serialization
 - [X] Implement ProjectFile::setFilename() and unit test
+- [X] Create the ProjectFile class using fox steam object
+- [ ] Handle ProjectFile::save file creation using FX stream
+  Should fix actual failing unit tests
 - [ ] ProjectFile may handle dirty flag so it can be tested
-- [ ] Create the ProjectFile class using fox steam object
 - [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 - [ ] If we don't use boost serialization, remove it from cmake and README
 **** TODO First version of the to-be-generated electron app
