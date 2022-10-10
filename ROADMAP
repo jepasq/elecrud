@@ -13,6 +13,10 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
+**** Font issue on manjaro
+- [ ] Can't see entered text in textfields etc...
+  see font section of https://sites.google.com/site/foxtoolkitusers/faq
+  Seems to be fixed with reinstallation.
 **** TODO Project-file serialization
 :LOGBOOK:
 CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
@@ -49,6 +53,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   Or make as a dialog with pre-recorded fields ?
 **** TODO Continue with details panel implementation
 :LOGBOOK:
+CLOCK: [2022-10-10 lun. 03:49]--[2022-10-10 lun. 04:05] =>  0:16
 CLOCK: [2022-09-20 mar. 04:09]--[2022-09-20 mar. 04:20] =>  0:11
 CLOCK: [2022-09-13 mar. 10:10]--[2022-09-13 mar. 10:21] =>  0:11
 CLOCK: [2022-09-13 mar. 09:40]--[2022-09-13 mar. 10:04] =>  0:24
@@ -65,6 +70,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
   - [X] When modifing the projectname, should set project file dirty file
 - [X] FX has a thing for recent files
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
+- [X] Calling File->new must reset all fields
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
@@ -88,9 +94,6 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot', arguments='"/home/
   rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
   graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
-**** Font issue on manjaro
-- [ ] Can't see entered text in textfields etc...
-  see font section of https://sites.google.com/site/foxtoolkitusers/faq
 *** DONE v0.0.1
 **** DONE Unit tests and CI setup
      :LOGBOOK:

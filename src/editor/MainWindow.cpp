@@ -206,6 +206,9 @@ long
 MainWindow::onFileNew(FXObject*,FXSelector,void*)
 {
   std::cout << "New file clicked!" << std::endl;
+  resetAllFields();
+  filename = "";
+  updateTitle();
   return 1;
 }
 
@@ -397,3 +400,18 @@ MainWindow::setDirty(bool vDirty)
   updateTitle();
 }
 
+/** Empty the content of all fields
+  *
+  */
+void
+MainWindow::resetAllFields()
+{
+  // Project panel
+  tfProjectName->setText("");
+  tfProjectAuth->setText("");
+  tfProjectVers->setText("");
+  tfProjectLice->setText("");
+  ftDescription->setText("");
+  // Collections panel
+  // Log panel
+}

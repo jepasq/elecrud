@@ -54,6 +54,7 @@ public:
   long onProjectDescChanged(FXObject*,FXSelector,void*);
 
   void addLogMessage(const FXString&);  
+  void resetAllFields();
   
 protected:
   MainWindow();
