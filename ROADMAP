@@ -38,6 +38,7 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [ ] If we don't use boost serialization, remove it from cmake and README
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
+CLOCK: [2022-10-10 lun. 04:28]--[2022-10-10 lun. 04:42] =>  0:14
 CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
 CLOCK: [2022-09-15 jeu. 02:51]--[2022-09-15 jeu. 03:00] =>  0:09
 CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
@@ -49,8 +50,11 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be able to include libfile's headers in elecrud
 - [X] ProjectFile must have a setter from FXString
   Add unit tests for this
-- [ ] Add a Generator panel where we can select output file and other
+- [-] Add a Generator panel where we can select output file and other
   Or make as a dialog with pre-recorded fields ?
+  - [X] Add the iconlist entry
+  - [X] Add the icon
+  - [ ] Add right panel  
 **** TODO Continue with details panel implementation
 :LOGBOOK:
 CLOCK: [2022-10-10 lun. 03:49]--[2022-10-10 lun. 04:05] =>  0:16

@@ -32,6 +32,7 @@ public:
 
   FXIcon* projecticon_big; //!< The Project pane icon
   FXIcon* collicon_big;    //!< The Collections icon
+  FXIcon* genicon_big;    //!< The Collections icon
   FXIcon* logicon_big;     //!< The Log icon
 
 };

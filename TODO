@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.1-7 (21 Sep. 2022 - ???) SLOC ???
-- (7) File/new menu item callback resets all fields
+- (8) Add generator icon and iconlist entry
+- File/new menu item callback resets all fields
 - Fix FXStream-based ProjectFile setrialization unit test
 - Implement serialization throw when filename is empty
 - Fix unit tests execution issue

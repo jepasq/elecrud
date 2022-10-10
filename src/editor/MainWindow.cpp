@@ -92,8 +92,6 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXMenuSeparator(filemenu);
   new FXMenuCommand(filemenu,tr("&Quit\tCtl-Q\tQuit program."),/*getApp()->quiticon*/nullptr,getApp(),Elecrud::ID_QUIT);
 
-
-
   auto mbProject=new FX::FXMenuBar(this, LAYOUT_TOP|LAYOUT_LEFT|LAYOUT_FILL_X);
   auto prjMenu=new FXMenuPane(this);
   auto mtFile = new FX::FXMenuTitle(mbFile, "&Project", nullptr,prjMenu);
@@ -120,6 +118,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 
   ilMenu->appendItem(new FXIconItem("Project", app->projecticon_big, nullptr));
   ilMenu->appendItem(new FXIconItem("Collections", app->collicon_big, nullptr));
+  ilMenu->appendItem(new FXIconItem("Generator", app->genicon_big, nullptr));
   ilMenu->appendItem(new FXIconItem("Log", app->logicon_big, nullptr));
   ilMenu->setWidth(120);
   

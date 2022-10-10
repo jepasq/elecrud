@@ -37,6 +37,7 @@ Elecrud::Elecrud(const FXString& name):
 
   projecticon_big = new FXGIFIcon(this, project_big);
   collicon_big = new FXGIFIcon(this, coll_big);
+  genicon_big = new FXGIFIcon(this, gen_big);
   logicon_big = new FXGIFIcon(this, log_big);
   }
 
