@@ -1,3 +1,13 @@
+* v0.0.1-7 (21 Sep. 2022 - 10 Oct. 2022) SLOC 868
+- Add generator icon and iconlist entry
+- File/new menu item callback resets all fields
+- Fix FXStream-based ProjectFile setrialization unit test
+- Implement serialization throw when filename is empty
+- Fix unit tests execution issue
+- Fix part of the tests
+- Add ProjectFile::save failing tests
+- Add a README screenshot
+
 * v0.0.1-6 (06 Sep. 2022 - 21 Sep. 2022) SLOC 801
 - Bump version to 0.0.1 (closed 5 ROADMAP sections)
 - Set default extension for both open and save as dialogs
