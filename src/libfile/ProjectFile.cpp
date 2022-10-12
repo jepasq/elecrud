@@ -25,7 +25,6 @@ ProjectFile::setFilename(const std::string& fn)
   filename = fn;
 }
 
-
 /** Get the current filename of this project
   *
   * \return  The current filename.
@@ -49,6 +48,11 @@ ProjectFile::setFilename(const FX::FXString& fn)
   filename = s;
 }
 
+/** Set the current filename (const char version)
+  *
+  * \param fn The new filename as a C string.
+  *
+  */
 void
 ProjectFile::setFilename(const char* fn)
 {

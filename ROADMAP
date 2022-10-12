@@ -87,11 +87,14 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
   to avoid a linker error. I fear it can make CI fail btw.
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2022-10-12 mer. 10:31]--[2022-10-12 mer. 10:52] =>  0:21
 CLOCK: [2022-09-06 mar. 07:19]--[2022-09-06 mar. 07:27] =>  0:08
 CLOCK: [2022-07-13 mer. 03:16]--[2022-07-13 mer. 03:41] =>  0:25
 CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 :END:
      Always fix undocumented members
+
+- [X] Add src/Mainpage.md as Doxygen mainpage
 - [ ] We have a dot error
   error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
 

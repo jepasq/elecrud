@@ -5,4 +5,5 @@ A C++/electron based multi-user CRUD operator generator.
 
 ## libfile
 
-This lib contains the *project files* related work.
+This library contains the *project files* related work and all that can be
+shared with other clients.
