@@ -152,12 +152,25 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   ftDescription = new FXText(projectPane, this, ID_DSCR,
 			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
 
+
+
+  
   //  ftDescription->setText("Insert project description here.");
   
   // Collections edition pane
   collectPane  = new FXHorizontalFrame(splitter);
   new FXLabel(collectPane, "Collections details");
 
+  // Generator details pane
+  //  projectPane = new FXFrame(splitter);
+  generatPane = new FXVerticalFrame(splitter);
+  new FXLabel(generatPane, "Generator");
+  auto pph10 = new FXHorizontalFrame(generatPane);
+  auto labOutName=new FXLabel(pph10, "Output filename :", 0, LAYOUT_FIX_WIDTH );
+  labOutName->setWidth(lablength);
+  tfOutputName = new FXTextField(pph10, tflength, this, ID_PRJD);
+
+  
   // Logger pane
   logPane  = new FXVerticalFrame(splitter,
 				 FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
@@ -321,18 +334,29 @@ MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
       projectPane->show();
       collectPane->hide();
       logPane->hide();
+      generatPane->hide();
     }
   else if (i == 1)
     {
       projectPane->hide();
       collectPane->show();
+      generatPane->hide();
+      logPane->hide();
+    }
+  else if (i == 2)
+    {
+      projectPane->hide();
+      collectPane->hide();
+      generatPane->show();
       logPane->hide();
     }
   else
     {
       projectPane->hide();
       collectPane->hide();
+      generatPane->hide();
       logPane->show();
+      
     }
   splitter->layout();
   

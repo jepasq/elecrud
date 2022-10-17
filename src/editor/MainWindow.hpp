@@ -80,6 +80,7 @@ private:
   FXSplitter* splitter;            //!< The parent of all panes
   FXVerticalFrame* projectPane;    //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The collections panel
+  FXVerticalFrame* generatPane;    //!< The generator log panel
   FXVerticalFrame* logPane;        //!< The project log panel
 
   FXList* logger;             //!< The logger widget
@@ -89,6 +90,9 @@ private:
   FXTextField* tfProjectLice; //!< The project version
   FXText*      ftDescription; //!< The description multiline input widget
 
+  FXTextField* tfOutputName; //!< The output filename
+
+  
   FXRecentFiles mrufiles; //!< Recent files list
 };
 

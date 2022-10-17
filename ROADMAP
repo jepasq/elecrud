@@ -57,6 +57,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] Add right panel  
 **** TODO Continue with details panel implementation
 :LOGBOOK:
+CLOCK: [2022-10-17 lun. 10:47]--[2022-10-17 lun. 11:16] =>  0:29
 CLOCK: [2022-10-10 lun. 03:49]--[2022-10-10 lun. 04:05] =>  0:16
 CLOCK: [2022-09-20 mar. 04:09]--[2022-09-20 mar. 04:20] =>  0:11
 CLOCK: [2022-09-13 mar. 10:10]--[2022-09-13 mar. 10:21] =>  0:11
@@ -75,6 +76,7 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
 - [X] FX has a thing for recent files
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 - [X] Calling File->new must reset all fields
+- [ ] Handle Generate pane
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
