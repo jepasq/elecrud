@@ -22,7 +22,10 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVEAS,MainWindow::onFileSaveAs),
 
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_GPAB,  MainWindow::onGenPathClicked),
 
+
+  
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
  // From https://rubydoc.info/gems/fxruby/Fox/FXText : Changed in any way.
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
@@ -169,7 +172,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   auto labOutName=new FXLabel(pph10, "Output filename :", 0, LAYOUT_FIX_WIDTH );
   labOutName->setWidth(lablength);
   tfOutputName = new FXTextField(pph10, tflength, this, ID_PRJD);
-
+  new FXButton(pph10, "...", nullptr, this, ID_GPAB);
   
   // Logger pane
   logPane  = new FXVerticalFrame(splitter,
@@ -437,4 +440,14 @@ MainWindow::resetAllFields()
   ftDescription->setText("");
   // Collections panel
   // Log panel
+}
+
+/** Launched when the Generator panel path change button is clicked
+  *
+  */
+long
+MainWindow::onGenPathClicked(FXObject*,FXSelector,void*)
+{
+  std::cout << "AZE " << std::endl;
+  return 1;
 }
