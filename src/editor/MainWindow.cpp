@@ -449,5 +449,12 @@ long
 MainWindow::onGenPathClicked(FXObject*,FXSelector,void*)
 {
   std::cout << "AZE " << std::endl;
+  auto filename = FXFileDialog::getOpenDirectory(this, "Generator directory...",
+						 "~");
+
+  std::cout << filename.text() << std::endl;
+  
+  
+  tfOutputName->setText(filename);  
   return 1;
 }
