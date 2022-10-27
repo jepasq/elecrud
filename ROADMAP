@@ -57,6 +57,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] Add right panel  
 **** TODO Continue with details panel implementation
 :LOGBOOK:
+CLOCK: [2022-10-27 jeu. 11:08]--[2022-10-27 jeu. 11:22] =>  0:14
 CLOCK: [2022-10-27 jeu. 10:40]--[2022-10-27 jeu. 10:57] =>  0:17
 CLOCK: [2022-10-25 mar. 11:22]--[2022-10-25 mar. 11:54] =>  0:32
 CLOCK: [2022-10-21 ven. 08:46]--[2022-10-21 ven. 09:04] =>  0:18
@@ -79,11 +80,12 @@ CLOCK: [2022-09-02 ven. 02:48]--[2022-09-02 ven. 03:06] =>  0:18
 - [X] FX has a thing for recent files
     https://github.com/gogglesguy/fox/blob/master/adie/TextWindow.cpp#L520
 - [X] Calling File->new must reset all fields
-- [-] Handle Generate pane
+- [X] Handle Generate pane
   - [X] At least an output field with a file selection button
   - [X] Generator menu item shouldn't be disabled. Will be used for help
     and add their callback
-  - [ ] Implement a preGenerationChecks method
+  - [X] Implement a preGenerationChecks method
+- [ ] Start Generator work
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting

@@ -72,6 +72,8 @@ protected:
   void setRunnableProject(bool);
   void updateTitle(void);
   void setDirty(bool vDirty=true);
+
+  void preGenerationChecks(void);
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 

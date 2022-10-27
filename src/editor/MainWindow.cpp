@@ -469,6 +469,7 @@ MainWindow::onGenPathClicked(FXObject*,FXSelector,void*)
 long
 MainWindow::onProjectGen(FXObject*,FXSelector,void*)
 {
+  preGenerationChecks();
   std::cout << "ProGen clicked" << std::endl;
 
   return 1;
@@ -477,7 +478,23 @@ MainWindow::onProjectGen(FXObject*,FXSelector,void*)
 long
 MainWindow::onProjectRun(FXObject*,FXSelector,void*)
 {
+  preGenerationChecks();
   std::cout << "ProRun clicked" << std::endl;
 
   return 1;
 }
+
+/** A check methods called just before generation/run
+  *
+  */
+void
+MainWindow::preGenerationChecks(void)
+{
+  if (tfOutputName->getText().empty())
+  {
+    FXMessageBox::warning(this, MBOX_OK, "Generator warning",
+			  "Generator output isn't setup!");
+  }
+
+}
+
