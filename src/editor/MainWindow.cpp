@@ -21,6 +21,10 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVE,  MainWindow::onFileSave),
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_SAVEAS,MainWindow::onFileSaveAs),
 
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_PGEN,MainWindow::onProjectGen),
+  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_PRUN,MainWindow::onProjectRun),
+
+  
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_GPAB,  MainWindow::onGenPathClicked),
 
@@ -101,10 +105,10 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 
   mcGen = new FXMenuCommand(prjMenu,
 	       tr("&Generate...\tCtl-N\tGenerate the electron app."),
-			    nullptr,this,ID_NEW);
+			    nullptr,this,ID_PGEN);
   mcRun = new FXMenuCommand(prjMenu,
 			    tr("&Run...\tCtl-O\tGenerate and run the app."),
-			    nullptr,this,ID_OPEN);
+			    nullptr,this,ID_PRUN);
 
 
   auto statusbar = new FXStatusBar(this,LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X|
@@ -285,16 +289,19 @@ MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 void
 MainWindow::setRunnableProject(bool runnable)
 {
-  if (runnable)
+  //  if (runnable)
+  // Now, we let tje Gen and Run button enabled but we will have a
+  // pre-generation check
     {
       mcGen->enable();
       mcRun->enable();
     }
-  else
+    /*  else
     {
       mcGen->disable();
       mcRun->disable();
     }
+    */
 }
 
 /** Update the window title with project save status
@@ -456,5 +463,21 @@ MainWindow::onGenPathClicked(FXObject*,FXSelector,void*)
   
   
   tfOutputName->setText(filename);  
+  return 1;
+}
+
+long
+MainWindow::onProjectGen(FXObject*,FXSelector,void*)
+{
+  std::cout << "ProGen clicked" << std::endl;
+
+  return 1;
+}
+
+long
+MainWindow::onProjectRun(FXObject*,FXSelector,void*)
+{
+  std::cout << "ProRun clicked" << std::endl;
+
   return 1;
 }

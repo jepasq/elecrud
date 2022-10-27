@@ -37,6 +37,9 @@ public:
     ID_DSCR,   //!< The project description widget
 
     ID_GPAB,   //!< The Generator panel Change Path button
+
+    ID_PGEN,   //!< The project->Generate menu button
+    ID_PRUN,   //!< The project->Run menu button
     
     ID_LAST,   //!< Always last (and not used)
     };
@@ -51,6 +54,9 @@ public:
   long onFileSave(FXObject*,FXSelector,void*);
   long onFileSaveAs(FXObject*,FXSelector,void*);
 
+  long onProjectGen(FXObject*,FXSelector,void*);
+  long onProjectRun(FXObject*,FXSelector,void*);
+  
   long onIconClicked(FXObject*,FXSelector,void*);
   long onProjectDetailsChanged(FXObject*,FXSelector,void*);
   long onProjectDescChanged(FXObject*,FXSelector,void*);
