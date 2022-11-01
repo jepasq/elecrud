@@ -26,6 +26,7 @@ find_package(Boost COMPONENTS serialization REQUIRED)
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(EDITOR_SRC
   src/editor/Elecrud.cpp
+  src/editor/Generator.cpp
   src/editor/MainWindow.cpp
 )
 
@@ -52,6 +53,7 @@ add_executable(tests src/tests.cpp
   ${EDITOR_SRC}
   src/libfile/ProjectFile_Test.cpp
   
+  src/editor/Generator_Test.cpp
   src/editor/MainWindow_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
