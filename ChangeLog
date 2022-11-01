@@ -1,3 +1,13 @@
+* v0.0.1-8 (10 Oct. 2022 - 01 Nov. 2022) SLOC 1,044
+- Generator::getOutputDir implementation
+- Add a bastc Generator abstract type
+- Add a warning dialog as pre-generation check
+- Reenable project menu actions and connect callbacks
+- Make the generator output dir selection work
+- Add the generator path button callback
+- Add generator pane with output filename textfield
+- Improve doxygen documentation with mainpage and undocumented members fix
+
 * v0.0.1-7 (21 Sep. 2022 - 10 Oct. 2022) SLOC 868
 - Add generator icon and iconlist entry
 - File/new menu item callback resets all fields

@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.1-8 (10 Oct. 2022 - ???) SLOC ???
-- (8) Generator::getOutputDir implementation
-- Add a bastc Generator abstract type
-- Add a warning dialog as pre-generation check
-- Reenable project menu actions and connect callbacks
-- Make the generator output dir selection work
-- Add the generator path button callback
-- Add generator pane with output filename textfield
-- Improve doxygen documentation with mainpage and undocumented members fix
+* v0.0.1-9 (01 Nov. 2022 - ???) SLOC ?,???
+
