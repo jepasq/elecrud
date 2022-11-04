@@ -55,10 +55,16 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [X] Add the iconlist entry
   - [X] Add the icon
   - [ ] Add right panel  
-**** Basic Generator work
-- [ ] Start Generator work in src/editor/
-  - [ ] A Generator base class with ouputdir handling
+**** TODO Basic Generator work
+:LOGBOOK:
+CLOCK: [2022-11-04 ven. 09:45]--[2022-11-04 ven. 09:58] =>  0:13
+:END:
+- [-] Start Generator work in src/editor/
+  - [X] A Generator base class with ouputdir handling
   - [ ] A Generator subclass (maybe a versionned one (v1 ?)
+
+- [ ] Generator must be able to check if a directory exist and create it if
+  needed
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting

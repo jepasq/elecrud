@@ -19,6 +19,7 @@ public:
   virtual void generate(void)=0;
 
   const std::string& getOutputDir() const;
+  void               setOutputDir(const std::string&);
   
 private:
   std::string outputDir;
