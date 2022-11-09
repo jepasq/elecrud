@@ -23,6 +23,8 @@ public:
 
 protected:
   bool directoryExists(const std::string&);
+  void createDirectory(const std::string&);
+  void removeDirectory(const std::string&);
   
 private:
   std::string outputDir;

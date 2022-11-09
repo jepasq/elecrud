@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.1-9 (01 Nov. 2022 - ???) SLOC ?,???
-- (4) Generator can check if a directory exists
+- (5) Add two directory-related failing tests
+- Generator can check if a directory exists
 - Add a GeneratorV1 class
 - Generator::setOutputDir implementation
 - Close a panel-related ROADMAP section

@@ -51,3 +51,15 @@ Generator::directoryExists(const std::string& dir)
 
   return false;
 }
+
+void
+Generator::createDirectory(const std::string&)
+{
+
+}
+
+void
+Generator::removeDirectory(const std::string&)
+{
+
+}
