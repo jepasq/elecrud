@@ -1,5 +1,8 @@
 #include "Generator.hpp"
 
+#include <sys/types.h>
+#include <sys/stat.h>
+
 Generator::Generator():
   outputDir()
 {
@@ -26,4 +29,25 @@ void
 Generator::setOutputDir(const std::string& nod)
 {
   this->outputDir = nod;
+}
+
+bool
+Generator::directoryExists(const std::string& dir)
+{
+  // From https://stackoverflow.com/a/18101042
+  struct stat info;
+
+  auto pathname = dir.c_str();
+  
+  if( stat( pathname, &info ) != 0 )
+    printf( "cannot access %s\n", pathname );
+  else if( info.st_mode & S_IFDIR )
+    {
+      printf( "%s is a directory\n", pathname );
+      return true;
+    }
+  else
+    printf( "%s is no directory\n", pathname );
+
+  return false;
 }

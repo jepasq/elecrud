@@ -20,6 +20,9 @@ public:
 
   const std::string& getOutputDir() const;
   void               setOutputDir(const std::string&);
+
+protected:
+  bool directoryExists(const std::string&);
   
 private:
   std::string outputDir;
