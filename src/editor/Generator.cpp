@@ -83,3 +83,10 @@ Generator::removeDirectory(const std::string& dir)
     std::cout << "Something wen wrong." << std::endl;
   
 }
+
+const std::map<std::string, std::string>&
+Generator::getVariables(void) const
+{
+  return variables;
+}
+

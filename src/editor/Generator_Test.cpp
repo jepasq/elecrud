@@ -13,8 +13,6 @@ public:
   bool _directoryExists(const std::string&d){ return directoryExists(d); } 
   void _createDirectory(const std::string&d){ createDirectory(d); } 
   void _removeDirectory(const std::string&d){ removeDirectory(d); } 
-
-  
 };
 
 BOOST_AUTO_TEST_CASE( TestableGenerator_can_be_instantiated )
@@ -60,4 +58,13 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_createDirectory )
   // then, remove
   tg._removeDirectory(dirname);
   BOOST_REQUIRE( !tg._directoryExists(dirname) );
+}
+
+/// Be sure the variables map is empty
+BOOST_AUTO_TEST_CASE( TestableGenerator_varsAreEmpty )
+{
+  TestableGenerator tg;
+  auto vars= tg.getVariables();
+  BOOST_REQUIRE( vars.empty() );
+
 }
