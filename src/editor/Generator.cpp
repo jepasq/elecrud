@@ -2,6 +2,9 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <unistd.h>    // POSIX-only solution
+
+#include <iostream>
 
 Generator::Generator():
   outputDir()
@@ -52,14 +55,31 @@ Generator::directoryExists(const std::string& dir)
   return false;
 }
 
+/** Create the given directory
+  *
+  * \param The directory name.
+  *
+  */
 void
-Generator::createDirectory(const std::string&)
+Generator::createDirectory(const std::string& dir)
 {
-
+  int r = mkdir(dir.c_str(), 0700);
+  if (r != 0)
+    std::cout << "Something wen wrong." << std::endl;
+  // see https://www.man7.org/linux/man-pages/man2/mkdir.2.html#RETURN_VALUE
+  // for more
 }
 
+/** Remove the given directory
+  *
+  * \param The directory name.
+  *
+  */
 void
-Generator::removeDirectory(const std::string&)
+Generator::removeDirectory(const std::string& dir)
 {
-
+  int r = rmdir(dir.c_str());
+  if (r != 0)
+    std::cout << "Something wen wrong." << std::endl;
+  
 }
