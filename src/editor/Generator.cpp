@@ -90,3 +90,8 @@ Generator::getVariables(void) const
   return variables;
 }
 
+void
+Generator::addVariable(const std::string& key, const std::string& value)
+{
+  variables.insert({key, value});
+}

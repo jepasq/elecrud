@@ -23,7 +23,8 @@ public:
   void               setOutputDir(const std::string&);
 
   const std::map<std::string, std::string>& getVariables(void) const;
-
+  void addVariable(const std::string&, const std::string&);
+  
 protected:
   bool directoryExists(const std::string&);
   void createDirectory(const std::string&);

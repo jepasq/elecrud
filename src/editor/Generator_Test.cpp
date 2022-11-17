@@ -66,5 +66,15 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_varsAreEmpty )
   TestableGenerator tg;
   auto vars= tg.getVariables();
   BOOST_REQUIRE( vars.empty() );
+}
 
+BOOST_AUTO_TEST_CASE( TestableGenerator_addVar )
+{
+  TestableGenerator tg;
+  auto c1= tg.getVariables().size();
+
+  tg.addVariable("key1", "val1");
+  
+  BOOST_REQUIRE( !tg.getVariables().empty() );
+  BOOST_REQUIRE( c1 != tg.getVariables().size() );
 }
