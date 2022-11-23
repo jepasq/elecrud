@@ -4,6 +4,8 @@
 
 #include <string>
 
+using std::string;
+
 /// Used to instantiate and test the abstract Generator class
 class TestableGenerator : public Generator {
 
@@ -13,6 +15,8 @@ public:
   bool _directoryExists(const std::string&d){ return directoryExists(d); } 
   void _createDirectory(const std::string&d){ createDirectory(d); } 
   void _removeDirectory(const std::string&d){ removeDirectory(d); } 
+  const string& _replaceVars(const string& in){return replaceVars(in); } 
+
 };
 
 BOOST_AUTO_TEST_CASE( TestableGenerator_can_be_instantiated )
@@ -78,3 +82,12 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_addVar )
   BOOST_REQUIRE( !tg.getVariables().empty() );
   BOOST_REQUIRE( c1 != tg.getVariables().size() );
 }
+
+BOOST_AUTO_TEST_CASE( TestableGenerator_replaceVars )
+{
+  TestableGenerator tg;
+  tg.addVariable("key1", "val1");
+  BOOST_REQUIRE( tg._replaceVars("key1") == "val1" );
+  BOOST_REQUIRE( tg._replaceVars("AAAkey1AAA") == "AAAval1AAA" );
+}
+

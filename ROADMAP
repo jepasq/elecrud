@@ -57,6 +57,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] Add right panel  
 **** TODO Basic Generator work
 :LOGBOOK:
+CLOCK: [2022-11-23 mer. 05:50]--[2022-11-23 mer. 06:01] =>  0:11
 CLOCK: [2022-11-17 jeu. 13:53]--[2022-11-17 jeu. 14:04] =>  0:11
 CLOCK: [2022-11-14 lun. 15:51]--[2022-11-14 lun. 16:02] =>  0:11
 CLOCK: [2022-11-14 lun. 14:52]--[2022-11-14 lun. 15:11] =>  0:19
@@ -80,7 +81,9 @@ CLOCK: [2022-11-04 ven. 09:45]--[2022-11-04 ven. 09:58] =>  0:13
 
 - [ ] Generator must use variables map to produce a regex to replace text
   in an arbitrary text (the file content)
-
+  - [ ] May keep a list of std::regex_replace objects
+  - [ ] Then, implement replaceVars method
+    
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
 - [ ] We have a segfault in FX::FXAccelTable::removeAccel when quitting
@@ -104,9 +107,9 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] We have a dot error
   error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
 
-  error: Problems running dot: exit code=0, command='dot', arguments='"/home/
-  rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__
-  graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
+  error: Problems running dot: exit code=0, command='dot',
+    arguments='".../elecrud/build/latex/classMainWindow__coll__
+    graph.dot" -Tpdf -o "/home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__coll__graph.pdf"'
 **** DONE Continue with details panel implementation
 :LOGBOOK:
 CLOCK: [2022-11-01 mar. 12:24]--[2022-11-01 mar. 12:36] =>  0:12

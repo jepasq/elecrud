@@ -6,6 +6,8 @@
 
 #include <iostream>
 
+#include <regex>
+
 Generator::Generator():
   outputDir()
 {
@@ -94,4 +96,10 @@ void
 Generator::addVariable(const std::string& key, const std::string& value)
 {
   variables.insert({key, value});
+}
+
+const std::string&
+Generator::replaceVars(const std::string& in)
+{
+
 }

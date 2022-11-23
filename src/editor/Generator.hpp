@@ -30,6 +30,8 @@ protected:
   void createDirectory(const std::string&);
   void removeDirectory(const std::string&);
 
+  const std::string& replaceVars(const std::string&);
+  
   
 private:
   std::string outputDir; //!< The directory the output will be created in
