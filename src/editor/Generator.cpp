@@ -8,17 +8,28 @@
 
 #include <regex>
 
+/** Default constructor
+  *
+  * Mainly set outputDir  default value.
+  *
+  */
 Generator::Generator():
   outputDir()
 {
   
 }
 
+/// Destructor
 Generator::~Generator()
 {
   
 }
 
+/** Get the current outputDir value
+  *
+  * \return The outputDir value as a string.
+  *
+  */
 const std::string&
 Generator::getOutputDir() const
 {
@@ -36,6 +47,13 @@ Generator::setOutputDir(const std::string& nod)
   this->outputDir = nod;
 }
 
+/** Check if the given directory exists
+  *
+  * \param dir The dir name as a std string.
+  *
+  * \return true If we can access the existing directory.
+  *
+  */
 bool
 Generator::directoryExists(const std::string& dir)
 {
@@ -86,18 +104,36 @@ Generator::removeDirectory(const std::string& dir)
   
 }
 
+/** Get the variables map
+  *
+  * \return A reference to the local variables map.
+  *
+  */
 const std::map<std::string, std::string>&
 Generator::getVariables(void) const
 {
   return variables;
 }
 
+/** Insert the given key and value to the variables map
+  *
+  * \param key   The text to be replaced.
+  * \param value The value to replace the key with.
+  *
+  */
 void
 Generator::addVariable(const std::string& key, const std::string& value)
 {
   variables.insert({key, value});
 }
 
+/** Return a text wher we replaced all variale jey by its value
+ *
+ * \param The input string.
+ *
+ * \return The modified string.
+ *
+ */
 const std::string&
 Generator::replaceVars(const std::string& in)
 {
