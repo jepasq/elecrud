@@ -475,8 +475,17 @@ MainWindow::onProjectGen(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** The run project callback
+  *
+  * \param _o Unused parameter.
+  * \param _s Unused parameter.
+  * \param _v Unused parameter.
+  *
+  * \return Always 1.
+  *
+  */
 long
-MainWindow::onProjectRun(FXObject*,FXSelector,void*)
+MainWindow::onProjectRun(FXObject* _o,FXSelector _s, void* _v)
 {
   preGenerationChecks();
   std::cout << "ProRun clicked" << std::endl;

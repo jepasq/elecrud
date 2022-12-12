@@ -129,7 +129,7 @@ Generator::addVariable(const std::string& key, const std::string& value)
 
 /** Return a text wher we replaced all variale jey by its value
  *
- * \param The input string.
+ * \param in The input string.
  *
  * \return The modified string.
  *

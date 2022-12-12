@@ -17,6 +17,13 @@ public:
   Generator();
   virtual ~Generator();
 
+  /** Will finally generate the applicarion
+    *
+    * Must be reimplemented by subclasses to generate the final application
+    * according to member variables. For example, use the outputDir member
+    * as the final app. destination.
+    *
+    */
   virtual void generate(void)=0;
 
   const std::string& getOutputDir() const;
