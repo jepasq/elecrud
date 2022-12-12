@@ -134,8 +134,15 @@ Generator::addVariable(const std::string& key, const std::string& value)
  * \return The modified string.
  *
  */
-const std::string&
+std::string
 Generator::replaceVars(const std::string& in)
 {
 
+  std::string out = in;
+
+  for (auto var : variables)
+    out = std::regex_replace(out, std::regex(var.first), var.second);
+
+  return out;
+  
 }

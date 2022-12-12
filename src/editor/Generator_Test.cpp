@@ -15,7 +15,7 @@ public:
   bool _directoryExists(const std::string&d){ return directoryExists(d); } 
   void _createDirectory(const std::string&d){ createDirectory(d); } 
   void _removeDirectory(const std::string&d){ removeDirectory(d); } 
-  const string& _replaceVars(const string& in){return replaceVars(in); } 
+  string _replaceVars(const string& in){return replaceVars(in); } 
 
 };
 

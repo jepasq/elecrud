@@ -30,7 +30,7 @@ protected:
   void createDirectory(const std::string&);
   void removeDirectory(const std::string&);
 
-  const std::string& replaceVars(const std::string&);
+  std::string replaceVars(const std::string&);
   
   
 private:
