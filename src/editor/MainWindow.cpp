@@ -174,7 +174,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(generatPane, "Generator");
   auto pph10 = new FXHorizontalFrame(generatPane);
   auto labOutName=new FXLabel(pph10, "Output filename :", 0, LAYOUT_FIX_WIDTH );
-  labOutName->setWidth(lablength);
+  labOutName->setWidth(lablength+60);
   tfOutputName = new FXTextField(pph10, tflength, this, ID_PRJD);
   new FXButton(pph10, "...", nullptr, this, ID_GPAB);
   
