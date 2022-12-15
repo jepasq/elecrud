@@ -91,3 +91,22 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_replaceVars )
   BOOST_REQUIRE( tg._replaceVars("AAAkey1AAA") == "AAAval1AAA" );
 }
 
+/// Copy index.html in the 
+BOOST_AUTO_TEST_CASE( TestableGenerator_copy_index )
+{
+  std::string dirname = "newone";
+  auto filename = "" + dirname + "/index.html";
+  auto gen_appname = "generated_appname";
+
+  
+  TestableGenerator tg;
+  tg.addVariable("APPNAME", gen_appname);
+  tg._removeDirectory(dirname);
+  tg.setOutputDir(dirname);
+
+  BOOST_REQUIRE( tg._directoryExists(dirname) );
+  BOOST_REQUIRE( tg._fileExists(filename ) );
+		 BOOST_REQUIRE( tg._fileContains(filename, gen_appname ));
+  
+}
+
