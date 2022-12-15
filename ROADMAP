@@ -38,6 +38,7 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [ ] If we don't use boost serialization, remove it from cmake and README
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
+CLOCK: [2022-12-15 jeu. 01:18]--[2022-12-15 jeu. 01:40] =>  0:22
 CLOCK: [2022-10-10 lun. 04:28]--[2022-10-10 lun. 04:42] =>  0:14
 CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
 CLOCK: [2022-09-15 jeu. 02:51]--[2022-09-15 jeu. 03:00] =>  0:09
@@ -54,7 +55,9 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   Or make as a dialog with pre-recorded fields ?
   - [X] Add the iconlist entry
   - [X] Add the icon
-  - [ ] Add right panel  
+  - [ ] Add right panel
+- [ ] Complete test
+  - [ ] Copy src/app elsewhere then npm install then npm start
 **** TODO Basic Generator work
 :LOGBOOK:
 CLOCK: [2022-12-15 jeu. 00:54]--[2022-12-15 jeu. 00:56] =>  0:02
@@ -84,6 +87,15 @@ CLOCK: [2022-11-04 ven. 09:45]--[2022-11-04 ven. 09:58] =>  0:13
   in an arbitrary text (the file content)
   - [X] May keep a list of std::regex_replace objects
   - [X] Then, implement replaceVars method
+
+- [ ] Must implement complete process with unit tests  
+  - [ ] Must create output directory and test this
+  - [ ] Must start to copy needed files
+    package.json: must replace {{APPNAME}}
+  - [ ] Maybe call npm audit fix to update packeges to last version ?
+  - [ ] Then call =npm install= : it can be very long. We must have a
+    =ProcessWatcher= class here to follow progress
+  - [ ] Call =npm start= to run app
     
 - [ ] Search for other icons in Adie source code
   https://github.com/gogglesguy/fox/blob/master/adie/  
