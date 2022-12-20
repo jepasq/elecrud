@@ -147,11 +147,20 @@ Generator::replaceVars(const std::string& in)
   
 }
 
-/// Does the given file exist ?
+/** Does the given file exist ?
+  *
+  * \param file The filename to be checked.
+  *
+  * \return true if the file exists accordibng to stat().
+  *
+  */
 bool
-Generator::fileExists(const std::string&)
+Generator::fileExists(const std::string& file)
 {
-  return false;
+  struct stat info;
+  auto pathname = file.c_str();
+  
+  return (stat( pathname, &info ) == 0);
 }
 
 /** Does the file contain the given txt

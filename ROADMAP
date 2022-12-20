@@ -59,8 +59,14 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [ ] Complete test
   - [ ] Copy src/app elsewhere then npm install then npm start
 **** TODO First generation work
-- [ ] Implement actually failing unit tests
-
+:LOGBOOK:
+CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
+:END:
+- [-] Implement actually failing unit tests
+  - [X] fileExists
+  - [ ] fileContains  
+  - [ ] copy_index complete test
+    
 - [ ] Must implement complete process with unit tests
   - [ ] Must access the log panel and use it
   - [ ] Must start to copy needed files
