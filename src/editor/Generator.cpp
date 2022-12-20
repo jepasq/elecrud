@@ -5,6 +5,8 @@
 #include <unistd.h>    // POSIX-only solution
 
 #include <iostream>
+#include <fstream>     // USES fstream
+#include <cstring>     // USES strcmp
 
 #include <regex>
 
@@ -165,10 +167,39 @@ Generator::fileExists(const std::string& file)
 
 /** Does the file contain the given txt
  *
+ * Performs a case sensitive search. For unit test purpose.
+ *
+ * \param filename The file to be checked
+ * \param txt      The text to be searched for.
+ *
+ * \return true is the text was found. false if not or if the file can't be
+ *         opened.
+ *
  */
 bool
-Generator::fileContains(const std::string& file, const std::string& txt)
+Generator::fileContains(const std::string& filename, const std::string& txt)
 {
+  if (!fileExists(filename))
+    return false;
+  
+  // see https://stackoverflow.com/a/13482546
+  auto wordToFind = txt.c_str();
+  char aWord[50];
+
+  std::fstream file;
+  file.open(filename, std::ios::in);
+  
+  while (file.good())
+    {
+      file >> aWord;
+      std::cout << "Got '" << aWord << "'" << std::endl;
+      if (file.good() && strcmp(aWord, wordToFind) == 0) {
+	//found word
+	file.close();
+	return true;
+      }
+    }
+  file.close();
   return false;
 }
 

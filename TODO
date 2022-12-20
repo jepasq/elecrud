@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.1-10 (17 Nov. 2022 - ???) SLOC ?,???
-- (5) Implement the Generator::fileExists function
+- (6) First basic fileContains() implementation
+- Implement the Generator::fileExists function
 - Add fileExists and FileContains Generator unit tests
 - Add a failing test for inde.html copied file
 - Fix generator panel label width
