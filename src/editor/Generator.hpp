@@ -38,7 +38,8 @@ protected:
   void removeDirectory(const std::string&);
 
   std::string replaceVars(const std::string&);
-  
+  bool fileExists(const std::string&);
+  bool fileContains(const std::string&, const std::string&);
   
 private:
   std::string outputDir; //!< The directory the output will be created in

@@ -17,6 +17,12 @@ public:
   void _removeDirectory(const std::string&d){ removeDirectory(d); } 
   string _replaceVars(const string& in){return replaceVars(in); } 
 
+  bool _fileExists(const std::string&d){ return fileExists(d); } 
+  bool _fileContains(const std::string&f, const std::string&txt){
+    return fileContains(f, txt);
+  } 
+
+  
 };
 
 BOOST_AUTO_TEST_CASE( TestableGenerator_can_be_instantiated )
@@ -91,6 +97,23 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_replaceVars )
   BOOST_REQUIRE( tg._replaceVars("AAAkey1AAA") == "AAAval1AAA" );
 }
 
+
+/// Test if a file exist
+BOOST_AUTO_TEST_CASE( TestableGenerator_fileExists )
+{
+  TestableGenerator tg;
+  BOOST_REQUIRE( tg._fileExists("CMakeCache.txt" ) );
+  BOOST_REQUIRE( !tg._fileExists("CMakeCache.txt_inexistantFile;;" ) );  
+}
+
+/// Test if a file contains a given test
+BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains )
+{
+  TestableGenerator tg;
+  BOOST_REQUIRE( tg._fileContains("CMakeCache.txt", "EXTERNAL" ) );
+  BOOST_REQUIRE( !tg._fileContains("CMakeCache.txt", "AAAbbbCCCdDdD" ) );  
+}
+
 /// Copy index.html in the 
 BOOST_AUTO_TEST_CASE( TestableGenerator_copy_index )
 {
@@ -106,7 +129,6 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_copy_index )
 
   BOOST_REQUIRE( tg._directoryExists(dirname) );
   BOOST_REQUIRE( tg._fileExists(filename ) );
-		 BOOST_REQUIRE( tg._fileContains(filename, gen_appname ));
-  
+  BOOST_REQUIRE( tg._fileContains(filename, gen_appname ));  
 }
 

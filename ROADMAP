@@ -58,38 +58,11 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] Add right panel
 - [ ] Complete test
   - [ ] Copy src/app elsewhere then npm install then npm start
-**** TODO Basic Generator work
-:LOGBOOK:
-CLOCK: [2022-12-15 jeu. 03:40]--[2022-12-15 jeu. 03:54] =>  0:14
-CLOCK: [2022-12-15 jeu. 00:54]--[2022-12-15 jeu. 00:56] =>  0:02
-CLOCK: [2022-12-12 lun. 03:07]--[2022-12-12 lun. 03:22] =>  0:15
-CLOCK: [2022-11-23 mer. 05:50]--[2022-11-23 mer. 06:01] =>  0:11
-CLOCK: [2022-11-17 jeu. 13:53]--[2022-11-17 jeu. 14:04] =>  0:11
-CLOCK: [2022-11-14 lun. 15:51]--[2022-11-14 lun. 16:02] =>  0:11
-CLOCK: [2022-11-14 lun. 14:52]--[2022-11-14 lun. 15:11] =>  0:19
-CLOCK: [2022-11-09 mer. 10:52]--[2022-11-09 mer. 11:06] =>  0:14
-CLOCK: [2022-11-09 mer. 10:06]--[2022-11-09 mer. 10:24] =>  0:18
-CLOCK: [2022-11-04 ven. 10:07]--[2022-11-04 ven. 10:23] =>  0:16
-CLOCK: [2022-11-04 ven. 09:45]--[2022-11-04 ven. 09:58] =>  0:13
-:END:
-- [X] Start Generator work in src/editor/
-  - [X] A Generator base class with ouputdir handling
-  - [X] A Generator subclass (maybe a versionned one (v1 ?)
+**** TODO First generation work
+- [ ] Implement actually failing unit tests
 
-- [X] Generator must be able to check if a directory exist
-- [X] Generator must be able to create the needed directory
-  And remove it for test purpose
-- [X] Generator must be able to copy a file and modify it on the fly
-  As a template engine would do with a single file {{VERSION}} could work
-  - [X] Must have a key/value pair to be able to replace them
-  - [X] Must be able to add a key with a value    
-  - [X] This variables map must be empty by default
-- [X] Generator must use variables map to produce a regex to replace text
-  in an arbitrary text (the file content)
-  - [X] May keep a list of std::regex_replace objects
-  - [X] Then, implement replaceVars method
-
-- [ ] Must implement complete process with unit tests  
+- [ ] Must implement complete process with unit tests
+  - [ ] Must access the log panel and use it
   - [ ] Must start to copy needed files
     package.json: must replace {{APPNAME}}
   - [ ] Maybe call npm audit fix to update packeges to last version ?
@@ -125,6 +98,38 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE Basic Generator work
+:LOGBOOK:
+CLOCK: [2022-12-20 mar. 04:49]--[2022-12-20 mar. 05:10] =>  0:21
+CLOCK: [2022-12-15 jeu. 03:40]--[2022-12-15 jeu. 03:54] =>  0:14
+CLOCK: [2022-12-15 jeu. 00:54]--[2022-12-15 jeu. 00:56] =>  0:02
+CLOCK: [2022-12-12 lun. 03:07]--[2022-12-12 lun. 03:22] =>  0:15
+CLOCK: [2022-11-23 mer. 05:50]--[2022-11-23 mer. 06:01] =>  0:11
+CLOCK: [2022-11-17 jeu. 13:53]--[2022-11-17 jeu. 14:04] =>  0:11
+CLOCK: [2022-11-14 lun. 15:51]--[2022-11-14 lun. 16:02] =>  0:11
+CLOCK: [2022-11-14 lun. 14:52]--[2022-11-14 lun. 15:11] =>  0:19
+CLOCK: [2022-11-09 mer. 10:52]--[2022-11-09 mer. 11:06] =>  0:14
+CLOCK: [2022-11-09 mer. 10:06]--[2022-11-09 mer. 10:24] =>  0:18
+CLOCK: [2022-11-04 ven. 10:07]--[2022-11-04 ven. 10:23] =>  0:16
+CLOCK: [2022-11-04 ven. 09:45]--[2022-11-04 ven. 09:58] =>  0:13
+:END:
+- [X] Start Generator work in src/editor/
+  - [X] A Generator base class with ouputdir handling
+  - [X] A Generator subclass (maybe a versionned one (v1 ?)
+
+- [X] Generator must be able to check if a directory exist
+- [X] Generator must be able to create the needed directory
+  And remove it for test purpose
+- [X] Generator must be able to copy a file and modify it on the fly
+  As a template engine would do with a single file {{VERSION}} could work
+  - [X] Must have a key/value pair to be able to replace them
+  - [X] Must be able to add a key with a value    
+  - [X] This variables map must be empty by default
+- [X] Generator must use variables map to produce a regex to replace text
+  in an arbitrary text (the file content)
+  - [X] May keep a list of std::regex_replace objects
+  - [X] Then, implement replaceVars method
+
 **** DONE Continue with details panel implementation
 :LOGBOOK:
 CLOCK: [2022-11-01 mar. 12:24]--[2022-11-01 mar. 12:36] =>  0:12

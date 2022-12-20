@@ -146,3 +146,20 @@ Generator::replaceVars(const std::string& in)
   return out;
   
 }
+
+/// Does the given file exist ?
+bool
+Generator::fileExists(const std::string&)
+{
+  return false;
+}
+
+/** Does the file contain the given txt
+ *
+ */
+bool
+Generator::fileContains(const std::string& file, const std::string& txt)
+{
+  return false;
+}
+
