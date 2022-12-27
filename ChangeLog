@@ -1,3 +1,13 @@
+* v0.0.1-10 (17 Nov. 2022 - 27 Dec. 2022) SLOC 1,406
+- Close the font issue related ROADMAP section
+- Change h1 and h2 styles in generated app.
+- First basic fileContains() implementation
+- Implement the Generator::fileExists function
+- Add fileExists and FileContains Generator unit tests
+- Add a failing test for inde.html copied file
+- Fix generator panel label width
+- replace_var method implementation
+
 * v0.0.1-9 (01 Nov. 2022 - 17 Nov. 2022) SLOC 1,217
 - Generator::addVariable test and implementation
 - Add the variables map to Genetator abstract class
