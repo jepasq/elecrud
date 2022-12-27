@@ -192,7 +192,7 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
   while (file.good())
     {
       file >> aWord;
-      std::cout << "Got '" << aWord << "'" << std::endl;
+      //      std::cout << "Got '" << aWord << "'" << std::endl;
       if (file.good() && strcmp(aWord, wordToFind) == 0) {
 	//found word
 	file.close();

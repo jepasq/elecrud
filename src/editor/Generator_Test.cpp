@@ -106,6 +106,14 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_fileExists )
   BOOST_REQUIRE( !tg._fileExists("CMakeCache.txt_inexistantFile;;" ) );  
 }
 
+/// Test the contain function with an EOF
+BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains_eof )
+{
+  TestableGenerator tg;
+  BOOST_REQUIRE( !tg._fileContains("CMakeCache.txt", "AAAbbbCCCdDdD" ) );  
+}
+
+
 /// Test if a file contains a given test
 BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains )
 {

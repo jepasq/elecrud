@@ -13,10 +13,6 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
-**** Font issue on manjaro
-- [ ] Can't see entered text in textfields etc...
-  see font section of https://sites.google.com/site/foxtoolkitusers/faq
-  Seems to be fixed with reinstallation.
 **** TODO Project-file serialization
 :LOGBOOK:
 CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
@@ -52,24 +48,25 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
 - [X] Must be able to include libfile's headers in elecrud
 - [X] ProjectFile must have a setter from FXString
   Add unit tests for this
-- [-] Add a Generator panel where we can select output file and other
+- [X] Add a Generator panel where we can select output file and other
   Or make as a dialog with pre-recorded fields ?
   - [X] Add the iconlist entry
   - [X] Add the icon
-  - [ ] Add right panel
-- [ ] Complete test : Copy src/app elsewhere then npm install then npm start
-  - [ ] Replace 'Today's chores' with {{APPNAME}} and put a smaller font
+  - [X] Add right panel
+- [-] Complete test : Copy src/app elsewhere then npm install then npm start
+  - [X] Replace 'Today's chores' with {{APPNAME}} and put a smaller font
   - [ ] Remove the 'Chores' text
   - [ ] We should have a left menu  
 **** TODO First generation work
 :LOGBOOK:
+CLOCK: [2022-12-27 mar. 02:18]--[2022-12-27 mar. 02:42] =>  0:24
 CLOCK: [2022-12-20 mar. 05:31]--[2022-12-20 mar. 05:54] =>  0:23
 CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
 :END:
 - [-] Implement actually failing unit tests
   - [X] fileExists
   - [ ] fileContains
-    Implemented but got a memory error when text not found  
+    App. get a SIGABRT when reaching EOF
   - [ ] copy_index complete test
     
 - [ ] Must implement complete process with unit tests
@@ -109,6 +106,10 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE Font issue on manjaro
+- [X] Can't see entered text in textfields etc...
+  see font section of https://sites.google.com/site/foxtoolkitusers/faq
+  Seems to be fixed with reinstallation.
 **** DONE Basic Generator work
 :LOGBOOK:
 CLOCK: [2022-12-20 mar. 04:49]--[2022-12-20 mar. 05:10] =>  0:21
