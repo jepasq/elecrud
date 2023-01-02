@@ -79,7 +79,7 @@ Generator::directoryExists(const std::string& dir)
 
 /** Create the given directory
   *
-  * \param The directory name.
+  * \param dir The directory name.
   *
   */
 void

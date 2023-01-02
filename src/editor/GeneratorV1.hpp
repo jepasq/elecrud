@@ -3,6 +3,9 @@
 
 #include "Generator.hpp"
 
+/** The v1 version of the Generator implementation
+  *
+  */
 class GeneratorV1 : public Generator {
 
   virtual void generate();
