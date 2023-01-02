@@ -87,7 +87,7 @@ Generator::createDirectory(const std::string& dir)
 {
   int r = mkdir(dir.c_str(), 0700);
   if (r != 0)
-    std::cout << "Something wen wrong." << std::endl;
+    std::cout << "Cannot create directory '" << dir <<"'." << std::endl;
   // see https://www.man7.org/linux/man-pages/man2/mkdir.2.html#RETURN_VALUE
   // for more
 }
@@ -184,7 +184,7 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
   
   // see https://stackoverflow.com/a/13482546
   auto wordToFind = txt.c_str();
-  char aWord[50];
+  std::string aWord;
 
   std::fstream file;
   file.open(filename, std::ios::in);
@@ -193,11 +193,13 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
     {
       file >> aWord;
       //      std::cout << "Got '" << aWord << "'" << std::endl;
-      if (file.good() && strcmp(aWord, wordToFind) == 0) {
-	//found word
-	file.close();
-	return true;
-      }
+      //      if (file.good() && strcmp(aWord, wordToFind) == 0) {
+      if (aWord.find(txt) != std::string::npos)
+	{
+	  //found word
+	  file.close();
+	  return true;
+	}
     }
   file.close();
   return false;

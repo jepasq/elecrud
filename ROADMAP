@@ -59,13 +59,14 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] We should have a left menu  
 **** TODO First generation work
 :LOGBOOK:
+CLOCK: [2023-01-02 lun. 04:49]--[2023-01-02 lun. 05:04] =>  0:15
 CLOCK: [2022-12-27 mar. 02:18]--[2022-12-27 mar. 02:42] =>  0:24
 CLOCK: [2022-12-20 mar. 05:31]--[2022-12-20 mar. 05:54] =>  0:23
 CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
 :END:
 - [-] Implement actually failing unit tests
   - [X] fileExists
-  - [ ] fileContains
+  - [X] fileContains
     App. get a SIGABRT when reaching EOF
   - [ ] copy_index complete test
     
