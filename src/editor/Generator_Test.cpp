@@ -96,7 +96,6 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains_eof )
   BOOST_REQUIRE( !tg._fileContains("CMakeCache.txt", "AAAbbbCCCdDdD" ) );  
 }
 
-
 /// Test if a file contains a given test
 BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains )
 {
@@ -105,4 +104,11 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains )
   BOOST_REQUIRE( !tg._fileContains("CMakeCache.txt", "AAAbbbCCCdDdD" ) );  
 }
 
+/// Test if a file contains a given test
+BOOST_AUTO_TEST_CASE( TestableGenerator_copyFile )
+{
+  TestableGenerator tg;
+  tg._copyFile("CMakeCache.txt", "CMakeCache.txt_copied");
+  BOOST_REQUIRE( tg._fileExists("CMakeCache.txt_copied" ) );
+}
 

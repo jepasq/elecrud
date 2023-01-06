@@ -40,8 +40,9 @@ protected:
   std::string replaceVars(const std::string&);
   bool fileExists(const std::string&);
   bool fileContains(const std::string&, const std::string&);
+  void copyFile(const std::string&, const std::string&);
   
-private:
+protected:
   std::string outputDir; //!< The directory the output will be created in
   std::map<std::string, std::string> variables; //!< To-be-substitued vars
 };

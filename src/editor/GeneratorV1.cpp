@@ -7,5 +7,5 @@
 void
 GeneratorV1::generate()
 {
-
+  createDirectory(outputDir);
 }

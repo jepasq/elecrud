@@ -20,6 +20,9 @@ public:
   bool _fileContains(const std::string&f, const std::string&txt){
     return fileContains(f, txt);
   } 
+  void _copyFile(const std::string&from, const std::string&to){
+    void copyFile(from, to);
+  } 
 };
 
 #endif // !__TESTABLE_GEENRATOR_HPP__

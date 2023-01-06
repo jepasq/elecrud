@@ -205,3 +205,16 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
   return false;
 }
 
+/** Copy a file while replacig its test with existing variables
+  *
+  * \param from The source file name
+  * \param to   The destination file name
+  *
+  */
+void
+Generator::copyFile(const std::string& from, const std::string& to)
+{
+
+}
+
+
