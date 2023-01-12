@@ -217,4 +217,8 @@ Generator::copyFile(const std::string& from, const std::string& to)
 
 }
 
-
+std::string
+Generator::getFileContent(const std::string& filename)
+{
+  
+}

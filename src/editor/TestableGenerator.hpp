@@ -21,8 +21,11 @@ public:
     return fileContains(f, txt);
   } 
   void _copyFile(const std::string&from, const std::string&to){
-    void copyFile(from, to);
-  } 
+    copyFile(from, to);
+  }
+  std::string _getFileContent(const std::string& filename){
+    return getFileContent(filename);
+  };
 };
 
 #endif // !__TESTABLE_GEENRATOR_HPP__

@@ -7,7 +7,6 @@
 
 using std::string;
 
-
 BOOST_AUTO_TEST_CASE( TestableGenerator_can_be_instantiated )
 {
   TestableGenerator* tg = new TestableGenerator();
@@ -102,6 +101,20 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_fileContains )
   TestableGenerator tg;
   BOOST_REQUIRE( tg._fileContains("CMakeCache.txt", "EXTERNAL" ) );
   BOOST_REQUIRE( !tg._fileContains("CMakeCache.txt", "AAAbbbCCCdDdD" ) );  
+}
+
+/// Test that we can have the content of a file as a string
+BOOST_AUTO_TEST_CASE( TestableGenerator_getFileContent )
+{
+  TestableGenerator tg;
+
+  // If file doesn't exist, throw an exceptino
+  BOOST_CHECK_THROW(tg._getFileContent("CMakeCache.txt_CantBeFound"),
+		    std::runtime_error);
+  
+
+  auto content = tg._getFileContent("CMakeCache.txt");
+  BOOST_REQUIRE( !content.empty() );
 }
 
 /// Test if a file contains a given test

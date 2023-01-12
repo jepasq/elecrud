@@ -41,6 +41,7 @@ protected:
   bool fileExists(const std::string&);
   bool fileContains(const std::string&, const std::string&);
   void copyFile(const std::string&, const std::string&);
+  std::string getFileContent(const std::string&);
   
 protected:
   std::string outputDir; //!< The directory the output will be created in
