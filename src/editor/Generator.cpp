@@ -239,5 +239,10 @@ Generator::getFileContent(const std::string& filename)
 void
 Generator::copyFile(const std::string& from, const std::string& to)
 {
+  auto in = replaceVars(getFileContent(from));
   
+  std::ofstream myfile;
+  myfile.open (to);
+  myfile << in;
+  myfile.close();
 }
