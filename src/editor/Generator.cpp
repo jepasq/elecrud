@@ -205,6 +205,31 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
   return false;
 }
 
+/** Get the content of a file as a std::string
+  *
+  * May throw a std::runtime_error if the file doesn't exist.
+  *
+  * \param filename The file name.
+  *
+  * \return The content of the given file as a std::string.
+  *
+  */
+
+std::string
+Generator::getFileContent(const std::string& filename)
+{
+  if (!fileExists(filename))
+    {
+      auto s = "Can't open file '" + filename + "' : file doesn't exist.";
+      throw std::runtime_error(s);
+    }
+      
+  std::ifstream ifs(filename);
+  std::string content( (std::istreambuf_iterator<char>(ifs) ),
+                       (std::istreambuf_iterator<char>()    ) );
+  return content;
+}
+
 /** Copy a file while replacig its test with existing variables
   *
   * \param from The source file name
@@ -213,12 +238,6 @@ Generator::fileContains(const std::string& filename, const std::string& txt)
   */
 void
 Generator::copyFile(const std::string& from, const std::string& to)
-{
-
-}
-
-std::string
-Generator::getFileContent(const std::string& filename)
 {
   
 }
