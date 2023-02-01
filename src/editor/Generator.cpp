@@ -2,7 +2,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>    // POSIX-only solution
+#include <unistd.h>    // POSIX-only solution, for mkdir, rmdir etc...
 
 #include <iostream>
 #include <fstream>     // USES fstream
@@ -102,7 +102,16 @@ Generator::removeDirectory(const std::string& dir)
 {
   int r = rmdir(dir.c_str());
   if (r != 0)
-    std::cout << "Something wen wrong." << std::endl;
+    {
+      if ( errno == ENOTEMPTY )
+	{
+	  throw std::runtime_error("Can remove directory with content '"
+				   + dir + "'");
+	}
+
+      throw std::runtime_error("Something went wrong removing directory '"
+			       + dir + "'");
+    }
   
 }
 
