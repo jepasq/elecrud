@@ -57,8 +57,9 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [X] Replace 'Today's chores' with {{APPNAME}} and put a smaller font
   - [ ] Remove the 'Chores' text
   - [ ] We should have a left menu  
-**** TODO [feature_CopyFileImpl]First generation work
+**** TODO First generation work
 :LOGBOOK:
+CLOCK: [2023-02-01 mer. 09:13]--[2023-02-01 mer. 09:28] =>  0:15
 CLOCK: [2023-01-26 jeu. 09:37]--[2023-01-26 jeu. 09:45] =>  0:08
 CLOCK: [2023-01-26 jeu. 08:34]--[2023-01-26 jeu. 09:19] =>  0:45
 CLOCK: [2023-01-12 jeu. 05:26]--[2023-01-12 jeu. 05:44] =>  0:18
@@ -69,15 +70,15 @@ CLOCK: [2022-12-27 mar. 02:18]--[2022-12-27 mar. 02:42] =>  0:24
 CLOCK: [2022-12-20 mar. 05:31]--[2022-12-20 mar. 05:54] =>  0:23
 CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
 :END:
-- [-] Implement actually failing unit tests
+- [X] Implement actually failing unit tests
   - [X] fileExists
   - [X] fileContains
     App. get a SIGABRT when reaching EOF
-  - [-] copy_index complete test
+  - [X] copy_index complete test
     - [X] Move the complete test to GeneratorV1 class
-    - [ ] Add and test a Ganerator::getFileContent function first
-    - [ ] Must implement a copyFile function that replace vars
-    - [ ] Implement GeneratorV1::generate
+    - [X] Add and test a Ganerator::getFileContent function first
+    - [X] Must implement a copyFile function that replace vars
+    - [X] Implement GeneratorV1::generate
       
 - [ ] Must implement complete process with unit tests
   - [ ] Must access the log panel and use it
