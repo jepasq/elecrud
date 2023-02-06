@@ -10,6 +10,8 @@
 
 #include <regex>
 
+#include  <experimental/filesystem>
+
 /** Default constructor
   *
   * Mainly set outputDir  default value.
@@ -105,14 +107,19 @@ Generator::removeDirectory(const std::string& dir)
     {
       if ( errno == ENOTEMPTY )
 	{
-	  throw std::runtime_error("Can remove directory with content '"
-				   + dir + "'");
-	}
+	  /*	  throw std::runtime_error("Can remove directory with content '"
+		  + dir + "'"); */
+	  using namespace std::experimental::filesystem;
+	  std::experimental::filesystem::path p(dir);
+	  remove_all(p);
 
-      throw std::runtime_error("Something went wrong removing directory '"
-			       + dir + "'");
+	  if (directoryExists(dir))
+	    {
+	      throw std::runtime_error("Failed to remove directory '"
+				       + dir + "' using remove_all");
+	    }
+	}
     }
-  
 }
 
 /** Get the variables map

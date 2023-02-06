@@ -13,7 +13,7 @@ configure_file(
   "${PROJECT_BINARY_DIR}/config.h"
   )
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -40,7 +40,7 @@ target_include_directories(elecrud-file PUBLIC ${LIBS_INCLUDE_DIRS})
 # Executable
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
-  elecrud-file)
+  elecrud-file stdc++fs)
 target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
   ${LIBS_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR}
@@ -57,7 +57,8 @@ add_executable(tests src/tests.cpp
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
   src/editor/MainWindow_Test.cpp)
-target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
+target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
+  elecrud-file stdc++fs)
 target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR} src src/libfile)
 add_custom_target(check COMMAND tests DEPENDS icons)
