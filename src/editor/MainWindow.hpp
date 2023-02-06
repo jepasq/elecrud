@@ -73,7 +73,7 @@ protected:
   void updateTitle(void);
   void setDirty(bool vDirty=true);
 
-  void preGenerationChecks(void);
+  bool preGenerationChecks(void);
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 

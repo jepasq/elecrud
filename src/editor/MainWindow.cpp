@@ -7,6 +7,9 @@
 #include "Elecrud.hpp"
 #include "icons.hpp"
 
+#include "GeneratorV1.hpp"
+
+
 using namespace std;
 
 #define EXT_PATTERN "*.eud"
@@ -158,9 +161,6 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(projectPane, "Multiline description and notes :");
   ftDescription = new FXText(projectPane, this, ID_DSCR,
 			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
-
-
-
   
   //  ftDescription->setText("Insert project description here.");
   
@@ -455,23 +455,14 @@ MainWindow::resetAllFields()
 long
 MainWindow::onGenPathClicked(FXObject*,FXSelector,void*)
 {
-  std::cout << "AZE " << std::endl;
-  auto filename = FXFileDialog::getOpenDirectory(this, "Generator directory...",
-						 "~");
+  auto filename = FXFileDialog::getOpenDirectory(this,
+						 "Select output directory...",
+						 "generatorTest");
 
   std::cout << filename.text() << std::endl;
   
   
   tfOutputName->setText(filename);  
-  return 1;
-}
-
-long
-MainWindow::onProjectGen(FXObject*,FXSelector,void*)
-{
-  preGenerationChecks();
-  std::cout << "ProGen clicked" << std::endl;
-
   return 1;
 }
 
@@ -495,15 +486,52 @@ MainWindow::onProjectRun(FXObject* _o,FXSelector _s, void* _v)
 
 /** A check methods called just before generation/run
   *
+  * \return Can generation start ?
+  *
   */
-void
+bool
 MainWindow::preGenerationChecks(void)
 {
-  if (tfOutputName->getText().empty())
+  bool check = true;
+  std::string msg;
+  
+  if (tfProjectName->getText().empty())
   {
-    FXMessageBox::warning(this, MBOX_OK, "Generator warning",
-			  "Generator output isn't setup!");
+    msg = "Project name can't be null!";
+    check = false;
+    onIconClicked(nullptr, 0, (void*)0); 
+
   }
 
+  if (tfOutputName->getText().empty())
+  {
+    msg = "Generator output isn't setup!";
+    check =  false;
+    onIconClicked(nullptr, 0, (void*)2); 
+
+  }
+  
+  if (!check)
+    FXMessageBox::warning(this, MBOX_OK, "Generator warning", msg.c_str());
+  
+  return check;
+}
+
+long
+MainWindow::onProjectGen(FXObject*,FXSelector,void*)
+{
+  if (!preGenerationChecks())
+    {
+      addLogMessage("Can't generate project. Fix previous errors first...");
+      return 1;
+    }
+
+  // Switch to log pane
+  onIconClicked(nullptr, 0, (void*)3); 
+
+  GeneratorV1 gv1;
+  addLogMessage("Generation started...");
+  
+  return 1;
 }
 
