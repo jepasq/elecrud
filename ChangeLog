@@ -1,3 +1,13 @@
+* v0.0.1-11 (27 Dec. 2022 - 10 Feb. 2023) SLOC 1,590
+- Better Generator::directoryExists output handling using streams
+- Improve editor's pre-generation checks
+- Fix directory suppression using stx::experimental remove_all
+- Better Generator::removeDirectory error reporting if content
+- GeneratorV1::generate implementation
+- Basic Generator::getFileContent and copyFile implementation
+- Move complete index copying test to GeneratorV1
+- Fix some Generator UT using getline instead of stream operator
+
 * v0.0.1-10 (17 Nov. 2022 - 27 Dec. 2022) SLOC 1,406
 - Close the font issue related ROADMAP section
 - Change h1 and h2 styles in generated app.
