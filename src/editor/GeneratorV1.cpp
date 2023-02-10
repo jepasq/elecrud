@@ -9,4 +9,5 @@ GeneratorV1::generate()
 {
   createDirectory(outputDir);
   copyFile("../src/app/index.html", outputDir+"/index.html");
+  copyFile("../src/app/package.json", outputDir+"/package.json");
 }

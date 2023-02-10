@@ -61,21 +61,25 @@ Generator::setOutputDir(const std::string& nod)
 bool
 Generator::directoryExists(const std::string& dir)
 {
-  // From https://stackoverflow.com/a/18101042
-  struct stat info;
+
+  struct stat info; // From https://stackoverflow.com/a/18101042
 
   auto pathname = dir.c_str();
   
   if( stat( pathname, &info ) != 0 )
-    printf( "cannot access %s\n", pathname );
+    {
+      std::cout << "Generator::directoryExists(): " << pathname
+		<< " doesn't exist." << std::endl;
+    }
   else if( info.st_mode & S_IFDIR )
     {
-      printf( "%s is a directory\n", pathname );
+      std::cout << pathname << " is a directory" << std::endl;
       return true;
     }
   else
-    printf( "%s is no directory\n", pathname );
-
+    {
+      std::cout << pathname << " exists but is not a directory" << std::endl;
+    }
   return false;
 }
 
