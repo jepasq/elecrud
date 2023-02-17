@@ -75,8 +75,8 @@ BOOST_AUTO_TEST_CASE( TestableGenerator_replaceVars )
 {
   TestableGenerator tg;
   tg.addVariable("key1", "val1");
-  BOOST_REQUIRE( tg._replaceVars("key1") == "val1" );
-  BOOST_REQUIRE( tg._replaceVars("AAAkey1AAA") == "AAAval1AAA" );
+  BOOST_REQUIRE( tg._replaceVars("{{key1}}") == "val1" );
+  BOOST_REQUIRE( tg._replaceVars("AAA{{key1}}AAA") == "AAAval1AAA" );
 }
 
 

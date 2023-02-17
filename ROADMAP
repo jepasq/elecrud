@@ -59,6 +59,7 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] We should have a left menu  
 **** TODO First generation work
 :LOGBOOK:
+CLOCK: [2023-02-17 ven. 13:02]--[2023-02-17 ven. 13:22] =>  0:20
 CLOCK: [2023-02-17 ven. 12:06]--[2023-02-17 ven. 12:45] =>  0:39
 CLOCK: [2023-02-10 ven. 03:08]--[2023-02-10 ven. 03:38] =>  0:30
 CLOCK: [2023-02-06 lun. 07:12]--[2023-02-06 lun. 07:42] =>  0:30
@@ -87,8 +88,7 @@ CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
 - [X] Generator::removeDirectory doesn't work with directory with content
   Fix that, maybe with boost filesystem remove_all https://stackoverflow.com/a/2256980
   - [X] First testing with C++17
-
-- [ ] replaceVars shoukld also replace curly brackets, not only variable name
+- [X] replaceVars should also replace curly brackets, not only variable name
 
 - [-] Must implement complete process with unit tests
   - [X] Must access the log panel and use it
