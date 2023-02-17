@@ -46,8 +46,8 @@ BOOST_AUTO_TEST_CASE( GeneratorV1_copiedPackage_noAPPNAME )
 
   g1.generate();
   
-  BOOST_REQUIRE( !tg._fileContains(filename, gen_appname ));  
-  tg._removeDirectory(dirname);
+  BOOST_REQUIRE( !tg._fileContains(filename, "APPNAME" ));  
+  //  tg._removeDirectory(dirname);
 }
 
 /// Check that package.json file is copied and contains APPNAME replaced var
@@ -68,7 +68,7 @@ BOOST_AUTO_TEST_CASE( GeneratorV1_copy_package_json )
   BOOST_REQUIRE( tg._directoryExists(dirname) );
   BOOST_REQUIRE( tg._fileExists(filename ) );
   BOOST_REQUIRE( tg._fileContains(filename, gen_appname ));
-  tg._removeDirectory(dirname);
+  //  tg._removeDirectory(dirname);
 }
 
 
