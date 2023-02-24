@@ -517,8 +517,15 @@ MainWindow::preGenerationChecks(void)
   return check;
 }
 
+/** The Project -> Generate callback.
+  *
+  * \param _o Unused sender information.
+  * \param _s Unused selector.
+  * \param _d Unused data.
+  *
+  */
 long
-MainWindow::onProjectGen(FXObject*,FXSelector,void*)
+MainWindow::onProjectGen(FXObject* _o,FXSelector _s,void* _d)
 {
   if (!preGenerationChecks())
     {
