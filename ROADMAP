@@ -27,10 +27,10 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [X] Cmake search for boost_serialization
 - [X] Implement ProjectFile::setFilename() and unit test
 - [X] Create the ProjectFile class using fox steam object
+- [X] Maybe fox has a stream thing that can be used to file it in binbary     
 - [ ] Handle ProjectFile::save file creation using FX stream
   Should fix actual failing unit tests
 - [ ] ProjectFile may handle dirty flag so it can be tested
-- [ ] Maybe fox has a stream thing that can be used to file it in binbary     
 - [ ] If we don't use boost serialization, remove it from cmake and README
 **** TODO First version of the to-be-generated electron app
 :LOGBOOK:
@@ -59,6 +59,9 @@ CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
   - [ ] We should have a left menu  
 **** TODO First generation work
 :LOGBOOK:
+CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
+CLOCK: [2023-03-10 ven. 10:35]--[2023-03-10 ven. 10:36] =>  0:01
+CLOCK: [2023-03-10 ven. 10:19]--[2023-03-10 ven. 10:35] =>  0:16
 CLOCK: [2023-02-17 ven. 13:02]--[2023-02-17 ven. 13:22] =>  0:20
 CLOCK: [2023-02-17 ven. 12:06]--[2023-02-17 ven. 12:45] =>  0:39
 CLOCK: [2023-02-10 ven. 03:08]--[2023-02-10 ven. 03:38] =>  0:30

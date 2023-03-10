@@ -244,6 +244,10 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 {
   filename = FXFileDialog::getOpenFilename(this, "Open a project...", "~",
 					   EXT_PATTERN);
+
+  std::cout << "Opening '" << filename.text() << "' ..." << std::endl;
+  projectFile.setFilename(filename);
+
   updateTitle();
 
   return 1;
