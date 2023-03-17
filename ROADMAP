@@ -13,8 +13,11 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
+**** Add a sidebars-based Menu to the generated app
+    https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2023-03-17 ven. 08:50]--[2023-03-17 ven. 08:58] =>  0:08
 CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
 CLOCK: [2022-09-29 jeu. 05:14]--[2022-09-29 jeu. 05:21] =>  0:07
 CLOCK: [2022-09-27 mar. 04:17]--[2022-09-27 mar. 04:38] =>  0:21
@@ -28,12 +31,12 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [X] Implement ProjectFile::setFilename() and unit test
 - [X] Create the ProjectFile class using fox steam object
 - [X] Maybe fox has a stream thing that can be used to file it in binbary     
+- [ ] Add ProjectFile::load function
+  Unit tests added, now implement
 - [ ] Handle ProjectFile::save file creation using FX stream
   Should fix actual failing unit tests
 - [ ] ProjectFile may handle dirty flag so it can be tested
 - [ ] If we don't use boost serialization, remove it from cmake and README
-**** Add a sidebars-based Menu to the generated app
-    https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO First generation work
 :LOGBOOK:
 CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07

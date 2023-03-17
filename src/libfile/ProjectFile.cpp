@@ -79,3 +79,13 @@ ProjectFile::save()
     }
 }
 
+/** Load the project file from the file previously set with setFilename()
+  *
+  */
+void
+ProjectFile::load()
+{
+
+}
+
+

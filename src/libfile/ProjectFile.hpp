@@ -19,6 +19,7 @@ public:
   const std::string& getFilename(void) const;
 
   void save();
+  void load();
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.

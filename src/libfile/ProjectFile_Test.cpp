@@ -52,3 +52,23 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_save_function )
   pf.save();
   BOOST_REQUIRE_EQUAL( is_file_exist(fn), true );
 }
+
+BOOST_AUTO_TEST_CASE( ProjectFile_has_load_function )
+{
+  ProjectFile pf;
+  pf.setFilename("");
+  // If filename is empty, must throw an exception
+  BOOST_REQUIRE_THROW(pf.load(), std::exception);
+
+  // But if filename is not empty, it should work
+  FXString fn = "test_THAT_DOESNT_EXIST.eud";
+  pf.setFilename(fn);
+  // If filename doesn't exist , must throw an exception
+  BOOST_REQUIRE_THROW(pf.load(), std::exception);
+
+  // Finally!!!
+  FXString fn2 = "test.eud";
+  pf.setFilename(fn2);
+  pf.load();
+}
+

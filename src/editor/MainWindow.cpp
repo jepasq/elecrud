@@ -247,7 +247,7 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 
   std::cout << "Opening '" << filename.text() << "' ..." << std::endl;
   projectFile.setFilename(filename);
-
+  projectFile.load();
   updateTitle();
 
   return 1;
