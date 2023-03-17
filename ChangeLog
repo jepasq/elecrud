@@ -1,3 +1,13 @@
+* v0.0.1-12 (10 Feb. 2023 - 17 Mar. 2023) SLOC 1,658
+- Fix the previous unit tests
+- Add failing ProjectFile::load unit tests
+- Remove chores-related text from generated app
+- Exclude template app's node_modules directory from doxygen doc
+- MainWindow::onFileOpen uses ProjectFile::setFilename
+- Improve MainWindow's doxygen documentation
+- Now replaces vars with curly brackets
+- Fix failing APPNAME test in package.json
+
 * v0.0.1-11 (27 Dec. 2022 - 10 Feb. 2023) SLOC 1,590
 - Better Generator::directoryExists output handling using streams
 - Improve editor's pre-generation checks
