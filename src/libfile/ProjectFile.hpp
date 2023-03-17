@@ -2,7 +2,12 @@
 #define __PROJECT_FILE_HPP__
 
 #include <string>
+#include <fstream>
 #include <fox-1.6/fx.h>
+
+// From https://stackoverflow.com/a/19841704
+bool file_exists(const FX::FXString& filename);
+bool file_exists(const std::string& filename);
 
 /** The project file used to serialize a complete project
   *

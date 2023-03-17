@@ -2,16 +2,6 @@
 
 #include "ProjectFile.hpp"
 
-#include <fstream>
-
-// From https://stackoverflow.com/a/19841704
-bool is_file_exist(const FX::FXString& filename)
-{
-  std::ifstream infile(filename.text());
-  return infile.good();
-}
-
-
 BOOST_AUTO_TEST_CASE( ProjectFile_empty_filename )
 {
   ProjectFile pf;
@@ -50,7 +40,7 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_save_function )
   FXString fn = "test.eud";
   pf.setFilename(fn);
   pf.save();
-  BOOST_REQUIRE_EQUAL( is_file_exist(fn), true );
+  BOOST_REQUIRE_EQUAL( file_exists(fn), true );
 }
 
 BOOST_AUTO_TEST_CASE( ProjectFile_has_load_function )

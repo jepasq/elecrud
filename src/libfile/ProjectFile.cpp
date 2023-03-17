@@ -3,6 +3,25 @@
 #include <stdexcept>  // USES runtime_error
 #include <FXFileStream.h>
 
+#include <iostream> // MAY USE cout, endl
+
+bool
+file_exists(const FX::FXString& filename)
+{
+  // Can't hardly call the std::string version without a "call of overloaded"
+  // "'***' is ambiguous error
+  std::ifstream infile(filename.text());
+  return infile.good();
+}
+
+bool
+file_exists(const std::string& filename)
+{
+  std::ifstream infile(filename);
+  return infile.good();
+}
+
+
 /** The default constructor
   *
   * This sets the project filename to an empty string.
@@ -85,7 +104,15 @@ ProjectFile::save()
 void
 ProjectFile::load()
 {
-
+  if (filename.empty())
+    throw std::runtime_error("Can't load a project file with empty filename");
+  else if (!file_exists(filename))
+    throw std::runtime_error("Can't load a project file that doesn't exist");
+  else
+    {
+      std::cout << "Loading " << filename << std::endl;
+    }
+  
 }
 
 
