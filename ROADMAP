@@ -32,31 +32,8 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
   Should fix actual failing unit tests
 - [ ] ProjectFile may handle dirty flag so it can be tested
 - [ ] If we don't use boost serialization, remove it from cmake and README
-**** TODO First version of the to-be-generated electron app
-:LOGBOOK:
-CLOCK: [2022-12-22 jeu. 06:05]--[2022-12-22 jeu. 06:22] =>  0:17
-CLOCK: [2022-12-15 jeu. 01:18]--[2022-12-15 jeu. 01:40] =>  0:22
-CLOCK: [2022-10-10 lun. 04:28]--[2022-10-10 lun. 04:42] =>  0:14
-CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
-CLOCK: [2022-09-15 jeu. 02:51]--[2022-09-15 jeu. 03:00] =>  0:09
-CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
-:END:
-- [X] Maybe something like daily chores in its very early state
-  Started in src/app
-- [X] Must be added to git repo
-- [X] Implement the Save As. event handler
-- [X] Must be able to include libfile's headers in elecrud
-- [X] ProjectFile must have a setter from FXString
-  Add unit tests for this
-- [X] Add a Generator panel where we can select output file and other
-  Or make as a dialog with pre-recorded fields ?
-  - [X] Add the iconlist entry
-  - [X] Add the icon
-  - [X] Add right panel
-- [-] Complete test : Copy src/app elsewhere then npm install then npm start
-  - [X] Replace 'Today's chores' with {{APPNAME}} and put a smaller font
-  - [ ] Remove the 'Chores' text
-  - [ ] We should have a left menu  
+**** Add a sidebars-based Menu to the generated app
+    https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO First generation work
 :LOGBOOK:
 CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
@@ -114,6 +91,7 @@ CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
   for instance, the .github worflow has to run =make icons= manually
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2023-03-10 ven. 11:05]--[2023-03-10 ven. 11:09] =>  0:04
 CLOCK: [2023-03-10 ven. 10:58]--[2023-03-10 ven. 11:02] =>  0:04
 CLOCK: [2023-02-24 ven. 16:14]--[2023-02-24 ven. 16:26] =>  0:12
 CLOCK: [2023-01-02 lun. 04:03]--[2023-01-02 lun. 04:11] =>  0:08
@@ -134,6 +112,33 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE First version of the to-be-generated electron app
+:LOGBOOK:
+CLOCK: [2023-03-17 ven. 08:33]--[2023-03-17 ven. 08:41] =>  0:08
+CLOCK: [2022-12-22 jeu. 06:05]--[2022-12-22 jeu. 06:22] =>  0:17
+CLOCK: [2022-12-15 jeu. 01:18]--[2022-12-15 jeu. 01:40] =>  0:22
+CLOCK: [2022-10-10 lun. 04:28]--[2022-10-10 lun. 04:42] =>  0:14
+CLOCK: [2022-09-15 jeu. 03:26]--[2022-09-15 jeu. 04:02] =>  0:36
+CLOCK: [2022-09-15 jeu. 02:51]--[2022-09-15 jeu. 03:00] =>  0:09
+CLOCK: [2022-07-26 mar. 07:26]--[2022-07-26 mar. 07:32] =>  0:06
+:END:
+- [X] Maybe something like daily chores in its very early state
+  Started in src/app
+- [X] Must be added to git repo
+- [X] Implement the Save As. event handler
+- [X] Must be able to include libfile's headers in elecrud
+- [X] ProjectFile must have a setter from FXString
+  Add unit tests for this
+- [X] Add a Generator panel where we can select output file and other
+  Or make as a dialog with pre-recorded fields ?
+  - [X] Add the iconlist entry
+  - [X] Add the icon
+  - [X] Add right panel
+- [X] Complete test : Copy src/app elsewhere then npm install then npm start
+  - [X] Replace 'Today's chores' with {{APPNAME}} and put a smaller font
+  - [X] Remove the 'Chores' text
+  - [X] We should have a left menu : see if we can use sidebars
+    https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** DONE Font issue on manjaro
 - [X] Can't see entered text in textfields etc...
   see font section of https://sites.google.com/site/foxtoolkitusers/faq

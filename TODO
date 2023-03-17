@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.1-12 (10 Feb. 2023 - ???) SLOC ?,???
-- (5) Exclude template app's node_modules directory from doxygen doc
+- (6) Remove chores-related text from generated app
+- Exclude template app's node_modules directory from doxygen doc
 - MainWindow::onFileOpen uses ProjectFile::setFilename
 - Improve MainWindow's doxygen documentation
 - Now replaces vars with curly brackets
