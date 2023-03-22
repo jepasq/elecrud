@@ -110,6 +110,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 
 - [X] Add src/Mainpage.md as Doxygen mainpage
 - [X] Exclude template app's node_modules directory from doxygen doc
+- [ ] Add TestableGenerator.hpp to EXCLUDE list to have cleaner log output
 - [ ] We have a dot error
   error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
 
