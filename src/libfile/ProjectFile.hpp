@@ -25,9 +25,13 @@ public:
 
   void save();
   void load();
+
+  bool isDirty();
+  void setDirty(bool);
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
+  bool dirty; // The underlying dirty flag (true if modifications must be saved)
 };
 
 #endif // !__PROJECT_FILE_HPP__

@@ -115,4 +115,20 @@ ProjectFile::load()
   
 }
 
+bool
+ProjectFile::isDirty()
+{
+  return this->dirty;
+}
+
+void
+ProjectFile::setDirty(bool d)
+{
+  this->dirty = d;
+
+  // May become a throw
+  if (!d)
+    std::cerr << "Warning : setting dirty flag to false without saving"
+	      << std::endl;
+}
 

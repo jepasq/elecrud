@@ -62,3 +62,12 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_load_function )
   pf.load();
 }
 
+BOOST_AUTO_TEST_CASE( ProjectFile_has_dirty_flag )
+{
+  ProjectFile pf;
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf.isDirty(), false );
+
+  pf.setDirty(true);
+  BOOST_REQUIRE_EQUAL( pf.isDirty(), true );
+}

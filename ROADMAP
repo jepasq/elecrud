@@ -17,6 +17,7 @@
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2023-03-22 mer. 11:12]--[2023-03-22 mer. 11:21] =>  0:09
 CLOCK: [2023-03-22 mer. 10:07]--[2023-03-22 mer. 10:25] =>  0:18
 CLOCK: [2023-03-17 ven. 09:01]--[2023-03-17 ven. 09:18] =>  0:17
 CLOCK: [2023-03-17 ven. 08:50]--[2023-03-17 ven. 08:58] =>  0:08
@@ -38,7 +39,11 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [X] Handle ProjectFile::save file creation using FX stream
   Should fix actual failing unit tests
 - [X] If we don't use boost serialization, remove it from cmake and README
-- [ ] ProjectFile may handle dirty flag so it can be tested
+- [-] ProjectFile may handle dirty flag so it can be tested
+  - [X] Add unit tests
+  - [X] Implement
+  - [ ] Must be used by MainWindow    
+- [ ] Start to lis andhandle MainWindow fileds to be saved
 **** TODO First generation work
 :LOGBOOK:
 CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
