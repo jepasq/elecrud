@@ -42,8 +42,13 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [-] ProjectFile may handle dirty flag so it can be tested
   - [X] Add unit tests
   - [X] Implement
-  - [ ] Must be used by MainWindow    
-- [ ] Start to lis andhandle MainWindow fileds to be saved
+  - [ ] Must be used by MainWindow
+    MainWindow already has a dirty flag
+- [ ] Start to list MainWindow fields to be saved
+  Project pane : Name, Author, Version, License + Description
+  Collection : /none/
+  Generator : Output filename
+  Log : not shure we should save this
 **** TODO First generation work
 :LOGBOOK:
 CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
