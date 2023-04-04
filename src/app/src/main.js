@@ -1,6 +1,5 @@
 const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron');
 const path = require('path')
-const chore = require('./chore')
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -41,7 +40,6 @@ app.whenReady().then(() => {
     })
 
     let today = new Date().toLocaleDateString();
-    let c = chore.Chore.new(today);
     console.log(today);
     
 })

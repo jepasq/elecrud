@@ -86,6 +86,7 @@ BOOST_AUTO_TEST_CASE( GeneratorV1_copy_src_main )
   
   BOOST_REQUIRE( tg._directoryExists(dirname) );
   BOOST_REQUIRE( tg._fileExists(filename ) );
+  tg._removeDirectory(dirname);
 }
 
 

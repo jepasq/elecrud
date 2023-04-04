@@ -51,6 +51,7 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
   Log : not shure we should save this
 **** TODO First generation work
 :LOGBOOK:
+CLOCK: [2023-04-04 mar. 09:43]--[2023-04-04 mar. 09:53] =>  0:10
 CLOCK: [2023-04-04 mar. 09:32]--[2023-04-04 mar. 09:41] =>  0:09
 CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
 CLOCK: [2023-03-10 ven. 10:35]--[2023-03-10 ven. 10:36] =>  0:01
@@ -91,8 +92,9 @@ CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
   - [X] Must access the log panel and use it
   - [X] Must start to copy needed files
     package.json: must replace {{APPNAME}}
-  - [ ] Must copy src/main.js 
-  - [ ] Calling =npm start= on /newone/ directory
+  - [X] Must copy src/main.js
+  - [X] Remove reference to the Chore module  
+  - [ ] Calling =npm start= on /newone/ directory to test complet process
   - [ ] Maybe call npm audit fix to update packages to last version ?
   - [ ] Then call =npm install= : it can be very long. We must have a
     =ProcessWatcher= class here to follow progress
