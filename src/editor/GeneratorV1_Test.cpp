@@ -71,4 +71,22 @@ BOOST_AUTO_TEST_CASE( GeneratorV1_copy_package_json )
   tg._removeDirectory(dirname);
 }
 
+/// Check that src/main.js file is copied
+BOOST_AUTO_TEST_CASE( GeneratorV1_copy_src_main )
+{
+  std::string dirname = "newone";
+  auto filename = "" + dirname + "/src/main.js";
+
+  GeneratorV1 g1;
+  TestableGenerator tg; // Just to test
+  tg._removeDirectory(dirname);
+  g1.setOutputDir(dirname);
+
+  g1.generate();
+  
+  BOOST_REQUIRE( tg._directoryExists(dirname) );
+  BOOST_REQUIRE( tg._fileExists(filename ) );
+}
+
+
 
