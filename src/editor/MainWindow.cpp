@@ -177,6 +177,9 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   labOutName->setWidth(lablength+60);
   tfOutputName = new FXTextField(pph10, tflength, this, ID_PRJD);
   new FXButton(pph10, "...", nullptr, this, ID_GPAB);
+
+  new FXCheckButton(generatPane,
+		    "Call 'npm install' in generated dir (can be long)");
   
   // Logger pane
   logPane  = new FXVerticalFrame(splitter,

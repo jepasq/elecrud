@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** TODO v0.0.2
+*** TODO v0.0.3
 **** Must be multi-user
 - [ ] While the admin user can be crated in fox editor, other users may be
   created by admin user
@@ -49,52 +49,8 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
   Collection : /none/
   Generator : Output filename
   Log : not shure we should save this
-**** TODO First generation work
-:LOGBOOK:
-CLOCK: [2023-04-04 mar. 09:43]--[2023-04-04 mar. 09:53] =>  0:10
-CLOCK: [2023-04-04 mar. 09:32]--[2023-04-04 mar. 09:41] =>  0:09
-CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
-CLOCK: [2023-03-10 ven. 10:35]--[2023-03-10 ven. 10:36] =>  0:01
-CLOCK: [2023-03-10 ven. 10:19]--[2023-03-10 ven. 10:35] =>  0:16
-CLOCK: [2023-02-17 ven. 13:02]--[2023-02-17 ven. 13:22] =>  0:20
-CLOCK: [2023-02-17 ven. 12:06]--[2023-02-17 ven. 12:45] =>  0:39
-CLOCK: [2023-02-10 ven. 03:08]--[2023-02-10 ven. 03:38] =>  0:30
-CLOCK: [2023-02-06 lun. 07:12]--[2023-02-06 lun. 07:42] =>  0:30
-CLOCK: [2023-02-06 lun. 06:18]--[2023-02-06 lun. 06:29] =>  0:11
-CLOCK: [2023-02-01 mer. 09:53]--[2023-02-01 mer. 10:03] =>  0:10
-CLOCK: [2023-02-01 mer. 09:13]--[2023-02-01 mer. 09:28] =>  0:15
-CLOCK: [2023-01-26 jeu. 09:37]--[2023-01-26 jeu. 09:45] =>  0:08
-CLOCK: [2023-01-26 jeu. 08:34]--[2023-01-26 jeu. 09:19] =>  0:45
-CLOCK: [2023-01-12 jeu. 05:26]--[2023-01-12 jeu. 05:44] =>  0:18
-CLOCK: [2023-01-06 ven. 05:12]--[2023-01-06 ven. 05:42] =>  0:30
-CLOCK: [2023-01-06 ven. 04:11]--[2023-01-06 ven. 04:22] =>  0:11
-CLOCK: [2023-01-02 lun. 04:49]--[2023-01-02 lun. 05:04] =>  0:15
-CLOCK: [2022-12-27 mar. 02:18]--[2022-12-27 mar. 02:42] =>  0:24
-CLOCK: [2022-12-20 mar. 05:31]--[2022-12-20 mar. 05:54] =>  0:23
-CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
-:END:
-- [X] Implement actually failing unit tests
-  - [X] fileExists
-  - [X] fileContains
-    App. get a SIGABRT when reaching EOF
-  - [X] copy_index complete test
-    - [X] Move the complete test to GeneratorV1 class
-    - [X] Add and test a Ganerator::getFileContent function first
-    - [X] Must implement a copyFile function that replace vars
-    - [X] Implement GeneratorV1::generate
-- [X] Generator::removeDirectory doesn't work with directory with content
-  Fix that, maybe with boost filesystem remove_all https://stackoverflow.com/a/2256980
-  - [X] First testing with C++17
-- [X] replaceVars should also replace curly brackets, not only variable name
-
-- [-] Must implement complete process with unit tests
-  Current tests are added in GeneratorV1_Test.cpp
-  - [X] Must access the log panel and use it
-  - [X] Must start to copy needed files
-    package.json: must replace {{APPNAME}}
-  - [X] Must copy src/main.js
-  - [X] Remove reference to the Chore module  
-  - [ ] Calling =npm start= on /newone/ directory to test complet process
+**** TODO Continue generation work
+- [ ] Continue to implement complete process with unit tests
   - [ ] Maybe call npm audit fix to update packages to last version ?
   - [ ] Then call =npm install= : it can be very long. We must have a
     =ProcessWatcher= class here to follow progress
@@ -134,6 +90,55 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+*** DONE v0.0.2
+**** DONE First generation work
+:LOGBOOK:
+CLOCK: [2023-04-10 lun. 11:35]--[2023-04-10 lun. 11:44] =>  0:09
+CLOCK: [2023-04-04 mar. 09:43]--[2023-04-04 mar. 09:53] =>  0:10
+CLOCK: [2023-04-04 mar. 09:32]--[2023-04-04 mar. 09:41] =>  0:09
+CLOCK: [2023-03-10 ven. 10:42]--[2023-03-10 ven. 10:49] =>  0:07
+CLOCK: [2023-03-10 ven. 10:35]--[2023-03-10 ven. 10:36] =>  0:01
+CLOCK: [2023-03-10 ven. 10:19]--[2023-03-10 ven. 10:35] =>  0:16
+CLOCK: [2023-02-17 ven. 13:02]--[2023-02-17 ven. 13:22] =>  0:20
+CLOCK: [2023-02-17 ven. 12:06]--[2023-02-17 ven. 12:45] =>  0:39
+CLOCK: [2023-02-10 ven. 03:08]--[2023-02-10 ven. 03:38] =>  0:30
+CLOCK: [2023-02-06 lun. 07:12]--[2023-02-06 lun. 07:42] =>  0:30
+CLOCK: [2023-02-06 lun. 06:18]--[2023-02-06 lun. 06:29] =>  0:11
+CLOCK: [2023-02-01 mer. 09:53]--[2023-02-01 mer. 10:03] =>  0:10
+CLOCK: [2023-02-01 mer. 09:13]--[2023-02-01 mer. 09:28] =>  0:15
+CLOCK: [2023-01-26 jeu. 09:37]--[2023-01-26 jeu. 09:45] =>  0:08
+CLOCK: [2023-01-26 jeu. 08:34]--[2023-01-26 jeu. 09:19] =>  0:45
+CLOCK: [2023-01-12 jeu. 05:26]--[2023-01-12 jeu. 05:44] =>  0:18
+CLOCK: [2023-01-06 ven. 05:12]--[2023-01-06 ven. 05:42] =>  0:30
+CLOCK: [2023-01-06 ven. 04:11]--[2023-01-06 ven. 04:22] =>  0:11
+CLOCK: [2023-01-02 lun. 04:49]--[2023-01-02 lun. 05:04] =>  0:15
+CLOCK: [2022-12-27 mar. 02:18]--[2022-12-27 mar. 02:42] =>  0:24
+CLOCK: [2022-12-20 mar. 05:31]--[2022-12-20 mar. 05:54] =>  0:23
+CLOCK: [2022-12-20 mar. 05:19]--[2022-12-20 mar. 05:30] =>  0:11
+:END:
+- [X] Implement actually failing unit tests
+  - [X] fileExists
+  - [X] fileContains
+    App. get a SIGABRT when reaching EOF
+  - [X] copy_index complete test
+    - [X] Move the complete test to GeneratorV1 class
+    - [X] Add and test a Ganerator::getFileContent function first
+    - [X] Must implement a copyFile function that replace vars
+    - [X] Implement GeneratorV1::generate
+- [X] Generator::removeDirectory doesn't work with directory with content
+  Fix that, maybe with boost filesystem remove_all https://stackoverflow.com/a/2256980
+  - [X] First testing with C++17
+- [X] replaceVars should also replace curly brackets, not only variable name
+
+- [X] Must implement complete process with unit tests
+  Current tests are added in GeneratorV1_Test.cpp
+  - [X] Must access the log panel and use it
+  - [X] Must start to copy needed files
+    package.json: must replace {{APPNAME}}
+  - [X] Must copy src/main.js
+  - [X] Remove reference to the Chore module  
+  - [X] Calling =npm start= on /newone/ directory to test complet process
+    Could be a parameter
 **** DONE First version of the to-be-generated electron app
 :LOGBOOK:
 CLOCK: [2023-03-17 ven. 08:33]--[2023-03-17 ven. 08:41] =>  0:08
