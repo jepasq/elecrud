@@ -7,13 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-13 (17 Mar. 2023 - ???) SLOC ?,???
-- (8) Editor's MainWindow uses ProjectFile's dirty flag
-- Add npm install call option to editor's generator pane
-  and bump version to 0.0.2
-- Copy main.js to generated app and remove chore refrerences
-- Add a Generator test for src/main.js presence in generated dir
-- List to-be-saved MainWindow fields in ROADMAP
-- Implement ProjectFile's dirty flag
-- Remove boost serialization dependency cause we're using fox one
-- Add TestableGenerator.hpp to doxygen EXCLUDE list
+* v0.0.2-14 (24 Apr. 2023 - ???) SLOC ?,???
+
