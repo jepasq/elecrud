@@ -17,6 +17,7 @@
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2023-04-24 lun. 09:45]--[2023-04-24 lun. 10:09] =>  0:24
 CLOCK: [2023-04-24 lun. 09:11]--[2023-04-24 lun. 09:17] =>  0:06
 CLOCK: [2023-03-22 mer. 11:12]--[2023-03-22 mer. 11:21] =>  0:09
 CLOCK: [2023-03-22 mer. 10:07]--[2023-03-22 mer. 10:25] =>  0:18
@@ -47,9 +48,12 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
     MainWindow already has a dirty flag
 - [ ] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
+  - Let's preprend function with setProject*
+  - [ ] Added ProjectName unit test. Fix it
   Collection : /none/
   Generator : Output filename
-  Log : not shure we should save this
+  - Let's preprend function with setGenerator*
+  Log : not sure we should save this
 **** TODO Continue generation work
 :LOGBOOK:
 CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11

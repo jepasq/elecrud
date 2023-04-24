@@ -71,3 +71,23 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_dirty_flag )
   pf.setDirty(true);
   BOOST_REQUIRE_EQUAL( pf.isDirty(), true );
 }
+
+BOOST_AUTO_TEST_CASE( ProjectFile_has_project_name )
+{
+  auto pn = "PrjName";
+  auto fn = "PrjNameTest.eud";
+  
+  ProjectFile pf1, pf2;
+  pf1.setProjectName(pn);
+
+  // Save and load
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+  
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf2.getProjectName(), pn );
+}
+

@@ -28,6 +28,10 @@ public:
 
   bool isDirty();
   void setDirty(bool);
+
+  // Project pane-related editor fields
+  void               setProjectName(const std::string&);
+  const std::string& getProjectName(void) const;
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.

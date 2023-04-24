@@ -132,3 +132,15 @@ ProjectFile::setDirty(bool d)
 	      << std::endl;
 }
 
+
+void
+ProjectFile::setProjectName(const std::string&)
+{
+
+}
+
+const std::string&
+ProjectFile::getProjectName(void) const
+{
+
+}
