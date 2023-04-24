@@ -17,6 +17,7 @@
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Project-file serialization
 :LOGBOOK:
+CLOCK: [2023-04-24 lun. 09:11]--[2023-04-24 lun. 09:17] =>  0:06
 CLOCK: [2023-03-22 mer. 11:12]--[2023-03-22 mer. 11:21] =>  0:09
 CLOCK: [2023-03-22 mer. 10:07]--[2023-03-22 mer. 10:25] =>  0:18
 CLOCK: [2023-03-17 ven. 09:01]--[2023-03-17 ven. 09:18] =>  0:17
@@ -39,10 +40,10 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
 - [X] Handle ProjectFile::save file creation using FX stream
   Should fix actual failing unit tests
 - [X] If we don't use boost serialization, remove it from cmake and README
-- [-] ProjectFile may handle dirty flag so it can be tested
+- [X] ProjectFile may handle dirty flag so it can be tested
   - [X] Add unit tests
   - [X] Implement
-  - [ ] Must be used by MainWindow
+  - [X] Must be used by MainWindow
     MainWindow already has a dirty flag
 - [ ] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
@@ -50,6 +51,9 @@ CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
   Generator : Output filename
   Log : not shure we should save this
 **** TODO Continue generation work
+:LOGBOOK:
+CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
+:END:
 - [ ] Continue to implement complete process with unit tests
   - [ ] Maybe call npm audit fix to update packages to last version ?
   - [ ] Then call =npm install= : it can be very long. We must have a

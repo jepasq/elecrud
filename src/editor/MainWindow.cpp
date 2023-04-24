@@ -437,6 +437,7 @@ void
 MainWindow::setDirty(bool vDirty)
 {
   dirty = vDirty;
+  projectFile->setDirty(vDirty);
   updateTitle();
 }
 
