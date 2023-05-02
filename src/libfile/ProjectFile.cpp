@@ -28,7 +28,8 @@ file_exists(const std::string& filename)
   *
   */
 ProjectFile::ProjectFile():
-  filename()
+  filename(),
+  dirty(false)
 {
 
 }
@@ -93,7 +94,7 @@ ProjectFile::save()
       FXString fna(filename.c_str());
       FXFileStream s;
       s.open(fna, FXStreamSave);
-      s << FXString("test");
+      s << FXString(projectName.c_str());
       s.close();
     }
 }
@@ -112,6 +113,15 @@ ProjectFile::load()
     {
       std::cout << "Loading " << filename << std::endl;
     }
+
+
+  FXString fna(filename.c_str()), pna;
+  FXFileStream s;
+  s.open(fna, FXStreamLoad);
+  s >> pna;
+  s.close();
+
+  projectName = pna.text();
   
 }
 
@@ -134,13 +144,13 @@ ProjectFile::setDirty(bool d)
 
 
 void
-ProjectFile::setProjectName(const std::string&)
+ProjectFile::setProjectName(const std::string& vpn)
 {
-
+  projectName = vpn;
 }
 
 const std::string&
 ProjectFile::getProjectName(void) const
 {
-
+  return projectName;
 }

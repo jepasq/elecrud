@@ -36,6 +36,9 @@ public:
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
   bool dirty; // The underlying dirty flag (true if modifications must be saved)
+
+  // Saved values/fields
+  std::string projectName;
 };
 
 #endif // !__PROJECT_FILE_HPP__
