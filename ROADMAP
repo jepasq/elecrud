@@ -15,42 +15,10 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
-**** TODO Project-file serialization
-:LOGBOOK:
-CLOCK: [2023-05-02 mar. 12:13]--[2023-05-02 mar. 12:21] =>  0:08
-CLOCK: [2023-04-24 lun. 09:45]--[2023-04-24 lun. 10:09] =>  0:24
-CLOCK: [2023-04-24 lun. 09:11]--[2023-04-24 lun. 09:17] =>  0:06
-CLOCK: [2023-03-22 mer. 11:12]--[2023-03-22 mer. 11:21] =>  0:09
-CLOCK: [2023-03-22 mer. 10:07]--[2023-03-22 mer. 10:25] =>  0:18
-CLOCK: [2023-03-17 ven. 09:01]--[2023-03-17 ven. 09:18] =>  0:17
-CLOCK: [2023-03-17 ven. 08:50]--[2023-03-17 ven. 08:58] =>  0:08
-CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
-CLOCK: [2022-09-29 jeu. 05:14]--[2022-09-29 jeu. 05:21] =>  0:07
-CLOCK: [2022-09-27 mar. 04:17]--[2022-09-27 mar. 04:38] =>  0:21
-CLOCK: [2022-09-27 mar. 03:56]--[2022-09-27 mar. 04:14] =>  0:18
-CLOCK: [2022-07-15 ven. 06:01]--[2022-07-15 ven. 06:16] =>  0:15
-CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
-:END:
-     As an ini file read by boost or a binary file or a zip directory?
-     Must be versionnable with a magic number to keep opening old files.
-- [X] Cmake search for boost_serialization
-- [X] Implement ProjectFile::setFilename() and unit test
-- [X] Create the ProjectFile class using fox steam object
-- [X] Maybe fox has a stream thing that can be used to file it in binbary     
-- [X] Add ProjectFile::load function
-  Unit tests added, now implement
-- [X] Handle ProjectFile::save file creation using FX stream
-  Should fix actual failing unit tests
-- [X] If we don't use boost serialization, remove it from cmake and README
-- [X] ProjectFile may handle dirty flag so it can be tested
-  - [X] Add unit tests
-  - [X] Implement
-  - [X] Must be used by MainWindow
-    MainWindow already has a dirty flag
-- [-] Start to list MainWindow fields to be saved
+**** TODO Next Project-file serialization work
+- [ ] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
   - Let's preprend function with setProject*
-  - [X] Added ProjectName unit test. Fix it
   - [ ] Let's add Author  
   Collection : /none/
   Generator : Output filename
@@ -100,6 +68,40 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+**** DONE Project-file serialization
+:LOGBOOK:
+CLOCK: [2023-05-02 mar. 12:13]--[2023-05-02 mar. 12:21] =>  0:08
+CLOCK: [2023-04-24 lun. 09:45]--[2023-04-24 lun. 10:09] =>  0:24
+CLOCK: [2023-04-24 lun. 09:11]--[2023-04-24 lun. 09:17] =>  0:06
+CLOCK: [2023-03-22 mer. 11:12]--[2023-03-22 mer. 11:21] =>  0:09
+CLOCK: [2023-03-22 mer. 10:07]--[2023-03-22 mer. 10:25] =>  0:18
+CLOCK: [2023-03-17 ven. 09:01]--[2023-03-17 ven. 09:18] =>  0:17
+CLOCK: [2023-03-17 ven. 08:50]--[2023-03-17 ven. 08:58] =>  0:08
+CLOCK: [2022-09-29 jeu. 07:57]--[2022-09-29 jeu. 08:31] =>  0:34
+CLOCK: [2022-09-29 jeu. 05:14]--[2022-09-29 jeu. 05:21] =>  0:07
+CLOCK: [2022-09-27 mar. 04:17]--[2022-09-27 mar. 04:38] =>  0:21
+CLOCK: [2022-09-27 mar. 03:56]--[2022-09-27 mar. 04:14] =>  0:18
+CLOCK: [2022-07-15 ven. 06:01]--[2022-07-15 ven. 06:16] =>  0:15
+CLOCK: [2022-07-15 ven. 05:08]--[2022-07-15 ven. 05:50] =>  0:42
+:END:
+     As an ini file read by boost or a binary file or a zip directory?
+     Must be versionnable with a magic number to keep opening old files.
+- [X] Cmake search for boost_serialization
+- [X] Implement ProjectFile::setFilename() and unit test
+- [X] Create the ProjectFile class using fox steam object
+- [X] Maybe fox has a stream thing that can be used to file it in binbary     
+- [X] Add ProjectFile::load function
+  Unit tests added, now implement
+- [X] Handle ProjectFile::save file creation using FX stream
+  Should fix actual failing unit tests
+- [X] If we don't use boost serialization, remove it from cmake and README
+- [X] ProjectFile may handle dirty flag so it can be tested
+  - [X] Add unit tests
+  - [X] Implement
+  - [X] Must be used by MainWindow
+    MainWindow already has a dirty flag
+- [X] Already added fields ProjectName unit test. Fix it
+  
 *** DONE v0.0.2
 **** DONE First generation work
 :LOGBOOK:
