@@ -91,3 +91,22 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_project_name )
   BOOST_REQUIRE_EQUAL( pf2.getProjectName(), pn );
 }
 
+/// Has a project author field
+BOOST_AUTO_TEST_CASE( ProjectFile_has_project_author )
+{
+  auto pa = "PrjAuthooor";
+  auto fn = "PrjNameTest.eud";
+  
+  ProjectFile pf1, pf2;
+  pf1.setProjectAuthor(pa);
+
+  // Save and load
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+  
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf2.getProjectAuthor(), pa );
+}

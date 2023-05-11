@@ -154,3 +154,15 @@ ProjectFile::getProjectName(void) const
 {
   return projectName;
 }
+
+void
+ProjectFile::setProjectAuthor(const std::string&)
+{
+
+}
+
+const std::string&
+ProjectFile::getProjectAuthor(void) const
+{
+
+}

@@ -16,6 +16,9 @@
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Next Project-file serialization work
+:LOGBOOK:
+CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
+:END:
 - [ ] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
   - Let's preprend function with setProject*

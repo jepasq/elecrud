@@ -32,6 +32,10 @@ public:
   // Project pane-related editor fields
   void               setProjectName(const std::string&);
   const std::string& getProjectName(void) const;
+
+  void               setProjectAuthor(const std::string&);
+  const std::string& getProjectAuthor(void) const;
+
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
