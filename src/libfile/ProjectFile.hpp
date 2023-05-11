@@ -43,6 +43,7 @@ private:
 
   // Saved values/fields
   std::string projectName;
+  std::string projectAuthor;
 };
 
 #endif // !__PROJECT_FILE_HPP__

@@ -95,6 +95,7 @@ ProjectFile::save()
       FXFileStream s;
       s.open(fna, FXStreamSave);
       s << FXString(projectName.c_str());
+      s << FXString(projectAuthor.c_str());
       s.close();
     }
 }
@@ -115,13 +116,15 @@ ProjectFile::load()
     }
 
 
-  FXString fna(filename.c_str()), pna;
+  FXString fna(filename.c_str()), pna, pau;
   FXFileStream s;
   s.open(fna, FXStreamLoad);
   s >> pna;
+  s >> pau;
   s.close();
 
-  projectName = pna.text();
+  projectName   = pna.text();
+  projectAuthor = pau.text();
   
 }
 
@@ -156,13 +159,13 @@ ProjectFile::getProjectName(void) const
 }
 
 void
-ProjectFile::setProjectAuthor(const std::string&)
+ProjectFile::setProjectAuthor(const std::string& pa)
 {
-
+   projectAuthor = pa;
 }
 
 const std::string&
 ProjectFile::getProjectAuthor(void) const
 {
-
+  return projectAuthor;
 }
