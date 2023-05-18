@@ -84,8 +84,9 @@ private:
   bool             dirty;    //!< Does the actual document need a save ?
 
   // Used to set them to disable if we can't generate project
-  FXMenuCommand* mcGen; //!< Then Project>Generate menu command
-  FXMenuCommand* mcRun; //!< Then Project>Run menu command
+  FXMenuCommand* mcGen;  //!< The Project>Generate menu command
+  FXMenuCommand* mcRun;  //!< The Project>Run menu command
+  FXMenuCommand* mcSave; //!< The File>Save menu command 
   
   ProjectFile      projectFile; //!< Used to load/save actual project
 

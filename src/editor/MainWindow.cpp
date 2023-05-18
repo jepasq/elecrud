@@ -77,9 +77,9 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 		    app->openicon,this,ID_OPEN);
 
  
-  auto save = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
+  mcSave = new FXMenuCommand(filemenu,tr("&Save\tCtrl-S\tOverride already saved file."),
 				nullptr,this,ID_SAVE);
-  save->disable();
+  mcSave->disable();
 
   new FXMenuCommand(filemenu,tr("&Save as...\tCtrl-S\tSave in a new file."),
 				nullptr,this,ID_SAVEAS);
@@ -253,6 +253,9 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
   projectFile.load();
   updateTitle();
 
+  mcSave->enable();
+
+  
   return 1;
 }
 

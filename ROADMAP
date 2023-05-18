@@ -30,12 +30,18 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
   Log : not sure we should save this
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2023-05-18 jeu. 03:28]--[2023-05-18 jeu. 03:39] =>  0:11
 CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 :END:
+
+- [-] Opening a .eud file
+  - [X] should enable the save button
+  - [ ] Should set Project name, author etc...  from loaded Project file
+
 - [ ] Continue to implement complete process with unit tests
   - [ ] Maybe call npm audit fix to update packages to last version ?
   - [ ] Then call =npm install= : it can be very long. We must have a
-    =ProcessWatcher= class here to follow progress
+    =ProcessWatcher= class here to follow progress.
   - [ ] Call =npm start= to run app
     
 - [ ] Search for other icons in Adie source code
