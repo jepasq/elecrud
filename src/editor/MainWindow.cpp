@@ -254,8 +254,9 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
   updateTitle();
 
   mcSave->enable();
-
   
+  FXString pna(projectFile.getProjectName().c_str());
+  tfProjectName->setText(pna);  
   return 1;
 }
 

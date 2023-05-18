@@ -7,3 +7,13 @@ A C++/electron based multi-user CRUD operator generator.
 
 This library contains the *project files* related work and all that can be
 shared with other clients.
+
+## std::string vs FXString
+
+The *fox toolkit* implements its own string object : FXString. While it is
+possible to cast a *std::string* to FXString, you have to do it manually.
+
+I will use both type in different subprojects. When the project is Fox-based,
+for example the graphical editor, it uses the FXString type.
+
+In the general-purpose library called `libfile`, I will use std::string.
