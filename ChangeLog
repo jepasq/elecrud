@@ -1,3 +1,13 @@
+* v0.0.2-14 (24 Apr. 2023 - 18 Mai. 2023) SLOC 1,847
+- Add the failing generator filename projectfile test
+- Loading a project file set project name in editor
+- Loading a file enable the File>save MenuCommand
+- Multiple to-be-generated app node modules update
+- Add ProjectAuthor unit test
+- Close a project file serialization related ROADMAP section
+- Serialize project name and finally fix related unit tests
+- Add failing test for ProjectFile's project name field
+
 * v0.0.2-13 (17 Mar. 2023 - 24 Apr. 2023) SLOC 1,716
 - Editor's MainWindow uses ProjectFile's dirty flag
 - Add npm install call option to editor's generator pane
