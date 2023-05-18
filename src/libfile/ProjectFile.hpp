@@ -36,6 +36,9 @@ public:
   void               setProjectAuthor(const std::string&);
   const std::string& getProjectAuthor(void) const;
 
+  // Generator pane-related editor fields
+  void               setGeneratorFilename(const std::string&);
+  const std::string& getGeneratorFilename(void) const;
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
@@ -44,6 +47,7 @@ private:
   // Saved values/fields
   std::string projectName;
   std::string projectAuthor;
+  std::string generatorFilename;
 };
 
 #endif // !__PROJECT_FILE_HPP__

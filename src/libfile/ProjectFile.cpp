@@ -169,3 +169,16 @@ ProjectFile::getProjectAuthor(void) const
 {
   return projectAuthor;
 }
+
+void
+ProjectFile::setGeneratorFilename(const std::string& gf)
+{
+  generatorFilename = gf;
+}
+
+const std::string&
+ProjectFile::getGeneratorFilename(void) const
+{
+  return generatorFilename;
+}
+

@@ -110,3 +110,24 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_project_author )
   // False by default
   BOOST_REQUIRE_EQUAL( pf2.getProjectAuthor(), pa );
 }
+
+BOOST_AUTO_TEST_CASE( ProjectFile_has_generator_filename )
+{
+
+  auto pa = "GeneratorOutput";
+  auto fn = "PrjNameTest.eud";
+  
+  ProjectFile pf1, pf2;
+  pf1.setGeneratorFilename(pa);
+
+  // Save and load
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+  
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf2.getGeneratorFilename(), pa );
+}
+  

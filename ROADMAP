@@ -17,6 +17,7 @@
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** TODO Next Project-file serialization work
 :LOGBOOK:
+CLOCK: [2023-05-18 jeu. 04:21]--[2023-05-18 jeu. 04:40] =>  0:19
 CLOCK: [2023-05-11 jeu. 14:44]--[2023-05-11 jeu. 14:51] =>  0:07
 CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 :END:
@@ -25,7 +26,9 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
   - Let's preprend function with setProject*
   - [X] Let's add Author  
   Collection : /none/
-  - [ ] Generator : Output filename
+  - [ ] Generator
+    - [ ] filename : test added
+    - [ ] CallNpm (boolean)  
   - Let's preprend function with setGenerator*
   Log : not sure we should save this
 **** TODO Continue generation work
