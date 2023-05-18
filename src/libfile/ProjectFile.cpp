@@ -96,6 +96,7 @@ ProjectFile::save()
       s.open(fna, FXStreamSave);
       s << FXString(projectName.c_str());
       s << FXString(projectAuthor.c_str());
+      s << FXString(generatorFilename.c_str());
       s.close();
     }
 }
@@ -116,16 +117,18 @@ ProjectFile::load()
     }
 
 
-  FXString fna(filename.c_str()), pna, pau;
+  FXString fna(filename.c_str()), pna, pau, gna;
   FXFileStream s;
   s.open(fna, FXStreamLoad);
   s >> pna;
   s >> pau;
+  s >> gna;
   s.close();
 
-  projectName   = pna.text();
-  projectAuthor = pau.text();
+  projectName       = pna.text();
+  projectAuthor     = pau.text();
   
+  generatorFilename = gna.text();
 }
 
 bool
