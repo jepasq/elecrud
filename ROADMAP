@@ -25,23 +25,26 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 - [-] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
   - Let's preprend function with setProject*
-  - [X] Let's add Author  
+  - [X] Let's add Author
+  - [ ] Description  
   Collection : /none/
   - [-] Generator
     - [X] filename : test added and implemented
     - [ ] CallNpm (boolean)  
   - Let's preprend function with setGenerator*
   Log : not sure we should save this
+  
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2023-05-29 lun. 05:11]--[2023-05-29 lun. 05:24] =>  0:13
 CLOCK: [2023-05-18 jeu. 03:56]--[2023-05-18 jeu. 04:07] =>  0:11
 CLOCK: [2023-05-18 jeu. 03:28]--[2023-05-18 jeu. 03:39] =>  0:11
 CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 :END:
 
-- [-] Opening a .eud file
+- [X] Opening a .eud file
   - [X] should enable the save button
-  - [ ] Should set Project name, author etc... from loaded Project file
+  - [X] Should set Project name, author etc... from loaded Project file
 
 - [ ] Must implement MainWindow's save callback
 

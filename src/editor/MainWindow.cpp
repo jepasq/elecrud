@@ -256,7 +256,13 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
   mcSave->enable();
   
   FXString pna(projectFile.getProjectName().c_str());
-  tfProjectName->setText(pna);  
+  tfProjectName->setText(pna);
+
+  FXString pauth(projectFile.getProjectAuthor().c_str());
+  tfProjectAuth->setText(pauth);
+    
+  FXString gfiln(projectFile.getGeneratorFilename().c_str());
+  tfOutputName->setText(gfiln);
   return 1;
 }
 

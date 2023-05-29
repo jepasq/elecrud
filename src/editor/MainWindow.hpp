@@ -100,7 +100,7 @@ private:
   FXTextField* tfProjectName; //!< The widget for the project name edition
   FXTextField* tfProjectAuth; //!< The project author widget
   FXTextField* tfProjectVers; //!< The project version
-  FXTextField* tfProjectLice; //!< The project version
+  FXTextField* tfProjectLice; //!< The project license
   FXText*      ftDescription; //!< The description multiline input widget
 
   FXTextField* tfOutputName; //!< The output filename
