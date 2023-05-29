@@ -8,4 +8,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-15 (18 Mai. 2023 - ???) SLOC ?,???
-- (1) Implement generator filename save and load to fix failing test
+- (2) Improve Project API documentation
+- Implement generator filename save and load to fix failing test

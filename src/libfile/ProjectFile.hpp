@@ -42,12 +42,12 @@ public:
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
-  bool dirty; // The underlying dirty flag (true if modifications must be saved)
+  bool dirty; //!< The underlying dirty flag (modifications must be saved ?)
 
   // Saved values/fields
-  std::string projectName;
-  std::string projectAuthor;
-  std::string generatorFilename;
+  std::string projectName;       //!< The project name field
+  std::string projectAuthor;     //!< The project author field
+  std::string generatorFilename; //!< The file to be created when generated
 };
 
 #endif // !__PROJECT_FILE_HPP__

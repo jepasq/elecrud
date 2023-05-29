@@ -131,12 +131,29 @@ ProjectFile::load()
   generatorFilename = gna.text();
 }
 
+/** Is this project file dirty ?
+  *
+  * Is there any modification waiting to be saved ?
+  *
+  * \return The dirty flag value as boolean.
+  *
+  */
+
 bool
 ProjectFile::isDirty()
 {
   return this->dirty;
 }
 
+
+/** Manually changing the dirty flag value
+  *
+  * May issue an error in cerr if user try to set flag to false without
+  * saving. Please use save() instead.
+  *
+  * \param d The new value
+  *
+  */
 void
 ProjectFile::setDirty(bool d)
 {
@@ -148,37 +165,66 @@ ProjectFile::setDirty(bool d)
 	      << std::endl;
 }
 
-
+/** Set the project name
+  *
+  * \param vpn The new value.
+  *
+  */
 void
 ProjectFile::setProjectName(const std::string& vpn)
 {
   projectName = vpn;
 }
 
+/** Get the project name
+  *
+  * \return The name as std string.
+  *
+  */
 const std::string&
 ProjectFile::getProjectName(void) const
 {
   return projectName;
 }
 
+/** Set the project author
+  *
+  * \param pa The new value.
+  *
+  */
 void
 ProjectFile::setProjectAuthor(const std::string& pa)
 {
    projectAuthor = pa;
 }
 
+/** Get the project author
+  *
+  * \return The author as std string.
+  *
+  */
 const std::string&
 ProjectFile::getProjectAuthor(void) const
 {
   return projectAuthor;
 }
 
+/** Set the generator filename
+  *
+  * \param gf The new value.
+  *
+  */
 void
 ProjectFile::setGeneratorFilename(const std::string& gf)
 {
   generatorFilename = gf;
 }
 
+/** Get the generator filename
+  *
+  * \return The filename.
+  *
+  */
 const std::string&
 ProjectFile::getGeneratorFilename(void) const
 {
