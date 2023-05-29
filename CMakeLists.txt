@@ -79,5 +79,6 @@ add_custom_target(icons ALL DEPENDS icons.hpp)
 
 # eudcat tool
 add_executable(eudcat src/eudcat/main.cpp) 
-target_include_directories(eudcat PUBLIC src src/libfile)
+target_include_directories(eudcat PUBLIC
+  ${PROJECT_BINARY_DIR} src src/libfile)
 target_link_libraries(eudcat ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)

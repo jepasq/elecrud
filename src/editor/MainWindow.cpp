@@ -9,7 +9,6 @@
 
 #include "GeneratorV1.hpp"
 
-
 using namespace std;
 
 #define EXT_PATTERN "*.eud"
