@@ -39,7 +39,7 @@ target_include_directories(elecrud-file PUBLIC ${LIBS_INCLUDE_DIRS})
 add_executable(elecrud src/editor/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   elecrud-file stdc++fs)
-target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS}
+target_include_directories(elecrud PUBLIC
   ${LIBS_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR}
   src
@@ -57,7 +57,7 @@ add_executable(tests src/tests.cpp
   src/editor/MainWindow_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   elecrud-file stdc++fs)
-target_include_directories(tests PUBLIC ${SDL2_INCLUDE_DIRS}
+target_include_directories(tests PUBLIC
   ${PROJECT_BINARY_DIR} src src/libfile)
 add_custom_target(check COMMAND tests DEPENDS icons)
 
@@ -77,3 +77,7 @@ add_custom_command(OUTPUT icons.hpp
   )
 add_custom_target(icons ALL DEPENDS icons.hpp)
 
+# eudcat tool
+add_executable(eudcat src/eudcat/main.cpp) 
+target_include_directories(eudcat PUBLIC src src/libfile)
+target_link_libraries(eudcat ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)

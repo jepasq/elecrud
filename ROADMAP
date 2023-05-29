@@ -16,8 +16,19 @@
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** eudcat : A simple cat tool for eud files
+:LOGBOOK:
+CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
+:END:
+- [ ] Add simplest main.cpp file and cmake rule
+- [ ] Prints  version from CMakeLists file  
+- [ ] Need an existant file as first argument
+- [ ] Add usage text
+- [ ] Possible options
+  -a|-all Print all possible fields even the unset ones
+  -s|-set Only prints set fields (default)
+  
 - [ ] Simply prints fields saved in an eud file
-
+- [ ] Add an associated completion script (may be installed)
 **** TODO Next Project-file serialization work
 :LOGBOOK:
 CLOCK: [2023-05-18 jeu. 05:25]--[2023-05-18 jeu. 05:28] =>  0:03
