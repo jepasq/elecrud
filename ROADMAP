@@ -15,6 +15,9 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
+**** eudcat : A simple cat tool for eud files
+- [ ] Simply prints fields saved in an eud file
+
 **** TODO Next Project-file serialization work
 :LOGBOOK:
 CLOCK: [2023-05-18 jeu. 05:25]--[2023-05-18 jeu. 05:28] =>  0:03
@@ -33,9 +36,10 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
     - [ ] CallNpm (boolean)  
   - Let's preprend function with setGenerator*
   Log : not sure we should save this
-  
+
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2023-05-29 lun. 05:38]--[2023-05-29 lun. 05:59] =>  0:21
 CLOCK: [2023-05-29 lun. 05:11]--[2023-05-29 lun. 05:24] =>  0:13
 CLOCK: [2023-05-18 jeu. 03:56]--[2023-05-18 jeu. 04:07] =>  0:11
 CLOCK: [2023-05-18 jeu. 03:28]--[2023-05-18 jeu. 03:39] =>  0:11

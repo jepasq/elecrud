@@ -277,7 +277,9 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 long
 MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
 {
+  projectFile.save();
   setDirty(false);
+  updateTitle();
   return 1;
 }
 
@@ -295,7 +297,8 @@ MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
   filename = FXFileDialog::getSaveFilename(this, "Save as project...", "~",
 					   EXT_PATTERN);
   projectFile.setFilename(filename);
-
+  projectFile.save();
+  
   updateTitle();
   return 1;
 }
