@@ -295,10 +295,13 @@ MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 {
   filename = FXFileDialog::getSaveFilename(this, "Save as project...", "~",
 					   EXT_PATTERN);
-  projectFile.setFilename(filename);
-  projectFile.save();
-  
-  updateTitle();
+  if (!filename.empty())
+    {
+      projectFile.setFilename(filename);
+      projectFile.save();
+      
+      updateTitle();
+    }
   return 1;
 }
 

@@ -51,6 +51,7 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2023-06-14 mer. 05:42]--[2023-06-14 mer. 05:52] =>  0:10
 CLOCK: [2023-06-14 mer. 05:14]--[2023-06-14 mer. 05:35] =>  0:21
 CLOCK: [2023-05-29 lun. 05:38]--[2023-05-29 lun. 05:59] =>  0:21
 CLOCK: [2023-05-29 lun. 05:11]--[2023-05-29 lun. 05:24] =>  0:13
@@ -63,8 +64,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
   - [X] should enable the save button
   - [X] Should set Project name, author etc... from loaded Project file
 - [X] Must implement MainWindow's save callback
-
-- [ ] When we cancel a 'save as ' action, we got the runtime_error
+- [X] When we cancel a 'save as ' action, we got the runtime_error
   =Can't save project file with empty filename=
 
 - [ ] Continue to implement complete process with unit tests
