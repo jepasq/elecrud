@@ -1,3 +1,13 @@
+* v0.0.2-15 (18 Mai 2023 - 14 Jun. 2023) SLOC 1,921
+- Fix the MainWindow's Save as callback empty filename error
+- MainWindow's save callback call ProjectFile::save
+- eudcat prints version from cmake-generated config.h
+- Add empty eudcat tool binary
+- Naive MainWindow's save and saveAs callback implementation
+- MainWindow update UI fields from loaded project file
+- Improve Project API documentation
+- Implement generator filename save and load to fix failing test
+
 * v0.0.2-14 (24 Apr. 2023 - 18 Mai. 2023) SLOC 1,847
 - Add the failing generator filename projectfile test
 - Loading a project file set project name in editor
