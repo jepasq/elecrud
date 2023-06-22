@@ -30,8 +30,6 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_ICON,  MainWindow::onIconClicked),
   FXMAPFUNC(SEL_COMMAND,MainWindow::ID_GPAB,  MainWindow::onGenPathClicked),
 
-
-  
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
  // From https://rubydoc.info/gems/fxruby/Fox/FXText : Changed in any way.
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
@@ -445,6 +443,9 @@ MainWindow::onProjectDescChanged(FXObject* _o,FXSelector _s,void* _d)
 
 /** Set the dirty flag to a new value (default to true) and update title
   *
+  * It sets the internal ProjectFile object to the exact same value without
+  * any check.
+  *
   * \param vDirty The new dirty flag value.
   *
   */
@@ -452,7 +453,7 @@ void
 MainWindow::setDirty(bool vDirty)
 {
   dirty = vDirty;
-  projectFile.save();
+  projectFile.setDirty(vDirty);
   updateTitle();
 }
 
