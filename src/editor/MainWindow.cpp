@@ -9,6 +9,9 @@
 
 #include "GeneratorV1.hpp"
 
+#include <stdio.h>      /* printf */
+#include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
+
 using namespace std;
 
 #define EXT_PATTERN "*.eud"
@@ -393,8 +396,6 @@ MainWindow::onIconClicked(FXObject* _o,FXSelector _s,void* idx)
       
     }
   splitter->layout();
-  
-  cout << "Icon clicked :  " << idx << endl;
   return 1;
 }
 
@@ -509,6 +510,25 @@ MainWindow::onProjectRun(FXObject* _o,FXSelector _s, void* _v)
   preGenerationChecks();
   std::cout << "ProRun clicked" << std::endl;
 
+  // Switch to log pane
+  onIconClicked(nullptr, 0, (void*)3); 
+
+  GeneratorV1 gv1;
+  addLogMessage("Generation started...");
+
+  // Shoulod check for return value/file generation ?
+  
+  // Run previously generated project
+  addLogMessage("Running generated project...");
+
+  if (system(NULL)) puts ("Ok");
+  else addLogMessage("Can't run system command!");
+
+  std::string cmd = "cd "+ gv1.getOutputDir() +"&&npm start";
+  
+  auto i=system(cmd.c_str());
+  printf ("The value returned was: %d.\n",i);
+  
   return 1;
 }
 
@@ -566,6 +586,9 @@ MainWindow::onProjectGen(FXObject* _o,FXSelector _s,void* _d)
 
   GeneratorV1 gv1;
   addLogMessage("Generation started...");
+  gv1.generate();
+  addLogMessage("Generation finished...");
+
   
   return 1;
 }
