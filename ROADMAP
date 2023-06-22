@@ -51,6 +51,7 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2023-06-22 jeu. 05:25]--[2023-06-22 jeu. 05:32] =>  0:07
 CLOCK: [2023-06-22 jeu. 05:07]--[2023-06-22 jeu. 05:16] =>  0:09
 CLOCK: [2023-06-14 mer. 05:42]--[2023-06-14 mer. 05:52] =>  0:10
 CLOCK: [2023-06-14 mer. 05:14]--[2023-06-14 mer. 05:35] =>  0:21
@@ -68,6 +69,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 - [X] When we cancel a 'save as ' action, we got the runtime_error
   =Can't save project file with empty filename=
 - [X] Modifying project name makes the project throw an =empty filename= exc.
+- [X] Still the same =empty filename= when we cancel the open dialog
 
 - [ ] Continue to implement complete process with unit tests
   - [ ] Maybe call npm audit fix to update packages to last version ?
