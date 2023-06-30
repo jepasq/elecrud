@@ -560,7 +560,8 @@ MainWindow::preGenerationChecks(void)
   }
   
   if (!check)
-    FXMessageBox::warning(this, MBOX_OK, "Generator warning", msg.c_str());
+    FXMessageBox::warning(this, MBOX_OK, "Generator warning", "%s",
+			  msg.c_str());
   
   return check;
 }
