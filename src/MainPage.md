@@ -17,3 +17,10 @@ I will use both type in different subprojects. When the project is Fox-based,
 for example the graphical editor, it uses the FXString type.
 
 In the general-purpose library called `libfile`, I will use std::string.
+
+# Tools
+
+This repository contains multiple binaries :
+
+	src/editor   A graphical project file editor powered by fox toolkit.
+	src/eudcat   A CLI file printing .eud file informations.
