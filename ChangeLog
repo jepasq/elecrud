@@ -1,3 +1,13 @@
+* v0.0.2-16 (14 Jun. 2023 - ???) SLOC 2,015
+- Create a basic StartupOptions struct
+- eudcat: Feed a std::list with argc and test it
+- Should have fixed a 'format not a string literal' warning
+- eudcat shows first ProjectFile fields
+- Add usage function to eudcat tool
+- Project run menu action shows log pane
+- Fix a thrown exception when open dialog is cancelled
+- Fix an unwanted ProjectFile save when fields are modified
+
 * v0.0.2-15 (18 Mai 2023 - 14 Jun. 2023) SLOC 1,921
 - Fix the MainWindow's Save as callback empty filename error
 - MainWindow's save callback call ProjectFile::save

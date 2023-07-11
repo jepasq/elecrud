@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-16 (14 Jun. 2023 - ???) SLOC ?,???
-- (8) Create a vasic StartupOptions struct
-- eudcat: Feed a std::list with argc and test it
-- Should have fixed a 'format not a string literal' warning
-- eudcat shows first ProjectFile fields
-- Add usage function to eudcat tool
-- Project run menu action shows log pane
-- Fix a thrown exception when open dialog is cancelled
-- Fix an unwanted ProjectFile save when fields are modified
+* v0.0.2-17 (14 Jun. 2023 - ???) SLOC ?,???
+
