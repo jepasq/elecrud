@@ -8,6 +8,9 @@
 
 #include "libfile/ProjectFile.hpp"
 
+#include <list>
+#include <string>
+
 using namespace std;
 
 void
@@ -27,6 +30,13 @@ print_if_not_empty(std::string label, std::string value)
   
 }
 
+void
+debugStdArgv(list<string>& l)
+{
+  cout << "Debugging ARGV :" << endl;
+  for (auto i : l)
+    cout << " - " << i << endl;
+}
 
 /** The main entry of the eudcat tool
   *
@@ -35,8 +45,16 @@ print_if_not_empty(std::string label, std::string value)
 int
 main(int argc, char** argv)
 {
+  // argv testing
+  list<string> stdargv;
+  for (int i=0; i<argc; ++i)
+    stdargv.push_back(string(argv[i]));
+  debugStdArgv(stdargv);
+  
   if (argc != 2)
     usage();
+
+  
   
   ProjectFile pf;
   pf.setFilename(argv[1]);

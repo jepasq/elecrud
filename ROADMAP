@@ -17,6 +17,7 @@
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 **** eudcat : A simple cat tool for eud files
 :LOGBOOK:
+CLOCK: [2023-07-11 mar. 11:31]--[2023-07-11 mar. 11:51] =>  0:20
 CLOCK: [2023-06-30 ven. 07:18]--[2023-06-30 ven. 07:29] =>  0:11
 CLOCK: [2023-06-30 ven. 06:59]--[2023-06-30 ven. 07:04] =>  0:05
 CLOCK: [2023-05-29 lun. 06:31]--[2023-05-29 lun. 06:38] =>  0:07
@@ -26,10 +27,12 @@ CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
 - [X] Prints version from CMakeLists file  
 - [X] Add usage text
 - [X] Need an existant file as first argument
-- [ ] Possible options
+- [-] Possible options
   -a|-all Print all possible fields even the unset ones
   -s|-set Only prints set fields (default)
-
+  - [X] Feed a std::list with argc and test it
+  - [ ] Now check if option is in list and feed a StartupOptions list
+    
 - [ ] Simply prints fields saved in an eud file
 - [ ] Add an associated completion script (may be installed)
 **** TODO Next Project-file serialization work
