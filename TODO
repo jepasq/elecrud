@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-16 (14 Jun. 2023 - ???) SLOC ?,???
-- (7) eudcat: Feed a std::list with argc and test it
+- (8) Create a vasic StartupOptions struct
+- eudcat: Feed a std::list with argc and test it
 - Should have fixed a 'format not a string literal' warning
 - eudcat shows first ProjectFile fields
 - Add usage function to eudcat tool

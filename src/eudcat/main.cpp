@@ -13,6 +13,11 @@
 
 using namespace std;
 
+struct tStartupOptions
+{
+  bool printAll;
+};
+
 void
 usage()
 {
@@ -30,6 +35,11 @@ print_if_not_empty(std::string label, std::string value)
   
 }
 
+/** Simply print argument to cout
+  *
+  * \param l the argument list
+  *
+  */
 void
 debugStdArgv(list<string>& l)
 {
@@ -47,14 +57,14 @@ main(int argc, char** argv)
 {
   // argv testing
   list<string> stdargv;
-  for (int i=0; i<argc; ++i)
+  for (int i=1; i<argc; ++i)
     stdargv.push_back(string(argv[i]));
-  debugStdArgv(stdargv);
+  //  debugStdArgv(stdargv);
+
+  tStartupOptions startupOptions;
   
   if (argc != 2)
     usage();
-
-  
   
   ProjectFile pf;
   pf.setFilename(argv[1]);
