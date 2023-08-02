@@ -29,7 +29,8 @@ file_exists(const std::string& filename)
   */
 ProjectFile::ProjectFile():
   filename(),
-  dirty(false)
+  dirty(false),
+  generatorCallnpm(false)
 {
 
 }
@@ -97,6 +98,7 @@ ProjectFile::save()
       s << FXString(projectName.c_str());
       s << FXString(projectAuthor.c_str());
       s << FXString(generatorFilename.c_str());
+      s << (FXint)generatorCallnpm;  // Can't save a bool. Cast to int.
       s.close();
     }
 }
@@ -119,12 +121,14 @@ ProjectFile::load()
 
   FXString fna(filename.c_str()), pna, pau, gna;
   FXFileStream s;
+  FXint iCallnpm;
   s.open(fna, FXStreamLoad);
   s >> pna;
   s >> pau;
   s >> gna;
+  s >> iCallnpm;
   s.close();
-
+  generatorCallnpm = (bool)iCallnpm;
   projectName       = pna.text();
   projectAuthor     = pau.text();
   
@@ -231,3 +235,14 @@ ProjectFile::getGeneratorFilename(void) const
   return generatorFilename;
 }
 
+void
+ProjectFile::setGeneratorCallnpm(bool b)
+{
+  generatorCallnpm = b;
+}
+
+bool
+ProjectFile::getGeneratorCallnpm(void) const
+{
+  return generatorCallnpm;
+}

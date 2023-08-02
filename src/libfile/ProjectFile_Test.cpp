@@ -131,3 +131,22 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_generator_filename )
   BOOST_REQUIRE_EQUAL( pf2.getGeneratorFilename(), pa );
 }
   
+BOOST_AUTO_TEST_CASE( ProjectFile_has_generator_callnpm )
+{
+  auto fn = "PrjNameTest.eud";
+
+  ProjectFile pf1, pf2;
+  BOOST_REQUIRE_EQUAL( pf1.getGeneratorCallnpm(), false ); // Default at false
+  pf1.setGeneratorCallnpm(true);
+
+  // Save and load
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+  
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf2.getGeneratorCallnpm(), true );
+}
+  

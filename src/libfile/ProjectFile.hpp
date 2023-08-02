@@ -39,6 +39,9 @@ public:
   // Generator pane-related editor fields
   void               setGeneratorFilename(const std::string&);
   const std::string& getGeneratorFilename(void) const;
+
+  void               setGeneratorCallnpm(bool);
+  bool               getGeneratorCallnpm(void) const;
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.
@@ -48,6 +51,8 @@ private:
   std::string projectName;       //!< The project name field
   std::string projectAuthor;     //!< The project author field
   std::string generatorFilename; //!< The file to be created when generated
+  bool generatorCallnpm;         //!< Call npm during generation ?
+
 };
 
 #endif // !__PROJECT_FILE_HPP__
