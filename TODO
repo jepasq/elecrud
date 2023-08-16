@@ -8,4 +8,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-17 (14 Jun. 2023 - ???) SLOC ?,???
-- (1) Save and load callNpm boolean using an int cast
+- (2) Improve eudcat API documentation
+- Save and load callNpm boolean using an int cast

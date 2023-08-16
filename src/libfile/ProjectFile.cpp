@@ -235,12 +235,22 @@ ProjectFile::getGeneratorFilename(void) const
   return generatorFilename;
 }
 
+/** Set the generatorCallnpm member field value
+  *
+  * \param b The bool value.
+  *
+  */
 void
 ProjectFile::setGeneratorCallnpm(bool b)
 {
   generatorCallnpm = b;
 }
 
+/** Get the generatorCallnpm member field value
+  *
+  * \return The bool value.
+  *
+  */
 bool
 ProjectFile::getGeneratorCallnpm(void) const
 {
