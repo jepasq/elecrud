@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 project(elecrud VERSION 0.0.2)
 set(REVISION 16)
@@ -32,7 +32,7 @@ set(EDITOR_SRC
 # File library
 add_library(elecrud-file SHARED
   src/libfile/ProjectFile.cpp)
-target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES})
+target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
 target_include_directories(elecrud-file PUBLIC ${LIBS_INCLUDE_DIRS})
 
 # Executable
