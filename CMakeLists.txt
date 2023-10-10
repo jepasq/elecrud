@@ -29,6 +29,11 @@ set(EDITOR_SRC
   src/editor/MainWindow.cpp
 )
 
+# Shared both eudcat target and unit tests
+set(EUDCAT_SRC
+  src/eudcat/StartupOptions.cpp
+)
+
 # File library
 add_library(elecrud-file SHARED
   src/libfile/ProjectFile.cpp)
@@ -50,11 +55,15 @@ add_dependencies(elecrud icons)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 add_executable(tests src/tests.cpp
   ${EDITOR_SRC}
+  ${EUDCAT_SRC}
   src/libfile/ProjectFile_Test.cpp
   
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
-  src/editor/MainWindow_Test.cpp)
+  src/editor/MainWindow_Test.cpp
+
+  src/eudcat/StartupOptions_Test.cpp
+)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   elecrud-file stdc++fs)
 target_include_directories(tests PUBLIC
@@ -78,7 +87,10 @@ add_custom_command(OUTPUT icons.hpp
 add_custom_target(icons ALL DEPENDS icons.hpp)
 
 # eudcat tool
-add_executable(eudcat src/eudcat/main.cpp) 
+add_executable(eudcat
+  src/eudcat/main.cpp
+  ${EUDCAT_SRC}
+) 
 target_include_directories(eudcat PUBLIC
   ${PROJECT_BINARY_DIR} src src/libfile)
 target_link_libraries(eudcat ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)

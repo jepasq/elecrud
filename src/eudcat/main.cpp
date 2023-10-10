@@ -11,17 +11,9 @@
 #include <list>
 #include <string>
 
-using namespace std;
+#include "StartupOptions.hpp"
 
-/** The options used to print eud content of a file
-  *
-  * Only used in eucat tool binary.
-  *
-  */
-struct tStartupOptions
-{
-  bool printAll;  //!< Shoyuld we print all extract values from .eud file
-};
+using namespace std;
 
 /** Print an help message and exit with a 0 status code
   *
@@ -75,9 +67,10 @@ main(int argc, char** argv)
     stdargv.push_back(string(argv[i]));
   //  debugStdArgv(stdargv);
 
-  tStartupOptions startupOptions;
+  StartupOptions startupOptions;
   
-  if (argc != 2)
+  
+  if (argc != 2 || argv[1] == "-h" || argv[1] == "-help")
     usage();
   
   ProjectFile pf;
