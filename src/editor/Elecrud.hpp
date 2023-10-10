@@ -3,6 +3,11 @@
 
 #include <fox-1.6/fx.h>
 
+/** \file Elecrud.hpp
+  * The main editor application header.
+  *
+  */
+
 using namespace FX;
 
 /** The main application object

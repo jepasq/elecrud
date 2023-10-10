@@ -2,9 +2,9 @@
 #define __STARTUP_OPTIONS_HPP__
 
 /** \file StartupOptions.hpp
+  * The eudcat tool options set at startup with command line arguments.
   *
-  *
-  *
+  */
 
 /** The options used to print eud content of a file
   *
