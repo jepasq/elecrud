@@ -16,3 +16,15 @@ BOOST_AUTO_TEST_CASE( StartupOptions_check_default )
   BOOST_REQUIRE_EQUAL( so.check(), true );
 }
 
+/// Wich default values, check must pass
+BOOST_AUTO_TEST_CASE( StartupOptions_consume_remove_first )
+{
+  tStringList o = { "progname", "aze"};
+  StartupOptions so;
+  // Should remove progname
+  so.consume(o);
+  BOOST_REQUIRE_EQUAL( o.size(), 1 );
+  BOOST_REQUIRE_EQUAL( *o.begin(), "aze" );
+}
+
+

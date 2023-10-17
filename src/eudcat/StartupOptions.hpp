@@ -6,6 +6,11 @@
   *
   */
 
+#include <list>
+#include <string>
+
+typedef std::list<std::string> tStringList;
+
 /** The options used to print eud content of a file
   *
   * Only used in eucat tool binary. Mainly a class (not a struct) to set
@@ -17,6 +22,8 @@ class StartupOptions
 public:
   StartupOptions();
   bool check();
+
+  void consume(tStringList&);
   
 public:
   bool printAll; //!< Should we print all extract values from .eud file

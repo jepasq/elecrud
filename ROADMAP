@@ -15,8 +15,9 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
-**** eudcat : A simple cat tool for eud files
+**** TODO eudcat : A simple cat tool for eud files
 :LOGBOOK:
+CLOCK: [2023-10-18 mer. 01:16]--[2023-10-18 mer. 01:49] =>  0:33
 CLOCK: [2023-10-10 mar. 01:28]--[2023-10-10 mar. 02:07] =>  0:39
 CLOCK: [2023-08-16 mer. 05:18]--[2023-08-16 mer. 05:28] =>  0:10
 CLOCK: [2023-07-11 mar. 12:31]--[2023-07-11 mar. 12:50] =>  0:19
@@ -35,6 +36,7 @@ CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
   -s|-set Only prints set fields (default)
   - [X] Feed a std::list with argc and test it
   - [ ] Now check if option is in list and feed a StartupOptions list
+    Usign a new =consume()= function that returns consumed argv
   - [ ] Then check for incompatibility
       
 - [ ] Simply prints fields saved in an eud file

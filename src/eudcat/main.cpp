@@ -69,7 +69,6 @@ main(int argc, char** argv)
 
   StartupOptions startupOptions;
   
-  
   if (argc != 2 || argv[1] == "-h" || argv[1] == "-help")
     usage();
   

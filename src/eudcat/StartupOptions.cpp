@@ -20,3 +20,17 @@ StartupOptions::check()
 
   return true;
 }
+
+/** Modify the given arg list and set current instance's attributes
+  *
+  * Will modify the given list. Will remove the first element known as progname.
+  *
+  * It will not handle char** so you need to create a tStringList based on it.
+  *
+  */
+void
+StartupOptions::consume(tStringList& argv)
+{
+
+}
+
