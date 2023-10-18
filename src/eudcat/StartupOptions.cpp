@@ -31,6 +31,7 @@ StartupOptions::check()
 void
 StartupOptions::consume(tStringList& argv)
 {
-
+  // Removes the first element : always the progname
+  argv.pop_front();
 }
 

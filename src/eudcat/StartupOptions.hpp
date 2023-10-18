@@ -26,8 +26,9 @@ public:
   void consume(tStringList&);
   
 public:
-  bool printAll; //!< Should we print all extract values from .eud file
-  bool printSet; //!< On print setted values, not default values
+  bool printHelp; //!< Print Help/Usage and exit
+  bool printAll;  //!< Should we print all extract values from .eud file
+  bool printSet;  //!< On print setted values, not default values
 };
 
 #endif // !__STARTUP_OPTIONS_HPP__

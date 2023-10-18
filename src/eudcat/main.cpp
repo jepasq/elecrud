@@ -68,6 +68,8 @@ main(int argc, char** argv)
   //  debugStdArgv(stdargv);
 
   StartupOptions startupOptions;
+  tStringList sl(argv, argv + argc);
+  startupOptions.consume(sl);
   
   if (argc != 2 || argv[1] == "-h" || argv[1] == "-help")
     usage();
