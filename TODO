@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-17 (14 Jun. 2023 - ???) SLOC ?,???
-- (8) Fix consule first test and use it for eudcat argv
-- Add a StartupOptions unit test to check for consume()
-- Upgrade Doxygen file and several API documentation blocks
-- eudcat's StartupOptions is now a class
-- Add fox as libelecrud-file depencendies trying to fix github CI
-- Improve README formatting
-- Improve eudcat API documentation
-- Save and load callNpm boolean using an int cast
+* v0.0.2-18 (18 Jun. 2023 - ???) SLOC ?,???
+
