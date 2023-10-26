@@ -103,6 +103,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO *eudcat* : A simple cat tool for eud files
 :LOGBOOK:
+CLOCK: [2023-10-26 jeu. 06:03]--[2023-10-26 jeu. 06:15] =>  0:12
 CLOCK: [2023-10-26 jeu. 05:40]--[2023-10-26 jeu. 05:52] =>  0:12
 CLOCK: [2023-10-18 mer. 01:16]--[2023-10-18 mer. 01:49] =>  0:33
 CLOCK: [2023-10-10 mar. 01:28]--[2023-10-10 mar. 02:07] =>  0:39

@@ -58,6 +58,7 @@ StartupOptions::consume(tStringList& argv)
   if (contains(argv, "-h", "--help"))
     printHelp = true;
 
-  
+  if (contains(argv, "-a", "--all"))
+    printAll = true;
 }
 

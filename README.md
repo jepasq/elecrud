@@ -56,3 +56,9 @@ Here is how to add a new icon list menu item icon to the **MainWindow** :
 4. You just have to get it using `app->icon_name`.
 
 Now, you need to handle panel creation and visibility.
+
+## Tools
+
+### eudcat
+
+`eudcat` is a console-based binary used to output *.eud* project file values.

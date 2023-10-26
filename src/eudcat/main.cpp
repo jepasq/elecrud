@@ -22,9 +22,17 @@ void
 usage()
 {
   cout << "eudcat v" << PROJECT_NUMBER << endl
-       << "This tool is part of the " << PROJECT_NAME << " project." << endl;
+       << "This tool is part of the " << PROJECT_NAME << " project." << endl
+       << endl
+       << "Usage :" << endl
+       << "  eudcat [options] <catfile>" << endl
+       << endl
+       << "Options :" << endl
+       << "  -h, --help  Print this message and exit." << endl
+       << "  -a, --all   Print all values, even unsetted ones." << endl
+       << endl;
 
-  exit(0);
+  exit(EXIT_SUCCESS);
 }
 
 /** Print a key/value pair to std cout if value is not empty
@@ -71,7 +79,7 @@ main(int argc, char** argv)
   tStringList sl(argv, argv + argc);
   startupOptions.consume(sl);
   
-  if (argc != 2 || argv[1] == "-h" || argv[1] == "-help")
+  if (startupOptions.printHelp)
     usage();
   
   ProjectFile pf;
