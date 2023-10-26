@@ -27,4 +27,27 @@ BOOST_AUTO_TEST_CASE( StartupOptions_consume_remove_first )
   BOOST_REQUIRE_EQUAL( *o.begin(), "aze" );
 }
 
+/// Wich default values, check must pass
+BOOST_AUTO_TEST_CASE( StartupOptions_consume_printHelp_short )
+{
+  tStringList o = { "progname", "-h"};
+  StartupOptions so;
+  BOOST_REQUIRE_EQUAL( so.printHelp, false );
+
+  so.consume(o);
+  BOOST_REQUIRE_EQUAL( so.printHelp, true );
+}
+
+BOOST_AUTO_TEST_CASE( StartupOptions_consume_printHelp_long )
+{
+  tStringList o = { "progname", "--help"};
+  StartupOptions so;
+  BOOST_REQUIRE_EQUAL( so.printHelp, false );
+
+  so.consume(o);
+  BOOST_REQUIRE_EQUAL( so.printHelp, true );
+}
+
+
+
 

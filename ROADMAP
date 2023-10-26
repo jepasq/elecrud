@@ -15,32 +15,6 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** Add a sidebars-based Menu to the generated app
     https://getbootstrap.com/docs/5.0/examples/sidebars/
-**** TODO eudcat : A simple cat tool for eud files
-:LOGBOOK:
-CLOCK: [2023-10-18 mer. 01:16]--[2023-10-18 mer. 01:49] =>  0:33
-CLOCK: [2023-10-10 mar. 01:28]--[2023-10-10 mar. 02:07] =>  0:39
-CLOCK: [2023-08-16 mer. 05:18]--[2023-08-16 mer. 05:28] =>  0:10
-CLOCK: [2023-07-11 mar. 12:31]--[2023-07-11 mar. 12:50] =>  0:19
-CLOCK: [2023-07-11 mar. 11:31]--[2023-07-11 mar. 11:51] =>  0:20
-CLOCK: [2023-06-30 ven. 07:18]--[2023-06-30 ven. 07:29] =>  0:11
-CLOCK: [2023-06-30 ven. 06:59]--[2023-06-30 ven. 07:04] =>  0:05
-CLOCK: [2023-05-29 lun. 06:31]--[2023-05-29 lun. 06:38] =>  0:07
-CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
-:END:
-- [X] Add simplest main.cpp file and cmake rule
-- [X] Prints version from CMakeLists file  
-- [X] Add usage text
-- [X] Need an existant file as first argument
-- [-] Possible options
-  -a|-all Print all possible fields even the unset ones
-  -s|-set Only prints set fields (default)
-  - [X] Feed a std::list with argc and test it
-  - [ ] Now check if option is in list and feed a StartupOptions list
-    Usign a new =consume()= function that returns consumed argv
-  - [ ] Then check for incompatibility
-      
-- [ ] Simply prints fields saved in an eud file
-- [ ] Add an associated completion script (may be installed)
 **** TODO Next Project-file serialization work
 :LOGBOOK:
 CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
@@ -127,6 +101,33 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   error: Problems running dot: exit code=0, command='dot',
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
+**** TODO *eudcat* : A simple cat tool for eud files
+:LOGBOOK:
+CLOCK: [2023-10-26 jeu. 05:40]--[2023-10-26 jeu. 05:52] =>  0:12
+CLOCK: [2023-10-18 mer. 01:16]--[2023-10-18 mer. 01:49] =>  0:33
+CLOCK: [2023-10-10 mar. 01:28]--[2023-10-10 mar. 02:07] =>  0:39
+CLOCK: [2023-08-16 mer. 05:18]--[2023-08-16 mer. 05:28] =>  0:10
+CLOCK: [2023-07-11 mar. 12:31]--[2023-07-11 mar. 12:50] =>  0:19
+CLOCK: [2023-07-11 mar. 11:31]--[2023-07-11 mar. 11:51] =>  0:20
+CLOCK: [2023-06-30 ven. 07:18]--[2023-06-30 ven. 07:29] =>  0:11
+CLOCK: [2023-06-30 ven. 06:59]--[2023-06-30 ven. 07:04] =>  0:05
+CLOCK: [2023-05-29 lun. 06:31]--[2023-05-29 lun. 06:38] =>  0:07
+CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
+:END:
+- [X] Add simplest main.cpp file and cmake rule
+- [X] Prints version from CMakeLists file  
+- [X] Add usage text
+- [X] Need an existant file as first argument
+- [-] Possible options
+  -a|-all Print all possible fields even the unset ones
+  -s|-set Only prints set fields (default)
+  - [X] Feed a std::list with argc and test it
+  - [X] Now check if option is in list and feed a StartupOptions list
+    Usign a new =consume()= function that returns consumed argv
+  - [ ] Then check for incompatibility
+      
+- [ ] Simply prints fields saved in an eud file
+- [ ] Add an associated completion script (may be installed)
 **** DONE Project-file serialization
 :LOGBOOK:
 CLOCK: [2023-05-02 mar. 12:13]--[2023-05-02 mar. 12:21] =>  0:08
