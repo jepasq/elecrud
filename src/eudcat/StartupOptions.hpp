@@ -10,6 +10,9 @@
 #include <string>
 #include <stdexcept>
 
+/** A logic error thrown when Icompatible Argument are detected
+  *
+  */
 class IncompatibleArguments : public std::invalid_argument {
 public:
   IncompatibleArguments(const std::string& what = "") :

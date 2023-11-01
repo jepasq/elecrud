@@ -104,6 +104,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO *eudcat* : A simple cat tool for eud files
 :LOGBOOK:
+CLOCK: [2023-11-01 mer. 07:11]--[2023-11-01 mer. 07:16] =>  0:05
 CLOCK: [2023-11-01 mer. 06:51]--[2023-11-01 mer. 07:02] =>  0:11
 CLOCK: [2023-10-26 jeu. 06:03]--[2023-10-26 jeu. 06:15] =>  0:12
 CLOCK: [2023-10-26 jeu. 05:40]--[2023-10-26 jeu. 05:52] =>  0:12
@@ -127,9 +128,9 @@ CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
   - [X] Feed a std::list with argc and test it
   - [X] Now check if option is in list and feed a StartupOptions list
     Usign a new =consume()= function that returns consumed argv
-  - [ ] Then check for incompatibility
-    - [ ] for set et all
-    
+  - [-] Then check for incompatibility
+    - [X] for set et all
+    - [ ] Maybe more  
 - [ ] Simply prints fields saved in an eud file
 - [ ] Add an associated completion script (may be installed)
 **** DONE Project-file serialization

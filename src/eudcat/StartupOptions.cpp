@@ -11,7 +11,6 @@ StartupOptions::StartupOptions():
 
 }
 
-
 /** Check if the selected options are compatible
   *
   * \return true if all options are compatible and the execution can continue.
@@ -20,7 +19,6 @@ StartupOptions::StartupOptions():
 bool
 StartupOptions::check()
 {
-
   return true;
 }
 
@@ -60,5 +58,12 @@ StartupOptions::consume(tStringList& argv)
 
   if (contains(argv, "-a", "--all"))
     printAll = true;
+
+  if (contains(argv, "-s", "--set"))
+    printSet = true;
+
+  
+  if (printAll && printSet)
+    throw IncompatibleArguments("--set et --all are mutually exclusive arguments");
 }
 
