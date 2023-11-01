@@ -48,6 +48,14 @@ BOOST_AUTO_TEST_CASE( StartupOptions_consume_printHelp_long )
   BOOST_REQUIRE_EQUAL( so.printHelp, true );
 }
 
+BOOST_AUTO_TEST_CASE( StartupOptions_incompatible_SetAll )
+{
+  tStringList o = { "progname", "-s", "-a"};
+  StartupOptions so;
+  BOOST_CHECK_THROW( so.consume(o), IncompatibleArguments );
+}
+
+
 
 
 

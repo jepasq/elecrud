@@ -8,6 +8,13 @@
 
 #include <list>
 #include <string>
+#include <stdexcept>
+
+class IncompatibleArguments : public std::invalid_argument {
+public:
+  IncompatibleArguments(const std::string& what = "") :
+    std::invalid_argument(what) {}
+};
 
 /** A list of string */
 typedef std::list<std::string> tStringList;

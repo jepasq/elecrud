@@ -25,7 +25,7 @@ usage()
        << "This tool is part of the " << PROJECT_NAME << " project." << endl
        << endl
        << "Usage :" << endl
-       << "  eudcat [options] <catfile>" << endl
+       << "  eudcat [options] <eudfile>" << endl
        << endl
        << "Options :" << endl
        << "  -h, --help  Print this message and exit." << endl
