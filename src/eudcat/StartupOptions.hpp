@@ -9,6 +9,7 @@
 #include <list>
 #include <string>
 
+/** A list of string */
 typedef std::list<std::string> tStringList;
 
 /** The options used to print eud content of a file

@@ -1,12 +1,13 @@
 # elecrud 
 
 A C++/electron based multi-user CRUD operator generator.
-*electrud* is licensed under GNU GPL v3.
+*electrud* is licensed under *GNU GPL v3*.
 
 ## libfile
 
 This library contains the *project files* related work and all that can be
-shared with other clients.
+shared with other clients. The main entry to this part of the project can
+be the ProjectFile class.
 
 ## std::string vs FXString
 
@@ -23,4 +24,4 @@ In the general-purpose library called `libfile`, I will use std::string.
 This repository contains multiple binaries :
 
 	src/editor   A graphical project file editor powered by fox toolkit.
-	src/eudcat   A CLI file printing .eud file informations.
+	src/eudcat   A CLI utility to print .eud file informations.

@@ -5,6 +5,11 @@
 
 #include <iostream> // MAY USE cout, endl
 
+/** Check if the given file exists (Fox Toolkit version)
+  *
+  * \param filename The filename to be tested.
+  *
+  */
 bool
 file_exists(const FX::FXString& filename)
 {
@@ -14,6 +19,11 @@ file_exists(const FX::FXString& filename)
   return infile.good();
 }
 
+/** Check if the given file exists (STL version)
+  *
+  * \param filename The filename to be tested.
+  *
+  */
 bool
 file_exists(const std::string& filename)
 {
@@ -84,6 +94,9 @@ ProjectFile::setFilename(const char* fn)
 
 /** Save the project file as a current set filename
   *
+  * Here we use fox tooklit's FXFileStream to save current members values
+  * to a new file called filename.
+  *
   */
 void
 ProjectFile::save()
@@ -104,6 +117,8 @@ ProjectFile::save()
 }
 
 /** Load the project file from the file previously set with setFilename()
+  *
+  * Load the file named filename and set this instance's members.
   *
   */
 void

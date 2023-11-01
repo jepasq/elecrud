@@ -5,6 +5,12 @@
 #include <fstream>
 #include <fox-1.6/fx.h>
 
+/** \file ProjectFile.hpp
+  * The libfile's ProjectFile class header.
+  *
+  */
+
+
 // From https://stackoverflow.com/a/19841704
 bool file_exists(const FX::FXString& filename);
 bool file_exists(const std::string& filename);
