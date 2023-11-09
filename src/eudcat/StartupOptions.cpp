@@ -28,14 +28,20 @@ StartupOptions::check()
   *
   */
 bool
-StartupOptions::contains(const tStringList& l, const std::string& s1,
+StartupOptions::contains(tStringList& l, const std::string& s1,
 			 const std::string& s2) const
 {
   if (std::find(l.begin(), l.end(), s1) != l.end())
-    return true;
+    {
+      l.remove(s1);
+      return true;
+    }
 
   if (std::find(l.begin(), l.end(), s2) != l.end())
-    return true;
+    {
+      l.remove(s2);
+      return true;
+    }
 
   return false;
 }
@@ -54,14 +60,13 @@ StartupOptions::consume(tStringList& argv)
   // Removes the first element : always the progname
   argv.pop_front();
   if (contains(argv, "-h", "--help"))
-    printHelp = true;
+      printHelp = true;
 
   if (contains(argv, "-a", "--all"))
     printAll = true;
 
   if (contains(argv, "-s", "--set"))
     printSet = true;
-
   
   if (printAll && printSet)
     throw IncompatibleArguments("--set et --all are mutually exclusive arguments");

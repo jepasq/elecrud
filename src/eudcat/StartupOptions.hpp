@@ -37,8 +37,7 @@ public:
   void consume(tStringList&);
 
 protected:
-  bool contains(const tStringList&, const std::string&,
-		const std::string&) const;
+  bool contains(tStringList&, const std::string&, const std::string&) const;
   
 public:
   bool printHelp; //!< Print Help/Usage and exit

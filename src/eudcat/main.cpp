@@ -83,7 +83,7 @@ main(int argc, char** argv)
     usage();
   
   ProjectFile pf;
-  pf.setFilename(argv[1]);
+  pf.setFilename(sl[1]);
   pf.load();
 
   print_if_not_empty("Project name",   pf.getProjectName());

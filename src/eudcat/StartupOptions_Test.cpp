@@ -55,6 +55,16 @@ BOOST_AUTO_TEST_CASE( StartupOptions_incompatible_SetAll )
   BOOST_CHECK_THROW( so.consume(o), IncompatibleArguments );
 }
 
+BOOST_AUTO_TEST_CASE( StartupOptions_consume_remove_used )
+{
+  tStringList o = { "progname", "-a", "file.eud"};
+  StartupOptions so;
+  so.consume(o);
+  auto found = std::find(o.begin(), o.end(), "-a") != o.end();
+  BOOST_REQUIRE_EQUAL( found, false );
+}
+
+
 
 
 

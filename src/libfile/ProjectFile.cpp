@@ -127,7 +127,11 @@ ProjectFile::load()
   if (filename.empty())
     throw std::runtime_error("Can't load a project file with empty filename");
   else if (!file_exists(filename))
-    throw std::runtime_error("Can't load a project file that doesn't exist");
+    {
+      std::string s="Can't load project file '" + filename
+	+ "'. It doesn't exist!";
+      throw std::runtime_error(s.c_str());
+    }
   else
     {
       std::cout << "Loading " << filename << std::endl;
