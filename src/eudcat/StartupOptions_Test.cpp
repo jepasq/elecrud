@@ -2,7 +2,7 @@
 
 #include "StartupOptions.hpp"
 
-/// At leastn printAll must be set by default
+/// At least printAll must be set by default
 BOOST_AUTO_TEST_CASE( StartupOptions_defaultValues )
 {
   StartupOptions so;
