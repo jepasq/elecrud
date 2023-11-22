@@ -30,6 +30,7 @@ usage()
        << "Options :" << endl
        << "  -h, --help  Print this message and exit." << endl
        << "  -a, --all   Print all values, even unsetted ones." << endl
+       << "  -s, --set   Print only set values." << endl
        << endl;
 
   exit(EXIT_SUCCESS);
