@@ -1,3 +1,13 @@
+* v0.0.2-18 (18 Jun. 2023 - 22 Nov. 2023) SLOC 2,322
+- Add -s,--set to eudcat listed options in usage
+- Fix remaining eudcat main unit test
+- StartupOptions's consume and contains really remove found arg
+- Add a eudcat main unit test to check for return value
+- Add a test to check for args incompatibility with set and all
+- Improve API documentation for MainPage and ProjectFile
+- eudcat: better usage and all option handling
+- Implement eudcat's help option consume body
+
 * v0.0.2-17 (14 Jun. 2023 - 18 Jun. 2023) SLOC 2,179
 - Fix consule first test and use it for eudcat argv
 - Add a StartupOptions unit test to check for consume()
