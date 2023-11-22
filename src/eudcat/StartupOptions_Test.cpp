@@ -63,9 +63,3 @@ BOOST_AUTO_TEST_CASE( StartupOptions_consume_remove_used )
   auto found = std::find(o.begin(), o.end(), "-a") != o.end();
   BOOST_REQUIRE_EQUAL( found, false );
 }
-
-
-
-
-
-

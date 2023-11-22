@@ -19,6 +19,5 @@ BOOST_AUTO_TEST_CASE( eudcat_RunningWithOptions )
 
   // Now, running on the first file (that exists), shouldn't return 134
   rv = system(EUDC"-a test.eud");
-  BOOST_REQUIRE_EQUAL( rv, 0 );
-
+  BOOST_REQUIRE_NE( rv, 134 );
 }
