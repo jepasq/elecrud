@@ -104,6 +104,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO *eudcat* : A simple cat tool for eud files
 :LOGBOOK:
+CLOCK: [2023-11-30 jeu. 09:07]--[2023-11-30 jeu. 09:35] =>  0:28
 CLOCK: [2023-11-22 mer. 04:07]--[2023-11-22 mer. 04:33] =>  0:26
 CLOCK: [2023-11-09 jeu. 04:33]--[2023-11-09 jeu. 04:55] =>  0:22
 CLOCK: [2023-11-09 jeu. 04:04]--[2023-11-09 jeu. 04:14] =>  0:10
@@ -125,9 +126,9 @@ CLOCK: [2023-05-29 lun. 06:07]--[2023-05-29 lun. 06:25] =>  0:18
 - [X] Prints version from CMakeLists file  
 - [X] Add usage text
 - [X] Need an existant file as first argument
-- [ ] Doesn't correctly handle options and filename
+- [X] Doesn't correctly handle options and filename
   A test now fails on this. Make this test pass
-  - [ ] Really test the consume thing (actually testing only first arg)
+  - [X] Really test the consume thing (actually testing only first arg)
 - [-] Possible options
   -a|-all Print all possible fields even the unset ones
   -s|-set Only prints set fields (default)

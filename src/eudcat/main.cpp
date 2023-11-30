@@ -50,6 +50,24 @@ print_if_not_empty(const std::string& label, const std::string& value)
   
 }
 
+/** Print a key/value pair as needed in the printAll mode
+  *
+  * \param label The label
+  * \param value The conditionnal print value
+  *
+  */
+void
+print_all(const std::string& label, const std::string& value)
+{
+  std::string v = "<unset>";
+
+  if (!value.empty())
+    v = value;
+  
+  std::cout << "  " << label << ":: " << v << endl;
+}
+
+
 /** Simply print argument to cout
   *
   * \param l the argument list
@@ -87,10 +105,18 @@ main(int argc, char** argv)
   pf.setFilename(sl.front());
   pf.load();
 
-  print_if_not_empty("Project name",   pf.getProjectName());
-  print_if_not_empty("Project author", pf.getProjectAuthor());
-
-  print_if_not_empty("Generator filename", pf.getGeneratorFilename());
-  
+  if (startupOptions.printSet)
+    {
+      print_if_not_empty("Project name",   pf.getProjectName());
+      print_if_not_empty("Project author", pf.getProjectAuthor());
+      print_if_not_empty("Generator filename", pf.getGeneratorFilename());
+    }
+  else // if (startupOptions.printAll)
+    {
+      print_all("Project name",   pf.getProjectName());
+      print_all("Project author", pf.getProjectAuthor());
+      print_all("Generator filename", pf.getGeneratorFilename());
+      print_all("Call npm", pf.getGeneratorCallnpm()?"True":"False");
+    }
   return 0;
 }
