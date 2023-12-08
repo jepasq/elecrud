@@ -1,5 +1,9 @@
-#include "MainWindow.hpp"
+/** \file MainWindow.cpp
+  * Implementation file of the editor's main window.
+  *
+  */
 
+#include "MainWindow.hpp"
 
 #include <iostream>
 #include <sstream>

@@ -1,3 +1,8 @@
+/** \file MainWindow.hpp
+  * Header file of the editor's main window.
+  *
+  */
+
 #ifndef __MAIN_WINDOW_HPP__
 #define __MAIN_WINDOW_HPP__
 

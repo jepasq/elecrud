@@ -8,4 +8,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-19 (22 Nov. 2023 - ???) SLOC ?,???
-- (1) eudcat shows all ProjectFile fields
+- (2) Slightly improve API documentation
+- eudcat shows all ProjectFile fields

@@ -1,3 +1,8 @@
+/** \file Generator.hpp
+  * Header file of the Generator abstract type.
+  *
+  */
+
 #ifndef __GENERATOR_HPP__
 #define __GENERATOR_HPP__
 
