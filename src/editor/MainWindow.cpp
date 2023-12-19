@@ -18,9 +18,10 @@
 
 using namespace std;
 
+/** The pattern for saved files extension */
 #define EXT_PATTERN "*.eud"
 
-// Message Map for the Scribble Window class
+/// Message Map for the MainWindow class
 FXDEFMAP(MainWindow) MainWindowMap[]={
   //________Message_Type_____________________ID____________Message_Handler_______
   //  FXMAPFUNC(SEL_PAINT,             MainWindow::ID_CANVAS, MainWindow::onPaint),

@@ -1,3 +1,8 @@
+/** \file GeneratorV1.hpp
+  * Header file of the actual, first version Generator.
+  *
+  */
+
 #ifndef __GENERATOR_V1_HPP__
 #define __GENERATOR_V1_HPP__
 

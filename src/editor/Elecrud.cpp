@@ -1,10 +1,15 @@
+/** \file Elecrud.cpp
+  * The main editor application implementation file.
+  *
+  */
+
 #include "Elecrud.hpp"
 
 //#include <FXGIFIcon.h>
 
 #include "icons.hpp"
 
-// Map
+/// The applicarion event Map
 FXDEFMAP(Elecrud) ElecrudMap[]={
     FXMAPFUNC(SEL_SIGNAL,Elecrud::ID_QUIT,Elecrud::onQuit),
     /* FXMAPFUNC(SEL_SIGNAL,Adie::ID_CLOSEALL,Adie::onCmdCloseAll),

@@ -77,6 +77,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
   for instance, the .github worflow has to run =make icons= manually
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2023-12-19 mar. 07:52]--[2023-12-19 mar. 08:23] =>  0:31
 CLOCK: [2023-12-08 ven. 09:49]--[2023-12-08 ven. 10:07] =>  0:18
 CLOCK: [2023-11-01 mer. 06:31]--[2023-11-01 mer. 06:44] =>  0:13
 CLOCK: [2023-05-29 lun. 04:30]--[2023-05-29 lun. 05:06] =>  0:36

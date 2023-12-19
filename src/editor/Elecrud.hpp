@@ -10,7 +10,10 @@
 
 using namespace FX;
 
-/** The main application object
+/** The main fox toolkit-based application object.
+  *
+  * Here is a standard FXApp overriding class needed to handle icon loading
+  * and some document-related events.
   *
   */
 class Elecrud : public FXApp {
