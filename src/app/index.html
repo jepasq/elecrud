@@ -17,24 +17,52 @@
     <link rel="stylesheet" type="text/css" href="view/styles.css">
   </head>
   <body>
-    <h1>{{APPNAME}}</h1>
+    <main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">{{APPNAME}}</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          Products
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          Customers
+        </a>
+      </li>
+    </ul>
+    <hr>
+  </div>
 
-    <button id="btn-preferences" title="Open preferences dialog">
-      <i class="fa fa-cog fa-1x" aria-hidden="true"></i>
-    </button>
-
-    <h2>{Today's date}</h2>
-
-    <table>
-      <thead>
-	<th></th>
-	<th>Item</th>
-      </thead>
-      <row>
-	<th><input type="checkbox" id="scales" name="scales" checked></th>
-	<th><label for="scales">Scales</label></th>
-      </row>
-    </table>
+    <div class="b-example-divider"></div>
+    
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px;">
+    <h2>App content</h2>
 
     <div class="modal show fade in" tabindex="-1" role="dialog" id="myModal">
       <div class="modal-dialog modal-xl" role="document">
@@ -46,58 +74,16 @@
               <span aria-hidden="true">&times;</span>
             </button>
 	  </div>
-	  <div class="modal-body">
-	    <h2>Theme selection</h2>
-	    <p>Current theme source:
-	      <strong id="theme-source">System</strong></p>
-	    <button id="toggle-dark-mode">Toggle Dark Mode</button>
-	    <button id="reset-to-system">Reset to System Theme</button>
-            <p>Modal body text goes here.</p>
-
-	    <h2>Second dialog header</h2>
-	    <div class="container">
-	      <div class="row">
-		<div class="col-sm">
-		  Actual chores :
-		  <ul class="list-group">
-		    <li class="list-group-item">
-		      <i class="fas fa-check-square"></i> Item1</li>
-		    <li class="list-group-item"> Item2</li>
-		    <li class="list-group-item">Morbi leo risus</li>
-		    <li class="list-group-item">Porta ac consectetur ac</li>
-		    <li class="list-group-item">Vestibulum at eros</li>
-		  </ul>
-		</div>
-		<div class="col-sm">
-		  <div>Actions :</div>
-		  <div class="btn-group-vertical">
-		    <button type="button" class="btn btn-secondary">
-		      &lt;&lt; Add
-		    </button>
-		    <button type="button" class="btn btn-secondary">
-		      &gt;&gt; Modify
-		    </button>
-		    <button type="button" class="btn btn-secondary">
-		      -- Delete
-		    </button>
-		  </div>
-		</div>
-		<div class="col-sm">
-		  New chores :
-		</div>
-	      </div>
-	    </div>
-
-	    
-	  </div>
 	  <div class="modal-footer">
             <button type="button" class="btn btn-secondary close"
 		    data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
 	  </div>
-	</div>
-      </div>
-    </div>
-    <script src="src/renderer.js"></script>
+</div>
+</div>
+</div>
+</div>
+<script src="src/renderer.js"></script>
+</main>
   </body>
 </html>

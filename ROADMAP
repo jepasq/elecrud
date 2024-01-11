@@ -13,8 +13,13 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
-**** Add a sidebars-based Menu to the generated app
+**** TODO Add a sidebars-based Menu to the generated app
+:LOGBOOK:
+CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
+:END:
     https://getbootstrap.com/docs/5.0/examples/sidebars/
+- [ ] Started but doesn't have full height
+    
 **** TODO Next Project-file serialization work
 :LOGBOOK:
 CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
