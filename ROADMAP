@@ -82,6 +82,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
   for instance, the .github worflow has to run =make icons= manually
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2024-01-19 ven. 20:01]--[2024-01-19 ven. 20:21] =>  0:20
 CLOCK: [2023-12-19 mar. 07:52]--[2023-12-19 mar. 08:23] =>  0:31
 CLOCK: [2023-12-08 ven. 09:49]--[2023-12-08 ven. 10:07] =>  0:18
 CLOCK: [2023-11-01 mer. 06:31]--[2023-11-01 mer. 06:44] =>  0:13
@@ -103,6 +104,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [X] Exclude template app's node_modules directory from doxygen doc
 - [X] Add TestableGenerator.hpp to EXCLUDE list to have cleaner log output
 - [ ] Must add \file document block at least (but not only) for headers
+- [ ] eudcat members not documented (StartupOptions) but no warning in logfile
 - [ ] We have a dot error
   error: Failed to extract bounding box from generated diagram file /home/rainbru/programmation/github/elecrud/build/latex/classMainWindow__inherit__graph.pdf
 
@@ -110,7 +112,13 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     arguments='".../elecrud/build/latex/classMainWindow__coll__
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO Continue eudcat implementation
-- [ ] Simply prints fields saved in an eud file
+:LOGBOOK:
+CLOCK: [2024-01-19 ven. 18:36]--[2024-01-19 ven. 18:50] =>  0:14
+:END:
+- [X] Simply prints fields saved in an eud file
+- [ ] Calling it on a simple file fails (PrjNameTest.eud)
+  =what():  --set et --all are mutually exclusive arguments=
+  - [ ] Write a unit test to check this case
 - [ ] Add an associated completion script (may be installed)
 **** DONE eudcat : A simple cat tool for eud files
 :LOGBOOK:

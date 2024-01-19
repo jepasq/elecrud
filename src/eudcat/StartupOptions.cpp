@@ -1,8 +1,15 @@
+/** \file StartupOptions.cpp
+  * The command line arguments handling class implementation.
+  *
+  */
 
 #include "StartupOptions.hpp"
 
 #include <algorithm>   // USES std::find()
 
+/** Default constructor
+  *
+  */
 StartupOptions::StartupOptions():
   printAll(true),
   printHelp(false),
