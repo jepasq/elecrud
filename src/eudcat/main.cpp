@@ -92,7 +92,7 @@ main(int argc, char** argv)
   list<string> stdargv;
   for (int i=1; i<argc; ++i)
     stdargv.push_back(string(argv[i]));
-  //  debugStdArgv(stdargv);
+  debugStdArgv(stdargv);
 
   StartupOptions startupOptions;
   tStringList sl(argv, argv + argc);

@@ -63,3 +63,17 @@ BOOST_AUTO_TEST_CASE( StartupOptions_consume_remove_used )
   auto found = std::find(o.begin(), o.end(), "-a") != o.end();
   BOOST_REQUIRE_EQUAL( found, false );
 }
+
+/// Tests that using the 'set' argument removes the default 'all' one
+/// This prevent the main script to fire an 'IncompatibleArguments' exception
+BOOST_AUTO_TEST_CASE( StartupOptions_set_remove_all )
+{
+  tStringList o = { "progname", "-s", "file.eud"};
+  StartupOptions so;
+  BOOST_REQUIRE_EQUAL( so.printAll, true ); // True by default
+  
+  so.consume(o);    // Consume the -s flag and make set equal true
+
+  BOOST_REQUIRE_EQUAL( so.printAll, false ); // Toggled by -s
+  
+}

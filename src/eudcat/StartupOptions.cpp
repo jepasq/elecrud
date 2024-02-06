@@ -73,7 +73,10 @@ StartupOptions::consume(tStringList& argv)
     printAll = true;
 
   if (contains(argv, "-s", "--set"))
-    printSet = true;
+    {
+      printSet = true;
+      printAll = false; // Removes the default printAll flag
+    }
   
   if (printAll && printSet)
     throw IncompatibleArguments("--set et --all are mutually exclusive arguments");
