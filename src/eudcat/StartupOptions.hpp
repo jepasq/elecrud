@@ -10,20 +10,6 @@
 #include <string>
 #include <stdexcept>
 
-/** A logic error thrown when Icompatible Argument are detected
-  *
-  */
-class IncompatibleArguments : public std::invalid_argument {
-public:
-  /** Constructor with optional what argument
-    *
-    * \param what Optional what argument as std string.
-    *
-    */
-  IncompatibleArguments(const std::string& what = "") :
-    std::invalid_argument(what) {}
-};
-
 /** A list of string */
 typedef std::list<std::string> tStringList;
 
