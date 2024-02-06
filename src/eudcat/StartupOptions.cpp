@@ -5,6 +5,8 @@
 
 #include "StartupOptions.hpp"
 
+#include "IncompatibleArguments.hpp"
+
 #include <algorithm>   // USES std::find()
 
 /** Default constructor

@@ -2,6 +2,8 @@
 
 #include "StartupOptions.hpp"
 
+#include "IncompatibleArguments.hpp"
+
 /// At least printAll must be set by default
 BOOST_AUTO_TEST_CASE( StartupOptions_defaultValues )
 {
