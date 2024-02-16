@@ -1,3 +1,13 @@
+#ifndef __STARTUP_OPTION_BOOL_HPP__
+#define __STARTUP_OPTION_BOOL_HPP__
+
+
+enum StartupOptionType
+  {
+    SOT_DEFAULT = 0,  //!< Default value programmatically set
+    SOT_MANUAL        //!< Was manually set
+  };
+
 /** Defines a simple bool flag for StartupOptions
   *
   * It is defined to handle defference between default options and
@@ -7,27 +17,16 @@
 class StartupOptionBool
 {
 public:
-  enum StartupOptionType
-    {
-      SOT_DEFAULT = 0,  //!< Default value programmatically set
-      SOT_MANUAL        //!< Was manually set
-    };
 
+  StartupOptionBool(bool v);
+  void setValue(bool v);
+
+  bool              getValue() const;
+  StartupOptionType getType() const;
   
-  StartupOptionBool(bool v):
-    type(SOT_DEFAULT),
-    value(v)
-  {
-    
-  }
-
-  void setValue(bool v)
-  {
-    type=SOT_MANUAL;
-    value = v;
-  }
-
 private:
   bool value;
   StartupOptionType type;
 };
+
+#endif // !__STARTUP_OPTION_BOOL_HPP__

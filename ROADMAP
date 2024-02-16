@@ -113,6 +113,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO Continue eudcat implementation
 :LOGBOOK:
+CLOCK: [2024-02-16 ven. 19:23]--[2024-02-16 ven. 19:47] =>  0:24
 CLOCK: [2024-02-16 ven. 18:59]--[2024-02-16 ven. 19:12] =>  0:13
 CLOCK: [2024-02-06 mar. 18:42]--[2024-02-06 mar. 18:56] =>  0:14
 CLOCK: [2024-02-06 mar. 18:19]--[2024-02-06 mar. 18:29] =>  0:10

@@ -32,6 +32,7 @@ set(EDITOR_SRC
 # Shared both eudcat target and unit tests
 set(EUDCAT_SRC
   src/eudcat/StartupOptions.cpp
+  src/eudcat/StartupOptionBool.cpp
 )
 
 # File library
@@ -64,6 +65,7 @@ add_executable(tests src/tests.cpp
 
   src/eudcat/main_Test.cpp
   src/eudcat/StartupOptions_Test.cpp
+  src/eudcat/StartupOptionBool_Test.cpp
 )
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   elecrud-file stdc++fs)
