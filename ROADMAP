@@ -113,6 +113,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO Continue eudcat implementation
 :LOGBOOK:
+CLOCK: [2024-02-16 ven. 18:59]--[2024-02-16 ven. 19:12] =>  0:13
 CLOCK: [2024-02-06 mar. 18:42]--[2024-02-06 mar. 18:56] =>  0:14
 CLOCK: [2024-02-06 mar. 18:19]--[2024-02-06 mar. 18:29] =>  0:10
 CLOCK: [2024-02-06 mar. 17:46]--[2024-02-06 mar. 18:06] =>  0:20
@@ -128,6 +129,7 @@ CLOCK: [2024-01-19 ven. 18:36]--[2024-01-19 ven. 18:50] =>  0:14
 - [ ] We fixed the first issue but now, we can't really have -s/-a
   Incompatibility reported. We should have a status for each option,
   set by default or by user.
+  - [ ] Started as StarupOptionBool
 - [ ] Add an associated completion script (may be installed)
 **** DONE eudcat : A simple cat tool for eud files
 :LOGBOOK:

@@ -10,8 +10,13 @@
 #include <string>
 #include <stdexcept>
 
+#include "StartupOptionBool.hpp"
+
 /** A list of string */
 typedef std::list<std::string> tStringList;
+
+
+
 
 /** The options used to print eud content of a file
   *
