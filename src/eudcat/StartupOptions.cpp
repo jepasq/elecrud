@@ -69,18 +69,20 @@ StartupOptions::consume(tStringList& argv)
   // Removes the first element : always the progname
   argv.pop_front();
   if (contains(argv, "-h", "--help"))
-      printHelp = true;
+    printHelp.setValue(true);
 
   if (contains(argv, "-a", "--all"))
-    printAll = true;
+    printAll.setValue(true);
 
   if (contains(argv, "-s", "--set"))
     {
-      printSet = true;
-      printAll = false; // Removes the default printAll flag
+      printSet.setValue(true);
+      printAll.setValue(false); // Removes the default printAll flag
     }
   
-  if (printAll && printSet)
+  if (printAll.getValue() && printSet.getValue() &&
+      printAll.getType() == SOT_MANUAL &&
+      printSet.getType() == SOT_MANUAL)
     throw IncompatibleArguments("--set et --all are mutually exclusive arguments");
 }
 

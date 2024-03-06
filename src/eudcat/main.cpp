@@ -98,14 +98,14 @@ main(int argc, char** argv)
   tStringList sl(argv, argv + argc);
   startupOptions.consume(sl);
   
-  if (startupOptions.printHelp)
+  if (startupOptions.printHelp.getValue())
     usage();
   
   ProjectFile pf;
   pf.setFilename(sl.front());
   pf.load();
 
-  if (startupOptions.printSet)
+  if (startupOptions.printSet.getValue())
     {
       print_if_not_empty("Project name",   pf.getProjectName());
       print_if_not_empty("Project author", pf.getProjectAuthor());

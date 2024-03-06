@@ -8,7 +8,7 @@
 BOOST_AUTO_TEST_CASE( StartupOptions_defaultValues )
 {
   StartupOptions so;
-  BOOST_REQUIRE_EQUAL( so.printAll, true );
+  BOOST_REQUIRE_EQUAL( so.printAll.getValue(), true );
 }
 
 /// Wich default values, check must pass
@@ -34,20 +34,20 @@ BOOST_AUTO_TEST_CASE( StartupOptions_consume_printHelp_short )
 {
   tStringList o = { "progname", "-h"};
   StartupOptions so;
-  BOOST_REQUIRE_EQUAL( so.printHelp, false );
+  BOOST_REQUIRE_EQUAL( so.printHelp.getValue(), false );
 
   so.consume(o);
-  BOOST_REQUIRE_EQUAL( so.printHelp, true );
+  BOOST_REQUIRE_EQUAL( so.printHelp.getValue(), true );
 }
 
 BOOST_AUTO_TEST_CASE( StartupOptions_consume_printHelp_long )
 {
   tStringList o = { "progname", "--help"};
   StartupOptions so;
-  BOOST_REQUIRE_EQUAL( so.printHelp, false );
+  BOOST_REQUIRE_EQUAL( so.printHelp.getValue(), false );
 
   so.consume(o);
-  BOOST_REQUIRE_EQUAL( so.printHelp, true );
+  BOOST_REQUIRE_EQUAL( so.printHelp.getValue(), true );
 }
 
 BOOST_AUTO_TEST_CASE( StartupOptions_incompatible_SetAll )
@@ -72,10 +72,9 @@ BOOST_AUTO_TEST_CASE( StartupOptions_set_remove_all )
 {
   tStringList o = { "progname", "-s", "file.eud"};
   StartupOptions so;
-  BOOST_REQUIRE_EQUAL( so.printAll, true ); // True by default
+  BOOST_REQUIRE_EQUAL( so.printAll.getValue(), true ); // True by default
   
   so.consume(o);    // Consume the -s flag and make set equal true
 
-  BOOST_REQUIRE_EQUAL( so.printAll, false ); // Toggled by -s
-  
+  BOOST_REQUIRE_EQUAL( so.printAll.getValue(), false ); // Toggled by -s
 }

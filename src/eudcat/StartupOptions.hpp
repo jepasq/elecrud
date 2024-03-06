@@ -15,9 +15,6 @@
 /** A list of string */
 typedef std::list<std::string> tStringList;
 
-
-
-
 /** The options used to print eud content of a file
   *
   * Only used in eucat tool binary. Mainly a class (not a struct) to set
@@ -36,9 +33,9 @@ protected:
   bool contains(tStringList&, const std::string&, const std::string&) const;
   
 public:
-  bool printHelp; //!< Print Help/Usage and exit
-  bool printAll;  //!< Should we print all extract values from .eud file
-  bool printSet;  //!< On print setted values, not default values
+  StartupOptionBool printHelp; //!< Print Help/Usage and exit
+  StartupOptionBool printAll;  //!< Should we print all extract values
+  StartupOptionBool printSet;  //!< On print setted values, not default values
 };
 
 #endif // !__STARTUP_OPTIONS_HPP__
