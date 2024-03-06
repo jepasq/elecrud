@@ -25,8 +25,8 @@ public:
   StartupOptionType getType() const;
   
 private:
-  bool value;
-  StartupOptionType type;
+  bool              value;   //!< The underlying value
+  StartupOptionType type;    //!< The current type
 };
 
 #endif // !__STARTUP_OPTION_BOOL_HPP__

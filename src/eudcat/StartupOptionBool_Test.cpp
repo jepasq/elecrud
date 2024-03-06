@@ -11,3 +11,13 @@ BOOST_AUTO_TEST_CASE( StartupOptionBool_default )
   BOOST_REQUIRE_EQUAL( sob.getValue(), true );
   BOOST_REQUIRE_EQUAL( sob.getType(), SOT_DEFAULT );
 }
+
+/// Must switch type to manual
+BOOST_AUTO_TEST_CASE( StartupOptionBool_setValue )
+{
+  StartupOptionBool sob(false);
+  sob.setValue(true);
+  BOOST_REQUIRE_EQUAL( sob.getValue(), true );
+  BOOST_REQUIRE_EQUAL( sob.getType(), SOT_MANUAL );
+}
+

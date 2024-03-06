@@ -7,6 +7,11 @@ StartupOptionBool::StartupOptionBool(bool v):
   
 }
 
+/** Change the value and set the type to Manual
+  *
+  * \param v The new value.
+  *
+  */
 void
 StartupOptionBool::setValue(bool v)
 {
