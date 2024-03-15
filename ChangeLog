@@ -1,3 +1,13 @@
+* v0.0.2-20 (06 Feb. 2024 - 15 Mar. 2024) SLOC 2,585
+- Improve StartupOption API documentation
+- Add a bash completion script and the related install rule
+- Finally fix eudcat icmpatible args throw issue
+- eudcat's StartupOptions class uses StartupOptionBool instances
+- Add a StartupOptionBool setValue unit test
+- Add very simple StartupOptionBool header skeleton
+- Add a couple of IncompatibleArguments wat member unit tests
+- Move eudcat's IncompatibleArguments class in their own files
+
 * v0.0.2-19 (22 Nov. 2023 - 06 Feb. 2024) SLOC 2,422
 - Change eudcat's -s option and fix main call unit test
 - Add a new eudcat unit test for spurious incompatible arguments issue

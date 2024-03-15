@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-20 (06 Feb. 2024 - ???) SLOC ?,???
-- (8) Improve StartupOption API documentation
-- Add a bash completion script and the related install rule
-- Finally fix eudcat icmpatible args throw issue
-- eudcat's StartupOptions class uses StartupOptionBool instances
-- Add a StartupOptionBool setValue unit test
-- Add very simple StartupOptionBool header skeleton
-- Add a couple of IncompatibleArguments wat member unit tests
-- Move eudcat's IncompatibleArguments class in their own files
+* v0.0.2-21 (15 Mar. 2024 - ???) SLOC ?,???
+
