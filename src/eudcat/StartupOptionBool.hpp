@@ -2,6 +2,9 @@
 #define __STARTUP_OPTION_BOOL_HPP__
 
 
+/** Defines the type of an option, default or manually set one.
+  *
+  */
 enum StartupOptionType
   {
     SOT_DEFAULT = 0,  //!< Default value programmatically set
@@ -10,7 +13,7 @@ enum StartupOptionType
 
 /** Defines a simple bool flag for StartupOptions
   *
-  * It is defined to handle defference between default options and
+  * It is defined to handle difference between default options and
   * manually set ones.
   *
   */
