@@ -1,0 +1,13 @@
+#						-*-sh-*-
+
+# Here is a completion script for the `eudcat` tool.
+# It should be installed by `cmake`
+
+_eudcat() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+
+    local IFS=$'\n'
+    COMPREPLY=( $( compgen -o plusdirs  -f -X '!*.eud' -- $cur ) )
+}
+
+complete -o filenames -F _eudcat eudcat

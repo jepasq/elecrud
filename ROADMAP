@@ -113,6 +113,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
     graph.dot" -Tpdf -o ".../build/latex/classMainWindow__coll__graph.pdf"'
 **** TODO Continue eudcat implementation
 :LOGBOOK:
+CLOCK: [2024-03-15 ven. 05:57]--[2024-03-15 ven. 06:44] =>  0:47
 CLOCK: [2024-03-15 ven. 05:22]--[2024-03-15 ven. 05:34] =>  0:12
 CLOCK: [2024-03-06 mer. 10:45]--[2024-03-06 mer. 11:07] =>  0:22
 CLOCK: [2024-03-06 mer. 07:09]--[2024-03-06 mer. 07:15] =>  0:06
@@ -137,6 +138,8 @@ CLOCK: [2024-01-19 ven. 18:36]--[2024-01-19 ven. 18:50] =>  0:14
   - [X] StartupOptions use this new class  
   - [X] Now use it to fix incompatible argument issue  
 - [ ] Add an associated completion script (may be installed)
+  Try to install in =/usr/share/bash-completion/completions=
+  May try to install binaries before
 **** DONE eudcat : A simple cat tool for eud files
 :LOGBOOK:
 CLOCK: [2023-11-30 jeu. 09:07]--[2023-11-30 jeu. 09:35] =>  0:28

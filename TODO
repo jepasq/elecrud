@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-20 (06 Feb. 2024 - ???) SLOC ?,???
-- (6) Finally fix eudcat icmpatible args throw issue
+- (7) Add a bash completion script and the related install rule
+- Finally fix eudcat icmpatible args throw issue
 - eudcat's StartupOptions class uses StartupOptionBool instances
 - Add a StartupOptionBool setValue unit test
 - Add very simple StartupOptionBool header skeleton

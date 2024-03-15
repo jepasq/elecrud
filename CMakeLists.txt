@@ -97,3 +97,8 @@ add_executable(eudcat
 target_include_directories(eudcat PUBLIC
   ${PROJECT_BINARY_DIR} src src/libfile)
 target_link_libraries(eudcat ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
+
+# Completion script
+install(FILES src/bash-completion/eudcat
+        DESTINATION /usr/share/bash-completion/completions/)
+
