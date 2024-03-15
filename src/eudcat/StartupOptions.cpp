@@ -71,14 +71,17 @@ StartupOptions::consume(tStringList& argv)
   if (contains(argv, "-h", "--help"))
     printHelp.setValue(true);
 
-  if (contains(argv, "-a", "--all"))
-    printAll.setValue(true);
-
   if (contains(argv, "-s", "--set"))
     {
       printSet.setValue(true);
       printAll.setValue(false); // Removes the default printAll flag
     }
+
+  // Must be tested after the -s, --set argtument to set back to true if found
+  if (contains(argv, "-a", "--all"))
+    printAll.setValue(true);
+
+
   
   if (printAll.getValue() && printSet.getValue() &&
       printAll.getType() == SOT_MANUAL &&
