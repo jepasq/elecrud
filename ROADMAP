@@ -13,6 +13,16 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
+**** TODO Upgrade src/app dependencies
+:LOGBOOK:
+CLOCK: [2024-03-27 mer. 09:18]--[2024-03-27 mer. 09:32] =>  0:14
+:END:
+- First copy it (for example in build/updatedApp/)
+- Then, npm audit fix
+- Then, npm ci and test
+- [ ] Updated :
+  | *Date*       | *Result*                          |
+  | 2024 Mar. 27 | Many updates in package-lock.json |
 **** TODO Add a sidebars-based Menu to the generated app
 :LOGBOOK:
 CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
