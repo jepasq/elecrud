@@ -27,6 +27,7 @@ set(EDITOR_SRC
   src/editor/Generator.cpp
   src/editor/GeneratorV1.cpp
   src/editor/MainWindow.cpp
+  src/editor/ProcessWatcher.cpp
 )
 
 # Shared both eudcat target and unit tests
@@ -62,6 +63,7 @@ add_executable(tests src/tests.cpp
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
   src/editor/MainWindow_Test.cpp
+  src/editor/ProcessWatcher_Test.cpp
 
   src/eudcat/main_Test.cpp
   src/eudcat/StartupOptions_Test.cpp
