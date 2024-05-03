@@ -54,6 +54,7 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2024-05-03 ven. 16:05]--[2024-05-03 ven. 16:32] =>  0:27
 CLOCK: [2024-04-11 jeu. 11:27]--[2024-04-11 jeu. 12:02] =>  0:35
 CLOCK: [2023-06-22 jeu. 05:53]--[2023-06-22 jeu. 06:18] =>  0:25
 CLOCK: [2023-06-22 jeu. 05:25]--[2023-06-22 jeu. 05:32] =>  0:07
@@ -82,6 +83,10 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
   - [ ] Then call =npm install= : it can be very long. We must have a
     =ProcessWatcher= class here to follow progress.
     Started, we need some memory check here (access violation error)
+    - [ ] Try to run the given test in valgrind
+      =./tests --run_test=ProcessWatcher_instantiate=
+      It seems it forks itself as in an infinite loop. Yes, we were calling fork
+      again and again
   - [ ] Call =npm start= to run app
     
 - [ ] Search for other icons in Adie source code

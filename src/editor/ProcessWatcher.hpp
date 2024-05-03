@@ -16,7 +16,7 @@ class ProcessWatcher
 public:
   ProcessWatcher();
   
-  int fork(const char* command);
+  int fork_process(const char* command);
 
 private:
   

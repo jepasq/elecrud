@@ -6,8 +6,10 @@
 #include "ProcessWatcher.hpp"
 
 #include <cstdio>
-#include <cstdlib>
-#include <unistd.h>
+//#include <cstdlib>
+#include <unistd.h> // USES getpid(), getppid() and fork()
+
+#include <sys/wait.h> // USES wait()
 
 ProcessWatcher::ProcessWatcher():
   pid(-1)
@@ -15,18 +17,33 @@ ProcessWatcher::ProcessWatcher():
 
 }
 
+// Return -1 in case of error
 int
-ProcessWatcher::fork(const char* command)
+ProcessWatcher::fork_process(const char* command)
 {
-  this->pid = fork(command);
-  if (pid == -1) {
-    // Il y a une erreur
-    perror("fork");
-  } else if (pid == 0) {
-    // On est dans le fils
-    printf("Mon PID est %i et celui de mon père est %i\n", getpid(),getppid());
-  } else {
-    // On est dans le père
-    printf("Mon PID est %i et celui de mon fils est %i\n", getpid(), pid);
+  using namespace std;
+  int status;
+  
+  auto ret = fork();
+  if (ret == -1)
+    {
+      perror("fork");
+    }
+  else if (pid == 0)
+    {
+      // On est dans le fils
+      this->pid = getpid();
+      if (execl(command, NULL) < 0) {
+	printf("*** ERROR: exec failed\n");
+	return -1;
+      }
   }
+  else
+    {
+      // On est dans le père
+      //      this->pid =ret;
+      while (wait(&status) != pid)       /* wait for completion  */
+	;
+    }
+  return this->pid;
 }
