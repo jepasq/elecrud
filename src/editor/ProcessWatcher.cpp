@@ -5,9 +5,11 @@
 
 #include "ProcessWatcher.hpp"
 
-#include <cstdio>
+#include <cstdio>     // USES perror
+#include <stdexcept>  // USES runtime_error
+
 //#include <cstdlib>
-#include <unistd.h> // USES getpid(), getppid() and fork()
+#include <unistd.h>   // USES getpid(), getppid() and fork()
 
 #include <sys/wait.h> // USES wait()
 
@@ -17,7 +19,8 @@ ProcessWatcher::ProcessWatcher():
 
 }
 
-// Return -1 in case of error
+// Throw runtim_error in case of error
+// wait() is from https://pubs.opengroup.org/onlinepubs/007904975/functions/waitpid.html
 int
 ProcessWatcher::fork_process(const char* command)
 {
@@ -28,21 +31,24 @@ ProcessWatcher::fork_process(const char* command)
   if (ret == -1)
     {
       perror("fork");
+      throw runtime_error("ProcessWatcher::fork_process: fork() call failed");
     }
   else if (pid == 0)
     {
-      // On est dans le fils
+      // We're in the son. Partly from stackoverflow.com/q/15749071
       this->pid = getpid();
-      if (execl(command, NULL) < 0) {
-	printf("*** ERROR: exec failed\n");
-	return -1;
-      }
+      //      if (execl(command, NULL) < 0)
+      // command may be replaced with "/bin/ls", "ls", "-l"
+      if (execl(command, NULL) < 0)
+	{
+	  throw runtime_error("ProcessWatcher::fork_process: execl() call failed");
+	}
   }
   else
     {
       // On est dans le père
       //      this->pid =ret;
-      while (wait(&status) != pid)       /* wait for completion  */
+      while (wait( &status) != pid)  /* wait for completion  */
 	;
     }
   return this->pid;
