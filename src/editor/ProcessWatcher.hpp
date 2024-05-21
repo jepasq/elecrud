@@ -1,12 +1,12 @@
 #ifndef __PROCESS_WATCHER_HPP__
 #define __PROCESS_WATCHER_HPP__
 
-#include <sys/types.h> // USES pid_t
-
 /** \file ProcessWatcher.hpp
   * The header for the ProcessWatcher class.
   *
   */
+
+#include <sys/types.h> // USES pid_t
 
 /** A class used to watch a forked process
   *
@@ -20,7 +20,7 @@ public:
 
 private:
   
-  pid_t pid; // 
+  pid_t pid; // The process ID of the created fork (the child)
   
 };
 

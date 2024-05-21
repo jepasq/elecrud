@@ -25,29 +25,43 @@ int
 ProcessWatcher::fork_process(const char* command)
 {
   using namespace std;
-  int status;
-  
+  int status; // The wait status paramater
+
+  // https://man7.org/linux/man-pages/man2/fork.2.html
+  //
+  // On success, the PID of the child process is returned in the
+  // parent, and 0 is returned in the child.  On failure, -1 is
+  // returned in the parent, no child process is created, and errno is
+  // set to indicate the error.
   auto ret = fork();
   if (ret == -1)
     {
       perror("fork");
       throw runtime_error("ProcessWatcher::fork_process: fork() call failed");
     }
-  else if (pid == 0)
+  else if (ret == 0)
     {
       // We're in the son. Partly from stackoverflow.com/q/15749071
       this->pid = getpid();
       //      if (execl(command, NULL) < 0)
       // command may be replaced with "/bin/ls", "ls", "-l"
+      // https://linux.die.net/man/3/execl
+      //
+      // only return if an error has occurred. The return value is -1,
+      // and errno is set to indicate the error.
       if (execl(command, NULL) < 0)
 	{
-	  throw runtime_error("ProcessWatcher::fork_process: execl() call failed");
+	  char str[120];
+	  // Error according to https://linux.die.net/man/2/execve ones
+	  sprintf(str, "ProcessWatcher::fork_process(): execl() failed "
+		   "with error '%d'", errno);
+	  throw runtime_error(str);
 	}
   }
   else
     {
-      // On est dans le père
-      //      this->pid =ret;
+      this->pid = ret;
+      // We're the parent process
       while (wait( &status) != pid)  /* wait for completion  */
 	;
     }
