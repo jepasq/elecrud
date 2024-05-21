@@ -7,6 +7,8 @@
   */
 
 #include <sys/types.h> // USES pid_t
+#include <string>
+
 
 /** A class used to watch a forked process
   *
@@ -18,6 +20,9 @@ public:
   
   int fork_process(const char* command);
 
+protected:
+  std::string execMessage(int) const; 
+  
 private:
   
   pid_t pid; // The process ID of the created fork (the child)
