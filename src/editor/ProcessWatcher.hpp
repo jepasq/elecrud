@@ -21,6 +21,7 @@ public:
   int fork_process(const char* command);
 
 protected:
+  std::string forkMessage(int) const; 
   std::string execMessage(int) const; 
   
 private:

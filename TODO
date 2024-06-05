@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-21 (15 Mar. 2024 - ???) SLOC ?,???
-- (7) Improve ProcessWatcher fork() handling
+- (8) Implement ProcessWatcher::forkMessage to help understand fork thing
+- Improve ProcessWatcher fork() handling
 - ProcessWatcher now uses std::runtime_error
 - Fix the ProcessWatcher recursive loop memory error
 - Add row div to generated app to make content side by side

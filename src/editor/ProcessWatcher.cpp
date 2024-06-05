@@ -36,8 +36,10 @@ ProcessWatcher::fork_process(const char* command)
   auto ret = fork();
   if (ret == -1)
     {
-      perror("fork");
-      throw runtime_error("ProcessWatcher::fork_process: fork() call failed");
+      //      perror("fork");
+      string str = "ProcessWatcher::fork_process: fork() call failed : ";
+      str += forkMessage(ret);
+      throw runtime_error(str.c_str());
     }
   else if (ret == 0)
     {
@@ -62,8 +64,9 @@ ProcessWatcher::fork_process(const char* command)
     {
       this->pid = ret;
       // We're the parent process
-      while (wait( &status) != pid)  /* wait for completion  */
+      //      while (wait( &status) != pid)  /* wait for completion  */
 	;
+	
     }
   return this->pid;
 }
@@ -157,4 +160,38 @@ ProcessWatcher::execMessage(int e) const
 
   return ret;
 }
+
+/** Return a textual error message from a failing fork() call
+  *
+  * From https://linux.die.net/man/2/fork
+  *
+  * \param e The errno value.
+  *
+  * \return The text message as a std string.
+  *
+  */
+std::string
+ProcessWatcher::forkMessage(int val) const
+{
+  std::string ret;
+
+  switch (val)
+    {
+    case EAGAIN:
+      ret = "It was not possible to create a new process because the caller's RLIMIT_NPROC resource limit was encountered. To exceed this limit, the process must have either the CAP_SYS_ADMIN or the CAP_SYS_RESOURCE capability.";
+      break;
+  case ENOMEM:
+    ret = "fork() failed to allocate the necessary kernel structures because memory is tight.";
+      break;
+  case ENOSYS:
+    ret = "fork() is not supported on this platform (for example, hardware without a Memory-Management Unit).";
+      break;
+      
+    default:
+      ret="Undefined error";
+    }
+
+  return ret;
+}
+
 
