@@ -6,6 +6,16 @@
 BOOST_AUTO_TEST_CASE( ProcessWatcher_instantiate )
 {
   ProcessWatcher pw;
-  auto ret = pw.fork_process("ls -h");
+  auto ret = pw.fork_process("/usr/bin/ls");
   BOOST_REQUIRE_NE( ret, 0); 
 }
+
+/// It seems it can fail, thinking the full command including args is
+/// interpreted as the command filename
+BOOST_AUTO_TEST_CASE( ProcessWatcher_fork_with_args )
+{
+  ProcessWatcher pw;
+  auto ret = pw.fork_process("/usr/bin/ls -lh");
+  BOOST_REQUIRE_NE( ret, 0); 
+}
+

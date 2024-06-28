@@ -98,15 +98,17 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 - [ ] Adie has a quit icon, steal this
 **** TODO Long term unit tests and CI items
 :LOGBOOK:
+CLOCK: [2024-06-28 ven. 03:48]--[2024-06-28 ven. 04:04] =>  0:16
 CLOCK: [2024-06-28 ven. 03:19]--[2024-06-28 ven. 03:47] =>  0:28
 CLOCK: [2024-06-05 mer. 20:56]--[2024-06-05 mer. 21:14] =>  0:18
 :END:
 - [X] Unit tests are not correctly ran locally or on actions
 - [X] Don't know why but with boost 1.65.1 we have to add a main function
   to avoid a linker error. I fear it can make CI fail btw.
-- [-] The ProcessWatcher_instantiate test throws a SIGABRT error
+- [X] The ProcessWatcher_instantiate test throws a SIGABRT error
   - [X] Maybe write an executable example for this
-  - [ ] ProcessWatcher must use a stringstream
+  - [X] ProcessWatcher must use a stringstream
+- [ ] The process watcher fails with some args    
 - [ ] Can't correctly make the default make rule depends on icons so
   for instance, the .github worflow has to run =make icons= manually
 **** TODO Keep improving doxygen documentation

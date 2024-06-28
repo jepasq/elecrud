@@ -10,7 +10,7 @@ main(int argc, char** argv)
 {
   using namespace std;
 
-  const char* arg = "ls -lh";
+  const char* arg = "/usr/bin/ls -lh";
   if (argc >1)
     arg = argv[1];
 

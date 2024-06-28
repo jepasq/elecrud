@@ -7,11 +7,13 @@
 
 #include <cstdio>     // USES perror
 #include <stdexcept>  // USES runtime_error
+#include <sstream>    // USES ostringstream
 
 //#include <cstdlib>
 #include <unistd.h>   // USES getpid(), getppid() and fork()
 
 #include <sys/wait.h> // USES wait()
+
 
 ProcessWatcher::ProcessWatcher():
   pid(-1)
@@ -37,9 +39,10 @@ ProcessWatcher::fork_process(const char* command)
   if (ret == -1)
     {
       //      perror("fork");
-      string str = "ProcessWatcher::fork_process: fork() call failed : ";
-      str += forkMessage(ret);
-      throw runtime_error(str.c_str());
+      ostringstream oss;
+      oss << "ProcessWatcher::fork_process: fork('" << command
+	  << "') call failed : " << forkMessage(ret);
+      throw runtime_error(oss.str().c_str());
     }
   else if (ret == 0)
     {
@@ -53,11 +56,12 @@ ProcessWatcher::fork_process(const char* command)
       // and errno is set to indicate the error.
       if (execl(command, NULL) < 0)
 	{
-	  std::string str
+	  ostringstream oss;
 	  // Error according to https://linux.die.net/man/2/execve ones
-	  sprintf(str, "ProcessWatcher::fork_process(): execl() failed "
-		  "with error '%s'", execMessage(errno).c_str());
-	  throw runtime_error(str);
+	  oss << "ProcessWatcher::fork_process('" << command
+	      << "'): execl() failed "
+	      << "with error '" << execMessage(errno) << "'";
+	  throw runtime_error(oss.str());
 	}
   }
   else
