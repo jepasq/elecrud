@@ -15,7 +15,7 @@ BOOST_AUTO_TEST_CASE( ProcessWatcher_instantiate )
 BOOST_AUTO_TEST_CASE( ProcessWatcher_fork_with_args )
 {
   ProcessWatcher pw;
-  auto ret = pw.fork_process("/usr/bin/ls -lh");
+  auto ret = pw.fork_process("/usr/bin/ls", "-lh");
   BOOST_REQUIRE_NE( ret, 0); 
 }
 

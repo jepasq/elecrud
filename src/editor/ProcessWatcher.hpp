@@ -18,7 +18,7 @@ class ProcessWatcher
 public:
   ProcessWatcher();
   
-  int fork_process(const char* command);
+  int fork_process(const char* command, const char* args=NULL);
 
 protected:
   std::string forkMessage(int) const; 

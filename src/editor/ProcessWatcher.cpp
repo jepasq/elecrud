@@ -24,7 +24,7 @@ ProcessWatcher::ProcessWatcher():
 // Throw runtim_error in case of error
 // wait() is from https://pubs.opengroup.org/onlinepubs/007904975/functions/waitpid.html
 int
-ProcessWatcher::fork_process(const char* command)
+ProcessWatcher::fork_process(const char* command, const char* args)
 {
   using namespace std;
   int status; // The wait status paramater
@@ -54,7 +54,7 @@ ProcessWatcher::fork_process(const char* command)
       //
       // only return if an error has occurred. The return value is -1,
       // and errno is set to indicate the error.
-      if (execl(command, NULL) < 0)
+      if (execl(command, args) < 0)
 	{
 	  ostringstream oss;
 	  // Error according to https://linux.die.net/man/2/execve ones
