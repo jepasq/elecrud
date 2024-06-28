@@ -53,7 +53,7 @@ ProcessWatcher::fork_process(const char* command)
       // and errno is set to indicate the error.
       if (execl(command, NULL) < 0)
 	{
-	  char str[120];
+	  std::string str
 	  // Error according to https://linux.die.net/man/2/execve ones
 	  sprintf(str, "ProcessWatcher::fork_process(): execl() failed "
 		  "with error '%s'", execMessage(errno).c_str());
@@ -135,11 +135,11 @@ ProcessWatcher::execMessage(int e) const
 	break;
 	
     case ENOEXEC:
-	ret ="n executable is not in a recognized format, is for the wrong architecture, or has some other format error that means it cannot be executed.";
+	ret ="The executable is not in a recognized format, is for the wrong architecture, or has some other format error that means it cannot be executed.";
 	break;
 	
     case ENOMEM:
-	ret ="nsufficient kernel memory was available.";
+	ret ="Insufficient kernel memory was available.";
 	break;
 	
     case ENOTDIR:
@@ -147,11 +147,11 @@ ProcessWatcher::execMessage(int e) const
 	break;
 	
     case EPERM:
-	ret ="he file system is mounted nosuid, the user is not the superuser, and the file has the set-user-ID or set-group-ID bit set. The process is being traced, the user is not the superuser and the file has the set-user-ID or set-group-ID bit set.";
+	ret ="The file system is mounted nosuid, the user is not the superuser, and the file has the set-user-ID or set-group-ID bit set. The process is being traced, the user is not the superuser and the file has the set-user-ID or set-group-ID bit set.";
 	break;
 	
     case ETXTBSY:
-	ret ="xecutable was open for writing by one or more processes.";
+	ret ="Executable was open for writing by one or more processes.";
 	break;
 	
     default:

@@ -100,6 +100,16 @@ target_include_directories(eudcat PUBLIC
   ${PROJECT_BINARY_DIR} src src/libfile)
 target_link_libraries(eudcat ${Boost_LIBRARIES} ${LIBS_LIBRARIES} elecrud-file)
 
+# Examples
+add_executable(example-process-watcher
+  src/examples/process_watcher/main.cpp
+
+  src/editor/ProcessWatcher.cpp
+) 
+target_include_directories(example-process-watcher PUBLIC
+  ${PROJECT_BINARY_DIR} src src/editor)
+
+
 # Completion script
 install(FILES src/bash-completion/eudcat
         DESTINATION /usr/share/bash-completion/completions/)
