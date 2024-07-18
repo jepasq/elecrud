@@ -110,9 +110,9 @@ ProjectFile::save()
       FXString fna(filename.c_str());
       FXFileStream s;
       s.open(fna, FXStreamSave);
-      s << FXString(projectName.c_str());
-      s << FXString(projectAuthor.c_str());
-      s << FXString(generatorFilename.c_str());
+      s << stdToFx(projectName);
+      s << stdToFx(projectAuthor);
+      s << stdToFx(generatorFilename);
       s << (FXint)generatorCallnpm;  // Can't save a bool. Cast to int.
       s.close();
       
@@ -282,10 +282,14 @@ ProjectFile::getGeneratorCallnpm(void) const
 
 /** Cast a standard library string to fox toolkit one
   *
+  * @param s The string to be copied.
+  *
+  * @return The same string content as a FXString. 
+  *
   */
 FXString
-ProjectFile::stdToFx(const std::string&) const
+ProjectFile::stdToFx(const std::string& s) const
 {
-  return  FXString(projectName.c_str());
+  return FXString(s.c_str());
 }
 

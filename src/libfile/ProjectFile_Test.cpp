@@ -8,6 +8,7 @@
 class TestableProjectFile : public ProjectFile
 {
 public:
+  /// Call a protected method
   FXString _stdToFx(const std::string& s){ return  stdToFx(s); }
 
 };

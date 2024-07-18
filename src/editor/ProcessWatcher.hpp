@@ -26,7 +26,7 @@ protected:
   
 private:
   
-  pid_t pid; // The process ID of the created fork (the child)
+  pid_t pid; //!< The process ID of the created fork (the child)
   
 };
 
