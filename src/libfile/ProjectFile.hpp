@@ -48,6 +48,9 @@ public:
 
   void               setGeneratorCallnpm(bool);
   bool               getGeneratorCallnpm(void) const;
+
+protected:
+  FXString stdToFx(const std::string&) const;
   
 private:
   std::string filename; //!< The filename to this project file. Can be empty.

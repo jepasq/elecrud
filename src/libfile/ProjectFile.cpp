@@ -105,6 +105,8 @@ ProjectFile::save()
     throw std::runtime_error("Can't save project file with empty filename");
   else
     {
+      using namespace std;
+      
       FXString fna(filename.c_str());
       FXFileStream s;
       s.open(fna, FXStreamSave);
@@ -113,6 +115,8 @@ ProjectFile::save()
       s << FXString(generatorFilename.c_str());
       s << (FXint)generatorCallnpm;  // Can't save a bool. Cast to int.
       s.close();
+      
+      cout << "ProjectFile : saved as '" << filename.c_str() << "'" << endl;
     }
 }
 
@@ -275,3 +279,13 @@ ProjectFile::getGeneratorCallnpm(void) const
 {
   return generatorCallnpm;
 }
+
+/** Cast a standard library string to fox toolkit one
+  *
+  */
+FXString
+ProjectFile::stdToFx(const std::string&) const
+{
+  return  FXString(projectName.c_str());
+}
+

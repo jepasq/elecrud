@@ -15,14 +15,30 @@
 #include <sys/wait.h> // USES wait()
 
 
+/** Watcher constructor
+  *
+  * By default with a negative PID member value.
+  *
+  */
 ProcessWatcher::ProcessWatcher():
   pid(-1)
 {
 
 }
 
-// Throw runtim_error in case of error
-// wait() is from https://pubs.opengroup.org/onlinepubs/007904975/functions/waitpid.html
+/** For the geven process
+  *
+  * wait() is from
+  * https://pubs.opengroup.org/onlinepubs/007904975/functions/waitpid.html
+  *
+  * @throws runtime_error if we can't use fork().
+  *
+  * @param command The executable to be called without possible parameters.
+  * @param args    All parameters in one string.
+  *
+  * @return The forked process PID.
+  * 
+  */
 int
 ProcessWatcher::fork_process(const char* command, const char* args)
 {
@@ -169,7 +185,7 @@ ProcessWatcher::execMessage(int e) const
   *
   * From https://linux.die.net/man/2/fork
   *
-  * \param e The errno value.
+  * \param val The errno value.
   *
   * \return The text message as a std string.
   *

@@ -2,6 +2,16 @@
 
 #include "ProjectFile.hpp"
 
+#include <string>
+
+/// Used to test protected members
+class TestableProjectFile : public ProjectFile
+{
+public:
+  FXString _stdToFx(const std::string& s){ return  stdToFx(s); }
+
+};
+
 BOOST_AUTO_TEST_CASE( ProjectFile_empty_filename )
 {
   ProjectFile pf;
@@ -149,4 +159,16 @@ BOOST_AUTO_TEST_CASE( ProjectFile_has_generator_callnpm )
   // False by default
   BOOST_REQUIRE_EQUAL( pf2.getGeneratorCallnpm(), true );
 }
-  
+
+BOOST_AUTO_TEST_CASE( ProjectFile_stdToFx )
+{
+  TestableProjectFile tpj;
+  FXString a = "Aze";
+  FXString b = "Aze";
+  BOOST_REQUIRE( a == b );
+
+  std::string sa = "Aze";
+  std::string sb = "Zer";
+  BOOST_REQUIRE( tpj._stdToFx(sa) == a );
+  BOOST_REQUIRE( tpj._stdToFx(sb) != a );
+}

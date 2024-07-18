@@ -34,12 +34,17 @@ CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
     
 **** TODO Next Project-file serialization work
 :LOGBOOK:
+CLOCK: [2024-07-18 jeu. 08:38]--[2024-07-18 jeu. 09:12] =>  0:34
 CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
 CLOCK: [2023-05-18 jeu. 05:25]--[2023-05-18 jeu. 05:28] =>  0:03
 CLOCK: [2023-05-18 jeu. 04:21]--[2023-05-18 jeu. 04:40] =>  0:19
 CLOCK: [2023-05-11 jeu. 14:44]--[2023-05-11 jeu. 14:51] =>  0:07
 CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 :END:
+- [ ] Serialization still fail (don't have project name in loaded one)
+  - [ ] Try to test a stdStringToFXString function in ProjectFile
+    and ProjectFile uses it!
+    
 - [-] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
   - Let's preprend function with setProject*
@@ -54,6 +59,7 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2024-07-18 jeu. 08:17]--[2024-07-18 jeu. 08:37] =>  0:20
 CLOCK: [2024-05-21 mar. 19:12]--[2024-05-21 mar. 19:25] =>  0:13
 CLOCK: [2024-05-21 mar. 18:48]--[2024-05-21 mar. 19:10] =>  0:22
 CLOCK: [2024-05-03 ven. 18:46]--[2024-05-03 ven. 18:59] =>  0:13
