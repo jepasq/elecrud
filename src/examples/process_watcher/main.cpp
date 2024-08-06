@@ -16,6 +16,6 @@ main(int argc, char** argv)
 
   ProcessWatcher pw;
   cout << "Running ProcessWatch for '" << arg << "'" << endl;
-  return pw.fork_process(arg);
+  return pw.forkProcess(arg);
   
 }

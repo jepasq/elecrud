@@ -40,7 +40,7 @@ ProcessWatcher::ProcessWatcher():
   * 
   */
 int
-ProcessWatcher::fork_process(const char* command, const char* args)
+ProcessWatcher::forkProcess(const char* command, const char* args)
 {
   using namespace std;
   int status; // The wait status paramater

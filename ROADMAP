@@ -105,6 +105,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 - [ ] Adie has a quit icon, steal this
 **** TODO Long term unit tests and CI items
 :LOGBOOK:
+CLOCK: [2024-08-06 mar. 08:36]--[2024-08-06 mar. 08:54] =>  0:18
 CLOCK: [2024-06-28 ven. 04:10]--[2024-06-28 ven. 04:27] =>  0:17
 CLOCK: [2024-06-28 ven. 03:48]--[2024-06-28 ven. 04:04] =>  0:16
 CLOCK: [2024-06-28 ven. 03:19]--[2024-06-28 ven. 03:47] =>  0:28
@@ -118,7 +119,7 @@ CLOCK: [2024-06-05 mer. 20:56]--[2024-06-05 mer. 21:14] =>  0:18
   - [X] ProcessWatcher must use a stringstream
 - [X] The process watcher fails with some args
   Fixed splitting command and args, as in the execl call
-- [ ] function name ProcessWatcher::fork_process could be camelCase, why
+- [X] function name ProcessWatcher::fork_process could be camelCase, why
   snake_case ?
 - [ ] Can't correctly make the default make rule depends on icons so
   for instance, the .github worflow has to run =make icons= manually

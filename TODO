@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-22 (06 Jun. 2024 - ???) SLOC ?,???
-- (5) Fix the stdToFx implementation
+- (6) Rename ProcessWatcher::fork_process to camelCase
+- Fix the stdToFx implementation
 - Add failing ProjectFile::stdToFx unit test
 - Add args param to ProcessWatcher::fork_process
 - Fix the unit test ProcessWatcher ls filename
