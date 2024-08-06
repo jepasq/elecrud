@@ -112,6 +112,8 @@ private:
 
   
   FXRecentFiles mrufiles; //!< Recent files list
+  
+  FXStatusBar* statusbar; //!< The main window's status bar used to print msgs
 };
 
 #endif // !__MAIN_WINDOW_HPP__

@@ -34,6 +34,7 @@ CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
     
 **** TODO Next Project-file serialization work
 :LOGBOOK:
+CLOCK: [2024-08-06 mar. 10:28]--[2024-08-06 mar. 10:52] =>  0:24
 CLOCK: [2024-07-18 jeu. 09:15]--[2024-07-18 jeu. 09:25] =>  0:10
 CLOCK: [2024-07-18 jeu. 08:38]--[2024-07-18 jeu. 09:12] =>  0:34
 CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
@@ -42,9 +43,11 @@ CLOCK: [2023-05-18 jeu. 04:21]--[2023-05-18 jeu. 04:40] =>  0:19
 CLOCK: [2023-05-11 jeu. 14:44]--[2023-05-11 jeu. 14:51] =>  0:07
 CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 :END:
-- [ ] Serialization still fail (don't have project name in loaded one)
-  - [ ] Try to test a stdStringToFXString function in ProjectFile
+- [X] Should add a status bar message when file is saved
+- [-] Serialization still fail (don't have project name in loaded one)
+  - [X] Try to test a stdStringToFXString function in ProjectFile
     and ProjectFile uses it!
+  - [ ] Make sure we correctly set ProjectFile values before saving it  
     
 - [-] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description

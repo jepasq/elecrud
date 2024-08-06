@@ -119,8 +119,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 			    nullptr,this,ID_PRUN);
 
 
-  auto statusbar = new FXStatusBar(this,LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X|
-				   STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
+  statusbar = new FXStatusBar(this,LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X|
+			      STATUSBAR_WITH_DRAGCORNER|FRAME_RAISED);
 
 
   splitter=new FXSplitter(this,LAYOUT_SIDE_TOP|LAYOUT_FILL_X|LAYOUT_FILL_Y|SPLITTER_TRACKING);
@@ -277,16 +277,20 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 
 /** The File/Save menu item callback
   *
-  * \param o Unused.
-  * \param s Unused.
-  * \param d Unused.
+  * \param o   Unused.
+  * \param sel Unused.
+  * \param d   Unused.
   *
   * \return Always returns 1.
   */
 long
-MainWindow::onFileSave(FXObject* o,FXSelector s,void* d)
+MainWindow::onFileSave(FXObject* o,FXSelector sel,void* d)
 {
+  projectFile.debug();
   projectFile.save();
+  std::string s="Current project saved as '" + projectFile.getFilename() + "'";
+  FXString fxs(s.c_str());
+  statusbar->getStatusLine()->setNormalText(fxs);
   setDirty(false);
   updateTitle();
   return 1;

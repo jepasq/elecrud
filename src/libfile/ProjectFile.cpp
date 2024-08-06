@@ -293,3 +293,13 @@ ProjectFile::stdToFx(const std::string& s) const
   return FXString(s.c_str());
 }
 
+void
+ProjectFile::debug(void) const
+{
+  using namespace std;
+  cout << "Debugging ProjectFile :" << endl
+       << "  name :" << projectName << endl
+       << "  author :" << projectAuthor << endl
+       << "  filename :" << generatorFilename << endl
+       << "  vallNpm" << generatorCallnpm << endl;
+}

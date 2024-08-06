@@ -49,6 +49,8 @@ public:
   void               setGeneratorCallnpm(bool);
   bool               getGeneratorCallnpm(void) const;
 
+  void debug(void) const;
+  
 protected:
   FXString stdToFx(const std::string&) const;
   
