@@ -1,3 +1,13 @@
+* v0.0.2-22 (06 Jun. 2024 - 07 Aug. 2024) SLOC 2,955
+- Implement MainWindow::copyUiToProjectFile() and save editor fields to file
+- Add a status bar message when we save project file
+- Rename ProcessWatcher::fork_process to camelCase
+- Fix the stdToFx implementation
+- Add failing ProjectFile::stdToFx unit test
+- Add args param to ProcessWatcher::fork_process
+- Fix the unit test ProcessWatcher ls filename
+- Add a ProcessWatcher executable example
+
 * v0.0.2-21 (15 Mar. 2024 - 06 Jun. 2024) SLOC 2,826
 - Implement ProcessWatcher::forkMessage to help understand fork thing
 - Improve ProcessWatcher fork() handling

@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-22 (06 Jun. 2024 - ???) SLOC ?,???
-- (8) Implement MainWindow::copyUiToProjectFile() ans save editor fields to file
-- Add a status bar message when we save project file
-- Rename ProcessWatcher::fork_process to camelCase
-- Fix the stdToFx implementation
-- Add failing ProjectFile::stdToFx unit test
-- Add args param to ProcessWatcher::fork_process
-- Fix the unit test ProcessWatcher ls filename
-- Add a ProcessWatcher executable example
+* v0.0.2-23 (07 Aug. 2024 - ???) SLOC ?,???
+
