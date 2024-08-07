@@ -79,6 +79,7 @@ protected:
   void setDirty(bool vDirty=true);
 
   bool preGenerationChecks(void);
+  void copyUiToProjectfile(void);
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
@@ -114,6 +115,7 @@ private:
   FXRecentFiles mrufiles; //!< Recent files list
   
   FXStatusBar* statusbar; //!< The main window's status bar used to print msgs
+  FXCheckButton* cbCallNpm; //!< The call npm check box
 };
 
 #endif // !__MAIN_WINDOW_HPP__

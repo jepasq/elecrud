@@ -183,7 +183,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   tfOutputName = new FXTextField(pph10, tflength, this, ID_PRJD);
   new FXButton(pph10, "...", nullptr, this, ID_GPAB);
 
-  new FXCheckButton(generatPane,
+  cbCallNpm = new FXCheckButton(generatPane,
 		    "Call 'npm install' in generated dir (can be long)");
   
   // Logger pane
@@ -272,6 +272,9 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
     
   FXString gfiln(projectFile.getGeneratorFilename().c_str());
   tfOutputName->setText(gfiln);
+
+  cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
+
   return 1;
 }
 
@@ -286,6 +289,7 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
 long
 MainWindow::onFileSave(FXObject* o,FXSelector sel,void* d)
 {
+  copyUiToProjectfile();
   projectFile.debug();
   projectFile.save();
   std::string s="Current project saved as '" + projectFile.getFilename() + "'";
@@ -311,6 +315,7 @@ MainWindow::onFileSaveAs(FXObject* o,FXSelector s,void* d)
 					   EXT_PATTERN);
   if (!filename.empty())
     {
+      copyUiToProjectfile();
       projectFile.setFilename(filename);
       projectFile.save();
       
@@ -603,3 +608,12 @@ MainWindow::onProjectGen(FXObject* _o,FXSelector _s,void* _d)
   return 1;
 }
 
+void
+MainWindow::copyUiToProjectfile(void)
+{
+  projectFile.setProjectName(tfProjectName->getText().text());
+  projectFile.setProjectAuthor(tfProjectAuth->getText().text());
+  projectFile.setGeneratorFilename(tfOutputName->getText().text());
+
+  projectFile.setGeneratorCallnpm(cbCallNpm->getCheck() == TRUE);
+}
