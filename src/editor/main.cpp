@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <fstream>   // USES ifstream
 
 #include "Elecrud.hpp"
 #include "MainWindow.hpp"
@@ -12,6 +13,8 @@ using namespace std;
 // Forward declarations
 int usage(void);
 int error(const std::string&);
+bool is_a_file(const std::string&);
+int launch_application(int argc, char** argv, const std::string& file = "");
 // End of forward declarations
 
 /** Main entry of the editor binary
@@ -28,18 +31,7 @@ main(int argc, char** argv)
 
   if (argc<2)
     {
-      // Make application
-      Elecrud application("elecrud-editor");
-      
-      application.init(argc,argv);
-
-      ostringstream oss;
-      oss << PROJECT_NAME << " editor " << PROJECT_NUMBER;
-      MainWindow mw(&application, oss.str().c_str());
-      application.create();
-      
-      // Run the application
-      return application.run();
+      return launch_application(argc, argv);
     }
   else
     {
@@ -52,7 +44,11 @@ main(int argc, char** argv)
 	}
       else
 	{
-	  return error(s);
+	  // Try to open s as a project file
+	  if (is_a_file(s))
+	    return launch_application(argc, argv, s);
+	  else
+	    return error(s);
 	}
     }
 }
@@ -82,3 +78,22 @@ error(const std::string& option)
 }
 
  
+bool
+is_a_file(const std::string& name)
+{
+  std::ifstream f(name.c_str());
+  return f.good();
+}
+
+int
+launch_application(int argc, char** argv, const std::string& file)
+{
+  Elecrud application("elecrud-editor");
+  application.init(argc,argv);
+	      
+  ostringstream oss;
+  oss << PROJECT_NAME << " editor " << PROJECT_NUMBER;
+  MainWindow mw(&application, oss.str().c_str());
+  application.create();
+  return application.run();
+}
