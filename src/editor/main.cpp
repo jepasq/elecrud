@@ -1,3 +1,9 @@
+
+/** @file main.cpp The editor main file
+ *
+ * Contains main() and other functions used before launching GUI application.
+ *
+ */
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -53,6 +59,11 @@ main(int argc, char** argv)
     }
 }
 
+/** Print a ùmultiline usage message to cout and return 0
+ *
+ * \param return 0
+ *
+ */
 int
 usage(void)
 {
@@ -67,17 +78,31 @@ usage(void)
   return 0;
 }
 
+/** Print an error message about the given option then exit
+ *
+ * \param option The unrecognized option test.
+ *
+ * \return 1
+ *
+ */
 int
 error(const std::string& option)
 {
-  using std::cout;
+  using std::cerr;
   using std::endl;
 
-  cout << "Unrecognized option '" << option << "'" << endl;
+  cerr << "Unrecognized option '" << option << "'" << endl;
   return 1;
 }
 
- 
+
+/** Check if the given file is a file
+  *
+  * \param name The file name.
+  *
+  * \return The value returned by fstream::good().
+  *
+  */
 bool
 is_a_file(const std::string& name)
 {
