@@ -293,6 +293,9 @@ ProjectFile::stdToFx(const std::string& s) const
   return FXString(s.c_str());
 }
 
+/** Print to console all project file fields
+  *
+  */
 void
 ProjectFile::debug(void) const
 {
@@ -301,5 +304,5 @@ ProjectFile::debug(void) const
        << "  name :" << projectName << endl
        << "  author :" << projectAuthor << endl
        << "  filename :" << generatorFilename << endl
-       << "  vallNpm" << generatorCallnpm << endl;
+       << "  callNpm :" << (generatorCallnpm ? "true" : "false") << endl;
 }
