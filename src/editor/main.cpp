@@ -95,5 +95,9 @@ launch_application(int argc, char** argv, const std::string& file)
   oss << PROJECT_NAME << " editor " << PROJECT_NUMBER;
   MainWindow mw(&application, oss.str().c_str());
   application.create();
+
+  if (!file.empty())
+    mw.openProjectFile(file);
+  
   return application.run();
 }

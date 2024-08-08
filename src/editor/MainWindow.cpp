@@ -256,25 +256,9 @@ MainWindow::onFileOpen(FXObject* o,FXSelector s,void* d)
   // Dialog was cancelled
   if (filename.empty())
     return 1;
+
+  openProjectFile(filename.text());
   
-  std::cout << "Opening '" << filename.text() << "' ..." << std::endl;
-  projectFile.setFilename(filename);
-  projectFile.load();
-  updateTitle();
-
-  mcSave->enable();
-  
-  FXString pna(projectFile.getProjectName().c_str());
-  tfProjectName->setText(pna);
-
-  FXString pauth(projectFile.getProjectAuthor().c_str());
-  tfProjectAuth->setText(pauth);
-    
-  FXString gfiln(projectFile.getGeneratorFilename().c_str());
-  tfOutputName->setText(gfiln);
-
-  cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
-
   return 1;
 }
 
@@ -617,3 +601,32 @@ MainWindow::copyUiToProjectfile(void)
 
   projectFile.setGeneratorCallnpm(cbCallNpm->getCheck() == TRUE);
 }
+
+/** Open the given file
+  *
+  * \param filename The filename from open file dialog or command line argument.
+  *
+  */
+void
+MainWindow::openProjectFile(const std::string& filename)
+{
+  std::cout << "Opening '" << filename << "' ..." << std::endl;
+  projectFile.setFilename(filename);
+  projectFile.load();
+  updateTitle();
+
+  mcSave->enable();
+  
+  FXString pna(projectFile.getProjectName().c_str());
+  tfProjectName->setText(pna);
+
+  FXString pauth(projectFile.getProjectAuthor().c_str());
+  tfProjectAuth->setText(pauth);
+    
+  FXString gfiln(projectFile.getGeneratorFilename().c_str());
+  tfOutputName->setText(gfiln);
+
+  cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
+
+}
+

@@ -70,6 +70,8 @@ public:
   
   void addLogMessage(const FXString&);  
   void resetAllFields();
+
+  void openProjectFile(const std::string&);
   
 protected:
   MainWindow();

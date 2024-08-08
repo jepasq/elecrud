@@ -65,6 +65,7 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
 
 **** TODO Continue generation work
 :LOGBOOK:
+CLOCK: [2024-08-08 jeu. 09:38]--[2024-08-08 jeu. 09:47] =>  0:09
 CLOCK: [2024-08-08 jeu. 09:12]--[2024-08-08 jeu. 09:34] =>  0:22
 CLOCK: [2024-07-18 jeu. 08:17]--[2024-07-18 jeu. 08:37] =>  0:20
 CLOCK: [2024-05-21 mar. 19:12]--[2024-05-21 mar. 19:25] =>  0:13
@@ -93,8 +94,7 @@ CLOCK: [2023-04-24 lun. 09:00]--[2023-04-24 lun. 09:11] =>  0:11
 - [X] Modifying project name makes the project throw an =empty filename= exc.
 - [X] Still the same =empty filename= when we cancel the open dialog
 - [X] Project run should also show log pane as prj generate do
-
-- [ ] Make elecrud open arg1 if a file
+- [X] Make elecrud open arg1 if a file
 
 - [ ] Continue to implement complete process with unit tests
   - [ ] Maybe call npm audit fix to update packages to last version ?
