@@ -114,6 +114,7 @@ ProjectFile::save()
       s << stdToFx(projectAuthor);
       s << stdToFx(generatorFilename);
       s << (FXint)generatorCallnpm;  // Can't save a bool. Cast to int.
+      s << stdToFx(description);
       s.close();
       
       cout << "ProjectFile : saved as '" << filename.c_str() << "'" << endl;
@@ -142,7 +143,7 @@ ProjectFile::load()
     }
 
 
-  FXString fna(filename.c_str()), pna, pau, gna;
+  FXString fna(filename.c_str()), pna, pau, gna, des;
   FXFileStream s;
   FXint iCallnpm;
   s.open(fna, FXStreamLoad);
@@ -150,12 +151,14 @@ ProjectFile::load()
   s >> pau;
   s >> gna;
   s >> iCallnpm;
+  s >> des;
   s.close();
   generatorCallnpm = (bool)iCallnpm;
   projectName       = pna.text();
   projectAuthor     = pau.text();
   
   generatorFilename = gna.text();
+  description       = des.text();
 }
 
 /** Is this project file dirty ?
@@ -306,3 +309,16 @@ ProjectFile::debug(void) const
        << "  filename :" << generatorFilename << endl
        << "  callNpm :" << (generatorCallnpm ? "true" : "false") << endl;
 }
+
+void
+ProjectFile::setDescription(const std::string& d)
+{
+  description = d;
+}
+
+const std::string&
+ProjectFile::getDescription(void) const
+{
+  return description;
+}
+

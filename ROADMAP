@@ -39,6 +39,7 @@ CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
     
 **** TODO Next Project-file serialization work
 :LOGBOOK:
+CLOCK: [2024-08-30 ven. 10:32]--[2024-08-30 ven. 10:46] =>  0:14
 CLOCK: [2024-08-30 ven. 10:05]--[2024-08-30 ven. 10:17] =>  0:12
 CLOCK: [2024-08-07 mer. 05:22]--[2024-08-07 mer. 06:08] =>  0:46
 CLOCK: [2024-08-06 mar. 10:28]--[2024-08-06 mar. 10:52] =>  0:24
@@ -67,9 +68,13 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
   - [X] Generator
     - [X] filename : test added and implemented
     - [X] CallNpm (boolean)  
-  - [ ] Description  
-  Collection : /none/
-  Log : not sure we should save this
+  - [-] Description
+    - [X] ProjectFile handles set,get and save
+    - [ ] Add debug in eudcat  
+    - [ ] MainWindow set ProjectFile before save
+    - [ ] MainWindow update GUI when loading file    
+  - [ ] Collection : /none/ ?
+  - [ ] Log : not sure we should save this
 
 **** TODO Continue generation work
 :LOGBOOK:

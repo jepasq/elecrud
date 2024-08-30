@@ -49,6 +49,9 @@ public:
   void               setGeneratorCallnpm(bool);
   bool               getGeneratorCallnpm(void) const;
 
+  void               setDescription(const std::string&);
+  const std::string& getDescription(void) const;
+  
   void debug(void) const;
   
 protected:
@@ -64,6 +67,7 @@ private:
   std::string generatorFilename; //!< The file to be created when generated
   bool generatorCallnpm;         //!< Call npm during generation ?
 
+  std::string description;       //!< The project multiline description
 };
 
 #endif // !__PROJECT_FILE_HPP__

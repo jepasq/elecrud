@@ -173,3 +173,23 @@ BOOST_AUTO_TEST_CASE( ProjectFile_stdToFx )
   BOOST_REQUIRE( tpj._stdToFx(sa) == a );
   BOOST_REQUIRE( tpj._stdToFx(sb) != a );
 }
+
+BOOST_AUTO_TEST_CASE( ProjectFile_description )
+{
+  auto fn = "PrjNameTest.eud";
+
+  ProjectFile pf1, pf2;
+  BOOST_REQUIRE_EQUAL( pf1.getDescription().empty(), true);
+  pf1.setDescription("A description that could be long\nEventually multiline");
+
+  // Save and load
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+  
+  // False by default
+  BOOST_REQUIRE_EQUAL( pf2.getDescription().empty(), false );
+}
+
