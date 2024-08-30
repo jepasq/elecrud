@@ -15,16 +15,19 @@
 - [ ] Content may be copied to clipboard. Add button  
 **** TODO Upgrade src/app dependencies
 :LOGBOOK:
+CLOCK: [2024-08-30 ven. 09:32]--[2024-08-30 ven. 09:41] =>  0:09
 CLOCK: [2024-05-03 ven. 14:49]--[2024-05-03 ven. 15:12] =>  0:23
 CLOCK: [2024-03-27 mer. 09:18]--[2024-03-27 mer. 09:32] =>  0:14
 :END:
 - First copy it (for example in build/updatedApp/)
+  From build / =cp -R ../src/app updatedApp=
 - Then, npm audit fix
-- Then, npm ci and test
+- Then, npm ci and start (no test)
 - [ ] Updated :
-  | *Date*       | *Result*                          |
-  | 2024 Mar. 27 | Many updates in package-lock.json |
-  | 2024 Apr. 03 | None.                             |
+  | *Date*       | *Result*                                |
+  | 2024 Mar. 27 | Many updates in package-lock.json       |
+  | 2024 Apr. 03 | None.                                   |
+  | 2024 Aug. 30 | braces, elliptic and more minor updates |
 **** TODO Add a sidebars-based Menu to the generated app
 :LOGBOOK:
 CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
