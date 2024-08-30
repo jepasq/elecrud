@@ -8,6 +8,8 @@
   created by admin user
 **** Multiple persistance system
 - [ ] Sqlite first ?
+  Maybe mysql and postgres as external server
+- [ ] May add a Persistence editor panel
 **** Logger widget options
 - [ ] May add some icon types and a legend to see information, warning error
   etc...
@@ -37,6 +39,7 @@ CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
     
 **** TODO Next Project-file serialization work
 :LOGBOOK:
+CLOCK: [2024-08-30 ven. 10:05]--[2024-08-30 ven. 10:17] =>  0:12
 CLOCK: [2024-08-07 mer. 05:22]--[2024-08-07 mer. 06:08] =>  0:46
 CLOCK: [2024-08-06 mar. 10:28]--[2024-08-06 mar. 10:52] =>  0:24
 CLOCK: [2024-07-18 jeu. 09:15]--[2024-07-18 jeu. 09:25] =>  0:10
@@ -53,7 +56,9 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
     and ProjectFile uses it!
   - [X] Make sure we correctly set ProjectFile values before saving it  
     Implementing MainWindow::copyUiToProjectFile()
-    
+- [X] Should be able to open a project from the argv filename
+  Started but it seems it doesn't work entirely
+
 - [-] Start to list MainWindow fields to be saved
   Project pane : Name, Author, Version, License + Description
   - Let's preprend function with setProject*

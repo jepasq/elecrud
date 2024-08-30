@@ -628,5 +628,8 @@ MainWindow::openProjectFile(const std::string& filename)
 
   cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
 
+  this->filename = FXString(filename.c_str());
+  
+  updateTitle();
 }
 
