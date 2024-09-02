@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(elecrud VERSION 0.0.2)
-set(REVISION 22)
+set(REVISION 23)
 
 configure_file(
   "${PROJECT_SOURCE_DIR}/Doxyfile.in"
