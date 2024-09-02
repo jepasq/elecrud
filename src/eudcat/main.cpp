@@ -110,12 +110,18 @@ main(int argc, char** argv)
     {
       print_if_not_empty("Project name",   pf.getProjectName());
       print_if_not_empty("Project author", pf.getProjectAuthor());
+      std::cout << "\e[3m";
+      print_if_not_empty("Description", "\n"+pf.getDescription());
+      std::cout << "\e[0m";
       print_if_not_empty("Generator filename", pf.getGeneratorFilename());
     }
   else // if (startupOptions.printAll)
     {
       print_all("Project name",   pf.getProjectName());
       print_all("Project author", pf.getProjectAuthor());
+      std::cout << "\e[3m";
+      print_if_not_empty("Description", "\n"+pf.getDescription());
+      std::cout << "\e[0m";
       print_all("Generator filename", pf.getGeneratorFilename());
       print_all("Call npm", pf.getGeneratorCallnpm()?"True":"False");
     }
