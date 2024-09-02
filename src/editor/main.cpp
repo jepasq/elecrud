@@ -61,7 +61,7 @@ main(int argc, char** argv)
 
 /** Print a ùmultiline usage message to cout and return 0
  *
- * \param return 0
+ * \return return 0
  *
  */
 int
@@ -110,6 +110,13 @@ is_a_file(const std::string& name)
   return f.good();
 }
 
+/** Launch the editor with the given filename
+ *
+ * \param argc The number of remaining args.
+ * \param argv The remaining args.
+ * \param file The filename.
+ *
+ */
 int
 launch_application(int argc, char** argv, const std::string& file)
 {

@@ -592,6 +592,11 @@ MainWindow::onProjectGen(FXObject* _o,FXSelector _s,void* _d)
   return 1;
 }
 
+/** Copy the content of saveable fields to project field
+  *
+  * Must be called just before a save.
+  *
+  */
 void
 MainWindow::copyUiToProjectfile(void)
 {

@@ -310,12 +310,22 @@ ProjectFile::debug(void) const
        << "  callNpm :" << (generatorCallnpm ? "true" : "false") << endl;
 }
 
+/** Set the to-be-saved description field
+  *
+  * \param d The new description.
+  *
+  */
 void
 ProjectFile::setDescription(const std::string& d)
 {
   description = d;
 }
 
+/** Returns the description
+ *
+ * \return The description fiels value.
+ *
+ */
 const std::string&
 ProjectFile::getDescription(void) const
 {
