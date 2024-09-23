@@ -78,13 +78,6 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
   - [ ] Collection :
     - [ ] Save all this collection of fields
   - [ ] Log : not sure we should save this
-**** Create editor's Collection handling UI
-:LOGBOOK:
-CLOCK: [2024-09-23 lun. 10:23]--[2024-09-23 lun. 11:01] =>  0:38
-:END:
-- [X] Add a Fields list alongside Collection one
-- [ ] Add a Add collection pane
-- [ ] Add a Add Field pane
 **** TODO Continue generation work
 :LOGBOOK:
 CLOCK: [2024-08-08 jeu. 09:38]--[2024-08-08 jeu. 09:47] =>  0:09
@@ -183,6 +176,17 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   Seems to be fixed by an update
 - [X] eudcat members not documented (StartupOptions) but no warning in logfile
 - [ ] Must add \file document block at least (but not only) for headers
+**** TODO Create editor's Collection handling UI
+:LOGBOOK:
+CLOCK: [2024-09-23 lun. 12:04]--[2024-09-23 lun. 12:25] =>  0:21
+CLOCK: [2024-09-23 lun. 10:23]--[2024-09-23 lun. 11:01] =>  0:38
+:END:
+- [X] Add a Fields list alongside Collection one
+- [ ] Add a Add collection pane
+  Add it just below the two list pane
+  - [ ] Added a basic collection class in libfile with failing unit tests
+- [ ] Add a Add field pane
+- [ ] The new button make the below pane switch between coll and field ones  
 **** DONE Continue eudcat implementation
 :LOGBOOK:
 CLOCK: [2024-03-15 ven. 05:57]--[2024-03-15 ven. 06:44] =>  0:47
