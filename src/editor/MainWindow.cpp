@@ -170,9 +170,21 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   //  ftDescription->setText("Insert project description here.");
   
   // Collections edition pane
-  collectPane  = new FXHorizontalFrame(splitter);
-  new FXLabel(collectPane, "Collections details");
+  collectPane  = new FXHorizontalFrame(splitter,
+				       FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  auto allColl = new FXVerticalFrame(collectPane, LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  new FXLabel(allColl, "Collections details");
+  new FXList(allColl, nullptr, 0,
+	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  new FXButton(allColl, "New ...", nullptr, this, ID_GPAB /* To be changed */);
 
+  
+  auto allFields =new FXVerticalFrame(collectPane,LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  new FXLabel(allFields, "Fields details");
+  new FXList(allFields, nullptr, 0,
+	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  new FXButton(allFields, "New ...", nullptr, this, ID_GPAB /* To be changed */);
+  
   // Generator details pane
   //  projectPane = new FXFrame(splitter);
   generatPane = new FXVerticalFrame(splitter);

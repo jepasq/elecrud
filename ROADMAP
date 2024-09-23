@@ -75,9 +75,16 @@ CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
     - [X] Add debug in eudcat  
     - [X] MainWindow set ProjectFile description before save
     - [X] MainWindow update GUI when loading file    
-  - [ ] Collection : /none/ ?
+  - [ ] Collection :
+    - [ ] Save all this collection of fields
   - [ ] Log : not sure we should save this
-
+**** Create editor's Collection handling UI
+:LOGBOOK:
+CLOCK: [2024-09-23 lun. 10:23]--[2024-09-23 lun. 11:01] =>  0:38
+:END:
+- [X] Add a Fields list alongside Collection one
+- [ ] Add a Add collection pane
+- [ ] Add a Add Field pane
 **** TODO Continue generation work
 :LOGBOOK:
 CLOCK: [2024-08-08 jeu. 09:38]--[2024-08-08 jeu. 09:47] =>  0:09
