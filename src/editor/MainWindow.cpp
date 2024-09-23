@@ -605,6 +605,8 @@ MainWindow::copyUiToProjectfile(void)
   projectFile.setGeneratorFilename(tfOutputName->getText().text());
 
   projectFile.setGeneratorCallnpm(cbCallNpm->getCheck() == TRUE);
+
+  projectFile.setDescription(ftDescription->getText().text());
 }
 
 /** Open the given file
@@ -631,6 +633,9 @@ MainWindow::openProjectFile(const std::string& filename)
   FXString gfiln(projectFile.getGeneratorFilename().c_str());
   tfOutputName->setText(gfiln);
 
+  FXString desc(projectFile.getDescription().c_str());
+  tfOutputName->setText(desc);
+  
   cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
 
   this->filename = FXString(filename.c_str());
