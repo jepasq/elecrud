@@ -12,6 +12,7 @@
 #include "icons.hpp"
 
 #include "GeneratorV1.hpp"
+#include "NewCollectionDialog.hpp"
 
 #include <stdio.h>      /* printf */
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
@@ -41,6 +42,9 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_PRJD,MainWindow::onProjectDetailsChanged),
  // From https://rubydoc.info/gems/fxruby/Fox/FXText : Changed in any way.
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
+
+ FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NCOL,MainWindow::onNewCollection),
+
  
 };
 
@@ -176,7 +180,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(allColl, "Collections details");
   new FXList(allColl, nullptr, 0,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
-  new FXButton(allColl, "New ...", nullptr, this, ID_GPAB /* To be changed */);
+  new FXButton(allColl, "New ...", nullptr, this, ID_NCOL);
 
   
   auto allFields =new FXVerticalFrame(collectPane,LAYOUT_FILL_X|LAYOUT_FILL_Y);
@@ -653,5 +657,14 @@ MainWindow::openProjectFile(const std::string& filename)
   this->filename = FXString(filename.c_str());
   
   updateTitle();
+}
+
+long
+MainWindow::onNewCollection(FXObject*,FXSelector,void*)
+{
+  NewCollectionDialog ncd;
+  auto ret = ncd.execute();
+  cout << "Dialog ret. : " << ret << endl;
+  return 1;
 }
 

@@ -45,6 +45,8 @@ public:
 
     ID_PGEN,   //!< The project->Generate menu button
     ID_PRUN,   //!< The project->Run menu button
+
+    ID_NCOL,   //!< New collection button
     
     ID_LAST,   //!< Always last (and not used)
     };
@@ -67,6 +69,8 @@ public:
   long onProjectDescChanged(FXObject*,FXSelector,void*);
 
   long onGenPathClicked(FXObject*,FXSelector,void*);
+
+  long onNewCollection(FXObject*,FXSelector,void*);
   
   void addLogMessage(const FXString&);  
   void resetAllFields();
