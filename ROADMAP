@@ -178,13 +178,15 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Create editor's Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-10-15 mar. 09:53]--[2024-10-15 mar. 10:21] =>  0:28
 CLOCK: [2024-09-23 lun. 12:04]--[2024-09-23 lun. 12:25] =>  0:21
 CLOCK: [2024-09-23 lun. 10:23]--[2024-09-23 lun. 11:01] =>  0:38
 :END:
 - [X] Add a Fields list alongside Collection one
-- [ ] Add a Add collection pane
+- [-] Add a Add collection pane
   Add it just below the two list pane
-  - [ ] Added a basic collection class in libfile with failing unit tests
+  - [X] Added a basic collection class in libfile with failing unit tests
+  - [ ] May start to create a real CollectionField class
 - [ ] Add a Add field pane
 - [ ] The new button make the below pane switch between coll and field ones  
 **** DONE Continue eudcat implementation

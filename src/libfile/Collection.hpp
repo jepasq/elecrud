@@ -23,8 +23,8 @@ public:
   const FX::FXString& getName() const;
   
 private:
-  FX::FXString       name; //!< The collection name
-  std::vector<Field> fields;
+  FX::FXString       name;   //!< The collection name
+  std::vector<Field> fields; //!< The list of fields for this collection
 };
 
 #endif // !__COLLECTION_HPP__
