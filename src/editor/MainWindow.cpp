@@ -662,8 +662,8 @@ MainWindow::openProjectFile(const std::string& filename)
 long
 MainWindow::onNewCollection(FXObject*,FXSelector,void*)
 {
-  NewCollectionDialog ncd;
-  auto ret = ncd.execute();
+  NewCollectionDialog ncd(this);
+  auto ret = ncd.execute(PLACEMENT_OWNER);
   cout << "Dialog ret. : " << ret << endl;
   return 1;
 }

@@ -1,6 +1,9 @@
 #include "NewCollectionDialog.hpp"
 
-NewCollectionDialog::NewCollectionDialog()
-{
 
+
+NewCollectionDialog::NewCollectionDialog(FXWindow *owner):
+  FXDialogBox(owner, "New Collection")
+{
+  resize(600, 400);
 }

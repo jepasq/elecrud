@@ -6,7 +6,7 @@
 class NewCollectionDialog : public FXDialogBox
 {
 public:
-  NewCollectionDialog();
+  NewCollectionDialog(FXWindow*);
 };
 
 #endif // !__NEW_COLLECTION_DIALOG_HPP__
