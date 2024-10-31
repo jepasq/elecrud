@@ -1,3 +1,13 @@
+* v0.0.2-24 (02 Sep. 2024 - 31 Oct. 2024) SLOC ?,???
+- Add Ok/Cancel buttons to NewCollectionDialog
+- Fixed the NewCollectionDialog segfault issue
+- Added basic NewCollectionDialog class
+- Fix Collection unit tests
+- Add a basic named Collection class with failing unit tests
+- Add a field list in collection editor pane
+- MainWindow handles project file description on load/save
+- Upgrade Projectfile doxygen documentation
+
 * v0.0.2-23 (07 Aug. 2024 - 02 Sep. 2024) SLOC 3,066
 - eudcat tool prints project description from project file
 - ProjectFile saves description
