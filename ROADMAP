@@ -178,6 +178,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Create editor's Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-10-31 jeu. 08:59]--[2024-10-31 jeu. 09:29] =>  0:30
 CLOCK: [2024-10-15 mar. 11:46]--[2024-10-15 mar. 12:03] =>  0:17
 CLOCK: [2024-10-15 mar. 10:39]--[2024-10-15 mar. 11:01] =>  0:22
 CLOCK: [2024-10-15 mar. 09:53]--[2024-10-15 mar. 10:21] =>  0:28
@@ -192,6 +193,7 @@ CLOCK: [2024-09-23 lun. 10:23]--[2024-09-23 lun. 11:01] =>  0:38
 - [-] Add a NewCollectionDialog derived from FXDialogBox
   see http://www.fox-toolkit.org/ref/classFX_1_1FXDialogBox.html
   - [X] Done but we have a segfault here
+  - [ ] Must add associated FxMap  
   - [ ] Should show Ok/Cancel button  
 - [ ] Add a Add field pane
 - [ ] The new button make the below pane switch between coll and field ones  
