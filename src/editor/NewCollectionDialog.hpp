@@ -5,6 +5,7 @@
 
 class NewCollectionDialog : public FXDialogBox
 {
+  FXDECLARE(NewCollectionDialog)
 public:
   enum
     {
@@ -17,7 +18,10 @@ public:
 
   long onCmdCancel(FXObject*,FXSelector,void*);
   long onCmdOk(FXObject*,FXSelector,void*);
-  
+
+protected:
+  NewCollectionDialog(){}    // Needed by FXIMPLEMENT macro
+  void construct();  
 };
 
 #endif // !__NEW_COLLECTION_DIALOG_HPP__
