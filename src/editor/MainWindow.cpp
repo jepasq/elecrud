@@ -673,6 +673,16 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** Get the a single string from the NewCollectionDialog entered values
+  *
+  * It may be used to be logged or to be added to the collection list UI.
+  *
+  * @param d The opened dialog instance.
+  *
+  * @return A single string containing the collection name and at least a
+  *         part of the multiline description.
+  *
+  */
 FXString
 MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
 {

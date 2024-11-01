@@ -22,6 +22,14 @@ NewCollectionDialog::~NewCollectionDialog()
   delete ftDescription;
 }
 
+
+/** UI construction method
+ *
+ * Called from the constructor to build UI. It notably instanciates
+ * @ref tfName and @ref ftDescription dynamically so these two pointers
+ * need to be manually deleted in destructor.
+ *
+ */
 void
 NewCollectionDialog::construct()
 {
@@ -45,6 +53,13 @@ NewCollectionDialog::construct()
   resize(600, 400);
 }
 
+/** The dialog's Cancel button callback
+ *
+ * Stop the modal execution of this dialog with a `FALSE` status then hide it.
+ *
+ * @return Always return 1 to tell fox-toolkit the event has been consumed.
+ *
+ */
 long
 NewCollectionDialog::onCmdCancel(FXObject*,FXSelector,void*)
 {
@@ -53,6 +68,13 @@ NewCollectionDialog::onCmdCancel(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** The dialog's Ok button callback
+ *
+ * Stop the modal execution of this dialog with a `TRUE` status then hide it.
+ *
+ * @return Always return 1 to tell fox-toolkit the event has been consumed.
+ *
+ */
 long
 NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
 {

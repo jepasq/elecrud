@@ -17,7 +17,7 @@ public:
     };
  
   NewCollectionDialog(FXWindow*);
-  ~NewCollectionDialog();
+  virtual ~NewCollectionDialog();
 
   long onCmdCancel(FXObject*,FXSelector,void*);
   long onCmdOk(FXObject*,FXSelector,void*);

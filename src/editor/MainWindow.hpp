@@ -31,7 +31,9 @@ public:
   // MainWindow's constructor
   MainWindow(Elecrud* a, const FX::FXString& windowTitle);
 
-  // Messages for our class
+  /** Fox-toolkit messages IDs for our class
+   *
+   */
   enum{
     ID_CANVAS=FXMainWindow::ID_LAST,
     ID_CLEAR,
@@ -53,7 +55,7 @@ public:
     ID_NCOL,   //!< New collection button
     
     ID_LAST,   //!< Always last (and not used)
-    };
+  };
 
   
   // Initialize
