@@ -665,6 +665,11 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
   NewCollectionDialog ncd(this);
   auto ret = ncd.execute(PLACEMENT_OWNER);
   cout << "Dialog ret. : " << ret << endl;
+  if (ret == 1)
+    {
+      cout << "  Coll. name : " << ncd.getName().text() << endl;
+      cout << "  Coll. desc.: " << ncd.getDescription().text() << endl;
+    }
   return 1;
 }
 

@@ -16,6 +16,12 @@ NewCollectionDialog::NewCollectionDialog(FXWindow *owner):
   construct();
 }
 
+NewCollectionDialog::~NewCollectionDialog()
+{
+  delete tfName;
+  delete ftDescription;
+}
+
 void
 NewCollectionDialog::construct()
 {
@@ -30,13 +36,12 @@ NewCollectionDialog::construct()
   auto pph1 = new FXHorizontalFrame(pane);
   auto labPrjName=new FXLabel(pph1, "Collection name :", 0, LAYOUT_FIX_WIDTH );
   labPrjName->setWidth(120);
-  auto tfCollName = new FXTextField(pph1, 60, this, ID_COLNAM);
+  tfName = new FXTextField(pph1, 60, this, ID_COLNAM);
   
   new FXLabel(pane, "Multiline description and notes :");
-  auto ftDescription = new FXText(pane, this, ID_COLDES,
-			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
-  
-  
+  ftDescription = new FXText(pane, this, ID_COLDES,
+			     FRAME_RAISED|FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+    
   resize(600, 400);
 }
 
@@ -56,3 +61,14 @@ NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
   return 1;
 }
 
+FXString
+NewCollectionDialog::getName(void)
+{
+  return tfName->getText();
+}
+
+FXString
+NewCollectionDialog::getDescription(void)
+{
+  return ftDescription->getText();
+}

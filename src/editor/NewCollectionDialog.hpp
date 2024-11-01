@@ -17,13 +17,22 @@ public:
     };
  
   NewCollectionDialog(FXWindow*);
+  ~NewCollectionDialog();
 
   long onCmdCancel(FXObject*,FXSelector,void*);
   long onCmdOk(FXObject*,FXSelector,void*);
 
+  FXString getName(void);
+  FXString getDescription(void);
+  
 protected:
   NewCollectionDialog(){}    // Needed by FXIMPLEMENT macro
-  void construct();  
+  void construct();
+
+private:
+  FXTextField* tfName;        //!< The Name textfield
+  FXText*      ftDescription; //!< The The description multiline text
+
 };
 
 #endif // !__NEW_COLLECTION_DIALOG_HPP__
