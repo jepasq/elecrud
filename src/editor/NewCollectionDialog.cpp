@@ -25,7 +25,18 @@ NewCollectionDialog::construct()
   auto cancelBtn=new FXButton(buttons, "&Canel", NULL, this, ID_CANCEL,
 			      FRAME_RAISED|FRAME_THICK|LAYOUT_FILL_Y|LAYOUT_RIGHT);
   new FXHorizontalSeparator(this,SEPARATOR_GROOVE|LAYOUT_SIDE_BOTTOM|LAYOUT_FILL_X);
- 
+
+  auto pane = new FXVerticalFrame(this);
+  auto pph1 = new FXHorizontalFrame(pane);
+  auto labPrjName=new FXLabel(pph1, "Collection name :", 0, LAYOUT_FIX_WIDTH );
+  labPrjName->setWidth(120);
+  auto tfCollName = new FXTextField(pph1, 60, this, ID_COLNAM);
+  
+  new FXLabel(pane, "Multiline description and notes :");
+  auto ftDescription = new FXText(pane, this, ID_COLDES,
+			     LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  
+  
   resize(600, 400);
 }
 

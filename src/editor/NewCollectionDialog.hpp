@@ -9,8 +9,10 @@ class NewCollectionDialog : public FXDialogBox
 public:
   enum
     {
-      ID_CANCEL=FXDialogBox::ID_LAST,
-      ID_OK,
+      ID_CANCEL=FXDialogBox::ID_LAST,  //!< The Cancel button
+      ID_OK,                           //!< The OK button
+      ID_COLNAM,                       //!< The collection name input field
+      ID_COLDES,        //!< The collection description input field
       ID_LAST
     };
  
