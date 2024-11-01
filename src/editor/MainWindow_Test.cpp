@@ -4,14 +4,21 @@
 
 #include <string>
 
-// Nothing to be tested here, MainWindow is a FoxToolkit class that need
-// all graphical stack.
-BOOST_AUTO_TEST_CASE( my_test )
+#include "NewCollectionDialog.hpp"
+
+/// Seems we can't test this this way
+BOOST_AUTO_TEST_CASE( getNewCollectionString )
 {
   /*
   FXApp app("elecrud","editor-test");
   std::string title = "test-title";
-  MainWindow mw(&app, title.c_str());
+  MainWindow mw;
+
+  NewCollectionDialog d;
+  
+  
   BOOST_REQUIRE_EQUAL( mw.getTitle().text(), title);      // #2 throws on error
+
   */
-}
+
+  }

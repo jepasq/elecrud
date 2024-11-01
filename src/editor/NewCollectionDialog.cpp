@@ -62,13 +62,13 @@ NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
 }
 
 FXString
-NewCollectionDialog::getName(void)
+NewCollectionDialog::getName(void) const
 {
   return tfName->getText();
 }
 
 FXString
-NewCollectionDialog::getDescription(void)
+NewCollectionDialog::getDescription(void) const
 {
   return ftDescription->getText();
 }

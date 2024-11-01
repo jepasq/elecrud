@@ -667,9 +667,23 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
   cout << "Dialog ret. : " << ret << endl;
   if (ret == 1)
     {
-      cout << "  Coll. name : " << ncd.getName().text() << endl;
-      cout << "  Coll. desc.: " << ncd.getDescription().text() << endl;
+      auto txt = getNewCollectionString(&ncd);
+      cout << "  New Coll. string : " << txt.text() << endl;
     }
   return 1;
+}
+
+FXString
+MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
+{
+  FXString ret = d->getName();
+  FXString fulldesc = d->getDescription();
+  FXString desc = fulldesc;
+  
+  if (fulldesc.length() > 8)
+    desc = fulldesc.trunc(5) + "...";
+    
+  ret += " (" + desc + ")";
+  return ret;
 }
 

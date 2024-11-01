@@ -13,6 +13,10 @@
 
 #include "Elecrud.hpp"
 
+// Forward declarations
+class NewCollectionDialog;
+// End of forward declarations
+
 /** The main editor window
   *
   * If current \c filename is an empty string, 
@@ -86,6 +90,8 @@ protected:
 
   bool preGenerationChecks(void);
   void copyUiToProjectfile(void);
+  FXString getNewCollectionString(const NewCollectionDialog*) const;
+
   
 private:
   FX::FXMenuBar*   mbFile;   //!< The File menubar 
