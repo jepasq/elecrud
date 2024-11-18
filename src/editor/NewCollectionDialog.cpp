@@ -83,14 +83,24 @@ NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
   return 1;
 }
 
+/** Get the trimmed version of the new collection name
+ *
+ *  @return The name as a FXString.
+ *
+ */  
 FXString
 NewCollectionDialog::getName(void) const
 {
-  return tfName->getText();
+  return tfName->getText().trim();
 }
 
+/** Get the trimmed version of the new collection's description
+ *
+ *  @return The name as a FXString.
+ *
+ */  
 FXString
 NewCollectionDialog::getDescription(void) const
 {
-  return ftDescription->getText();
+  return ftDescription->getText().trim();
 }

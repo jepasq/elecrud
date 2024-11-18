@@ -668,7 +668,7 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
   if (ret == 1)
     {
       auto txt = getNewCollectionString(&ncd);
-      cout << "  New Coll. string : " << txt.text() << endl;
+      cout << "  New Coll. string : '" << txt.text() << "'" << endl;
     }
   return 1;
 }
@@ -687,7 +687,9 @@ FXString
 MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
 {
   FXString ret = d->getName();
-  FXString fulldesc = d->getDescription();
+  // Here we replace all occurences of newline char with a regular space
+  // to get a one line representation
+  FXString fulldesc = d->getDescription().substitute('\n', ' ');
   FXString desc = fulldesc;
   
   if (fulldesc.length() > 8)

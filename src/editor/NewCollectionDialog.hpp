@@ -3,6 +3,12 @@
 
 #include <fox-1.6/fx.h>
 
+/** Here is a fox toolkit, eventually modal, dialog used to enter new
+ *  collection-related fields (name, description).
+ *
+ * Returned value are trimed to avoid unwanted space at the start or the end.
+ *
+ */
 class NewCollectionDialog : public FXDialogBox
 {
   FXDECLARE(NewCollectionDialog)
