@@ -45,6 +45,7 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
 
  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NCOL,MainWindow::onNewCollection),
 
+ FXMAPFUNC(SEL_SELECTED,MainWindow::ID_COLI,MainWindow::onCollSelectionChanged),
  
 };
 
@@ -178,7 +179,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 				       FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   auto allColl = new FXVerticalFrame(collectPane, LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(allColl, "Collections details");
-  collectionsList = new FXList(allColl, nullptr, 0,
+  collectionsList = new FXList(allColl, this,  ID_COLI,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXButton(allColl, "New ...", nullptr, this, ID_NCOL);
 
@@ -666,13 +667,10 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
 {
   NewCollectionDialog ncd(this);
   auto ret = ncd.execute(PLACEMENT_OWNER);
-  cout << "Dialog ret. : " << ret << endl;
+  
   if (ret == 1)
-    {
-      auto txt = getNewCollectionString(&ncd);
-      cout << "  New Coll. string : '" << txt.text() << "'" << endl;
-      collectionsList->appendItem(txt);
-    }
+    collectionsList->appendItem(getNewCollectionString(&ncd));
+  
   return 1;
 }
 
@@ -700,5 +698,16 @@ MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
     
   ret += " (" + desc + ")";
   return ret;
+}
+
+long
+MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
+{
+  /*
+  FXString idStr((FXchar*)itemId);
+  int i = idStr.scan("%d");
+  cout << "Collection selection changed (Id is '" << i << "')" << endl;
+  */
+  return 1;
 }
 

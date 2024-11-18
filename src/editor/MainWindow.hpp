@@ -53,7 +53,8 @@ public:
     ID_PRUN,   //!< The project->Run menu button
 
     ID_NCOL,   //!< New collection button
-    
+    ID_COLI,   //!< Collection list widget
+
     ID_LAST,   //!< Always last (and not used)
   };
 
@@ -77,6 +78,8 @@ public:
   long onGenPathClicked(FXObject*,FXSelector,void*);
 
   long onNewCollection(FXObject*,FXSelector,void*);
+  long onCollSelectionChanged(FXObject*,FXSelector,void*);
+
   
   void addLogMessage(const FXString&);  
   void resetAllFields();
@@ -85,7 +88,7 @@ public:
   
 protected:
   MainWindow();
-
+  
   void setRunnableProject(bool);
   void updateTitle(void);
   void setDirty(bool vDirty=true);
