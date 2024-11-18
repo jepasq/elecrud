@@ -1,4 +1,14 @@
-* v0.0.2-24 (02 Sep. 2024 - 31 Oct. 2024) SLOC ?,???
+* v0.0.2-25 (31 Oct. 2024 - 18 Noc. 2024) SLOC 3,420
+- Start to handle cllections list selection event
+- Newly added collection string added to associated FXlist widget
+- NewCollection dialog return trimmes string and newline char handle
+- Half an hour improving various classes API documentation
+- MainWindow::getNewCollectionString implementation
+- Add NewCollectionDialog name and description getters
+- Add NewCollectionDialog text fields
+- NewCollectionDialog buttons events work
+
+* v0.0.2-24 (02 Sep. 2024 - 31 Oct. 2024) SLOC 3,250
 - Add Ok/Cancel buttons to NewCollectionDialog
 - Fixed the NewCollectionDialog segfault issue
 - Added basic NewCollectionDialog class
