@@ -178,7 +178,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
 				       FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   auto allColl = new FXVerticalFrame(collectPane, LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(allColl, "Collections details");
-  new FXList(allColl, nullptr, 0,
+  collectionsList = new FXList(allColl, nullptr, 0,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXButton(allColl, "New ...", nullptr, this, ID_NCOL);
 
@@ -226,6 +226,8 @@ MainWindow::~MainWindow()
   delete mbFile;
   delete mtFile;
   */
+
+  delete collectionsList;
 }
 
 /** Create and set initial placement of the MainWindow
@@ -669,6 +671,7 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
     {
       auto txt = getNewCollectionString(&ncd);
       cout << "  New Coll. string : '" << txt.text() << "'" << endl;
+      collectionsList->appendItem(txt);
     }
   return 1;
 }

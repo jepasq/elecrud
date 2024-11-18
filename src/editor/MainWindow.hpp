@@ -130,6 +130,8 @@ private:
   
   FXStatusBar* statusbar; //!< The main window's status bar used to print msgs
   FXCheckButton* cbCallNpm; //!< The call npm check box
+
+  FXList* collectionsList; //!< The list containing current project's colls
 };
 
 #endif // !__MAIN_WINDOW_HPP__
