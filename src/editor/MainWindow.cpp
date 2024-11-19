@@ -700,14 +700,22 @@ MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
   return ret;
 }
 
+/** The callback handling collection FXList selection changed event
+ *
+ * @param itemId The index in the list. Must be casted to long integer.
+ *
+ */
 long
 MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
 {
-  /*
-  FXString idStr((FXchar*)itemId);
-  int i = idStr.scan("%d");
+  int i = (long int)itemId;
   cout << "Collection selection changed (Id is '" << i << "')" << endl;
-  */
+
+  auto collPtr= collectionsList->getItemData(i);
+  if (collPtr == nullptr)
+    cout << "Collection lost item data shouldn't be NULL (idx=" << i << ")"
+	 << endl;
+  
   return 1;
 }
 
