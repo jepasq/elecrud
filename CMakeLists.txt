@@ -63,6 +63,7 @@ add_executable(tests src/tests.cpp
   ${EUDCAT_SRC}
   src/libfile/ProjectFile_Test.cpp
   src/libfile/Collection_Test.cpp
+  src/libfile/CollectionList_Test.cpp
   
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
