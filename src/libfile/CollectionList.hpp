@@ -12,6 +12,8 @@ public:
   size_t size() const;
 
   void push_back(Collection*);
+
+  bool isNameInUse(const FXString&) const;
   
 private:
   // Trying with a vector so we can size to the nitem number it at load

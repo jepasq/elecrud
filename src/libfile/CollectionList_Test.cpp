@@ -2,7 +2,6 @@
 
 #include "Collection.hpp"
 #include "CollectionList.hpp"
-#include "NameCollisionException.hpp"
 
 /// Creating an empty list
 BOOST_AUTO_TEST_CASE( Collection_size_0 )
@@ -29,10 +28,8 @@ BOOST_AUTO_TEST_CASE( Collection_name_collision )
   CollectionList cl;
   Collection c("name1");
   cl.push_back(&c);
-
-  ;
-  BOOST_CHECK_THROW(cl.push_back(new Collection("name1")),
-		    NameCollisionException);
+  BOOST_REQUIRE(cl.isNameInUse("name1"));
+  BOOST_REQUIRE(!cl.isNameInUse("name2"));
 }
 
 

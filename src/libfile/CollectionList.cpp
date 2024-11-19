@@ -11,3 +11,9 @@ CollectionList::push_back(Collection*)
 {
 
 }
+
+bool
+CollectionList::isNameInUse(const FXString&) const
+{
+  
+}
