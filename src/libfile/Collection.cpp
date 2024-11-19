@@ -31,3 +31,26 @@ Collection::getName() const
 {
   return name;
 }
+
+/** Change the description value
+  *
+  * @param d The new collection description.
+  *
+  */
+void
+Collection::setDescription(const FX::FXString& d)
+{
+  description = d;
+}
+
+/** Return the current description
+ *
+ *  @return The description value.
+ *
+ */
+const FX::FXString&
+Collection::getDescription() const
+{
+  return description;
+}
+

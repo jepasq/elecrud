@@ -21,9 +21,13 @@ public:
 
   void                setName(const FX::FXString&);
   const FX::FXString& getName() const;
-  
+
+  void                setDescription(const FX::FXString&);
+  const FX::FXString& getDescription() const;
+
 private:
-  FX::FXString       name;   //!< The collection name
+  FX::FXString       name;        //!< The collection name
+  FX::FXString       description; //!< An optional multiline description
   std::vector<Field> fields; //!< The list of fields for this collection
 };
 
