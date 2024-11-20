@@ -11,9 +11,10 @@ Collection::Collection(const FX::FXString& vName)
 }
 
 // Needed by std::make_shared
-Collection::Collection(const Collection*)
+Collection::Collection(const Collection*c)
 {
-
+  name = c->getName();
+  description = c->getDescription();
 }
 
 

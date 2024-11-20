@@ -6,6 +6,11 @@
 
 #include "Collection.hpp"
 
+/** A list (or vector) of collections (or tables) as shown in the editor
+ *
+ *
+ *
+ */
 class CollectionList
 {
 public:
