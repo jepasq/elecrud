@@ -40,6 +40,7 @@ set(EUDCAT_SRC
 # File library
 add_library(elecrud-file SHARED
   src/libfile/Collection.cpp
+  src/libfile/CollectionList.cpp
   src/libfile/ProjectFile.cpp
 )
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES} ${LIBS_LIBRARIES})

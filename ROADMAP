@@ -3,6 +3,14 @@
 * v1.0.0
 ** v0.1.0
 *** TODO v0.0.3
+**** Further improvments
+- [ ] Can clone a new collection from a template
+  - [ ] Add a /New from template/ button in the collection pane
+  - [ ] This opens a new dialog where we can choose in a list of template
+    (User, Address, etc...) and a new name
+  - [ ] These template may comme from a configuration file
+- [ ] May add a completely new pane named *Style* where we can shoose
+  the CSS-based style of the generated app., maybe with screenshot and more
 **** Must be multi-user
 - [ ] While the admin user can be crated in fox editor, other users may be
   created by admin user
@@ -179,7 +187,8 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO [feature_CollectionList] Create editor's Collection handling UI
 :LOGBOOK:
-CLOCK: [2024-11-19 mar. 15:25]
+CLOCK: [2024-11-20 mer. 10:54]--[2024-11-20 mer. 11:02] =>  0:08
+CLOCK: [2024-11-19 mar. 15:25]--[2024-11-19 mar. 15:54] =>  0:29
 CLOCK: [2024-11-19 mar. 11:43]--[2024-11-19 mar. 12:25] =>  0:42
 CLOCK: [2024-11-19 mar. 10:48]--[2024-11-19 mar. 11:00] =>  0:12
 CLOCK: [2024-11-19 mar. 09:30]--[2024-11-19 mar. 09:44] =>  0:14

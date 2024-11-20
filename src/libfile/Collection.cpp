@@ -10,6 +10,13 @@ Collection::Collection(const FX::FXString& vName)
   name = vName;
 }
 
+// Needed by std::make_shared
+Collection::Collection(const Collection*)
+{
+
+}
+
+
 /** Change the collection name
  *
  *  @param vName The new name field value.

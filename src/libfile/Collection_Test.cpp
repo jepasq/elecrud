@@ -9,6 +9,18 @@ BOOST_AUTO_TEST_CASE( Collection_name )
   BOOST_REQUIRE( c.getName() == n );
 }
 
+BOOST_AUTO_TEST_CASE( Collection_copy_ctor )
+{
+  FXString n("nAmE");
+  Collection c(n);
+
+  Collection c2(&c);
+
+  BOOST_REQUIRE( c.getName() == c2.getName() );
+  BOOST_REQUIRE( c.getDescription() == c2.getDescription() );
+}
+
+
 BOOST_AUTO_TEST_CASE( Collection_setName )
 {
   FXString n("nAmE");
