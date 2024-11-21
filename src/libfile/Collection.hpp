@@ -18,6 +18,7 @@ class Collection
 {
 public:
   Collection(const FX::FXString&);
+  Collection(const FX::FXString&, const FX::FXString&);
   Collection(const Collection*);
 
   void                setName(const FX::FXString&);

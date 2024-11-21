@@ -88,7 +88,7 @@ NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
  *  @return The name as a FXString.
  *
  */  
-FXString
+const FXString&
 NewCollectionDialog::getName(void) const
 {
   return tfName->getText().trim();
@@ -99,7 +99,7 @@ NewCollectionDialog::getName(void) const
  *  @return The name as a FXString.
  *
  */  
-FXString
+const FXString&
 NewCollectionDialog::getDescription(void) const
 {
   return ftDescription->getText().trim();

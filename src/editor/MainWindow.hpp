@@ -10,6 +10,7 @@
 #include <string>
 
 #include "ProjectFile.hpp"
+#include "CollectionList.hpp"
 
 #include "Elecrud.hpp"
 
@@ -111,8 +112,6 @@ private:
   FXMenuCommand* mcRun;  //!< The Project>Run menu command
   FXMenuCommand* mcSave; //!< The File>Save menu command 
   
-  ProjectFile      projectFile; //!< Used to load/save actual project
-
   FXSplitter* splitter;            //!< The parent of all panes
   FXVerticalFrame* projectPane;    //!< The project details panel
   FXHorizontalFrame* collectPane;  //!< The collections panel
@@ -135,6 +134,11 @@ private:
   FXCheckButton* cbCallNpm; //!< The call npm check box
 
   FXList* collectionsList; //!< The list containing current project's colls
+
+  // Underlying/no UI datas
+  ProjectFile    projectFile; //!< Used to load/save actual project
+  CollectionList collections; //!< The project collections 
+  
 };
 
 #endif // !__MAIN_WINDOW_HPP__

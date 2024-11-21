@@ -28,8 +28,8 @@ public:
   long onCmdCancel(FXObject*,FXSelector,void*);
   long onCmdOk(FXObject*,FXSelector,void*);
 
-  FXString getName(void) const;
-  FXString getDescription(void) const;
+  const FXString& getName(void) const;
+  const FXString& getDescription(void) const;
   
 protected:
   NewCollectionDialog(){}    // Needed by FXIMPLEMENT macro

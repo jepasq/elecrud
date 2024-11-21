@@ -17,6 +17,8 @@
 #include <stdio.h>      /* printf */
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
 
+#include <FXMessageBox.h>
+
 using namespace std;
 
 /** The pattern for saved files extension */
@@ -667,9 +669,22 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
 {
   NewCollectionDialog ncd(this);
   auto ret = ncd.execute(PLACEMENT_OWNER);
-  
+
+  // Dialog's okbutton clicked
   if (ret == 1)
-    collectionsList->appendItem(getNewCollectionString(&ncd));
+    {
+      FXString n = ncd.getName();
+      if (!collections.isNameInUse(n))
+	{
+	  collectionsList->appendItem(getNewCollectionString(&ncd));
+	  collections.push_back(new Collection(n, ncd.getDescription()));
+	}
+      else
+	{
+	  FXMessageBox::error(this, 0, "Collection's name already used",
+			      "The given connection name is already used in another collection.");
+	}
+  }
   
   return 1;
 }
@@ -690,8 +705,8 @@ MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
   FXString ret = d->getName();
   // Here we replace all occurences of newline char with a regular space
   // to get a one line representation
-  FXString fulldesc = d->getDescription().substitute('\n', ' ');
-  FXString desc = fulldesc;
+  FXString fulldesc = d->getDescription();
+  FXString desc = fulldesc.substitute('\n', ' ');
   
   if (fulldesc.length() > 8)
     desc = fulldesc.trunc(5) + "...";

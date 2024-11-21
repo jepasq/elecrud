@@ -5,10 +5,18 @@
  *  @param vName The initial name field value.
  *
  */
-Collection::Collection(const FX::FXString& vName)
+Collection::Collection(const FX::FXString& vName):
+  name(vName)
 {
-  name = vName;
 }
+
+Collection::Collection(const FX::FXString& vName, const FX::FXString& vDesc):
+  name(vName),
+  description(vDesc)
+{
+
+}
+
 
 // Needed by std::make_shared
 Collection::Collection(const Collection*c)
