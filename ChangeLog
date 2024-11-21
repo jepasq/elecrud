@@ -1,3 +1,13 @@
+* v0.0.2-26 (18 Nov. 2024 - 21 Nov. 2024) SLOC 3,641
+- Fix the NewCollecionDialog segault on UI access
+- MainWindow starts to use CollectionList
+- Implement CollectionList::isNameInUse to fix last failing test
+- One more CollectionList test to be fixed
+- Add Collection copy ctor to make call to make_shared possible
+- Started to write first CollectionList unit tests
+- Add collection description field, getter, setter and tests
+- Collection list event handling get item index
+
 * v0.0.2-25 (31 Oct. 2024 - 18 Noc. 2024) SLOC 3,420
 - Start to handle cllections list selection event
 - Newly added collection string added to associated FXlist widget
