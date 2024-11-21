@@ -681,8 +681,10 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
 	}
       else
 	{
-	  FXMessageBox::error(this, 0, "Collection's name already used",
-			      "The given connection name is already used in another collection.");
+	  FXMessageBox::error(this,  FX::MBOX_OK,
+			      "Collection's name already used",
+			      "The given connection name is already used in "
+			      "another collection.");
 	}
   }
   

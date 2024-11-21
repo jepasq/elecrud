@@ -6,7 +6,9 @@
 /** Here is a fox toolkit, eventually modal, dialog used to enter new
  *  collection-related fields (name, description).
  *
- * Returned value are trimed to avoid unwanted space at the start or the end.
+ *  Returned values are trimed to avoid unwanted space at the start or the end.
+ *  These values are also stored in temporary variables on Ok button callback
+ *  to avoid segfault when accessing UI widgets after hide() call.
  *
  */
 class NewCollectionDialog : public FXDialogBox
@@ -39,6 +41,8 @@ private:
   FXTextField* tfName;        //!< The Name textfield
   FXText*      ftDescription; //!< The The description multiline text
 
+  FXString name; //!< Temporary name returned by getter
+  FXString desc; //!< Temporary description returned by getter
 };
 
 #endif // !__NEW_COLLECTION_DIALOG_HPP__

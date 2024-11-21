@@ -13,6 +13,10 @@ FXIMPLEMENT(NewCollectionDialog, FXDialogBox, NewCollectionDialogMap,
 NewCollectionDialog::NewCollectionDialog(FXWindow *owner):
   FXDialogBox(owner, "New Collection")
 {
+  name = "aze";
+  desc = "zer";
+
+  
   construct();
 }
 
@@ -78,6 +82,10 @@ NewCollectionDialog::onCmdCancel(FXObject*,FXSelector,void*)
 long
 NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
 {
+  // Setting temporary values here to avoid a segfault.
+  name = tfName->getText().trim();
+  desc = ftDescription->getText().trim();
+  
   getApp()->stopModal(this,TRUE); // From FXDialogBox sources
   hide();
   return 1;
@@ -91,7 +99,7 @@ NewCollectionDialog::onCmdOk(FXObject*,FXSelector,void*)
 const FXString&
 NewCollectionDialog::getName(void) const
 {
-  return tfName->getText().trim();
+  return name;
 }
 
 /** Get the trimmed version of the new collection's description
@@ -102,5 +110,5 @@ NewCollectionDialog::getName(void) const
 const FXString&
 NewCollectionDialog::getDescription(void) const
 {
-  return ftDescription->getText().trim();
+  return desc;
 }

@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-26 (18 Noc. 2024 - ???) SLOC ?,???
-- (7) MainWindow starts to use CollectionList
+- (8) Fix the NewCollecionDialog segault on UI access
+- MainWindow starts to use CollectionList
 - Implement CollectionList::isNameInUse to fix last failing test
 - One more CollectionList test to be fixed
 - Add Collection copy ctor to make call to make_shared possible
