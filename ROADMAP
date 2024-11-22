@@ -187,6 +187,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Continue Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-11-22 ven. 10:24]
 CLOCK: [2024-11-22 ven. 09:09]--[2024-11-22 ven. 10:11] =>  1:02
 CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
 :END:
@@ -198,9 +199,13 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
     - [X] NewCollectionDialog could use temporary string vars instead of
       using graphical UI widget pointer instead
   - [X] The Collection One liner could be a class member
+- [-] May start to create a real CollectionField class
+  - [X] Create and unit test this new class
+  - [ ] FieldType could be handled via a Factory to be able to add new type
+    on the fly
+- [ ] collections could be a projectfile member (to be saved and load)
+  With a mutable getter
 - [ ] Entering an invalid collection shouldn't hide dialog
-- [ ] collections cound be a projectfile member (to be saved and load)  
-- [ ] May start to create a real CollectionField class
 - [ ] Collections list may need a data pointer to modify the right collection
   when changing fields
   Use FXListItem::setData and  FXList::getItemData

@@ -44,6 +44,7 @@ set(EUDCAT_SRC
 add_library(elecrud-file SHARED
   src/libfile/Collection.cpp
   src/libfile/CollectionList.cpp
+  src/libfile/Field.cpp
   src/libfile/ProjectFile.cpp
 )
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
@@ -68,6 +69,8 @@ add_executable(tests src/tests.cpp
   src/libfile/ProjectFile_Test.cpp
   src/libfile/Collection_Test.cpp
   src/libfile/CollectionList_Test.cpp
+
+  src/libfile/Field_Test.cpp
   
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
