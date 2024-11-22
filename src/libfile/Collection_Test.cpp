@@ -47,3 +47,12 @@ BOOST_AUTO_TEST_CASE( Collection_ctor_descr_setter )
   BOOST_REQUIRE(c.getDescription().empty());
 }
 
+/// Check that the description effectively change underlying field
+BOOST_AUTO_TEST_CASE( Collection_one_liner )
+{
+  Collection c("Name", "Desc");
+  BOOST_REQUIRE(!c.getOneLiner().empty());
+}
+
+
+

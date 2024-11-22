@@ -676,8 +676,9 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
       FXString n = ncd.getName();
       if (!collections.isNameInUse(n))
 	{
-	  collectionsList->appendItem(getNewCollectionString(&ncd));
-	  collections.push_back(new Collection(n, ncd.getDescription()));
+	  Collection c(n, ncd.getDescription());
+	  collectionsList->appendItem(c.getOneLiner());
+	  collections.push_back(&c);
 	}
       else
 	{
@@ -689,32 +690,6 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
   }
   
   return 1;
-}
-
-/** Get the a single string from the NewCollectionDialog entered values
-  *
-  * It may be used to be logged or to be added to the collection list UI.
-  *
-  * @param d The opened dialog instance.
-  *
-  * @return A single string containing the collection name and at least a
-  *         part of the multiline description.
-  *
-  */
-FXString
-MainWindow::getNewCollectionString(const NewCollectionDialog* d) const
-{
-  FXString ret = d->getName();
-  // Here we replace all occurences of newline char with a regular space
-  // to get a one line representation
-  FXString fulldesc = d->getDescription();
-  FXString desc = fulldesc.substitute('\n', ' ');
-  
-  if (fulldesc.length() > 8)
-    desc = fulldesc.trunc(5) + "...";
-    
-  ret += " (" + desc + ")";
-  return ret;
 }
 
 /** The callback handling collection FXList selection changed event

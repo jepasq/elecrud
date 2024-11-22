@@ -81,7 +81,6 @@ public:
   long onNewCollection(FXObject*,FXSelector,void*);
   long onCollSelectionChanged(FXObject*,FXSelector,void*);
 
-  
   void addLogMessage(const FXString&);  
   void resetAllFields();
 
@@ -96,7 +95,6 @@ protected:
 
   bool preGenerationChecks(void);
   void copyUiToProjectfile(void);
-  FXString getNewCollectionString(const NewCollectionDialog*) const;
 
   
 private:

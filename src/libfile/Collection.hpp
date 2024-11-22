@@ -27,6 +27,8 @@ public:
   void                setDescription(const FX::FXString&);
   const FX::FXString& getDescription() const;
 
+  FX::FXString getOneLiner() const;
+  
 private:
   FX::FXString       name;        //!< The collection name
   FX::FXString       description; //!< An optional multiline description
