@@ -1,5 +1,7 @@
-#include __FIELD_TYPE_HPP__
+#ifndef __FIELD_TYPE_HPP__
 #define __FIELD_TYPE_HPP__
+
+#include <string>
 
 #include <fox-1.6/fx.h>
 
@@ -11,11 +13,11 @@
 class FieldType
 {
 public:
-  /// Returns this typename to string
-  FXString typeName() const=0;
+  /// Returns this typename as string to be the first map argument in lower case
+  virtual std::string typeName() const=0;
   
   /// Return the internal value to string
-  const FXString& toString() const=0;
+  virtual const FXString& toString() const=0;
 
 };
 

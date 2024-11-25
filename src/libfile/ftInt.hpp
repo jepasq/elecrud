@@ -3,14 +3,18 @@
 
 #include <fox-1.6/fx.h>
 
+#include <string>
+
+#include "FieldType.hpp"
+
 /** A column type that handle Integer type
  *
  */
-class FieldTypeInt
+class FieldTypeInt : public FieldType
 {
 public:
   /// Returns this typename to string
-  FXString typeName() const;
+  std::string typeName() const;
   
   /// Return the internal value to string
   const FXString& toString() const;

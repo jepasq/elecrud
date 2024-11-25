@@ -3,7 +3,7 @@
 #include <FXString.h>
 
 /// Returns this typename to string
-FXString
+std::string
 FieldTypeInt::typeName() const
 {
   return "integer";
