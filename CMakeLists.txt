@@ -46,6 +46,7 @@ add_library(elecrud-file SHARED
   src/libfile/CollectionList.cpp
   src/libfile/Field.cpp
     src/libfile/ftInt.cpp
+  src/libfile/FieldTypeFactory.cpp
   src/libfile/ProjectFile.cpp
 )
 target_link_libraries(elecrud-file PUBLIC ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
@@ -71,6 +72,7 @@ add_executable(tests src/tests.cpp
   src/libfile/Collection_Test.cpp
   src/libfile/CollectionList_Test.cpp
 
+  src/libfile/FieldTypeFactory_Test.cpp
   src/libfile/Field_Test.cpp
   src/libfile/ftInt_Test.cpp
   
