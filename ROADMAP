@@ -187,6 +187,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO [feature_RegisterFirstFactoryType] Continue Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-11-26 mar. 13:00]--[2024-11-26 mar. 13:23] =>  0:23
 CLOCK: [2024-11-26 mar. 10:54]--[2024-11-26 mar. 11:08] =>  0:14
 CLOCK: [2024-11-25 lun. 11:59]--[2024-11-25 lun. 12:17] =>  0:18
 CLOCK: [2024-11-25 lun. 09:59]--[2024-11-25 lun. 10:26] =>  0:27
@@ -203,16 +204,17 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
     - [X] NewCollectionDialog could use temporary string vars instead of
       using graphical UI widget pointer instead
   - [X] The Collection One liner could be a class member
-- [-] May start to create a real CollectionField class
+- [X] May start to create a real CollectionField class
   - [X] Create and unit test this new class
-  - [ ] FieldType could be handled via a Factory to be able to add new type
+  - [X] FieldType could be handled via a Factory to be able to add new type
     on the fly
-    - [ ] Register first FieldType factory type
+    - [X] Register first FieldType factory type
     - At least ftInt and ftString
-      FtInt can't find how to use FXString::value
+- [ ] FtInt : can't find how to use FXString::value
+- ftString implementation  
 - [ ] FieldTypeFactory
   With a basic list of fieldTypes
-  - [ ] UI could use a typelist returbned as a string list to select from
+  - [ ] UI could use a typelist returned as a string list to select from
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter
 - [ ] Entering an invalid collection shouldn't hide dialog

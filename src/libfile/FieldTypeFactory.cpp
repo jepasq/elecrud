@@ -31,3 +31,14 @@ FieldTypeFactory::newInstance(const string& typen)
 {
   return types[typen]->newInstance();
 }
+
+std::vector<std::string>
+FieldTypeFactory::getKeys() const
+{
+  std::vector<string> vkeys;
+  vkeys.reserve(types.size());
+  for(auto const& item: types)
+    vkeys.push_back(item.first);
+
+  return vkeys;
+}

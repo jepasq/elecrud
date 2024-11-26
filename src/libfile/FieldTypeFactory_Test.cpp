@@ -16,9 +16,9 @@ BOOST_AUTO_TEST_CASE( FieldTypeFactoru_instance )
 BOOST_AUTO_TEST_CASE( FieldTypeFactoru_getKeys )
 {
   FieldTypeFactory ftf;
-  /*  auto l = ftf.getKeys();
+  auto l = ftf.getKeys();
   
-  BOOST_REQUIRE( l.size() > 1 );
-  */
+  BOOST_REQUIRE( !l.empty() );
+  
 }
 
