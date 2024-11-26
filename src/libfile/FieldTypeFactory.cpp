@@ -3,6 +3,8 @@
 #include "FieldType.hpp"
 #include "ftInt.hpp"
 
+using namespace std;
+
 FieldTypeFactory::FieldTypeFactory()
 {
   
@@ -24,3 +26,8 @@ FieldTypeFactory::registerTypeInstance(FieldType* t)
   types[t->typeName()] = std::unique_ptr<FieldType>(t);
 }
 
+FieldType*
+FieldTypeFactory::newInstance(const string& typen)
+{
+  return types[typen]->newInstance();
+}

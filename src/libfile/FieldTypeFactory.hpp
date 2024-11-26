@@ -17,6 +17,8 @@ public:
   FieldTypeFactory();
   ~FieldTypeFactory();
 
+  FieldType* newInstance(const std::string&);
+  
 protected:
   void registerTypeInstance(FieldType*);
   

@@ -16,3 +16,10 @@ FieldTypeInt::toString() const
   // Second arg to FXString::value can be the base (default to 10)
   ///  return FX::FXString::value(mValue);
 }
+
+FieldType*
+FieldTypeInt::newInstance() const
+{
+  return new FieldTypeInt();
+}
+

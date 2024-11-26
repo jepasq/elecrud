@@ -14,10 +14,13 @@ class FieldTypeInt : public FieldType
 {
 public:
   /// Returns this typename to string
-  std::string typeName() const;
+  virtual std::string typeName() const override;
   
   /// Return the internal value to string
-  const FXString& toString() const;
+  virtual const FXString& toString() const override;
+
+  virtual FieldType* newInstance() const override;
+  
 private:
 
   int mValue;   // The internal value

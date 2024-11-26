@@ -22,6 +22,8 @@ public:
   /// Return the internal value to string
   virtual const FXString& toString() const=0;
 
+  /// Return a new malloced default instance
+  virtual FieldType* newInstance() const=0;
 };
 
 #endif // !__FIELD_TYPE_HPP__
