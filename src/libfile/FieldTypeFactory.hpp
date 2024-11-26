@@ -15,6 +15,7 @@ class FieldTypeFactory
 {
 public:
   FieldTypeFactory();
+  ~FieldTypeFactory();
 
 protected:
   void registerTypeInstance(FieldType*);

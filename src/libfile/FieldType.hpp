@@ -13,6 +13,9 @@
 class FieldType
 {
 public:
+
+  virtual ~FieldType() = default;
+  
   /// Returns this typename as string to be the first map argument in lower case
   virtual std::string typeName() const=0;
   
