@@ -1,15 +1,16 @@
 #include "FieldTypeFactory.hpp"
 
 #include "FieldType.hpp"
+
 #include "ftInt.hpp"
+#include "ftString.hpp"
 
 using namespace std;
 
 FieldTypeFactory::FieldTypeFactory()
-{
-  
-  //  types.emplace(std::make_pair("int", new FieldTypeInt()));
+{  
   registerTypeInstance(new FieldTypeInt());
+  registerTypeInstance(new FieldTypeString());
 }
 
 // Needed to avoid "error-invalid-application-of-sizeof-to-an-incomplete-type"

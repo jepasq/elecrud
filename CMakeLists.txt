@@ -46,6 +46,7 @@ add_library(elecrud-file SHARED
   src/libfile/CollectionList.cpp
   src/libfile/Field.cpp
     src/libfile/ftInt.cpp
+    src/libfile/ftString.cpp
   src/libfile/FieldTypeFactory.cpp
   src/libfile/ProjectFile.cpp
 )
@@ -75,6 +76,7 @@ add_executable(tests src/tests.cpp
   src/libfile/FieldTypeFactory_Test.cpp
   src/libfile/Field_Test.cpp
   src/libfile/ftInt_Test.cpp
+  src/libfile/ftString_Test.cpp
   
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
