@@ -7,12 +7,5 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     Create a new git tag and pull --tags for each revision commit
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
-* v0.0.2-27 (21 Nov. 2024 - ???) SLOC ?,???
-- (8) Finish ftInt value test and implementation
-- FieldTypeFactory::getKeys implementation and unit test
-- FieldTypeFactory::newInstance implementation
-- Add a FieldType factoey skeleton
-- Basic ftInt class and unit tests
-- Add basic FieldType abstract class header
-- Add unit test and class for Collection's Field
-- Collection one liner impl. moves from MainWindow to Collection class
+* v0.0.2-28 (27 Nov. 2024 - ???) SLOC ?,???
+

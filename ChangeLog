@@ -1,3 +1,13 @@
+* v0.0.2-27 (21 Nov. 2024 - 27 Nov. 2024) SLOC 3,963
+- Finish ftInt value test and implementation
+- FieldTypeFactory::getKeys implementation and unit test
+- FieldTypeFactory::newInstance implementation
+- Add a FieldType factoey skeleton
+- Basic ftInt class and unit tests
+- Add basic FieldType abstract class header
+- Add unit test and class for Collection's Field
+- Collection one liner impl. moves from MainWindow to Collection class
+
 * v0.0.2-26 (18 Nov. 2024 - 21 Nov. 2024) SLOC 3,641
 - Fix the NewCollecionDialog segault on UI access
 - MainWindow starts to use CollectionList
