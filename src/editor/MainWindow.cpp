@@ -183,14 +183,16 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(allColl, "Collections details");
   collectionsList = new FXList(allColl, this,  ID_COLI,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
-  new FXButton(allColl, "New ...", nullptr, this, ID_NCOL);
+  new FXButton(allColl, "New collection ...", nullptr, this, ID_NCOL);
 
   
   auto allFields =new FXVerticalFrame(collectPane,LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(allFields, "Fields details");
   new FXList(allFields, nullptr, 0,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
-  new FXButton(allFields, "New ...", nullptr, this, ID_GPAB /* To be changed */);
+  fbNewField = new FXButton(allFields, "New field ...", nullptr, this,
+				 ID_GPAB /* To be changed */);
+  fbNewField->disable();
   
   // Generator details pane
   //  projectPane = new FXFrame(splitter);
@@ -707,6 +709,10 @@ MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
   if (collPtr == nullptr)
     cout << "Collection lost item data shouldn't be NULL (idx=" << i << ")"
 	 << endl;
+
+  // Re-enabling the actually potentially gray out 'New Field' button
+  // to make clickable again
+  fbNewField->enable();
   
   return 1;
 }

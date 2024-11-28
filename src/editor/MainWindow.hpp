@@ -132,6 +132,7 @@ private:
   FXCheckButton* cbCallNpm; //!< The call npm check box
 
   FXList* collectionsList; //!< The list containing current project's colls
+  FXButton* fbNewField;   //!< The New field button opening modal dialog
 
   // Underlying/no UI datas
   ProjectFile    projectFile; //!< Used to load/save actual project

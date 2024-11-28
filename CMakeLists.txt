@@ -30,6 +30,7 @@ set(EDITOR_SRC
   src/editor/Generator.cpp
   src/editor/GeneratorV1.cpp
   src/editor/MainWindow.cpp
+  src/editor/NewFieldDialog.cpp
   src/editor/NewCollectionDialog.cpp
   src/editor/ProcessWatcher.cpp
 )
