@@ -47,7 +47,7 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
 
  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NCOL,MainWindow::onNewCollection),
- FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NFIL,MainWindow::onNewCollection),
+ FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NFIL,MainWindow::onNewField),
 
  FXMAPFUNC(SEL_SELECTED,MainWindow::ID_COLI,MainWindow::onCollSelectionChanged),
  
@@ -192,8 +192,7 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   new FXLabel(allFields, "Fields details");
   new FXList(allFields, nullptr, 0,
 	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
-  fbNewField = new FXButton(allFields, "New field ...", nullptr, this,
-				 ID_GPAB /* To be changed */);
+  fbNewField = new FXButton(allFields, "New field ...", nullptr, this, ID_NFIL);
   fbNewField->disable();
   
   // Generator details pane
@@ -680,9 +679,9 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
       FXString n = ncd.getName();
       if (!collections.isNameInUse(n))
 	{
-	  Collection c(n, ncd.getDescription());
-	  collectionsList->appendItem(c.getOneLiner());
-	  collections.push_back(&c);
+	  auto c = make_shared<Collection>(n, ncd.getDescription());
+	  collectionsList->appendItem(c->getOneLiner(), nullptr, c.get());
+	  collections.push_back(c.get());
 	}
       else
 	{
@@ -733,7 +732,10 @@ MainWindow::onNewField(FXObject*,FXSelector,void*)
     }
   catch (std::invalid_argument e)
     {
+      // Shouldn't occur. Never.
       std::cerr << e.what() << std::endl;
+      FXMessageBox::error(this,  FX::MBOX_OK, "Invalid parent Collection",
+			  "You must select a parent Collection first.");
     }
 
   return 1;
