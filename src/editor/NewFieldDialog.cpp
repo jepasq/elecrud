@@ -2,6 +2,8 @@
 
 #include "FieldType.hpp"
 
+#include <stdexcept>
+
 // Map
 FXDEFMAP(NewFieldDialog) NewFieldDialogMap[]={
   FXMAPFUNC(SEL_COMMAND,NewFieldDialog::ID_OK,NewFieldDialog::onCmdOk),
@@ -12,12 +14,19 @@ FXDEFMAP(NewFieldDialog) NewFieldDialogMap[]={
 FXIMPLEMENT(NewFieldDialog, FXDialogBox, NewFieldDialogMap,
 	    ARRAYNUMBER(NewFieldDialogMap))
 
-NewFieldDialog::NewFieldDialog(FXWindow *owner):
+/** @param coll The parent Collection. Shouldn't be nullptr.
+ *
+ * @exception std::invalid_argument If the parent collection is invalid.
+ *
+ */
+
+NewFieldDialog::NewFieldDialog(FXWindow *owner, Collection* parent):
   FXDialogBox(owner, "New Field")
 {
   name = "aze";
   desc = "zer";
-
+  
+  checkCollection(parent);
   
   construct();
 }
@@ -26,6 +35,14 @@ NewFieldDialog::~NewFieldDialog()
 {
   delete tfName;
   delete ftDescription;
+}
+
+// Declared static to be easily unit tested 
+void
+NewFieldDialog::checkCollection(Collection* parent)
+{
+  if (parent  == nullptr)
+    throw std::invalid_argument("The parent Collection shouldn't be a nullptr");
 }
 
 

@@ -1,9 +1,10 @@
-#ifndef __NEW_COLLECTION_DIALOG_HPP__
-#define __NEW_COLLECTION_DIALOG_HPP__
+#ifndef __NEW_FIELD_DIALOG_HPP__
+#define __NEW_FIELD_DIALOG_HPP__
 
 #include <fox-1.6/fx.h>
 
 // Forward declarations
+class Collection;
 class FieldType;
 // End of forward declarationd
 
@@ -24,7 +25,7 @@ public:
       ID_LAST
     };
  
-  NewFieldDialog(FXWindow*);
+  NewFieldDialog(FXWindow*, Collection*);
   virtual ~NewFieldDialog();
 
   long onCmdCancel(FXObject*,FXSelector,void*);
@@ -32,6 +33,8 @@ public:
 
   const FXString& getName(void) const;
   const FXString& getDescription(void) const;
+
+  static void checkCollection(Collection*);
   
 protected:
   NewFieldDialog(){}    // Needed by FXIMPLEMENT macro
@@ -47,5 +50,5 @@ private:
   FieldType*   type;
 };
 
-#endif // !__NEW_COLLECTION_DIALOG_HPP__
+#endif // !__NEW_FIELD_DIALOG_HPP__
 

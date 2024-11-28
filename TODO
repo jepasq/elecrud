@@ -8,5 +8,6 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-28 (27 Nov. 2024 - ???) SLOC ?,???
-- (2) New field button deactivated by default and basic dialog
+- (3) Add first NewFieldDialog unit test
+- New field button deactivated by default and basic dialog
 - ftString implementation

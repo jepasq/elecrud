@@ -82,6 +82,7 @@ add_executable(tests src/tests.cpp
   src/editor/Generator_Test.cpp
   src/editor/GeneratorV1_Test.cpp
   src/editor/MainWindow_Test.cpp
+  src/editor/NewFieldDialog_Test.cpp
   src/editor/ProcessWatcher_Test.cpp
 
   src/eudcat/main_Test.cpp

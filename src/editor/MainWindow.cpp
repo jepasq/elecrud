@@ -12,6 +12,7 @@
 #include "icons.hpp"
 
 #include "GeneratorV1.hpp"
+#include "NewFieldDialog.hpp"
 #include "NewCollectionDialog.hpp"
 
 #include <stdio.h>      /* printf */
@@ -46,6 +47,7 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
  FXMAPFUNC(SEL_CHANGED,MainWindow::ID_DSCR,MainWindow::onProjectDescChanged),
 
  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NCOL,MainWindow::onNewCollection),
+ FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NFIL,MainWindow::onNewCollection),
 
  FXMAPFUNC(SEL_SELECTED,MainWindow::ID_COLI,MainWindow::onCollSelectionChanged),
  
@@ -717,3 +719,22 @@ MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
   return 1;
 }
 
+long
+MainWindow::onNewField(FXObject*,FXSelector,void*)
+{
+  try
+    {
+      auto id = collectionsList->getCurrentItem();
+      Collection* data = static_cast<Collection*>(collectionsList
+						  ->getItemData(id));
+      NewFieldDialog nfd(this, data);
+      auto ret = nfd.execute(PLACEMENT_OWNER);
+  
+    }
+  catch (std::invalid_argument e)
+    {
+      std::cerr << e.what() << std::endl;
+    }
+
+  return 1;
+}
