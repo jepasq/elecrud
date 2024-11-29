@@ -1,8 +1,11 @@
 #include "NewFieldDialog.hpp"
 
 #include "FieldType.hpp"
+#include "Collection.hpp"
 
 #include <stdexcept>
+
+#include <sstream>
 
 // Map
 FXDEFMAP(NewFieldDialog) NewFieldDialogMap[]={
@@ -27,7 +30,13 @@ NewFieldDialog::NewFieldDialog(FXWindow *owner, Collection* parent):
   desc = "zer";
   
   checkCollection(parent);
-  
+
+  // New title
+  std::ostringstream oss;
+  auto n = parent->getName().text();
+  oss << "New Field for collection '" << n << "'";
+  setTitle(oss.str().c_str());
+
   construct();
 }
 
@@ -68,6 +77,13 @@ NewFieldDialog::construct()
   auto labPrjName=new FXLabel(pph1, "Field name :", 0, LAYOUT_FIX_WIDTH );
   labPrjName->setWidth(120);
   tfName = new FXTextField(pph1, 60, this, ID_COLNAM);
+
+  // Type
+  auto pph2 = new FXHorizontalFrame(pane);
+  new FXLabel(pph2, "Field type :", 0, LAYOUT_FIX_WIDTH);
+  cbType = new FXComboBox(pph2, 60, this, ID_COLNAM);
+
+  
   
   new FXLabel(pane, "Multiline description and notes :");
   ftDescription = new FXText(pane, this, ID_COLDES,

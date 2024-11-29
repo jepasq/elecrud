@@ -187,6 +187,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Continue Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-11-29 ven. 10:43]--[2024-11-29 ven. 10:55] =>  0:12
 CLOCK: [2024-11-28 jeu. 11:01]--[2024-11-28 jeu. 11:18] =>  0:17
 CLOCK: [2024-11-28 jeu. 10:26]--[2024-11-28 jeu. 10:41] =>  0:15
 CLOCK: [2024-11-28 jeu. 09:33]--[2024-11-28 jeu. 09:46] =>  0:13
@@ -223,8 +224,10 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
 
 - [-] NewFieldDialog
   - [X] New Field button must be gray out by default
-  - [ ] Must contain parent collection name
-  
+  - [ ] Title must contain parent collection name
+    Seems spurious sometimes (random letters)
+  - [ ] Must feed combobox with possible type from factory  
+    
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter
 - [ ] Entering an invalid collection shouldn't hide dialog

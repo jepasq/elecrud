@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-28 (27 Nov. 2024 - ???) SLOC ?,???
-- (4) Correctly set Collection list item data
+- (5) Add collection name to NewFieldDialog title
+- Correctly set Collection list item data
 - Add first NewFieldDialog unit test
 - New field button deactivated by default and basic dialog
 - ftString implementation

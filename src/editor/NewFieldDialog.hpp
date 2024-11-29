@@ -42,6 +42,7 @@ protected:
 
 private:
   FXTextField* tfName;        //!< The Name textfield
+  FXComboBox*  cbType;        //!< The type combobox
   FXText*      ftDescription; //!< The The description multiline text
 
   FXString name; //!< Temporary name returned by getter
