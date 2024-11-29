@@ -20,7 +20,7 @@ FieldTypeString::~FieldTypeString()
 std::string
 FieldTypeString::typeName() const
 {
-  return mValue.text();
+  return "string";
 }
   
 FXString

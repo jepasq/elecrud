@@ -1,6 +1,7 @@
 #include "NewFieldDialog.hpp"
 
 #include "FieldType.hpp"
+#include "FieldTypeFactory.hpp"
 #include "Collection.hpp"
 
 #include <stdexcept>
@@ -81,9 +82,12 @@ NewFieldDialog::construct()
   // Type
   auto pph2 = new FXHorizontalFrame(pane);
   new FXLabel(pph2, "Field type :", 0, LAYOUT_FIX_WIDTH);
-  cbType = new FXComboBox(pph2, 60, this, ID_COLNAM);
+  cbType = new FXComboBox(pph2, 60, this, ID_COLNAM /* Must be changed */);
 
-  
+  // Feed types
+  FieldTypeFactory ftf;
+  for (auto const& i : ftf.getKeys())
+    cbType->appendItem(FXString(i.c_str()));
   
   new FXLabel(pane, "Multiline description and notes :");
   ftDescription = new FXText(pane, this, ID_COLDES,
