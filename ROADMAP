@@ -231,7 +231,8 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
   - [ ] Title must contain parent collection name
     Seems spurious sometimes (random letters or even description content)
     - It seems to work now, maybe remove Collection* push back now
-    
+      Maybe t"est it after deleting the base class first
+      
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter
 - [ ] Entering an invalid collection shouldn't hide dialog
