@@ -81,7 +81,8 @@ public:
 
   long onNewCollection(FXObject*,FXSelector,void*);
   long onNewField(FXObject*,FXSelector,void*);
-  long onCollSelectionChanged(FXObject*,FXSelector,void*);
+  long onCollSelChanged(FXObject*,FXSelector,void*);
+  long onCollDeselChanged(FXObject*,FXSelector,void*);
 
   void addLogMessage(const FXString&);  
   void resetAllFields();

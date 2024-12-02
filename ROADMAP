@@ -187,6 +187,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Continue Collection handling UI
 :LOGBOOK:
+CLOCK: [2024-12-02 lun. 09:44]--[2024-12-02 lun. 09:53] =>  0:09
 CLOCK: [2024-11-29 ven. 10:57]--[2024-11-29 ven. 11:22] =>  0:25
 CLOCK: [2024-11-29 ven. 10:43]--[2024-11-29 ven. 10:55] =>  0:12
 CLOCK: [2024-11-28 jeu. 11:01]--[2024-11-28 jeu. 11:18] =>  0:17
@@ -227,7 +228,7 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
   - [X] New Field button must be gray out by default
   - [X] Must feed combobox with possible type from factory  
   - [ ] Title must contain parent collection name
-    Seems spurious sometimes (random letters)
+    Seems spurious sometimes (random letters or even description content)
     
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter

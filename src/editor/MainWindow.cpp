@@ -49,7 +49,8 @@ FXDEFMAP(MainWindow) MainWindowMap[]={
  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NCOL,MainWindow::onNewCollection),
  FXMAPFUNC(SEL_COMMAND,MainWindow::ID_NFIL,MainWindow::onNewField),
 
- FXMAPFUNC(SEL_SELECTED,MainWindow::ID_COLI,MainWindow::onCollSelectionChanged),
+ FXMAPFUNC(SEL_SELECTED,MainWindow::ID_COLI,MainWindow::onCollSelChanged),
+ FXMAPFUNC(SEL_DESELECTED,MainWindow::ID_COLI,MainWindow::onCollDeselChanged),
  
 };
 
@@ -701,7 +702,7 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
  *
  */
 long
-MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
+MainWindow::onCollSelChanged(FXObject*,FXSelector,void* itemId)
 {
   int i = (long int)itemId;
   cout << "Collection selection changed (Id is '" << i << "')" << endl;
@@ -717,6 +718,14 @@ MainWindow::onCollSelectionChanged(FXObject*,FXSelector,void* itemId)
   
   return 1;
 }
+
+long
+MainWindow::onCollDeselChanged(FXObject*,FXSelector,void*)
+{
+  fbNewField->disable();
+  return 1;
+}
+
 
 long
 MainWindow::onNewField(FXObject*,FXSelector,void*)
