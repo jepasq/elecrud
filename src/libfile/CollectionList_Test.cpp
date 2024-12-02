@@ -3,6 +3,10 @@
 #include "Collection.hpp"
 #include "CollectionList.hpp"
 
+#include <memory>  // USES shared_ptr
+
+using namespace std;
+
 /// Creating an empty list
 BOOST_AUTO_TEST_CASE( Collection_size_0 )
 {
@@ -30,6 +34,17 @@ BOOST_AUTO_TEST_CASE( Collection_name_collision )
   cl.push_back(&c);
   BOOST_REQUIRE(cl.isNameInUse("name1"));
   BOOST_REQUIRE(!cl.isNameInUse("name2"));
+}
+
+BOOST_AUTO_TEST_CASE( Collection_spurious_getNAme )
+{
+  FXString n = "namecoll1";
+  CollectionList cl;
+  Collection c(n);
+  cl.push_back(&c);
+  BOOST_REQUIRE( cl.size() == 1 );
+
+  BOOST_REQUIRE( cl.at(0).get()->getName() == n );
 }
 
 

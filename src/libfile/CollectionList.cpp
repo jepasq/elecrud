@@ -19,10 +19,18 @@ CollectionList::size() const
   *
   */
 void
+CollectionList::push_back(std::shared_ptr<Collection> c)
+{
+  collections.push_back(c);
+}
+
+void
 CollectionList::push_back(Collection* c)
 {
+  // This seems to fail
   collections.push_back(make_shared<Collection>(c));
 }
+
 
 /** Is the given collection name already in use ?
  *
@@ -39,4 +47,10 @@ CollectionList::isNameInUse(const FXString& vName) const
       return true;
   
   return false;
+}
+
+std::shared_ptr<Collection>
+CollectionList::at(size_t pos) const
+{
+  return collections.at(pos);
 }

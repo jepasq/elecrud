@@ -16,8 +16,11 @@ class CollectionList
 public:
   size_t size() const;
 
+  void push_back(std::shared_ptr<Collection>);
   void push_back(Collection*);
 
+  std::shared_ptr<Collection> at(size_t) const;
+  
   bool isNameInUse(const FXString&) const;
   
 private:

@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.2-28 (27 Nov. 2024 - ???) SLOC ?,???
-- (7) Handle collection list deselection message and disable new field button
+- (8) CollectionList::at implementation
+- Handle collection list deselection message and disable new field button
 - Feed NewFieldDialog types combo box with FieldTypeFactory keys
 - Add collection name to NewFieldDialog title
 - Correctly set Collection list item data

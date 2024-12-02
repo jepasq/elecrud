@@ -681,8 +681,9 @@ MainWindow::onNewCollection(FXObject*,FXSelector,void*)
       if (!collections.isNameInUse(n))
 	{
 	  auto c = make_shared<Collection>(n, ncd.getDescription());
-	  collectionsList->appendItem(c->getOneLiner(), nullptr, c.get());
-	  collections.push_back(c.get());
+	  collectionsList->appendItem(c->getOneLiner(), nullptr /* Icon */,
+				      c.get());
+	  collections.push_back(c);
 	}
       else
 	{
