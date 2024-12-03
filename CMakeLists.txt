@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(elecrud VERSION 0.0.2)
+project(elecrud VERSION 0.0.3)
 set(REVISION 28)
 
 set(CMAKE_BUILD_TYPE "Debug")

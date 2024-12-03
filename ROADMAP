@@ -185,7 +185,20 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   Seems to be fixed by an update
 - [X] eudcat members not documented (StartupOptions) but no warning in logfile
 - [ ] Must add \file document block at least (but not only) for headers
-**** TODO Continue Collection handling UI
+**** TODO Continue Collection handling UI (2)
+- [ ] Must add a FieldType one liner to add it to the FXList
+
+- [ ] collections could be a projectfile member (to be saved and load)
+  With a mutable getter
+- [ ] Entering an invalid collection shouldn't hide dialog
+- [ ] Collections list may need a data pointer to modify the right collection
+  when changing fields
+  Use FXListItem::setData and  FXList::getItemData
+  - [ ] Can't get item ID for instance
+- [ ] Add a 'Add field' pane
+- [ ] The new button make the below pane switch between coll and field ones
+*** DONE v0.0.3
+**** DONE Continue Collection handling UI (1)
 :LOGBOOK:
 CLOCK: [2024-12-03 mar. 09:29]--[2024-12-03 mar. 09:42] =>  0:13
 CLOCK: [2024-12-02 lun. 10:04]--[2024-12-02 lun. 10:27] =>  0:23
@@ -225,7 +238,6 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
 - [X] FieldTypeFactory
   With a basic list of fieldTypes
   - [X] UI could use a typelist returned as a string list to select from
-
 - [X] NewFieldDialog
   - [X] New Field button must be gray out by default
   - [X] Must feed combobox with possible type from factory  
@@ -233,18 +245,6 @@ CLOCK: [2024-11-21 jeu. 11:31]--[2024-11-21 jeu. 11:52] =>  0:21
     Seems spurious sometimes (random letters or even description content)
     - It seems to work now, maybe remove Collection* push back now
       Maybe test it after deleting the base class first
-
-- [ ] Must add a FieldType one liner to add it to the FXList
-
-- [ ] collections could be a projectfile member (to be saved and load)
-  With a mutable getter
-- [ ] Entering an invalid collection shouldn't hide dialog
-- [ ] Collections list may need a data pointer to modify the right collection
-  when changing fields
-  Use FXListItem::setData and  FXList::getItemData
-  - [ ] Can't get item ID for instance
-- [ ] Add a 'Add field' pane
-- [ ] The new button make the below pane switch between coll and field ones  
 **** DONE Create editor's Collection handling UI
 :LOGBOOK:
 CLOCK: [2024-11-21 jeu. 11:02]--[2024-11-21 jeu. 11:18] =>  0:16
