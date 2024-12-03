@@ -15,13 +15,26 @@ class Field
 public:
   Field(const FXString&);
 
+  void  setName(const FXString&);
   const FXString& getName() const;
+
+  void  setDescription(const FXString&);
+  const FXString& getDescription() const;
+
+  
+  FX::FXString getOneLiner() const;
   
 private:
-  /** The unique name of this field
+  /** The unique name of this field. Can't be empty.
    *
    */
   FXString name;
+
+  /** The, eventually multiline, field description.
+   *
+   */
+  FXString description;
+
   /** The type of this field. May come froms a factory
    *
    */
