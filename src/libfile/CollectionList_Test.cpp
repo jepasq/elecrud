@@ -19,10 +19,10 @@ BOOST_AUTO_TEST_CASE( Collection_push_back )
 {
   CollectionList cl;
   Collection c("namecoll1");
-  cl.push_back(&c);
+  cl.push_back(make_shared<Collection>(c));
   BOOST_REQUIRE( cl.size() == 1 );
 
-  cl.push_back(new Collection("name2"));
+  cl.push_back(make_shared<Collection>("name2"));
   BOOST_REQUIRE( cl.size() == 2 );
 }
 
@@ -31,20 +31,8 @@ BOOST_AUTO_TEST_CASE( Collection_name_collision )
 {
   CollectionList cl;
   Collection c("name1");
-  cl.push_back(&c);
+  cl.push_back(make_shared<Collection>(c));
   BOOST_REQUIRE(cl.isNameInUse("name1"));
   BOOST_REQUIRE(!cl.isNameInUse("name2"));
 }
-
-BOOST_AUTO_TEST_CASE( Collection_spurious_getNAme )
-{
-  FXString n = "namecoll1";
-  CollectionList cl;
-  Collection c(n);
-  cl.push_back(&c);
-  BOOST_REQUIRE( cl.size() == 1 );
-
-  BOOST_REQUIRE( cl.at(0).get()->getName() == n );
-}
-
 

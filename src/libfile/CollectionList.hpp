@@ -17,7 +17,9 @@ public:
   size_t size() const;
 
   void push_back(std::shared_ptr<Collection>);
-  void push_back(Collection*);
+  /*
+  //Removes cause it leaks memory if raw pointer is later deleted
+  void push_back(Collection*);  */
 
   std::shared_ptr<Collection> at(size_t) const;
   

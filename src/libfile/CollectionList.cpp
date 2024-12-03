@@ -24,14 +24,6 @@ CollectionList::push_back(std::shared_ptr<Collection> c)
   collections.push_back(c);
 }
 
-void
-CollectionList::push_back(Collection* c)
-{
-  // This seems to fail
-  collections.push_back(make_shared<Collection>(c));
-}
-
-
 /** Is the given collection name already in use ?
  *
  *  It is used to check if a to-be-added collection name is unique.
