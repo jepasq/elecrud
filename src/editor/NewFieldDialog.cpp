@@ -165,3 +165,14 @@ NewFieldDialog::getDescription(void) const
 {
   return desc;
 }
+
+/** Get the typename that represent the selected type
+ *
+ *  @return The type to text.
+ *
+ */
+std::string
+NewFieldDialog::getTypename() const
+{
+  return cbType->getText().text();
+}

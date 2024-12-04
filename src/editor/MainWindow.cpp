@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <memory>    // USES make_shared
 
 #include "Elecrud.hpp"
 #include "icons.hpp"
@@ -14,6 +15,9 @@
 #include "GeneratorV1.hpp"
 #include "NewFieldDialog.hpp"
 #include "NewCollectionDialog.hpp"
+
+#include "Field.hpp"
+#include "FieldTypeFactory.hpp"
 
 #include <stdio.h>      /* printf */
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
@@ -191,8 +195,8 @@ MainWindow::MainWindow(Elecrud* app, const FX::FXString& windowTitle):
   
   auto allFields =new FXVerticalFrame(collectPane,LAYOUT_FILL_X|LAYOUT_FILL_Y);
   new FXLabel(allFields, "Fields details");
-  new FXList(allFields, nullptr, 0,
-	     FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
+  fieldList = new FXList(allFields, nullptr, 0,
+			 FX::LIST_SINGLESELECT|LAYOUT_FILL_X|LAYOUT_FILL_Y);
   fbNewField = new FXButton(allFields, "New field ...", nullptr, this, ID_NFIL);
   fbNewField->disable();
   
@@ -738,7 +742,16 @@ MainWindow::onNewField(FXObject*,FXSelector,void*)
 						  ->getItemData(id));
       NewFieldDialog nfd(this, data);
       auto ret = nfd.execute(PLACEMENT_OWNER);
-  
+      if (ret == 1)
+	{
+	  auto newField = make_shared<Field>(nfd.getName());
+	  newField->setDescription(nfd.getDescription());
+	  FieldTypeFactory ftf;
+	  newField->setType(ftf.newInstance(nfd.getTypename()));
+	  fieldList->appendItem(newField->getOneLiner());
+	    
+	}
+      
     }
   catch (std::invalid_argument e)
     {

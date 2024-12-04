@@ -188,10 +188,12 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Continue Collection handling UI (2)
 :LOGBOOK:
+CLOCK: [2024-12-04 mer. 12:51]--[2024-12-04 mer. 13:09] =>  0:18
 CLOCK: [2024-12-04 mer. 11:12]--[2024-12-04 mer. 11:48] =>  0:36
 CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 :END:
 - [X] Must add a Field one liner to add it to the FXList
+- [X] Add a 'Add field' pane
   
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter
@@ -200,7 +202,6 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
   when changing fields
   Use FXListItem::setData and  FXList::getItemData
   - [ ] Can't get item ID for instance
-- [ ] Add a 'Add field' pane
 - [ ] The new button make the below pane switch between coll and field ones
 *** DONE v0.0.3
 **** DONE Continue Collection handling UI (1)

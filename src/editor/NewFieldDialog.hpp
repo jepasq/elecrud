@@ -8,6 +8,8 @@
 
 #include <fox-1.6/fx.h>
 
+#include <string>
+
 // Forward declarations
 class Collection;
 class FieldType;
@@ -40,6 +42,8 @@ public:
   const FXString& getDescription(void) const;
 
   static void checkCollection(Collection*);
+
+  std::string getTypename() const;
   
 protected:
   NewFieldDialog(){}    // Needed by FXIMPLEMENT macro
@@ -52,8 +56,6 @@ private:
 
   FXString name; //!< Temporary name returned by getter
   FXString desc; //!< Temporary description returned by getter
-
-  FieldType*   type;  //!< The type of this field (from FieldTypeFactory)
 };
 
 #endif // !__NEW_FIELD_DIALOG_HPP__

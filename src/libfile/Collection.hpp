@@ -5,8 +5,7 @@
 
 #include <vector>
 
-// TODO: replace witrh a real class xD
-typedef int Field; //!< A collection field, with type and name at least
+#include "Field.hpp"
 
 /** A collection is the definition of an ordered collection of fields
  *
