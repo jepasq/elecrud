@@ -3,7 +3,9 @@
 
 #include <fox-1.6/fx.h>
 
-typedef int FieldType;
+// Forward declatations
+class FieldType;
+// End of forward declatations
 
 /** A field (also called a column in a database context) with a name and a type
  *
@@ -21,6 +23,8 @@ public:
   void  setDescription(const FXString&);
   const FXString& getDescription() const;
 
+  void setType(FieldType*);
+  
   
   FX::FXString getOneLiner() const;
   

@@ -1,11 +1,13 @@
 #include "Field.hpp"
 
+#include <stdexcept>
+
+#include "FieldType.hpp"
+
 Field::Field(const FXString& vName):
-  name(vName),
-  
   type(nullptr)
 {
-
+  setName(vName);
 }
 
 const FXString&
@@ -17,6 +19,9 @@ Field::getName() const
 void
 Field::setName(const FXString& n)
 {
+  if (n.empty())
+    throw std::invalid_argument("New Field name can't be empty");
+  
   name = n;
 }
 
@@ -32,9 +37,34 @@ Field::getDescription() const
   return description;
 }
 
+void
+Field::setType(FieldType* t)
+{
+  type = t;
+}
+
+
 
 FX::FXString
 Field::getOneLiner() const
 {
-  return "";
+  FXString t = "";
+
+  if (type)
+    {
+      t = FXString(type->typeName().c_str()).trunc(3);
+      t += " ";
+    }
+
+  t += name;
+
+  if (!description.empty())
+    {
+      t+= " (" + description + ")";
+
+    }
+    
+  return t;
 }
+
+
