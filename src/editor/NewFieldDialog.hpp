@@ -1,6 +1,11 @@
 #ifndef __NEW_FIELD_DIALOG_HPP__
 #define __NEW_FIELD_DIALOG_HPP__
 
+/** @file NewFieldDialog.hpp
+ *  Field adding dialog header.
+ *
+ */
+
 #include <fox-1.6/fx.h>
 
 // Forward declarations
@@ -48,7 +53,7 @@ private:
   FXString name; //!< Temporary name returned by getter
   FXString desc; //!< Temporary description returned by getter
 
-  FieldType*   type;
+  FieldType*   type;  //!< The type of this field (from FieldTypeFactory)
 };
 
 #endif // !__NEW_FIELD_DIALOG_HPP__

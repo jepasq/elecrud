@@ -1,3 +1,8 @@
+/** @file NewFieldDialog.cpp
+ *  Field adding dialog implementation.
+ *
+ */
+
 #include "NewFieldDialog.hpp"
 
 #include "FieldType.hpp"
@@ -18,13 +23,15 @@ FXDEFMAP(NewFieldDialog) NewFieldDialogMap[]={
 FXIMPLEMENT(NewFieldDialog, FXDialogBox, NewFieldDialogMap,
 	    ARRAYNUMBER(NewFieldDialogMap))
 
-/** @param coll The parent Collection. Shouldn't be nullptr.
+/** Create a new dialog
  *
- * @exception std::invalid_argument If the parent collection is invalid.
+ *  @param owner  The Window creating it. Usually a this pointer.
+ *  @param parent The parent Collection. Shouldn't be nullptr.
+ *
+ *  @exception std::invalid_argument If the parent collection is invalid.
  *
  */
-
-NewFieldDialog::NewFieldDialog(FXWindow *owner, Collection* parent):
+NewFieldDialog::NewFieldDialog(FXWindow* owner, Collection* parent):
   FXDialogBox(owner, "New Field")
 {
   name = "aze";
@@ -41,13 +48,20 @@ NewFieldDialog::NewFieldDialog(FXWindow *owner, Collection* parent):
   construct();
 }
 
+/// The dialog constructor
 NewFieldDialog::~NewFieldDialog()
 {
   delete tfName;
   delete ftDescription;
 }
 
-// Declared static to be easily unit tested 
+/** Check the given Collection pointer
+ *
+ * Declared static to be easily unit tested.
+ *
+ * @param parent The to-be-tested pointer.
+ *
+ */
 void
 NewFieldDialog::checkCollection(Collection* parent)
 {
