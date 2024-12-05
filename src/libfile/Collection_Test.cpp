@@ -56,15 +56,22 @@ BOOST_AUTO_TEST_CASE( Collection_one_liner )
   BOOST_REQUIRE(!c.getOneLiner().empty());
 }
 
-BOOST_AUTO_TEST_CASE( Collection_field_name_duplicate )
+BOOST_AUTO_TEST_CASE( Collection_append_field )
 {
   Collection c("Name", "Desc");
   BOOST_REQUIRE(c.getFields().size() == 0); // Empty by default
 
+  c.appendField(std::make_shared<Field>("aze"));
+  BOOST_REQUIRE(c.getFields().size() == 1); // Added worked
+}
+
+
+BOOST_AUTO_TEST_CASE( Collection_field_name_duplicate )
+{
+  Collection c("Name", "Desc");
   BOOST_REQUIRE(c.isFieldNameInUse("aze") == false);
   
   c.appendField(std::make_shared<Field>("aze"));
-  BOOST_REQUIRE(c.getFields().size() == 0); // Added worked
 
   BOOST_REQUIRE(c.isFieldNameInUse("aze") == true);
 }

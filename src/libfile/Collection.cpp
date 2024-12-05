@@ -112,12 +112,21 @@ Collection::getFields() const
 bool
 Collection::isFieldNameInUse(const FXString& n)
 {
+  for (auto const& f : fields)
+    if (f->getName() == n)
+      return true;
+  
   return false;
 }
 
+/** Append the given field
+  *
+  * @param f The field to be appened.
+  *
+  */
 void
-Collection::appendField(std::shared_ptr<Field>)
+Collection::appendField(std::shared_ptr<Field> f)
 {
-
+  fields.push_back(f);
 }
 
