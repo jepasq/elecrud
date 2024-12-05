@@ -103,3 +103,21 @@ Collection::getOneLiner() const
   return ret;
 }
 
+const tFieldList&
+Collection::getFields() const
+{
+  return fields;
+}
+
+bool
+Collection::isFieldNameInUse(const FXString& n)
+{
+  return false;
+}
+
+void
+Collection::appendField(std::shared_ptr<Field>)
+{
+
+}
+

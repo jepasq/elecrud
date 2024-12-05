@@ -188,13 +188,21 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 **** TODO Continue Collection handling UI (2)
 :LOGBOOK:
+CLOCK: [2024-12-05 jeu. 10:56]--[2024-12-05 jeu. 11:11] =>  0:15
 CLOCK: [2024-12-04 mer. 12:51]--[2024-12-04 mer. 13:09] =>  0:18
 CLOCK: [2024-12-04 mer. 11:12]--[2024-12-04 mer. 11:48] =>  0:36
 CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 :END:
 - [X] Must add a Field one liner to add it to the FXList
 - [X] Add a 'Add field' pane
-  
+
+- [ ] Field must be name-unique
+  - [ ] Add a fully tested collection::isFieldNameInUse function
+  - [ ] Use it before insertion and show an error dialog if duplicated
+    =if (!collections.isFieldNameInUse(n))=
+    
+- [ ] Selecting aa collection change associated fields in list
+
 - [ ] collections could be a projectfile member (to be saved and load)
   With a mutable getter
 - [ ] Entering an invalid collection shouldn't hide dialog

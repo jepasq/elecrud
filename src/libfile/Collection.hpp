@@ -4,8 +4,11 @@
 #include <fox-1.6/fx.h>
 
 #include <vector>
+#include <memory>
 
 #include "Field.hpp"
+
+typedef std::vector<std::shared_ptr<Field>> tFieldList;
 
 /** A collection is the definition of an ordered collection of fields
  *
@@ -26,12 +29,16 @@ public:
   void                setDescription(const FX::FXString&);
   const FX::FXString& getDescription() const;
 
-  FX::FXString getOneLiner() const;
+  FX::FXString      getOneLiner() const;
+  
+  void              appendField(std::shared_ptr<Field>);
+  const tFieldList& getFields() const;
+  bool              isFieldNameInUse(const FXString&);
   
 private:
   FX::FXString       name;        //!< The collection name
   FX::FXString       description; //!< An optional multiline description
-  std::vector<Field> fields; //!< The list of fields for this collection
+  tFieldList fields; //!< The list of fields for this collection
 };
 
 #endif // !__COLLECTION_HPP__
