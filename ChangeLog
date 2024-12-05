@@ -1,3 +1,13 @@
+* v0.0.3-29 (02 Dec. 2024 - 05 Dec. 2024) SLOC 4,555
+- Implement Collection::isFieldNameInUse function
+- Add unit tests and empty funcs for unique fieldName impl.
+- Add a collection field in UI works
+- Slightly improve NewFieldDialog API documentation
+- Implement Field::getOneLiner to fix unit tests
+- Add Field description and new failing tests
+- Close a collection handling ROADMAP section and bump version to 0.0.3
+- Remove CollectionList raw pointer push_back function
+
 * v0.0.2-28 (27 Nov. 2024 - 02 Dec. 2024) SLOC 4,345
 - CollectionList::at implementation
 - Handle collection list deselection message and disable new field button
