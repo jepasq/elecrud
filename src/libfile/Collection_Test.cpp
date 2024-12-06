@@ -76,6 +76,12 @@ BOOST_AUTO_TEST_CASE( Collection_field_name_duplicate )
   BOOST_REQUIRE(c.isFieldNameInUse("aze") == true);
 }
 
-
-
+/// If no description provided, do not add empty parenthesis
+BOOST_AUTO_TEST_CASE( Collection_one_liner_emptyDesc )
+{
+  Collection c1("Name", "DDD");
+  BOOST_REQUIRE(c1.getOneLiner() == "Name (DDD)");
+  Collection c2("Name");
+  BOOST_REQUIRE(c2.getOneLiner() == "Name");
+}
 

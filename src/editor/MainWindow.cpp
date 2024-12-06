@@ -744,14 +744,24 @@ MainWindow::onNewField(FXObject*,FXSelector,void*)
       auto ret = nfd.execute(PLACEMENT_OWNER);
       if (ret == 1)
 	{
-	  auto newField = make_shared<Field>(nfd.getName());
-	  newField->setDescription(nfd.getDescription());
-	  FieldTypeFactory ftf;
-	  newField->setType(ftf.newInstance(nfd.getTypename()));
-	  fieldList->appendItem(newField->getOneLiner());
-	    
+	  auto fname = nfd.getName();
+	  if (data->isFieldNameInUse(fname))
+	    {
+	      FXMessageBox::error(this,  FX::MBOX_OK,
+				  "Field's name already used",
+				  "The given field name is already used in "
+				  "the selected collection.");
+	    }
+	  else
+	    {
+	      auto newField = make_shared<Field>(fname);
+	      newField->setDescription(nfd.getDescription());
+	      FieldTypeFactory ftf;
+	      newField->setType(ftf.newInstance(nfd.getTypename()));
+	      fieldList->appendItem(newField->getOneLiner());
+	      data->appendField(newField);
+	    }
 	}
-      
     }
   catch (std::invalid_argument e)
     {
