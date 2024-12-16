@@ -119,7 +119,7 @@ private:
   FXVerticalFrame* generatPane;    //!< The generator log panel
   FXVerticalFrame* logPane;        //!< The project log panel
 
-  FXList* logger;             //!< The logger widget
+  FXList*      logger;        //!< The logger widget
   FXTextField* tfProjectName; //!< The widget for the project name edition
   FXTextField* tfProjectAuth; //!< The project author widget
   FXTextField* tfProjectVers; //!< The project version

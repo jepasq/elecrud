@@ -721,6 +721,12 @@ MainWindow::onCollSelChanged(FXObject*,FXSelector,void* itemId)
   // to make clickable again
   fbNewField->enable();
   
+  // Change listed fields of selected coll
+  auto selectedColl = static_cast<Collection*>(collPtr);
+  fieldList->clearItems();
+  for (auto const& f : selectedColl->getFields())
+    fieldList->appendItem(f->getOneLiner());
+  
   return 1;
 }
 
@@ -728,6 +734,7 @@ long
 MainWindow::onCollDeselChanged(FXObject*,FXSelector,void*)
 {
   fbNewField->disable();
+  fieldList->clearItems();
   return 1;
 }
 
