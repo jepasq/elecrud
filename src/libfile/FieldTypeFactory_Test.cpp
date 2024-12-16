@@ -19,6 +19,14 @@ BOOST_AUTO_TEST_CASE( FieldTypeFactoru_getKeys )
   auto l = ftf.getKeys();
   
   BOOST_REQUIRE( !l.empty() );
-  
 }
+
+BOOST_AUTO_TEST_CASE( FieldTypeFactoru_unknownKey )
+{
+  FieldTypeFactory ftf;
+
+  // Could you spot the typo ? ?
+  BOOST_REQUIRE_THROW(ftf.newInstance("intrrrreger"), std::invalid_argument);
+}
+
 

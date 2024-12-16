@@ -12,6 +12,14 @@
 class FieldType;
 // Enf of forward declaration
 
+/** A factory used to register new field types and create new instances
+ *
+ * The factory will internally use a name/type map to identify registered
+ * types. You can then create a new FieldType instance with the newInstance
+ * function, calling this function with a string parameter representing its
+ * type.
+ *
+ */
 class FieldTypeFactory
 {
 public:

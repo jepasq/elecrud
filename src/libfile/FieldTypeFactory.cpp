@@ -7,20 +7,33 @@
 
 using namespace std;
 
+/** Factory creator
+ *
+ * Also register default types.
+ *
+ */
 FieldTypeFactory::FieldTypeFactory()
 {  
   registerTypeInstance(new FieldTypeInt());
   registerTypeInstance(new FieldTypeString());
 }
 
-// Needed to avoid "error-invalid-application-of-sizeof-to-an-incomplete-type"
-// error
+/** The factory destructor
+ *
+ * Needed to avoid "error-invalid-application-of-sizeof-to-an-incomplete-type"
+ * error.
+ *
+ */
 FieldTypeFactory::~FieldTypeFactory()
 {
 
 }
 
-
+/** Register a new fieldType
+  *
+  * The field typename will be used as map key.
+  *
+  */
 void
 FieldTypeFactory::registerTypeInstance(FieldType* t)
 {

@@ -13,17 +13,17 @@
 
 #include <sstream>
 
-// Map
+/// The messages map used for event handling and binding
 FXDEFMAP(NewFieldDialog) NewFieldDialogMap[]={
   FXMAPFUNC(SEL_COMMAND,NewFieldDialog::ID_OK,NewFieldDialog::onCmdOk),
   FXMAPFUNC(SEL_COMMAND,NewFieldDialog::ID_CANCEL,NewFieldDialog::onCmdCancel),
 };
 
-// Object implementation
+/// Object implementation needed by Fox toolkit
 FXIMPLEMENT(NewFieldDialog, FXDialogBox, NewFieldDialogMap,
 	    ARRAYNUMBER(NewFieldDialogMap))
 
-/** Create a new dialog
+/** Create the dialog when you can configure a new collection's field
  *
  *  @param owner  The Window creating it. Usually a this pointer.
  *  @param parent The parent Collection. Shouldn't be nullptr.
