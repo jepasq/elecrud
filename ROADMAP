@@ -191,6 +191,7 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
   FXMAP
 **** TODO Continue Collection handling UI (2)
 :LOGBOOK:
+CLOCK: [2024-12-17 mar. 09:41]--[2024-12-17 mar. 09:51] =>  0:10
 CLOCK: [2024-12-16 lun. 10:37]--[2024-12-16 lun. 10:56] =>  0:19
 CLOCK: [2024-12-06 ven. 10:23]--[2024-12-06 ven. 10:47] =>  0:24
 CLOCK: [2024-12-05 jeu. 11:12]--[2024-12-05 jeu. 11:22] =>  0:10
@@ -206,8 +207,7 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
   - [X] Use it before insertion and show an error dialog if duplicated
     =if (!collections.isFieldNameInUse(n))=
 - [X] Selecting a collection change associated fields in list
-
-- [ ] FieldTypeFactory should throw an invalid_argument error on unknown key
+- [X] FieldTypeFactory should throw an invalid_argument error on unknown key
   Already unit tested
 
 - [ ] collections could be a projectfile member (to be saved and load)

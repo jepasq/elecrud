@@ -5,6 +5,9 @@
 #include "ftInt.hpp"
 #include "ftString.hpp"
 
+#include <stdexcept>
+
+
 using namespace std;
 
 /** Factory creator
@@ -43,6 +46,11 @@ FieldTypeFactory::registerTypeInstance(FieldType* t)
 FieldType*
 FieldTypeFactory::newInstance(const string& typen)
 {
+  // Can't use a temporary pointer here to check for nullity because of the use
+  // of unique_ptr
+  if (types[typen] == nullptr)
+    throw invalid_argument("Can't find type with name " + typen);
+  
   return types[typen]->newInstance();
 }
 
