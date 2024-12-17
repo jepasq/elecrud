@@ -8,6 +8,8 @@ constexpr unsigned int ONELINER_DECRIPTION_CHARS = 8;
 
 /** Named constructor
  *
+ *  Description is empty.
+ *
  *  @param vName The initial name field value.
  *
  */
@@ -16,6 +18,12 @@ Collection::Collection(const FX::FXString& vName):
 {
 }
 
+/** Named constructor
+ *
+ *  @param vName The initial name field value.
+ *  @param vDesc The collection description.
+ *
+ */
 Collection::Collection(const FX::FXString& vName, const FX::FXString& vDesc):
   name(vName),
   description(vDesc)
@@ -90,6 +98,9 @@ Collection::getDescription() const
 FX::FXString
 Collection::getOneLiner() const
 {
+  if (description.empty())
+    return name;
+  
   FXString ret = name;
   // Here we replace all occurences of newline char with a regular space
   // to get a one line representation
@@ -109,6 +120,13 @@ Collection::getFields() const
   return fields;
 }
 
+/** Check if the given field name is already used
+ *
+ * @param n The name to be checked.
+ *
+ * @return true if the string is already used as field name.
+ *
+ */
 bool
 Collection::isFieldNameInUse(const FXString& n)
 {
