@@ -1,6 +1,11 @@
 #ifndef __NEW_COLLECTION_DIALOG_HPP__
 #define __NEW_COLLECTION_DIALOG_HPP__
 
+/** @file NewCollectionDialog.hpp
+ *  Collection adding dialog header.
+ *
+ */
+
 #include <fox-1.6/fx.h>
 
 /** Here is a fox toolkit, eventually modal, dialog used to enter new

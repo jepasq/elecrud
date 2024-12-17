@@ -1,6 +1,10 @@
 #ifndef __STARTUP_OPTION_BOOL_HPP__
 #define __STARTUP_OPTION_BOOL_HPP__
 
+/** @file StartupOptionBool.hpp
+ *  The header of a bool flag for StartupOptions
+ *
+ */
 
 /** Defines the type of an option, default or manually set one.
   *
