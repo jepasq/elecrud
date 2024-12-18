@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.3-30 (05 Dec. 2024 - ???) SLOC ?,???
-- (6) Add a file comment block to a couple of headers
+- (7) Close a ProjectFile-related ROADMAP section
+- Add a file comment block to a couple of headers
 - Fix a remaining test fail when Collection description is empty
 - FieldTypeFactory throw an invalid argument exc. if invalid key
 - Slightly improve FieldTypeFactory's API documentation

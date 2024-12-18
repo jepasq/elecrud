@@ -45,47 +45,6 @@ CLOCK: [2024-01-11 jeu. 13:33]--[2024-01-11 jeu. 13:49] =>  0:16
     https://getbootstrap.com/docs/5.0/examples/sidebars/
 - [ ] Started but doesn't have full height
     
-**** TODO Next Project-file serialization work
-:LOGBOOK:
-CLOCK: [2024-09-23 lun. 09:58]--[2024-09-23 lun. 10:05] =>  0:07
-CLOCK: [2024-09-02 lun. 09:59]--[2024-09-02 lun. 10:12] =>  0:13
-CLOCK: [2024-08-30 ven. 10:32]--[2024-08-30 ven. 10:46] =>  0:14
-CLOCK: [2024-08-30 ven. 10:05]--[2024-08-30 ven. 10:17] =>  0:12
-CLOCK: [2024-08-07 mer. 05:22]--[2024-08-07 mer. 06:08] =>  0:46
-CLOCK: [2024-08-06 mar. 10:28]--[2024-08-06 mar. 10:52] =>  0:24
-CLOCK: [2024-07-18 jeu. 09:15]--[2024-07-18 jeu. 09:25] =>  0:10
-CLOCK: [2024-07-18 jeu. 08:38]--[2024-07-18 jeu. 09:12] =>  0:34
-CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
-CLOCK: [2023-05-18 jeu. 05:25]--[2023-05-18 jeu. 05:28] =>  0:03
-CLOCK: [2023-05-18 jeu. 04:21]--[2023-05-18 jeu. 04:40] =>  0:19
-CLOCK: [2023-05-11 jeu. 14:44]--[2023-05-11 jeu. 14:51] =>  0:07
-CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
-:END:
-- [X] Should add a status bar message when file is saved
-- [X] Serialization still fail (don't have project name in loaded one)
-  - [X] Try to test a stdStringToFXString function in ProjectFile
-    and ProjectFile uses it!
-  - [X] Make sure we correctly set ProjectFile values before saving it  
-    Implementing MainWindow::copyUiToProjectFile()
-- [X] Should be able to open a project from the argv filename
-  Started but it seems it doesn't work entirely
-
-- [-] Start to list MainWindow fields to be saved
-  Project pane : Name, Author, Version, License + Description
-  - Let's preprend function with setProject*
-  - [X] Let's add Author
-  - Let's preprend function with setGenerator*
-  - [X] Generator
-    - [X] filename : test added and implemented
-    - [X] CallNpm (boolean)  
-  - [X] Description
-    - [X] ProjectFile handles set,get and save
-    - [X] Add debug in eudcat  
-    - [X] MainWindow set ProjectFile description before save
-    - [X] MainWindow update GUI when loading file    
-  - [ ] Collection :
-    - [ ] Save all this collection of fields
-  - [ ] Log : not sure we should save this
 **** TODO Continue generation work
 :LOGBOOK:
 CLOCK: [2024-08-08 jeu. 09:38]--[2024-08-08 jeu. 09:47] =>  0:09
@@ -210,15 +169,56 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 - [X] Selecting a collection change associated fields in list
 - [X] FieldTypeFactory should throw an invalid_argument error on unknown key
   Already unit tested
-
-- [ ] collections could be a projectfile member (to be saved and load)
-  With a mutable getter
-- [ ] Entering an invalid collection shouldn't hide dialog
-- [ ] Collections list may need a data pointer to modify the right collection
+- [X] Collections list may need a data pointer to modify the right collection
   when changing fields
   Use FXListItem::setData and  FXList::getItemData
-  - [ ] Can't get item ID for instance
-- [ ] The new button make the below pane switch between coll and field ones
+  - [X] Can't get item ID for instance
+    
+- [ ] Entering an invalid collection name shouldn't hide dialog
+**** TODO Project-file's Collections serialization work
+- [ ] Collection :
+  - [ ] Save all this collection of fields
+  - [ ] collections could be a projectfile member (to be saved and load)
+    With a mutable getter
+- [ ] Log : not sure we should save this
+**** DONE Next Project-file serialization work
+:LOGBOOK:
+CLOCK: [2024-09-23 lun. 09:58]--[2024-09-23 lun. 10:05] =>  0:07
+CLOCK: [2024-09-02 lun. 09:59]--[2024-09-02 lun. 10:12] =>  0:13
+CLOCK: [2024-08-30 ven. 10:32]--[2024-08-30 ven. 10:46] =>  0:14
+CLOCK: [2024-08-30 ven. 10:05]--[2024-08-30 ven. 10:17] =>  0:12
+CLOCK: [2024-08-07 mer. 05:22]--[2024-08-07 mer. 06:08] =>  0:46
+CLOCK: [2024-08-06 mar. 10:28]--[2024-08-06 mar. 10:52] =>  0:24
+CLOCK: [2024-07-18 jeu. 09:15]--[2024-07-18 jeu. 09:25] =>  0:10
+CLOCK: [2024-07-18 jeu. 08:38]--[2024-07-18 jeu. 09:12] =>  0:34
+CLOCK: [2023-08-02 mer. 05:18]--[2023-08-02 mer. 05:34] =>  0:16
+CLOCK: [2023-05-18 jeu. 05:25]--[2023-05-18 jeu. 05:28] =>  0:03
+CLOCK: [2023-05-18 jeu. 04:21]--[2023-05-18 jeu. 04:40] =>  0:19
+CLOCK: [2023-05-11 jeu. 14:44]--[2023-05-11 jeu. 14:51] =>  0:07
+CLOCK: [2023-05-11 jeu. 13:16]--[2023-05-11 jeu. 13:40] =>  0:24
+:END:
+- [X] Should add a status bar message when file is saved
+- [X] Serialization still fail (don't have project name in loaded one)
+  - [X] Try to test a stdStringToFXString function in ProjectFile
+    and ProjectFile uses it!
+  - [X] Make sure we correctly set ProjectFile values before saving it  
+    Implementing MainWindow::copyUiToProjectFile()
+- [X] Should be able to open a project from the argv filename
+  Started but it seems it doesn't work entirely
+
+- [X] Start to list MainWindow fields to be saved
+  Project pane : Name, Author, Version, License + Description
+  - Let's preprend function with setProject*
+  - [X] Let's add Author
+  - Let's preprend function with setGenerator*
+  - [X] Generator
+    - [X] filename : test added and implemented
+    - [X] CallNpm (boolean)  
+  - [X] Description
+    - [X] ProjectFile handles set,get and save
+    - [X] Add debug in eudcat  
+    - [X] MainWindow set ProjectFile description before save
+    - [X] MainWindow update GUI when loading file    
 *** DONE v0.0.3
 **** DONE Continue Collection handling UI (1)
 :LOGBOOK:
