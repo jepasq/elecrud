@@ -67,4 +67,15 @@ Field::getOneLiner() const
   return t;
 }
 
+void
+Field::save(FXStream&)
+{
+
+}
+
+void
+Field::load(FXStream&)
+{
+
+}
 

@@ -59,5 +59,18 @@ BOOST_AUTO_TEST_CASE( Field_oneliner_int )
   BOOST_REQUIRE( f.getOneLiner() == "int a (bbb)" );
 }
 
+BOOST_AUTO_TEST_CASE( Field_saveToStream )
+{
+  FXMemoryStream ms;
+  
+  Field f("a");
+  f.setDescription("bbb");
+  f.save(ms);
 
+  Field f2("cc");
+  f2.load(ms);
+
+  BOOST_REQUIRE( f2.getName() == "a" );
+  BOOST_REQUIRE( f2.getDescription() == "bbb" );
+}
 

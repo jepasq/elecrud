@@ -25,8 +25,10 @@ public:
 
   void setType(FieldType*);
   
-  
   FX::FXString getOneLiner() const;
+
+  void save(FXStream&);
+  void load(FXStream&);
   
 private:
   /** The unique name of this field. Can't be empty.
