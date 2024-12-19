@@ -27,7 +27,7 @@ public:
   
   FX::FXString getOneLiner() const;
 
-  void save(FXStream&);
+  void save(FXStream&) const;
   void load(FXStream&);
   
 private:

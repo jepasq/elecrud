@@ -177,12 +177,13 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 - [ ] Entering an invalid collection name shouldn't hide dialog
 **** TODO Project-file's Collections serialization work
 :LOGBOOK:
+CLOCK: [2024-12-19 jeu. 10:41]--[2024-12-19 jeu. 11:41] =>  1:00
 CLOCK: [2024-12-18 mer. 12:38]--[2024-12-18 mer. 12:49] =>  0:11
 :END:
 - [ ] Collection :
   - [ ] Save all this collection of fields
     - [ ] Must be able to save a Field
-      - We will save to a given sFXStream passed as parameter (parent of both
+      - We will save to a given FXStream passed as parameter (parent of both
         FileStream and MemoryStream)
       - To let us save a field with nullptr type instance, we save "null"
 	instead of typename and we issue a warning.

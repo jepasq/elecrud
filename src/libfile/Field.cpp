@@ -67,15 +67,30 @@ Field::getOneLiner() const
   return t;
 }
 
+/** Save this field to the given stream
+ *
+ */
 void
-Field::save(FXStream&)
+Field::save(FXStream& s) const
 {
-
+  if (s.direction() != FXStreamSave)
+    throw std::invalid_argument("Stream in wrong direction to save() field");
+  
+  s << name;
+  s << description;
 }
 
+/** Load and override this field's member from the given stream
+ *
+ */
 void
-Field::load(FXStream&)
+Field::load(FXStream& s)
 {
-
+  if (s.direction() != FXStreamLoad)
+    throw std::invalid_argument("Stream in wrong direction to load() field");
+  
+  s >> name;
+  s >> description;
+  
 }
 
