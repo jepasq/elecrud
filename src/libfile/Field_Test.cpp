@@ -62,33 +62,38 @@ BOOST_AUTO_TEST_CASE( Field_oneliner_int )
 /// If steam has no/wrong direction, it should throw a n exception
 BOOST_AUTO_TEST_CASE( Field_saveNoDirection )
 {
-
+  FXMemoryStream ms;
+  Field f("a");
+  BOOST_REQUIRE_THROW( f.save(ms), std::invalid_argument );
 }
 
 /// If steam has no/wrong direction, it should throw a n exception
 BOOST_AUTO_TEST_CASE( Field_loadNoDirection )
 {
-
+  FXMemoryStream ms;
+  Field f("a");
+  BOOST_REQUIRE_THROW( f.load(ms), std::invalid_argument );
 }
 
 BOOST_AUTO_TEST_CASE( Field_saveToStream )
 {
   FXMemoryStream ms;
   constexpr auto sz = 180;
-  char c[sz];
+  FXuchar c[sz];
   
   Field f("a");
   f.setDescription("bbb");
-  //  ms.open(FXStreamSave, &c);
+  ms.open(FXStreamSave, c);
   f.save(ms);
   ms.close();
-  
+
   Field f2("cc");
-  //  ms.open(FXStreamLoad, &c);
+  ms.open(FXStreamLoad, c);
   f2.load(ms);
   ms.close();
 
   BOOST_REQUIRE( f2.getName() == "a" );
   BOOST_REQUIRE( f2.getDescription() == "bbb" );
 }
+
 
