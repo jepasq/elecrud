@@ -1,6 +1,11 @@
 #ifndef __COLLECTION_HPP__
 #define __COLLECTION_HPP__
 
+/** \file Collection.hpp
+  * The libfile's Collection class header.
+  *
+  */
+
 #include <fox-1.6/fx.h>
 
 #include <vector>

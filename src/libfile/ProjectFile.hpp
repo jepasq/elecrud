@@ -1,15 +1,14 @@
 #ifndef __PROJECT_FILE_HPP__
 #define __PROJECT_FILE_HPP__
 
-#include <string>
-#include <fstream>
-#include <fox-1.6/fx.h>
-
 /** \file ProjectFile.hpp
   * The libfile's ProjectFile class header.
   *
   */
 
+#include <string>
+#include <fstream>
+#include <fox-1.6/fx.h>
 
 // From https://stackoverflow.com/a/19841704
 bool file_exists(const FX::FXString& filename);

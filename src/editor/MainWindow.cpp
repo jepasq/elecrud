@@ -672,6 +672,11 @@ MainWindow::openProjectFile(const std::string& filename)
   updateTitle();
 }
 
+/** The new callection button callback
+  *
+  * @return Always 1 because we're using the event.
+  *
+  */
 long
 MainWindow::onNewCollection(FXObject*,FXSelector,void*)
 {
@@ -730,6 +735,9 @@ MainWindow::onCollSelChanged(FXObject*,FXSelector,void* itemId)
   return 1;
 }
 
+/** The Collection list deselection callback
+ *
+ */
 long
 MainWindow::onCollDeselChanged(FXObject*,FXSelector,void*)
 {
@@ -738,7 +746,9 @@ MainWindow::onCollDeselChanged(FXObject*,FXSelector,void*)
   return 1;
 }
 
-
+/** The new Field button callback
+ *
+ */
 long
 MainWindow::onNewField(FXObject*,FXSelector,void*)
 {

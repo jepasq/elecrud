@@ -115,6 +115,7 @@ CLOCK: [2024-06-05 mer. 20:56]--[2024-06-05 mer. 21:14] =>  0:18
   for instance, the .github worflow has to run =make icons= manually
 **** TODO Keep improving doxygen documentation
 :LOGBOOK:
+CLOCK: [2024-12-20 ven. 11:58]--[2024-12-20 ven. 12:20] =>  0:22
 CLOCK: [2024-12-16 lun. 11:21]--[2024-12-16 lun. 12:05] =>  0:44
 CLOCK: [2024-12-04 mer. 11:58]--[2024-12-04 mer. 12:28] =>  0:30
 CLOCK: [2024-11-01 ven. 11:16]--[2024-11-01 ven. 11:42] =>  0:26
@@ -177,11 +178,14 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 - [ ] Entering an invalid collection name shouldn't hide dialog
 **** TODO Project-file's Collections serialization work
 :LOGBOOK:
+CLOCK: [2024-12-20 ven. 11:56]--[2024-12-20 ven. 11:58] =>  0:02
 CLOCK: [2024-12-20 ven. 11:04]--[2024-12-20 ven. 11:46] =>  0:42
 CLOCK: [2024-12-19 jeu. 11:43]--[2024-12-19 jeu. 11:52] =>  0:09
 CLOCK: [2024-12-19 jeu. 10:41]--[2024-12-19 jeu. 11:41] =>  1:00
 CLOCK: [2024-12-18 mer. 12:38]--[2024-12-18 mer. 12:49] =>  0:11
 :END:
+- [ ] Why IncompatibleArguments and not Argument
+
 - [ ] Collection :
   - [ ] Save all this collection of fields
     - [ ] Must be able to save a Field

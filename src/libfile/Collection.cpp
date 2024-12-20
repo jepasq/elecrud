@@ -1,5 +1,10 @@
 #include "Collection.hpp"
 
+/** \file Collection.cpp
+  * The libfile's Collection class implementation.
+  *
+  */
+
 /** Defines the maximum number of characters of the description we include in
  *  the oneLiner result.
  *
