@@ -5,6 +5,7 @@
 #include "Field.hpp"
 #include "FieldTypeFactory.hpp"
 
+#include "ftInt.hpp"
 
 BOOST_AUTO_TEST_CASE( Field_name )
 {
@@ -95,5 +96,53 @@ BOOST_AUTO_TEST_CASE( Field_saveToStream )
   BOOST_REQUIRE( f2.getName() == "a" );
   BOOST_REQUIRE( f2.getDescription() == "bbb" );
 }
+
+BOOST_AUTO_TEST_CASE( Field_saveFieldType_nullptr )
+{
+  FXMemoryStream ms;
+  constexpr auto sz = 180;
+  FXuchar c[sz];
+
+  // nullptr type
+  Field f("a");
+  f.setDescription("bbb");
+  ms.open(FXStreamSave, c);
+  f.save(ms);
+  ms.close();
+
+  Field f2("cc");
+  ms.open(FXStreamLoad, c);
+  f2.load(ms);
+  ms.close();
+
+  BOOST_REQUIRE( f2.getType() == nullptr );
+}
+
+BOOST_AUTO_TEST_CASE( Field_saveFieldType_int )
+{
+  FXMemoryStream ms;
+  constexpr auto sz = 180;
+  FXuchar c[sz];
+
+  // nullptr type
+  Field f("a");
+  f.setType(new FieldTypeInt());
+  f.setDescription("bbb");
+  ms.open(FXStreamSave, c);
+  f.save(ms);
+  ms.close();
+
+  Field f2("cc");
+  ms.open(FXStreamLoad, c);
+  f2.load(ms);
+  ms.close();
+
+  // So this one shouldn't by nullptr if we serialized the typename
+  auto ttpe = f2.getType();
+  BOOST_REQUIRE( ttpe != nullptr );
+  if (ttpe)
+    BOOST_REQUIRE( ttpe->typeName() == "integer" );
+}
+
 
 

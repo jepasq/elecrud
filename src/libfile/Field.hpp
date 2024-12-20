@@ -3,6 +3,8 @@
 
 #include <fox-1.6/fx.h>
 
+#include "ftInt.hpp"
+
 // Forward declatations
 class FieldType;
 // End of forward declatations
@@ -23,7 +25,8 @@ public:
   void  setDescription(const FXString&);
   const FXString& getDescription() const;
 
-  void setType(FieldType*);
+  void             setType(FieldType*);
+  const FieldType* getType() const;
   
   FX::FXString getOneLiner() const;
 

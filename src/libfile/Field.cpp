@@ -94,3 +94,13 @@ Field::load(FXStream& s)
   
 }
 
+/** Get a const pointer to the FieldType instance
+ *
+ * @return A pointer to the type. May be nullptr.
+ *
+ */
+const FieldType*
+Field::getType() const
+{
+  return type;
+}
