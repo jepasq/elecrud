@@ -29,7 +29,7 @@ public:
   
 private:
 
-  int mValue;   // The internal value
+  int mValue;   //!< The internal value
 };
 
 #endif // !__FIELD_TYPE_INT_HPP__
