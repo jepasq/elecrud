@@ -9,8 +9,11 @@
 #include <string>       // USES std::string
 
 /** An invalid_argument exception thrown when icompatible Arguments are detected
-  *
-  */
+ *
+ *  The plural form is due to the fact than it needs at kleast two argument
+ *  for them to to become invalid.
+ *
+ */
 class IncompatibleArguments : public std::invalid_argument {
 public:
   /** Constructor with optional what argument

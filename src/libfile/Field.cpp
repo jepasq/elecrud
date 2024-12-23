@@ -3,6 +3,7 @@
 #include <stdexcept>
 
 #include "FieldType.hpp"
+#include "FieldTypeFactory.hpp"
 
 Field::Field(const FXString& vName):
   type(nullptr)
@@ -78,6 +79,12 @@ Field::save(FXStream& s) const
   
   s << name;
   s << description;
+  if (type == nullptr)
+    s << FXString("null");
+  else
+    s << FXString(type->typeName().c_str());
+  
+  
 }
 
 /** Load and override this field's member from the given stream
@@ -88,10 +95,21 @@ Field::load(FXStream& s)
 {
   if (s.direction() != FXStreamLoad)
     throw std::invalid_argument("Stream in wrong direction to load() field");
+
+  FXString typestr;
   
   s >> name;
   s >> description;
-  
+
+  s >> typestr;
+
+  if (typestr == "null")
+    type = nullptr;
+  else
+    {
+      FieldTypeFactory ftf;
+      type = ftf.newInstance(typestr.text());
+    }
 }
 
 /** Get a const pointer to the FieldType instance
