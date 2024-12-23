@@ -85,3 +85,22 @@ BOOST_AUTO_TEST_CASE( Collection_one_liner_emptyDesc )
   BOOST_REQUIRE(c2.getOneLiner() == "Name");
 }
 
+BOOST_AUTO_TEST_CASE( Collection_saveFieldList_len )
+{
+  FXMemoryStream ms;
+  constexpr auto sz = 180;
+  FXuchar buffer[sz];
+
+  Collection c("Name", "Desc");
+  c.appendField(std::make_shared<Field>("aze"));
+  ms.open(FXStreamSave, buffer);
+  c.save(ms);
+  ms.close();
+
+  Collection c2("Name", "Desc");
+  ms.open(FXStreamLoad, buffer);
+  c2.load(ms);
+  ms.close();
+
+  BOOST_REQUIRE(c2.getFields().size() == 1); // Load added one field
+}

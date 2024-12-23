@@ -39,6 +39,9 @@ public:
   void              appendField(std::shared_ptr<Field>);
   const tFieldList& getFields() const;
   bool              isFieldNameInUse(const FXString&);
+
+  void save(FXStream&) const;
+  void load(FXStream&);
   
 private:
   FX::FXString       name;        //!< The collection name

@@ -153,3 +153,15 @@ Collection::appendField(std::shared_ptr<Field> f)
   fields.push_back(f);
 }
 
+void
+Collection::save(FXStream&) const
+{
+
+}
+
+void
+Collection::load(FXStream&)
+{
+
+}
+
