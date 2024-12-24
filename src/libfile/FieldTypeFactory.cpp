@@ -46,10 +46,13 @@ FieldTypeFactory::registerTypeInstance(FieldType* t)
 FieldType*
 FieldTypeFactory::newInstance(const string& typen)
 {
+  if (typen.empty())
+    throw invalid_argument("Can't instantiate FieldType with empty name");
+
   // Can't use a temporary pointer here to check for nullity because of the use
   // of unique_ptr
   if (types[typen] == nullptr)
-    throw invalid_argument("Can't find type with name " + typen);
+    throw invalid_argument("Can't find type with name '" + typen + "'");
   
   return types[typen]->newInstance();
 }
