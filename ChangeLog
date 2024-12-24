@@ -1,3 +1,13 @@
+* v0.0.3-31 (18 Dec. 2024 - 24 Dec. 2024) SLOC 4,912
+- Change Collection::appendItem return type to allow chain call
+- Add failing tests to prepare Collection::save implementation
+- Improve ftInt members documentation
+- Implement Field load and save functions parts for field type
+- Fix multiple undocumentated members
+- New failing tests on the Field type pointer
+- Correctly use stream direction and uchar buffer to fix Field tests
+- Start to implement Field save/load on memory stream
+
 * v0.0.3-30 (05 Dec. 2024 - 18 Dec. 2024) SLOC 4,692
 - Add to-be-fixed Field tests for future save and load implementation
 - Close a ProjectFile-related ROADMAP section
