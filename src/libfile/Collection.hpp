@@ -36,7 +36,7 @@ public:
 
   FX::FXString      getOneLiner() const;
   
-  void              appendField(std::shared_ptr<Field>);
+  std::shared_ptr<Field> appendField(std::shared_ptr<Field>);
   const tFieldList& getFields() const;
   bool              isFieldNameInUse(const FXString&);
 

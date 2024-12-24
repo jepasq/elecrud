@@ -146,22 +146,37 @@ Collection::isFieldNameInUse(const FXString& n)
   *
   * @param f The field to be appened.
   *
+  * @return The inserted shared ptr to enable chain statements.
+  *
   */
-void
+std::shared_ptr<Field>
 Collection::appendField(std::shared_ptr<Field> f)
 {
   fields.push_back(f);
+  return f;
 }
 
 void
-Collection::save(FXStream&) const
+Collection::save(FXStream& s) const
 {
-
+  s << fields.size();
+  for (auto const& f : fields)
+    f->save(s);
 }
 
 void
-Collection::load(FXStream&)
+Collection::load(FXStream& s)
 {
 
+  int fieldsNumber;
+  s >> fieldsNumber;
+
+  for (int i=0; i< fieldsNumber; ++i)
+    {
+      auto f = this->appendField(std::make_shared<Field>("aa"));
+      f->load(s);
+    }
+    
+  
 }
 
