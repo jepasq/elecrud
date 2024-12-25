@@ -44,8 +44,6 @@ Field::setType(FieldType* t)
   type = t;
 }
 
-
-
 FX::FXString
 Field::getOneLiner() const
 {
@@ -83,7 +81,13 @@ Field::save(FXStream& s) const
     s << FXString("null");
   else
     s << FXString(type->typeName().c_str());
-  
+  /*
+    {
+      FXString fxs(type->typeName().c_str());
+      std::cout << "------> FXString: " << fxs.text() << std::endl;
+      s << fxs;
+    }
+  */
   
 }
 

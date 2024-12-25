@@ -40,6 +40,9 @@ FieldTypeFactory::~FieldTypeFactory()
 void
 FieldTypeFactory::registerTypeInstance(FieldType* t)
 {
+  if (t->typeName().empty())
+    throw invalid_argument("Can't register a new FieldType with empty name");
+  
   types[t->typeName()] = std::unique_ptr<FieldType>(t);
 }
 

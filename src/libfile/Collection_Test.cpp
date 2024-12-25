@@ -96,7 +96,8 @@ BOOST_AUTO_TEST_CASE( Collection_saveFieldList_len )
   ms.open(FXStreamSave, buffer);
   c.save(ms);
   ms.close();
-
+  
+  
   Collection c2("Name", "Desc");
   ms.open(FXStreamLoad, buffer);
   c2.load(ms);

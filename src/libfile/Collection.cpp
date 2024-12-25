@@ -119,6 +119,11 @@ Collection::getOneLiner() const
   return ret;
 }
 
+/** Return the actual fields list
+ *
+ *  @return A reference to the list.
+ *
+ */
 const tFieldList&
 Collection::getFields() const
 {
@@ -156,6 +161,11 @@ Collection::appendField(std::shared_ptr<Field> f)
   return f;
 }
 
+/** Save the collection and all its fields to the given stream
+ *
+ *  @param s The stream to save the current collection to.
+ *
+ */
 void
 Collection::save(FXStream& s) const
 {
@@ -164,6 +174,7 @@ Collection::save(FXStream& s) const
     f->save(s);
 }
 
+
 void
 Collection::load(FXStream& s)
 {
@@ -171,12 +182,10 @@ Collection::load(FXStream& s)
   int fieldsNumber;
   s >> fieldsNumber;
 
-  for (int i=0; i< fieldsNumber; ++i)
+  for (int i=0; i < fieldsNumber; ++i)
     {
       auto f = this->appendField(std::make_shared<Field>("aa"));
       f->load(s);
     }
-    
-  
 }
 

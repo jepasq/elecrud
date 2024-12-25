@@ -181,6 +181,7 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 - [ ] Entering an invalid collection name shouldn't hide dialog
 **** TODO Project-file's Collections serialization work
 :LOGBOOK:
+CLOCK: [2024-12-25 mer. 14:02]--[2024-12-25 mer. 14:27] =>  0:25
 CLOCK: [2024-12-24 mar. 10:55]--[2024-12-24 mar. 11:04] =>  0:09
 CLOCK: [2024-12-24 mar. 10:11]--[2024-12-24 mar. 10:35] =>  0:24
 CLOCK: [2024-12-23 lun. 16:02]--[2024-12-23 lun. 16:12] =>  0:10
