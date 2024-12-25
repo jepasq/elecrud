@@ -150,6 +150,8 @@ CLOCK: [2022-07-06 mer. 00:36]--[2022-07-06 mer. 00:42] =>  0:06
 - [ ] Must add \file document block at least (but not only) for headers
 - [ ] We have issue handling Ctor in fox-based classes using FXIMPLEMENT or
   FXMAP
+  - Actually trying to add these to Doxygen's EXCLUDE_SYMBOLS variable but it
+    doesn't work
 **** TODO Continue Collection handling UI (2)
 :LOGBOOK:
 CLOCK: [2024-12-17 mar. 09:55]--[2024-12-17 mar. 10:12] =>  0:17
