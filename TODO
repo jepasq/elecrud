@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/)
 
 * v0.0.3-32 (24 Dec. 2024 - ???) SLOC ?,???
-- (4) yargs-parser and other src/app dependencies update
+- (5) ProjectFile has now a mutable CollectionList member
+- yargs-parser and other src/app dependencies update
 - Slightly improve API documentation
 - Added some FX* macros to EXCLUDE_SYMBOLS trying to fix NewFieldDialog issue
 - Add a special throw case in FieldTypeFactory::newInstance for empty name

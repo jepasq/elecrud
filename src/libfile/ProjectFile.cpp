@@ -332,3 +332,9 @@ ProjectFile::getDescription(void) const
   return description;
 }
 
+CollectionList*
+ProjectFile::getCollections(void)
+{
+  return &colls;
+}
+

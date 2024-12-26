@@ -193,3 +193,13 @@ BOOST_AUTO_TEST_CASE( ProjectFile_description )
   BOOST_REQUIRE_EQUAL( pf2.getDescription().empty(), false );
 }
 
+/// Collections pointer is mutable and actually modify collection lists
+BOOST_AUTO_TEST_CASE( ProjectFile_mutable_collections )
+{
+  ProjectFile pf1;
+  BOOST_REQUIRE_EQUAL( pf1.getCollections()->size(), 0 );
+
+  pf1.getCollections()->push_back(std::make_shared<Collection>("name2"));
+  BOOST_REQUIRE_EQUAL( pf1.getCollections()->size(), 1 );
+  
+}

@@ -10,9 +10,13 @@
 #include <fstream>
 #include <fox-1.6/fx.h>
 
+#include "CollectionList.hpp"
+
 // From https://stackoverflow.com/a/19841704
 bool file_exists(const FX::FXString& filename);
 bool file_exists(const std::string& filename);
+
+
 
 /** The project file used to serialize a complete project
   *
@@ -50,6 +54,8 @@ public:
 
   void               setDescription(const std::string&);
   const std::string& getDescription(void) const;
+
+  CollectionList* getCollections(void);
   
   void debug(void) const;
   
@@ -67,6 +73,8 @@ private:
   bool generatorCallnpm;         //!< Call npm during generation ?
 
   std::string description;       //!< The project multiline description
+
+  CollectionList colls;
 };
 
 #endif // !__PROJECT_FILE_HPP__

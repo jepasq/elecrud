@@ -186,6 +186,7 @@ CLOCK: [2024-12-03 mar. 10:02]--[2024-12-03 mar. 10:34] =>  0:32
 - [ ] Entering an invalid collection name shouldn't hide dialog
 **** TODO Project-file's Collections serialization work
 :LOGBOOK:
+CLOCK: [2024-12-26 jeu. 12:01]--[2024-12-26 jeu. 12:39] =>  0:38
 CLOCK: [2024-12-25 mer. 14:02]--[2024-12-25 mer. 14:27] =>  0:25
 CLOCK: [2024-12-24 mar. 10:55]--[2024-12-24 mar. 11:04] =>  0:09
 CLOCK: [2024-12-24 mar. 10:11]--[2024-12-24 mar. 10:35] =>  0:24
@@ -207,6 +208,7 @@ CLOCK: [2024-12-18 mer. 12:38]--[2024-12-18 mer. 12:49] =>  0:11
     - [ ] Then, a collection with all its fields
   - [ ] collections could be a projectfile member (to be saved and load)
     With a mutable getter
+- [ ] eudcat shows Collection content : started
 - [ ] Log : not sure we should save this
 **** DONE Next Project-file serialization work
 :LOGBOOK:

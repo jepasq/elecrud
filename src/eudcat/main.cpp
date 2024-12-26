@@ -81,6 +81,15 @@ debugStdArgv(list<string>& l)
     cout << " - " << i << endl;
 }
 
+void
+printCollections(const CollectionList* c)
+{
+  auto s = c->size();
+  cout << "Number of collections : " << s << endl;
+  for (int i = 0 ; i < s ; ++i)
+    cout << " - " << c->at(i)->getOneLiner().text() << endl;
+}
+
 /** The main entry of the eudcat tool
   *
   *
@@ -114,6 +123,9 @@ main(int argc, char** argv)
       print_if_not_empty("Description", "\n"+pf.getDescription());
       std::cout << "\e[0m";
       print_if_not_empty("Generator filename", pf.getGeneratorFilename());
+
+      if (pf.getCollections()->size() > 0)
+	printCollections(pf.getCollections());
     }
   else // if (startupOptions.printAll)
     {
@@ -124,6 +136,8 @@ main(int argc, char** argv)
       std::cout << "\e[0m";
       print_all("Generator filename", pf.getGeneratorFilename());
       print_all("Call npm", pf.getGeneratorCallnpm()?"True":"False");
+
+      printCollections(pf.getCollections());
     }
   return 0;
 }
