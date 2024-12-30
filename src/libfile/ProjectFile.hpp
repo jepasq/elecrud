@@ -16,8 +16,6 @@
 bool file_exists(const FX::FXString& filename);
 bool file_exists(const std::string& filename);
 
-
-
 /** The project file used to serialize a complete project
   *
   */
@@ -74,7 +72,7 @@ private:
 
   std::string description;       //!< The project multiline description
 
-  CollectionList colls;
+  CollectionList colls;          //!< The internal Collection list
 };
 
 #endif // !__PROJECT_FILE_HPP__

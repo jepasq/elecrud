@@ -32,7 +32,7 @@ public:
   
 private:
 
-  FXString mValue;   // The internal stored value
+  FXString mValue;   //!< The internal stored value
 };
 
 #endif // !__FIELD_TYPE_STRING_HPP__

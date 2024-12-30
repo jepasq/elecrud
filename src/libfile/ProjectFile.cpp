@@ -1,5 +1,10 @@
 #include "ProjectFile.hpp"
 
+/** \file ProjectFile.cpp
+  * The libfile's ProjectFile implementation.
+  *
+  */
+
 #include <stdexcept>  // USES runtime_error
 #include <FXFileStream.h>
 
@@ -332,6 +337,13 @@ ProjectFile::getDescription(void) const
   return description;
 }
 
+/** Returns a mutable Collection pointer
+ *
+ *  The lifetime of this pointer will be this instance's one.
+ *
+ *  @return A pointer to the current Collection list.
+ *
+ */
 CollectionList*
 ProjectFile::getCollections(void)
 {
