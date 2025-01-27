@@ -5,18 +5,36 @@
 #include "FieldType.hpp"
 #include "FieldTypeFactory.hpp"
 
+/** A null-type named constructor
+ *
+ * The intername type will be set to nullptr.
+ *
+ *  @param vName The type name.
+ *
+ */
 Field::Field(const FXString& vName):
   type(nullptr)
 {
   setName(vName);
 }
 
+/** Return the type name
+ *
+ *  @return The name as FXString.
+ *
+ */
 const FXString&
 Field::getName() const
 {
   return name;
 }
 
+/** Change the current name
+ *
+ * @param n The new name to assign to the Field.
+ * @throw std::invalid_argument Thrown if the new name is empty. 
+ *
+ */
 void
 Field::setName(const FXString& n)
 {
@@ -26,24 +44,52 @@ Field::setName(const FXString& n)
   name = n;
 }
 
+/** Change the current description
+ *
+ * The new description can be an empty string.
+ *
+ * @param d The new description.
+ *
+ */
 void
 Field::setDescription(const FXString& d)
 {
   description = d;
 }
 
+/**
+ * @brief Retrieves the description of the Field.
+ *
+ * This method returns the description of the Field object.
+ *
+ * @return const FXString& The description of the Field.
+ */
 const FXString&
 Field::getDescription() const
 {
   return description;
 }
 
-void
-Field::setType(FieldType* t)
-{
+/**
+ * @brief Sets the type of the Field.
+ *
+ * This method assigns a new type to the Field object.
+ *
+ * @param t The new type to assign to the Field.
+ */
+void Field::setType(FieldType* t) {
   type = t;
 }
 
+/**
+ * @brief Retrieves a one-line summary of the Field.
+ *
+ * This method returns a one-line summary of the Field, including its type
+ * abbreviation, name, and optionally its description if it is not empty.
+ *
+ * @return FX::FXString A one-line summary of the Field.
+ *
+ */
 FX::FXString
 Field::getOneLiner() const
 {
