@@ -153,7 +153,7 @@ Field::load(FXStream& s)
 
   s >> typestr;
 
-  if (typestr == "null")
+  if (typestr == "null" || typestr.empty())
     type = nullptr;
   else
     {
