@@ -23,25 +23,36 @@
   etc...
 - [ ] The content may be exported to a text file
 - [ ] Content may be copied to clipboard. Add button  
+**** Maybe an initial values pane to let us feed table before generation
 **** TODO Upgrade src/app dependencies
 :LOGBOOK:
+CLOCK: [2025-01-27 lun. 09:19]--[2025-01-27 lun. 09:42] =>  0:23
 CLOCK: [2024-12-26 jeu. 11:26]--[2024-12-26 jeu. 11:35] =>  0:09
 CLOCK: [2024-08-30 ven. 09:32]--[2024-08-30 ven. 09:41] =>  0:09
 CLOCK: [2024-05-03 ven. 14:49]--[2024-05-03 ven. 15:12] =>  0:23
 CLOCK: [2024-03-27 mer. 09:18]--[2024-03-27 mer. 09:32] =>  0:14
 :END:
-- First copy it (for example in build/updatedApp/)
-  From build / =cp -R ../src/app updatedApp=
-- Then, npm audit fix
-- Then, npm ci and start (no test)
-- Then, see =diff package-lock.json ../../src/app/package-lock.json=
-  Copy if needed
+- Full command list :
+#+BEGIN_EXAMPLE
+cp -R ../src/app updatedApp
+cd updatedApp
+npm audit fix   #  (may try `npm outdated' then `npm update')
+npm ci
+npm start
+diff package-lock.json ../../src/app/package-lock.json
+# (then, copy if needed)
+
+cd ..   # (Should now be in build/)
+rm -fr updatedApp
+#+END_EXAMPLE
+
 - [ ] Updated :
   | *Date*       | *Result*                                |
   | 2024 Mar. 27 | Many updates in package-lock.json       |
   | 2024 Apr. 03 | None.                                   |
   | 2024 Aug. 30 | braces, elliptic and more minor updates |
   | 2024 Dec. 26 | yargs-parser and others                 |
+  | 2025 Jan. 27 | yargs, tunnel, stream-* and others      |
   |              |                                         |
 **** TODO Add a sidebars-based Menu to the generated app
 :LOGBOOK:
