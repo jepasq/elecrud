@@ -1,3 +1,13 @@
+* v0.0.3-32 (24 Dec. 2024 - 27 Jan. 2025) SLOC 5,026
+- Fix current unit test checking for empty type name
+- Improve Field class API documentation
+- Update many dependencies in to-be-generated app.
+- ProjectFile has now a mutable CollectionList member
+- yargs-parser and other src/app dependencies update
+- Slightly improve API documentation
+- Added some FX* macros to EXCLUDE_SYMBOLS trying to fix NewFieldDialog issue
+- Add a special throw case in FieldTypeFactory::newInstance for empty name
+
 * v0.0.3-31 (18 Dec. 2024 - 24 Dec. 2024) SLOC 4,912
 - Change Collection::appendItem return type to allow chain call
 - Add failing tests to prepare Collection::save implementation

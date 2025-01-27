@@ -5,14 +5,7 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     (8 items per revision)
     Update version and revision in CMakeLists.txt
     Create a new git tag and pull --tags for each revision commit
-    SLOC is the result of calling `sloc` in src/ (removes src/app/)
+    SLOC is the result of calling `sloc` in src/ (removes src/app/) 
 
-* v0.0.3-32 (24 Dec. 2024 - ???) SLOC ?,???
-- (8) Fix current unit test checking for empty type name
-- Improve Field class API documentation
-- Update many dependencies in to-be-generated app.
-- ProjectFile has now a mutable CollectionList member
-- yargs-parser and other src/app dependencies update
-- Slightly improve API documentation
-- Added some FX* macros to EXCLUDE_SYMBOLS trying to fix NewFieldDialog issue
-- Add a special throw case in FieldTypeFactory::newInstance for empty name
+* v0.0.3-33 (27 Jan. 2025 - ???) SLOC ?,???
+

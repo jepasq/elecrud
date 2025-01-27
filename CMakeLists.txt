@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(elecrud VERSION 0.0.3)
-set(REVISION 30)
+set(REVISION 32)
 
 set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
