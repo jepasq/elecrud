@@ -72,7 +72,12 @@ private:
 
   std::string description;       //!< The project multiline description
 
-  CollectionList colls;          //!< The internal Collection list
+  /** The internal Collection list
+   *
+   * You can't sue range-based loop on this, pleast use at() member instead.
+   *
+   */
+  CollectionList colls;          
 };
 
 #endif // !__PROJECT_FILE_HPP__

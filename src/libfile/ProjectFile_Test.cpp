@@ -203,3 +203,22 @@ BOOST_AUTO_TEST_CASE( ProjectFile_mutable_collections )
   BOOST_REQUIRE_EQUAL( pf1.getCollections()->size(), 1 );
   
 }
+
+/// Collections pointer is mutable and actually modify collection lists
+BOOST_AUTO_TEST_CASE( ProjectFile_save_Collections )
+{
+  auto fn = "PrjNameTest.eud";
+
+  ProjectFile pf1, pf2;
+  BOOST_REQUIRE_EQUAL( pf1.getCollections()->size(), 0 );
+  pf1.getCollections()->push_back(std::make_shared<Collection>("name2"));
+  pf1.setFilename(fn);
+  pf1.save();
+
+  pf2.setFilename(fn);
+  pf2.load();
+
+  BOOST_REQUIRE_EQUAL( pf2.getCollections()->size(), 1 );
+  
+}
+

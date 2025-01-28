@@ -120,6 +120,12 @@ ProjectFile::save()
       s << stdToFx(generatorFilename);
       s << (FXint)generatorCallnpm;  // Can't save a bool. Cast to int.
       s << stdToFx(description);
+
+      // Collections
+      s << colls.size();
+      for (int ji = 0; ji < colls.size(); ++ji)
+	colls.at(ji)->save(s);
+      
       s.close();
       
       cout << "ProjectFile : saved as '" << filename.c_str() << "'" << endl;
@@ -157,6 +163,17 @@ ProjectFile::load()
   s >> gna;
   s >> iCallnpm;
   s >> des;
+
+
+  FXint collnumber;
+  s >> collnumber;
+  for (int cni=0; cni < collnumber; ++cni)
+    {
+      auto cc = std::make_shared<Collection>("name");
+      cc->load(s);
+      colls.push_back(cc);
+    }
+  
   s.close();
   generatorCallnpm = (bool)iCallnpm;
   projectName       = pna.text();
