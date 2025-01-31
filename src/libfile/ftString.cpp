@@ -58,3 +58,26 @@ FieldTypeString::newInstance() const
 {
   return new FieldTypeString();
 }
+
+/** Change the current value
+ *
+ *  @param v The new string.
+ *
+ */
+void
+FieldTypeString::setValue(const FXString& v)
+{
+  mValue = v;
+}
+
+/** Change the current value
+ *
+ *  @return The current value as string.
+ *
+ */
+FXString
+FieldTypeString::getValue()
+{
+  return mValue;
+}
+

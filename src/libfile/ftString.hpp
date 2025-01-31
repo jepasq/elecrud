@@ -20,7 +20,7 @@ public:
 
   
   void setValue(const FXString&);
-  int  getValue();
+  FXString  getValue();
     
   /// Returns this typename to string
   virtual std::string typeName() const override;
@@ -31,7 +31,6 @@ public:
   virtual FieldType* newInstance() const override;
   
 private:
-
   FXString mValue;   //!< The internal stored value
 };
 

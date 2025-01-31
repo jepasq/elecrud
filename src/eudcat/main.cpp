@@ -81,6 +81,11 @@ debugStdArgv(list<string>& l)
     cout << " - " << i << endl;
 }
 
+/** Print all the collection from the given list
+ *
+ *  @param c The list to be printed to std::cout.
+ *
+ */
 void
 printCollections(const CollectionList* c)
 {
@@ -91,9 +96,13 @@ printCollections(const CollectionList* c)
 }
 
 /** The main entry of the eudcat tool
-  *
-  *
-  */
+ *
+ *  @param argc The number of command line arguments.
+ *  @param argv An array of strings representing the command line arguments.
+ *
+ *  @return An integer status code where 0 typically indicates success 
+ *
+ */
 int
 main(int argc, char** argv)
 {
