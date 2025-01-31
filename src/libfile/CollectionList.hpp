@@ -1,6 +1,11 @@
 #ifndef __COLLECTION_LIST_HPP__
 #define __COLLECTION_LIST_HPP__
 
+/** \file CollectionList.hpp
+  * The CollectionList class header.
+  *
+  */
+
 #include <vector> // USES std::vector
 #include <memory> // USES shared_ptr
 
@@ -8,7 +13,10 @@
 
 /** A list (or vector) of collections (or tables) as shown in the editor
  *
+ * You can check if a name is unique using isNameInUse() function.
  *
+ * Note: You can't use range-based loop on this, please use legacy for loop
+ * with the at() function.
  *
  */
 class CollectionList

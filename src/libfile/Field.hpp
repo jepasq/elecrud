@@ -1,6 +1,11 @@
 #ifndef __FIELD_HPP__
 #define __FIELD_HPP__
 
+/** \file Field.hpp
+  * The Field class header.
+  *
+  */
+
 #include <fox-1.6/fx.h>
 
 #include "ftInt.hpp"

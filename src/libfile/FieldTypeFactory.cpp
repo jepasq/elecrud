@@ -46,6 +46,18 @@ FieldTypeFactory::registerTypeInstance(FieldType* t)
   types[t->typeName()] = std::unique_ptr<FieldType>(t);
 }
 
+/**
+ * @brief Creates a new instance of FieldType based on the given type name.
+ *
+ * This function creates a new instance of FieldType. If the type name is
+ * empty or not found in the types map, it throws an invalid_argument
+ * exception.
+ *
+ * @param typen The name of the FieldType to create.
+ * @return A pointer to the new FieldType instance.
+ * @throws std::invalid_argument if the type name is empty or not found.
+ *
+ */
 FieldType*
 FieldTypeFactory::newInstance(const string& typen)
 {
@@ -60,6 +72,14 @@ FieldTypeFactory::newInstance(const string& typen)
   return types[typen]->newInstance();
 }
 
+/** Return all keys in a new vector
+ *
+ * The internally registered types are stored in a string,type map. This
+ * function is used to retrieve all string keys.
+ *
+ * @return A newly created vector.
+ *
+ */
 std::vector<std::string>
 FieldTypeFactory::getKeys() const
 {
