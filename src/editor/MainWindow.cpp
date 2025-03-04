@@ -668,6 +668,11 @@ MainWindow::openProjectFile(const std::string& filename)
   cbCallNpm->setCheck(projectFile.getGeneratorCallnpm());
 
   this->filename = FXString(filename.c_str());
+
+  // Start collections handling
+  if (projectFile.getCollections()->size() > 0)
+    cout << "There is collection(s) in this project file. UI loading NYI..."
+	 << endl;
   
   updateTitle();
 }
