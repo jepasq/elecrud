@@ -8,7 +8,8 @@ elecrud - GPLv3 - A C++/electron based multi-user CRUD operator generator.
     SLOC is the result of calling `sloc` in src/ (removes src/app/) 
 
 * v0.0.3-33 (27 Jan. 2025 - ???) SLOC ?,???
-- (4) Add a console message when editor is loading a project file with colls
+- (5) Add a new CollectionList test for out_of_range throw
+- Add a console message when editor is loading a project file with colls
 - Add a doxygen file block to a couple of files
 - Add ftString value setter and getter
 - ProjectFile save CollectionList members

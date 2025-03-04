@@ -41,6 +41,16 @@ CollectionList::isNameInUse(const FXString& vName) const
   return false;
 }
 
+/** Get the collection at a given index
+ *
+ * @param pos The index of the Collection to get
+ *
+ * @return A shared_ptr to a Collection object if in range
+ *
+ * @throws std::out_of_range If the given position is out of the
+ *   collection list bounds
+ *
+ */
 std::shared_ptr<Collection>
 CollectionList::at(size_t pos) const
 {

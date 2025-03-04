@@ -36,3 +36,10 @@ BOOST_AUTO_TEST_CASE( Collection_name_collision )
   BOOST_REQUIRE(!cl.isNameInUse("name2"));
 }
 
+
+BOOST_AUTO_TEST_CASE( Collection_at_outOfRange )
+{
+  CollectionList cl;
+  BOOST_REQUIRE_THROW(cl.at(88), std::out_of_range);
+}
+
